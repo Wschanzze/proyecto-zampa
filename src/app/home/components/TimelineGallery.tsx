@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 
@@ -150,7 +150,7 @@ export default function TimelineGallery() {
                   width={80}
                   height={56}
                   className="w-full h-full object-cover"
-                  style={entry.filter ? { filter: entry.filter } as React.CSSProperties : undefined} />
+                  style={entry.filter ? { filter: entry.filter } : undefined} />
                 
                 </div>
 
@@ -171,7 +171,7 @@ export default function TimelineGallery() {
                     width={600}
                     height={450}
                     className="w-full h-full object-cover"
-                    style={entry.filter ? { filter: entry.filter } as React.CSSProperties : undefined} />
+                    style={entry.filter ? { filter: entry.filter } : undefined} />
                   
                   </div>
 

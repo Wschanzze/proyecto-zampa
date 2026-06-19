@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next';
+import type { Metadata, Viewport, ReactNode } from 'next';
 import '../styles/tailwind.css';
 
 export const viewport: Viewport = {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="en">
