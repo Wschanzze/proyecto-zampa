@@ -1,5 +1,23 @@
-import { redirect } from 'next/navigation';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import HeroSection from './components/HeroSection';
+import TimelineGallery from './components/TimelineGallery';
+import CultivarGrid from './components/CultivarGrid';
+import ImpactSection from './components/ImpactSection';
+import CtaSection from './components/CtaSection';
+import FloatingPill from './components/FloatingPill';
 
-export default function Page() {
-  redirect('/home');
+export default function HomePage() {
+  return (
+    <div className="min-h-screen bg-limestone-soft">
+      <Header />
+      <HeroSection />
+      <TimelineGallery />
+      <CultivarGrid />
+      <ImpactSection />
+      <CtaSection />
+      <Footer />
+      <FloatingPill />
+    </div>
+  );
 }
