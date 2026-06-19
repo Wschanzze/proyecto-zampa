@@ -1,4 +1,5 @@
-import type { Metadata, Viewport, ReactNode } from 'next';
+import type { Metadata, Viewport } from 'next';
+import { ReactNode } from 'react';
 import '../styles/tailwind.css';
 
 export const viewport: Viewport = {
