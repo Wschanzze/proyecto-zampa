@@ -19,59 +19,59 @@ interface TimelineEntry {
 const entries: TimelineEntry[] = [
 {
   year: '1984',
-  era: 'Founding',
-  title: 'First Plots, Red Clay Soil',
-  description: 'Twelve test rows on a leased quarter-section in the Sahelian transition zone. Three researchers, a hand-drill planter, and rainfall records going back to 1962.',
-  detail: 'The founding team identified that existing commercial varieties were bred for irrigated conditions. Their hypothesis: systematic recurrent selection under managed drought stress would yield lines with stable performance across low-rainfall seasons. Early germplasm included 47 landrace accessions collected from smallholder farms across four countries.',
-  yieldNote: 'First cycle: 12% yield advantage over commercial check under 280mm annual rainfall.',
-  regionNote: 'Initial adoption zone: 3 districts, Burkina Faso.',
-  thumb: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop",
-  thumbAlt: 'Black and white archival photograph of founding trial plots in red clay soil, 1984',
+  era: 'Fundación',
+  title: 'Primeros Pasos y Pasturas',
+  description: 'Introducción de las primeras ovejas seleccionadas en pasturas locales para iniciar el rebaño original.',
+  detail: 'Los fundadores comenzaron con un pequeño grupo de ovejas criadas con métodos de pastoreo natural. El objetivo era elaborar quesos con una identidad única, respetando los ciclos climáticos y el suelo. Las recetas originales de esta época sentaron las bases para nuestro característico sabor rústico y duradero.',
+  yieldNote: 'Lote inicial: 50 ovejas seleccionadas para un pastoreo de alta adaptabilidad.',
+  regionNote: 'Zona de origen: Pasturas originales de la quesería.',
+  thumb: "/assets/Quesos%20Zampa/07B73847-614E-4FDC-B7AF-F639064C64CB.jpg",
+  thumbAlt: 'Fotografía histórica del rebaño original y pasturas de la quesería, 1984',
   filter: 'grayscale(100%) contrast(1.05)'
 },
 {
   year: '1997',
-  era: 'Expansion',
-  title: 'Crossing Into Genomics',
-  description: 'A partnership with three national agricultural research systems brought marker-assisted selection into the pipeline. Selection cycles shortened from 6 years to 3.',
-  detail: 'Molecular markers targeting root architecture genes allowed the team to screen 2,400 F2 plants per season without waiting for phenotypic expression under drought. The result: a breeding pipeline that could now advance 8 lines per year instead of 2. Parent lines from this period form the backbone of 60% of currently licensed cultivars.',
-  yieldNote: 'Pipeline efficiency: 4× increase in lines advanced per breeding cycle.',
-  regionNote: 'Adoption zone expanded to 7 countries across West and East Africa.',
-  thumb: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
-  thumbAlt: 'Color photograph of genomics laboratory with plant samples and molecular analysis equipment'
+  era: 'Crecimiento',
+  title: 'La Primera Quesería Tradicional',
+  description: 'Construcción de la planta de elaboración artesanal y la primera cámara de maduración tradicional.',
+  detail: 'Con el crecimiento del rebaño, se inauguró una instalación dedicada a la elaboración y control de temperatura de maduración. Esto permitió estandarizar la receta de nuestro queso Pecorino y aumentar la producción manteniendo la fermentación natural de la leche de oveja sin aditivos.',
+  yieldNote: 'Capacidad de maduración: Consolidación de la receta del Pecorino tradicional.',
+  regionNote: 'Expansión: Distribución ampliada a comunidades vecinas.',
+  thumb: "/assets/Quesos%20Zampa/68C50477-1C39-48B6-86FE-640DEDCA65B1.jpg",
+  thumbAlt: 'Cámara de maduración tradicional con estantes de madera y quesos curándose'
 },
 {
   year: '2009',
-  era: 'Scale',
-  title: 'Satellite Mapping Adoption Zones',
-  description: 'Remote sensing data revealed that Cultivar lines were being planted on 2.1 million hectares — far beyond what licensing records showed. Seed was moving through informal channels.',
-  detail: 'NDVI analysis of crop phenology across the Sahel and Horn of Africa confirmed that the phenotypic signature of Cultivar varieties — late tillering, compact canopy, extended grain fill — was detectable at landscape scale. This discovery reshaped the institute\'s strategy: formal licensing partnerships with national seed systems were established to capture the informal adoption and ensure quality seed supply reached smallholders.',
-  yieldNote: '2.1 million hectares under Cultivar genetics — 73% through informal seed networks.',
-  regionNote: '3 continents, 14 countries, 8 national seed system partnerships.',
-  thumb: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=600&h=400&fit=crop",
-  thumbAlt: 'Satellite imagery showing adoption zones of drought-resistant grain varieties across semi-arid landscapes'
+  era: 'Reconocimiento',
+  title: 'Distribución en Tiendas Especializadas',
+  description: 'Los quesos Zampa llegan a los primeros almacenes gourmet y tiendas de especialidad en la región.',
+  detail: 'La reputación del sabor curado y el cuidado artesanal abrió las puertas de los mercados más exigentes. Se estableció un sistema de distribución enfocado en mantener la cadena de frío y preservar las cualidades del queso desde el campo hasta la mesa de los consumidores.',
+  yieldNote: 'Presencia de marca: Primeras fiambrerías gourmet y restaurantes de autor selectos.',
+  regionNote: 'Distribución regional en las principales tiendas gourmet de la provincia.',
+  thumb: "/assets/Quesos%20Zampa/6de54990-a007-4692-8898-b1dda1296784.jpg",
+  thumbAlt: 'Presentación de quesos Zampa en un mercado gourmet regional'
 },
 {
   year: '2019',
-  era: 'Soil Protocols',
-  title: 'Restoration Science Joins the Pipeline',
-  description: 'Yield under stress is only half the equation. A soil health program measuring carbon sequestration, mycorrhizal density, and aggregate stability was embedded into every trial protocol.',
-  detail: 'Long-term plots established in 1984 showed measurable degradation in untreated control rows. The soil science program developed restoration protocols — specific cover crop sequences, organic amendment timings, and minimal-till schedules — that when combined with Cultivar varieties produced 18% higher yield stability over five-year rolling windows compared to variety alone. These protocols are now licensed alongside parent lines.',
-  yieldNote: '+18% yield stability over 5-year windows when soil protocols are paired with Cultivar varieties.',
-  regionNote: 'Soil protocol adoption: 340,000 hectares across 6 countries.',
-  thumb: "https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?w=600&h=400&fit=crop",
-  thumbAlt: 'Researcher examining soil aggregate structure and root density in a trial plot restoration zone'
+  era: 'Sostenibilidad',
+  title: 'Pastoreo Rotativo y Bienestar Animal',
+  description: 'El bienestar del rebaño es la base del sabor. Implementación de un manejo de pastura rotativa.',
+  detail: 'Estudios en nuestros suelos nos impulsaron a adoptar protocolos de regeneración del pasto. El pastoreo rotativo asegura que las ovejas tengan alimento de la más alta calidad y que el suelo se recupere de forma natural, aumentando el contenido de nutrientes en la leche que luego se transmite a nuestros quesos.',
+  yieldNote: 'Sostenibilidad: 100% de pasturas bajo manejo rotativo y regenerativo.',
+  regionNote: 'Certificación de prácticas de pastoreo respetuosas con el medio ambiente.',
+  thumb: "/assets/Quesos%20Zampa/BAB4C1FD-5368-4434-ADE4-498A3AE4D8C6.jpg",
+  thumbAlt: 'Vista de ovejas pastando en el campo bajo el protocolo de pastoreo rotativo'
 },
 {
   year: '2026',
-  era: 'Present',
-  title: 'Fourth Decade, Sharpest Tools',
-  description: 'Genomic prediction models trained on 40 years of phenotypic data. The current pipeline can predict drought tolerance with 89% accuracy before a single seed touches soil.',
-  detail: 'Training datasets spanning 1984 to 2025 — 41 seasons of rainfall, temperature, and yield observations — feed genomic prediction models that now guide parent selection with an accuracy impossible in the first decade. The 2026 trial season advances 23 new lines across 6 target environments. Three lines are already in pre-commercial multiplication. The work compounds.',
-  yieldNote: '89% prediction accuracy for drought tolerance. 23 new lines in 2026 pipeline.',
-  regionNote: '4.8 million hectares under Cultivar genetics as of December 2025.',
-  thumb: "https://images.unsplash.com/photo-1574263867373-68bfa3cf6d8d?w=600&h=400&fit=crop",
-  thumbAlt: 'Researcher in modern field trial using digital tools to record phenotypic data on grain varieties at dawn'
+  era: 'Presente',
+  title: 'Tradición y Nuevas Variedades',
+  description: 'Maduración de recetas y lanzamiento de quesos de autor de edición limitada.',
+  detail: 'Con más de 40 años perfeccionando el arte de la quesería artesanal de oveja, combinamos la experiencia de tres generaciones con técnicas modernas de análisis de calidad. Seguimos empujando los límites de la maduración para ofrecer quesos con texturas y matices únicos en cada temporada.',
+  yieldNote: 'Producción actual: 23 lotes anuales de maduración prolongada y quesos de autor.',
+  regionNote: 'Mercado de exportación y tiendas seleccionadas a nivel nacional.',
+  thumb: "/assets/Quesos%20Zampa/IMG_9824.JPG",
+  thumbAlt: 'Corteza y textura detallada de un queso madurado Zampa en 2026'
 }];
 
 
@@ -101,13 +101,13 @@ export default function TimelineGallery() {
         <div
           className={`mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           
-          <p className="text-xs font-medium uppercase tracking-widest text-teal mb-3">Origin Story</p>
+          <p className="text-xs font-medium uppercase tracking-widest text-teal mb-3">Nuestra Trayectoria</p>
           <h2 className="font-fraunces text-4xl lg:text-5xl font-semibold text-umber-dark leading-tight max-w-2xl">
-            Four Decades of Work,<br />
-            <em className="font-light italic">One Compounding Record.</em>
+            Cuatro Décadas de Tradición,<br />
+            <em className="font-light italic">Un Legado Familiar en Cada Lote.</em>
           </h2>
           <p className="mt-5 text-umber-light font-light text-lg max-w-xl leading-relaxed">
-            Each chapter raised the stakes — from a single research plot to global food security. Click any era to read it.
+            Cada etapa representa el esfuerzo de nuestra familia para perfeccionar el queso de oveja artesanal. Haz clic en cualquier época para leer más.
           </p>
         </div>
 

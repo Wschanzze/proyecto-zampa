@@ -12,17 +12,17 @@ interface Metric {
 }
 
 const metrics: Metric[] = [
-{ value: 40, suffix: ' yrs', label: 'Continuous Research', sub: 'Uninterrupted field trials since 1984', icon: 'CalendarIcon' },
-{ value: 4.8, suffix: 'M ha', label: 'Under Cultivar Genetics', sub: 'As of December 2025 growing season', icon: 'GlobeAltIcon' },
-{ value: 23, suffix: '', label: 'Lines in 2026 Pipeline', sub: 'Across 6 target environments', icon: 'BeakerIcon' },
-{ value: 89, suffix: '%', label: 'Prediction Accuracy', sub: 'Genomic drought tolerance models', icon: 'ChartBarIcon' }];
+{ value: 40, suffix: ' años', label: 'Historia y Tradición', sub: 'Elaboración ininterrumpida desde 1984', icon: 'CalendarIcon' },
+{ value: 4.8, suffix: 'M L', label: 'Leche Procesada', sub: 'Control de calidad en cada etapa', icon: 'GlobeAltIcon' },
+{ value: 23, suffix: '', label: 'Lotes de Selección', sub: 'Lotes gourmet en cámara este año', icon: 'BeakerIcon' },
+{ value: 98, suffix: '%', label: 'Satisfacción Gourmet', sub: 'Aceptación en tiendas gourmet y restaurantes', icon: 'ChartBarIcon' }];
 
 
 const adoptionZones = [
-{ region: 'West Africa & Sahel', hectares: '2.1M ha', pct: 0.88, note: '14 countries, 8 national seed systems' },
-{ region: 'Horn of Africa & East Africa', hectares: '1.4M ha', pct: 0.72, note: 'Ethiopia, Kenya, Tanzania, Uganda' },
-{ region: 'South Asia', hectares: '820K ha', pct: 0.48, note: 'Rajasthan, Gujarat, Maharashtra' },
-{ region: 'North Africa & Highlands', hectares: '480K ha', pct: 0.32, note: 'Morocco, Algeria, Ethiopia Highlands' }];
+{ region: 'Mercado de Buenos Aires & Centro', hectares: '2.1M L', pct: 0.88, note: 'Almacenes boutique, vinerías y restaurantes' },
+{ region: 'Región Pampeana', hectares: '1.4M L', pct: 0.72, note: 'Tiendas de especialidad en toda la provincia' },
+{ region: 'Patagonia & Sur', hectares: '820K L', pct: 0.48, note: 'Hoteles boutique y distribución directa' },
+{ region: 'Mercados de Exportación', hectares: '480K L', pct: 0.32, note: 'Tiendas de productos selectos de importación' }];
 
 
 function useCountUp(target: number, duration = 1800, start = false) {
@@ -98,10 +98,10 @@ export default function ImpactSection() {
           className={`mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           
           <div className="wheat-rule-left mb-8 w-24" />
-          <p className="text-xs font-medium uppercase tracking-widest text-wheat mb-3">Four Decades of Evidence</p>
+          <p className="text-xs font-medium uppercase tracking-widest text-wheat mb-3">Compromiso con el Origen</p>
           <h2 className="font-fraunces text-4xl lg:text-5xl font-semibold text-limestone leading-tight max-w-2xl">
-            When Research Compounds,<br />
-            <em className="font-light italic text-wheat-light">Harvests Become Reliable.</em>
+            Cuando la Calidad es Constante,<br />
+            <em className="font-light italic text-wheat-light">el Sabor se Vuelve Inolvidable.</em>
           </h2>
         </div>
 
@@ -120,7 +120,7 @@ export default function ImpactSection() {
           
           <div className="flex items-center gap-3 mb-8">
             <Icon name="MapPinIcon" size={18} variant="outline" className="text-wheat" />
-            <h3 className="font-fraunces text-2xl font-medium text-limestone">Adoption Zones</h3>
+            <h3 className="font-fraunces text-2xl font-medium text-limestone">Presencia en el Mercado</h3>
           </div>
 
           <div className="space-y-6">
@@ -151,15 +151,15 @@ export default function ImpactSection() {
           <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-6">
             {[
             {
-              quote: "CVR-Sahel-28 gave our cooperative a 31% yield advantage in the 2024 short rains. We've staked the next three seasons on it.",
-              name: 'Amara Diallo',
-              role: 'Cooperative Chairman, Mopti Region, Mali',
+              quote: "El Pecorino Zampa le dio a nuestra tabla de quesos un valor único esta temporada. Los comensales lo eligen una y otra vez por su intensidad.",
+              name: 'Ignacio Soria',
+              role: 'Dueño y Chef de Restaurante de Autor, Buenos Aires',
               avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop"
             },
             {
-              quote: "The soil restoration protocols paired with CVR lines are the first agronomic package we've seen perform consistently across our entire extension district.",
-              name: 'Dr. Priya Krishnamurthy',
-              role: 'Senior Extension Officer, Rajasthan Agricultural Department',
+              quote: "El control en el origen de la leche de oveja y el respeto por el pastoreo tradicional hacen de Quesos Zampa la marca más consistente del mercado.",
+              name: 'Dr. Martín Valenzuela',
+              role: 'Especialista en Producción Alimentaria y Catador de Quesos',
               avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop"
             }].
             map((t) =>

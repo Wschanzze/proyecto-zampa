@@ -23,8 +23,8 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <AppLogo
             size={36}
-            iconName="BeakerIcon"
-            text="Cultivar"
+            iconName="SparklesIcon"
+            text="Quesos Zampa"
             className="text-umber"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           />
@@ -33,10 +33,10 @@ export default function Header() {
         {/* Nav links */}
         <div className="hidden lg:flex items-center gap-10">
           {[
-            { label: 'Research', href: '#timeline' },
-            { label: 'Cultivars', href: '#cultivars' },
-            { label: 'Impact', href: '#impact' },
-            { label: 'About', href: '#about' },
+            { label: 'Nuestra Historia', href: '#timeline' },
+            { label: 'Nuestros Quesos', href: '#cultivars' },
+            { label: 'Calidad', href: '#impact' },
+            { label: 'Nosotros', href: '#about' },
           ]?.map((item) => (
             <a
               key={item?.label}
@@ -54,7 +54,7 @@ export default function Header() {
           className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-teal text-cream hover:bg-teal-light transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
         >
           <Icon name="SparklesIcon" size={16} variant="outline" />
-          Explore Cultivars
+          Explorar Variedades
         </a>
       </div>
     </nav>

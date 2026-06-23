@@ -12,16 +12,16 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
           <AppLogo
             size={28}
-            iconName="BeakerIcon"
-            text="Cultivar"
+            iconName="SparklesIcon"
+            text="Quesos Zampa"
             className="text-umber opacity-70"
           />
           <div className="flex items-center gap-6 text-sm font-medium text-umber-light">
-            <a href="#timeline" className="hover:text-teal transition-colors">Research</a>
-            <a href="#cultivars" className="hover:text-teal transition-colors">Cultivars</a>
-            <a href="#impact" className="hover:text-teal transition-colors">Impact</a>
-            <a href="#" className="hover:text-teal transition-colors">Privacy</a>
-            <a href="#" className="hover:text-teal transition-colors">Terms</a>
+            <a href="#timeline" className="hover:text-teal transition-colors">Nuestra Historia</a>
+            <a href="#cultivars" className="hover:text-teal transition-colors">Nuestros Quesos</a>
+            <a href="#impact" className="hover:text-teal transition-colors">Calidad</a>
+            <a href="#" className="hover:text-teal transition-colors">Privacidad</a>
+            <a href="#" className="hover:text-teal transition-colors">Términos</a>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ export default function Footer() {
               </a>
             ))}
           </div>
-          <span className="text-sm text-umber-light opacity-60">© {year} Cultivar Research Institute</span>
+          <span className="text-sm text-umber-light opacity-60">© {year} Quesería Artesanal Zampa</span>
         </div>
       </div>
     </footer>

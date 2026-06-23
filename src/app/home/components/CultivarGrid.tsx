@@ -8,7 +8,7 @@ interface Cultivar {
   name: string;
   region: string;
   yieldGain: string;
-  droughtTolerance: string;
+  droughtTolerance: string; // Used for maturation info
   image: string;
   imageAlt: string;
 }
@@ -16,48 +16,48 @@ interface Cultivar {
 const cultivars: Cultivar[] = [
   {
     id: 'cul-001',
-    name: 'Sahel Elite',
-    region: 'West Africa',
-    yieldGain: '+28% under drought stress',
-    droughtTolerance: 'High',
-    image: 'https://images.unsplash.com/photo-1537909352614-5ffe62b5ec3d?w=500&h=500&fit=crop',
-    imageAlt: 'Drought-resistant grain variety in field'
+    name: 'Queso Pecorino Zampa',
+    region: 'Especialidad Rústica',
+    yieldGain: 'Sabor intenso con notas herbales de pastura',
+    droughtTolerance: '6 a 12 meses en cava',
+    image: '/assets/Quesos%20Zampa/pecorino.jpeg',
+    imageAlt: 'Queso Pecorino madurado rústico Zampa'
   },
   {
     id: 'cul-002',
-    name: 'Horn Resilience',
-    region: 'East Africa',
-    yieldGain: '+32% under moisture stress',
-    droughtTolerance: 'Very High',
-    image: 'https://images.unsplash.com/photo-1592246854269-600fb3f29e45?w=500&h=500&fit=crop',
-    imageAlt: 'High-yielding grain cultivar in semi-arid conditions'
+    name: 'Queso Curado Tradición',
+    region: 'Gran Reserva',
+    yieldGain: 'Textura firme y notas profundas de madurez',
+    droughtTolerance: '9 meses',
+    image: '/assets/Quesos%20Zampa/producto_1.png',
+    imageAlt: 'Queso Curado Tradición Zampa'
   },
   {
     id: 'cul-003',
-    name: 'Compact Strong',
-    region: 'Sahel Zone',
-    yieldGain: '+22% in low-rainfall zones',
-    droughtTolerance: 'High',
-    image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=500&h=500&fit=crop',
-    imageAlt: 'Compact grain variety adapted to semi-arid climates'
+    name: 'Queso Semicurado Selección',
+    region: 'Clásico Cremoso',
+    yieldGain: 'Equilibrio perfecto, textura suave y fundente',
+    droughtTolerance: '3 a 6 meses',
+    image: '/assets/Quesos%20Zampa/producto_2.png',
+    imageAlt: 'Queso Semicurado Selección Zampa'
   },
   {
     id: 'cul-004',
-    name: 'Deep Root Legacy',
-    region: 'Multi-region',
-    yieldGain: '+25% under chronic stress',
-    droughtTolerance: 'Very High',
-    image: 'https://images.unsplash.com/photo-1500382017468-7049ffd0c72c?w=500&h=500&fit=crop',
-    imageAlt: 'Deep-rooted grain variety in trial field'
+    name: 'Queso Tierno Delicado',
+    region: 'Suave y Fresco',
+    yieldGain: 'Sabor láctico delicado, ideal para acompañar',
+    droughtTolerance: '1 a 2 meses',
+    image: '/assets/Quesos%20Zampa/producto_3.png',
+    imageAlt: 'Queso Tierno Zampa'
   },
   {
     id: 'cul-005',
-    name: 'Nutrient Dense',
-    region: 'East Africa',
-    yieldGain: '+18% with enhanced micronutrients',
-    droughtTolerance: 'High',
-    image: 'https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?w=500&h=500&fit=crop',
-    imageAlt: 'Nutrient-rich grain cultivar for food security'
+    name: 'Mix Gourmet Zampa',
+    region: 'Selección Especial',
+    yieldGain: 'Degustación variada con cortes de autor',
+    droughtTolerance: 'Varias maduraciones',
+    image: '/assets/Quesos%20Zampa/tipos%20de%20quesos.jpg',
+    imageAlt: 'Variedad de cortes de quesos Zampa'
   }
 ];
 
@@ -84,13 +84,13 @@ export default function CultivarGrid() {
         <div
           className={`mb-20 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           
-          <p className="text-xs font-medium uppercase tracking-widest text-teal mb-3">Available Cultivars</p>
+          <p className="text-xs font-medium uppercase tracking-widest text-teal mb-3">Nuestra Selección</p>
           <h2 className="font-fraunces text-4xl lg:text-5xl font-semibold text-umber-dark leading-tight max-w-3xl">
-            Tested Genetics for<br />
-            <em className="font-light italic">Low-Rainfall Regions</em>
+            Variedades Artesanales<br />
+            <em className="font-light italic">Elaboradas con Leche 100% de Oveja</em>
           </h2>
           <p className="mt-5 text-umber-light font-light text-lg max-w-2xl leading-relaxed">
-            Each cultivar represents decades of selection under real-world drought conditions. Performance data spans minimum 3 seasons across multiple trial environments.
+            Cada variedad de queso Zampa refleja el esmero en su maduración y el carácter natural de nuestras pasturas. Producción artesanal limitada y cuidada en cada etapa.
           </p>
         </div>
 
@@ -133,12 +133,12 @@ export default function CultivarGrid() {
                   </div>
                   <div className="flex items-start gap-2">
                     <Icon name="ShieldCheckIcon" size={16} variant="outline" className="text-teal mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-umber-light">Drought Tolerance: {cultivar.droughtTolerance}</p>
+                    <p className="text-sm text-umber-light">Maduración: {cultivar.droughtTolerance}</p>
                   </div>
                 </div>
 
                 <a href="#" className="teal-link text-sm font-medium">
-                  View Full Profile →
+                  Más Información →
                 </a>
               </div>
             </div>
