@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import AppImage from '@/components/ui/AppImage';
-import Icon from '@/components/ui/AppIcon';
 
 interface Cultivar {
   id: string;

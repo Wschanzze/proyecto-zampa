@@ -45,22 +45,23 @@ function useCountUp(target: number, duration = 1800, start = false) {
   return isDecimal ? count.toFixed(1) : Math.round(count).toString();
 }
 
-function MetricCard({ metric, started }: {metric: Metric;started: boolean;}) {
+function MetricCard({ metric, started }: { metric: Metric; started: boolean }) {
   const displayValue = useCountUp(metric.value, 1800, started);
   return (
-    <div className="p-7 bg-limestone border border-wheat/25 rounded-4xl flex flex-col gap-3">
-      <div className="w-11 h-11 rounded-xl bg-teal/10 flex items-center justify-center">
-        <Icon name={metric.icon as any} size={20} variant="outline" className="text-teal" />
-      </div>
-      <div>
-        <p className="font-fraunces text-4xl font-semibold text-umber-dark counter-value">
+    <div className="flex flex-col items-center text-center group relative p-6">
+      <div className="absolute inset-0 border border-wheat/10 rounded-2xl bg-white/5 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500" />
+      <div className="relative z-10">
+        <div className="text-wheat mb-4 transform group-hover:scale-110 transition-transform duration-500">
+          <Icon name={metric.icon as any} size={28} />
+        </div>
+        <div className="font-fraunces text-4xl lg:text-5xl font-semibold text-cream mb-2 tracking-tight">
           {metric.prefix}{displayValue}{metric.suffix}
-        </p>
-        <p className="text-sm font-medium text-umber mt-1">{metric.label}</p>
-        <p className="text-xs text-umber-light font-light mt-0.5">{metric.sub}</p>
+        </div>
+        <div className="text-sm font-medium text-wheat-light tracking-widest uppercase mb-2">{metric.label}</div>
+        <p className="text-xs text-limestone-soft/60 font-light max-w-[160px] mx-auto">{metric.sub}</p>
       </div>
-    </div>);
-
+    </div>
+  );
 }
 
 export default function ImpactSection() {
@@ -119,20 +120,8 @@ export default function ImpactSection() {
 
         {/* Minimalist Metrics */}
         <div className={`grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 mb-24 transition-all duration-1000 delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          {metrics.map((m, index) => (
-            <div key={m.label} className="flex flex-col items-center text-center group relative p-6">
-              <div className="absolute inset-0 border border-wheat/10 rounded-2xl bg-white/5 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500" />
-              <div className="relative z-10">
-                <div className="text-wheat mb-4 transform group-hover:scale-110 transition-transform duration-500">
-                  <Icon name={m.icon} size={28} />
-                </div>
-                <div className="font-fraunces text-4xl lg:text-5xl font-semibold text-cream mb-2 tracking-tight">
-                  {started ? <CountUp end={parseFloat(m.value)} suffix={m.value.replace(/[\d.]/g, '')} /> : '0'}
-                </div>
-                <div className="text-sm font-medium text-wheat-light tracking-widest uppercase mb-2">{m.label}</div>
-                <p className="text-xs text-limestone-soft/60 font-light max-w-[160px] mx-auto">{m.desc}</p>
-              </div>
-            </div>
+          {metrics.map((m) => (
+            <MetricCard key={m.label} metric={m} started={visible} />
           ))}
         </div>
 
