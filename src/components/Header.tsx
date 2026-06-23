@@ -17,17 +17,18 @@ export default function Header() {
         scrolled ? 'nav-blur py-2' : 'bg-transparent py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-center lg:grid lg:grid-cols-3 lg:items-center">
-        {/* Left: Nav links (Nuestra Historia, Nuestros Quesos) */}
-        <div className="hidden lg:flex items-center gap-10 justify-start">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-center gap-4 lg:gap-8">
+        {/* Left: Nav links (INICIO, PRODUCTOS, NUESTRA HISTORIA) */}
+        <div className="hidden lg:flex items-center gap-6 lg:gap-8 justify-end">
           {[
-            { label: 'Nuestra Historia', href: '#timeline' },
-            { label: 'Nuestros Quesos', href: '#cultivars' },
+            { label: 'INICIO', href: '#' },
+            { label: 'PRODUCTOS', href: '#cultivars' },
+            { label: 'NUESTRA HISTORIA', href: '#timeline' },
           ].map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-umber-light hover:text-teal transition-colors duration-200 tracking-wide"
+              className="text-xs font-bold text-umber-dark hover:text-teal transition-colors duration-200 tracking-widest"
             >
               {item.label}
             </a>
@@ -35,29 +36,37 @@ export default function Header() {
         </div>
 
         {/* Center: Logo (No text, larger and centered) */}
-        <div className="flex justify-center items-center w-full lg:w-auto lg:col-span-1">
+        <div className="flex justify-center items-center flex-shrink-0 mx-2 lg:mx-4">
           <AppLogo
             src="/IMG_1960(1).png"
-            size={scrolled ? 70 : 90}
+            size={scrolled ? 80 : 110}
             className="text-umber transition-all duration-500 hover:scale-105"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           />
         </div>
 
-        {/* Right: Nav links (Calidad, Nosotros) */}
-        <div className="hidden lg:flex items-center gap-10 justify-end">
+        {/* Right: Nav links (ELABORACIÓN, COMUNIDAD, REVENDEDORES, CONTACTO) */}
+        <div className="hidden lg:flex items-center gap-6 lg:gap-8 justify-start">
           {[
-            { label: 'Calidad', href: '#impact' },
-            { label: 'Nosotros', href: '#about' },
+            { label: 'ELABORACIÓN', href: '#about' },
+            { label: 'COMUNIDAD', href: '#impact' },
+            { label: 'REVENDEDORES', href: '#about' },
           ].map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-umber-light hover:text-teal transition-colors duration-200 tracking-wide"
+              className="text-xs font-bold text-umber-dark hover:text-teal transition-colors duration-200 tracking-widest"
             >
               {item.label}
             </a>
           ))}
+          {/* Contact button */}
+          <a
+            href="#about"
+            className="text-xs font-bold text-umber-dark border border-umber-dark/60 px-4 py-2 rounded-md hover:bg-umber-dark hover:text-cream transition-all duration-300 tracking-widest"
+          >
+            CONTACTO
+          </a>
         </div>
       </div>
     </nav>
