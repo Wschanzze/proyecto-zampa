@@ -24,198 +24,71 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-limestone-soft overflow-hidden flex items-center grain-overlay">
-      {/* Atmospheric gradient background */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <div
-          className="absolute top-0 right-0 w-2/3 h-full opacity-30"
-          style={{
-            background: 'radial-gradient(ellipse at 80% 30%, rgba(201,168,76,0.18) 0%, transparent 60%)'
-          }} />
-        
-        <div
-          className="absolute bottom-0 left-0 w-1/2 h-1/2 opacity-20"
-          style={{
-            background: 'radial-gradient(ellipse at 20% 80%, rgba(46,93,90,0.15) 0%, transparent 55%)'
-          }} />
-        
-      </div>
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-12 pt-28 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <section className="relative min-h-screen overflow-hidden flex items-center justify-center">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/assets/Quesos%20Zampa/IMG_1145.mp4" type="video/mp4" />
+      </video>
 
-          {/* Left: Copy */}
-          <div className="lg:col-span-5 flex flex-col gap-7">
-            {/* Season badge */}
-            <div className="inline-flex items-center gap-2 self-start border border-wheat/50 bg-cream px-4 py-2 rounded-full">
-              <span className="w-2 h-2 rounded-full bg-teal animate-pulse flex-shrink-0" />
-              <span className="text-xs font-medium text-teal tracking-widest uppercase">
-                Temporada 2026 Abierta
-              </span>
-            </div>
+      {/* Overlays for text readability */}
+      <div className="absolute inset-0 z-0 bg-charcoal/40" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-t from-charcoal via-transparent to-charcoal/60" />
 
-            <h1
-              ref={headlineRef}
-              className="font-fraunces text-5xl lg:text-6xl font-semibold leading-[1.05] text-umber-dark">
-              
-              Tres Generaciones<br />
-              en la Tierra.<br />
-              <em className="font-light italic text-umber" style={{ fontStyle: 'italic' }}>
-                Sabor de Origen.
-              </em>
-            </h1>
+      {/* Hero Content */}
+      <div className="relative z-10 max-w-5xl mx-auto w-full px-6 lg:px-12 pt-32 pb-24 flex flex-col items-center text-center">
+        {/* Season badge */}
+        <div className="inline-flex items-center gap-2 mb-8 border border-wheat/30 bg-charcoal/40 backdrop-blur-md px-5 py-2.5 rounded-full shadow-2xl">
+          <span className="w-2 h-2 rounded-full bg-wheat animate-pulse flex-shrink-0" />
+          <span className="text-xs font-medium text-cream tracking-[0.2em] uppercase">
+            Temporada 2026 Abierta
+          </span>
+        </div>
 
-            <p
-              ref={subRef}
-              className="text-lg font-light text-umber-light leading-relaxed max-w-md">
-              
-              En Quesos Zampa elaboramos quesos artesanales de oveja de la más alta calidad, cuidando a nuestro rebaño en pasturas naturales donde el respeto por la tierra define el carácter de cada pieza.
-            </p>
+        <h1
+          ref={headlineRef}
+          className="font-fraunces text-6xl lg:text-8xl font-light leading-tight text-cream mb-6 drop-shadow-2xl">
+          Tres Generaciones<br />
+          en la Tierra.<br />
+          <em className="font-light italic text-wheat-light">
+            Sabor de Origen.
+          </em>
+        </h1>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-2">
-              <a
-                href="#cultivars"
-                className="flex items-center justify-center gap-2 h-14 px-8 rounded-2xl bg-teal text-cream font-medium text-base hover:bg-teal-light transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-                style={{ boxShadow: '0 8px 32px rgba(46,93,90,0.28)' }}>
-                
-                <Icon name="SparklesIcon" size={18} variant="outline" />
-                Explorar Variedades
-              </a>
-              <a
-                href="#timeline"
-                className="flex items-center justify-center gap-2 h-14 px-8 rounded-2xl border border-wheat/60 bg-limestone text-umber font-medium text-base hover:bg-wheat-muted hover:border-wheat transition-all duration-300 group">
-                
-                <Icon name="ClockIcon" size={18} variant="outline" className="group-hover:text-teal transition-colors" />
-                Nuestra Historia
-              </a>
-            </div>
+        <p
+          ref={subRef}
+          className="text-lg lg:text-xl font-light text-limestone-soft/90 leading-relaxed max-w-2xl mb-12 drop-shadow-md">
+          En Quesos Zampa elaboramos quesos artesanales de oveja de la más alta calidad, cuidando a nuestro rebaño en pasturas naturales donde el respeto por la tierra define el carácter de cada pieza.
+        </p>
 
-            {/* Social proof strip */}
-            <div className="pt-5 border-t border-wheat/30 flex items-center gap-6 flex-wrap">
-              <div className="flex -space-x-3">
-                {[
-                'https://images.pexels.com/photos/2132180/pexels-photo-2132180.jpeg?auto=compress&w=64&h=64&fit=crop',
-                'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&w=64&h=64&fit=crop',
-                'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&w=64&h=64&fit=crop']?.
-                map((src, i) =>
-                <div key={i} className="w-10 h-10 rounded-full border-2 border-limestone-soft overflow-hidden flex-shrink-0">
-                    <AppImage src={src} alt={`Customer ${i + 1}`} width={40} height={40} className="w-full h-full object-cover" />
-                  </div>
-                )}
-                <div className="w-10 h-10 rounded-full border-2 border-limestone-soft bg-wheat-muted flex items-center justify-center text-xs font-semibold text-umber flex-shrink-0">
-                  +500
-                </div>
-              </div>
-              <div>
-                <div className="flex items-center gap-1 text-wheat">
-                  {[1, 2, 3, 4, 5]?.map((s) =>
-                  <svg key={s} className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  )}
-                </div>
-                <p className="text-xs text-umber-light mt-0.5 font-light">Elegido por los amantes del buen queso artesanal</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right: Asymmetric photo grid */}
-          <div className="w-full mt-12 lg:mt-0 lg:col-span-7 relative">
-            <div className="hero-photo-grid">
-              {/* Main tall image — researcher hands inspecting grain */}
-              <div className="photo-main rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
-                <AppImage
-                  src="/assets/Quesos%20Zampa/IMG_9816.JPG"
-                  alt="Manos artesanas inspeccionando la corteza de un queso en la sala de maduración"
-                  fill
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-umber-dark/50 via-transparent to-transparent" />
-                <div className="absolute bottom-5 left-5 text-cream">
-                  <p className="text-xs font-medium uppercase tracking-widest text-wheat-light mb-1">Crianza y Cuidado</p>
-                  <h3 className="font-fraunces text-lg font-medium">Lote Z-47</h3>
-                </div>
-              </div>
-
-              {/* Top wide — golden-hour trial rows */}
-              <div className="photo-top-wide rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
-                <AppImage
-                  src="/assets/Quesos%20Zampa/tipos%20de%20quesos.jpg"
-                  alt="Tabla variada de quesos Zampa cortados listos para degustar al atardecer"
-                  fill
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-umber-dark/40 via-transparent to-transparent" />
-                <div className="absolute top-4 right-4 glass-dark px-3 py-1.5 rounded-full flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-wheat animate-pulse" />
-                  <span className="text-xs font-medium text-cream">Productos Orgánicos</span>
-                </div>
-              </div>
-
-              {/* Bottom left — close-up grain */}
-              <div className="photo-bottom-left rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
-                <AppImage
-                  src="/assets/Quesos%20Zampa/pecorino.jpeg"
-                  alt="Queso Pecorino Zampa madurado de corteza rústica"
-                  fill
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                
-              </div>
-
-              {/* Circular spinning element */}
-              <div className="photo-circular-element flex items-center justify-center relative">
-                <div className="relative w-32 h-32 flex items-center justify-center">
-                  <svg className="w-full h-full absolute animate-spin-slow" viewBox="0 0 100 100">
-                    <path id="hero-curve" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
-                    <text className="text-[7px] uppercase font-bold tracking-widest" fill="#C9A84C">
-                      <textPath href="#hero-curve">
-                        · Quesos de Oveja · Sabor de Origen · Desde 1984 ·
-                      </textPath>
-                    </text>
-                  </svg>
-                  <a
-                    href="#cultivars"
-                    className="w-16 h-16 rounded-full bg-teal flex items-center justify-center hover:bg-teal-light transition-all duration-300 shadow-lg z-10 hover:scale-110"
-                    aria-label="Explorar catálogo">
-                    
-                    <Icon name="ArrowUpRightIcon" size={22} variant="outline" className="text-cream" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Floating trial card */}
-            <div
-              ref={cardRef}
-              className="absolute top-[38%] right-[-28px] glass-stone p-5 rounded-3xl w-64 shadow-2xl animate-float border border-wheat/30 hidden lg:block">
-              
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-medium uppercase tracking-wide text-umber-light">Queso del Mes</span>
-                <Icon name="EllipsisHorizontalIcon" size={16} variant="outline" className="text-umber-light" />
-              </div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-wheat-muted text-teal flex-shrink-0">
-                  <Icon name="SparklesIcon" size={18} variant="outline" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-umber-dark">Pecorino Zampa</p>
-                  <p className="text-xs text-umber-light">Maduración: 6 a 12 meses</p>
-                </div>
-              </div>
-              <div className="flex items-center justify-between p-3 rounded-xl border border-wheat/30 bg-cream">
-                <span className="text-xs text-umber-light">Sabor Intenso</span>
-                <span className="text-sm font-semibold text-teal">100% Oveja</span>
-              </div>
-              <div className="mt-3 flex items-center gap-2 text-xs font-medium px-2 py-1 rounded-md text-teal bg-teal/10 w-max">
-                <Icon name="CheckCircleIcon" size={12} variant="outline" />
-                Stock Limitado
-              </div>
-            </div>
-          </div>
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row gap-5">
+          <a
+            href="#cultivars"
+            className="flex items-center justify-center gap-2 h-14 px-8 rounded-full bg-wheat text-charcoal font-semibold text-sm hover:bg-wheat-light transition-all duration-300 shadow-[0_0_20px_rgba(201,168,76,0.3)] hover:shadow-[0_0_30px_rgba(201,168,76,0.5)] hover:-translate-y-1 tracking-widest uppercase">
+            Explorar Variedades
+          </a>
+          <a
+            href="#timeline"
+            className="flex items-center justify-center gap-2 h-14 px-8 rounded-full border border-cream/50 bg-transparent text-cream font-medium text-sm hover:bg-cream/10 transition-all duration-300 backdrop-blur-sm tracking-widest uppercase">
+            Nuestra Historia
+          </a>
         </div>
       </div>
+      
+      {/* Scroll indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-bounce">
+        <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-wheat-light/70">Descubrir</span>
+        <Icon name="ArrowDownIcon" size={16} className="text-wheat-light/70" />
+      </div>
+
       {/* Wheat-gold divider */}
-      <div className="absolute bottom-0 left-0 right-0 wheat-rule z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-wheat to-transparent z-10 opacity-60" />
     </section>);
 
 }

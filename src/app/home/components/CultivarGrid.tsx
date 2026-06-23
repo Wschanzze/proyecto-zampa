@@ -68,7 +68,7 @@ export default function CultivarGrid() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.1 }
+      { threshold: 0.05 }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -82,64 +82,90 @@ export default function CultivarGrid() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div
-          className={`mb-20 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          
-          <p className="text-xs font-medium uppercase tracking-widest text-teal mb-3">Nuestra Selección</p>
-          <h2 className="font-fraunces text-4xl lg:text-5xl font-semibold text-umber-dark leading-tight max-w-3xl">
+          className={`mb-24 text-center transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal mb-4">Nuestra Selección</p>
+          <h2 className="font-fraunces text-4xl lg:text-6xl font-light text-umber-dark leading-tight max-w-4xl mx-auto">
             Variedades Artesanales<br />
-            <em className="font-light italic">Elaboradas con Leche 100% de Oveja</em>
+            <em className="font-light italic text-umber-light">Elaboradas con Leche 100% de Oveja</em>
           </h2>
-          <p className="mt-5 text-umber-light font-light text-lg max-w-2xl leading-relaxed">
-            Cada variedad de queso Zampa refleja el esmero en su maduración y el carácter natural de nuestras pasturas. Producción artesanal limitada y cuidada en cada etapa.
-          </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* List of Products */}
+        <div className="space-y-32">
           {cultivars.map((cultivar, index) => (
             <div
               key={cultivar.id}
-              className={`group rounded-3xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 ${
+              className={`flex flex-col transition-all duration-1000 ${
                 visible
                   ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-8'
+                  : 'opacity-0 translate-y-16'
               }`}
               style={{
-                transitionDelay: visible ? `${index * 100}ms` : '0ms'
+                transitionDelay: visible ? `${index * 150}ms` : '0ms'
               }}>
               
-              {/* Image */}
-              <div className="aspect-square overflow-hidden bg-limestone-soft relative">
-                <AppImage
-                  src={cultivar.image}
-                  alt={cultivar.imageAlt}
-                  width={500}
-                  height={500}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
+              {/* Product Title */}
+              <h3 className="font-fraunces text-3xl lg:text-5xl font-light text-charcoal uppercase tracking-wide mb-12">
+                {cultivar.name}
+              </h3>
 
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="font-fraunces text-xl font-semibold text-umber-dark mb-1">
-                  {cultivar.name}
-                </h3>
-                <p className="text-sm text-teal font-medium mb-4">{cultivar.region}</p>
+              {/* Product Content Row */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 items-center">
+                
+                {/* Left: Description & Link */}
+                <div className="flex flex-col gap-8 order-2 lg:order-1">
+                  <p className="text-umber-light font-light text-base lg:text-lg leading-relaxed">
+                    La gama <strong className="font-semibold text-umber-dark">{cultivar.name}</strong> ofrece quesos de leche cruda de oveja, madurados con cuidado.
+                    {cultivar.yieldGain}. Sabores auténticos, aromas únicos y texturas inigualables garantizan una experiencia exquisita para los amantes del queso.
+                  </p>
+                  
+                  <a href="#" className="inline-flex items-center gap-4 text-base font-medium text-umber-dark hover:text-teal transition-colors duration-300 group mt-auto">
+                    Descubre Más
+                    <div className="w-12 h-px bg-umber-dark group-hover:bg-teal transition-colors duration-300" />
+                  </a>
+                </div>
 
-                <div className="space-y-3 mb-5">
-                  <div className="flex items-start gap-2">
-                    <Icon name="CheckIcon" size={16} variant="outline" className="text-teal mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-umber-light">{cultivar.yieldGain}</p>
+                {/* Center: Image */}
+                <div className="relative aspect-square max-w-sm mx-auto w-full order-1 lg:order-2 group">
+                  <AppImage
+                    src={cultivar.image}
+                    alt={cultivar.imageAlt}
+                    width={500}
+                    height={500}
+                    className="w-full h-full object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+
+                {/* Right: Technical Details */}
+                <div className="flex flex-col justify-center gap-6 order-3 border-l border-wheat/30 pl-8 lg:pl-12">
+                  <div>
+                    <span className="text-xs font-medium uppercase tracking-widest text-limestone-soft/0 text-umber-light/50 mb-1 block">
+                      Curación:
+                    </span>
+                    <span className="font-fraunces text-xl font-light text-umber-dark uppercase tracking-wider">
+                      {cultivar.droughtTolerance}
+                    </span>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <Icon name="ShieldCheckIcon" size={16} variant="outline" className="text-teal mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-umber-light">Maduración: {cultivar.droughtTolerance}</p>
+                  
+                  <div>
+                    <span className="text-xs font-medium uppercase tracking-widest text-umber-light/50 mb-1 block">
+                      Elaboración:
+                    </span>
+                    <span className="text-base text-umber-dark font-light">
+                      Leche cruda de oveja, {cultivar.region}
+                    </span>
+                  </div>
+
+                  <div>
+                    <span className="text-xs font-medium uppercase tracking-widest text-umber-light/50 mb-1 block">
+                      Notas:
+                    </span>
+                    <span className="text-base text-umber-dark font-light">
+                      Aromas intensos, textura firme, sabor profundo.
+                    </span>
                   </div>
                 </div>
 
-                <a href="#" className="teal-link text-sm font-medium">
-                  Más Información →
-                </a>
               </div>
             </div>
           ))}
@@ -147,7 +173,7 @@ export default function CultivarGrid() {
       </div>
 
       {/* Wheat rule bottom */}
-      <div className="wheat-rule mt-16" />
+      <div className="wheat-rule mt-32" />
     </section>
   );
 }
