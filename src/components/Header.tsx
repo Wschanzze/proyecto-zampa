@@ -22,8 +22,8 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <AppLogo
+            src="/IMG_1960(1).png"
             size={36}
-            iconName="SparklesIcon"
             text="Quesos Zampa"
             className="text-umber"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

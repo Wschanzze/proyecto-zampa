@@ -120,7 +120,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right: Asymmetric photo grid */}
-          <div className="lg:col-span-7 relative hidden lg:block">
+          <div className="w-full mt-12 lg:mt-0 lg:col-span-7 relative">
             <div className="hero-photo-grid">
               {/* Main tall image — researcher hands inspecting grain */}
               <div className="photo-main rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
@@ -187,7 +187,7 @@ export default function HeroSection() {
             {/* Floating trial card */}
             <div
               ref={cardRef}
-              className="absolute top-[38%] right-[-28px] glass-stone p-5 rounded-3xl w-64 shadow-2xl animate-float border border-wheat/30">
+              className="absolute top-[38%] right-[-28px] glass-stone p-5 rounded-3xl w-64 shadow-2xl animate-float border border-wheat/30 hidden lg:block">
               
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-medium uppercase tracking-wide text-umber-light">Queso del Mes</span>

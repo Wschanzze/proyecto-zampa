@@ -182,7 +182,7 @@ export default function TimelineGallery() {
                     {/* Teal link (first appearance of "Explore Available Cultivars" CTA) */}
                     {i === 0 &&
                   <a href="#cultivars" className="teal-link text-sm font-medium self-start">
-                        Explore Available Cultivars →
+                        Ver Variedades Disponibles →
                       </a>
                   }
                   </div>
@@ -190,11 +190,11 @@ export default function TimelineGallery() {
                   {/* Data panel */}
                   <div className="lg:col-span-3 flex flex-col gap-4">
                     <div className="p-4 bg-cream rounded-2xl border border-wheat/25">
-                      <p className="text-xs font-medium uppercase tracking-widest text-teal mb-2">Yield Data</p>
+                      <p className="text-xs font-medium uppercase tracking-widest text-teal mb-2">Datos de Lote</p>
                       <p className="text-sm text-umber font-light leading-snug">{entry.yieldNote}</p>
                     </div>
                     <div className="p-4 bg-cream rounded-2xl border border-wheat/25">
-                      <p className="text-xs font-medium uppercase tracking-widest text-teal mb-2">Regional Impact</p>
+                      <p className="text-xs font-medium uppercase tracking-widest text-teal mb-2">Alcance de Distribución</p>
                       <p className="text-sm text-umber font-light leading-snug">{entry.regionNote}</p>
                     </div>
                   </div>

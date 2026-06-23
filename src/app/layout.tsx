@@ -8,11 +8,11 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Cultivar — Drought-Resistant Grain Research Institute',
-  description: 'Four decades of field-proven cultivar development for semi-arid landscapes. Licensing, trial seed, and soil restoration protocols for extension officers, agronomists, and cooperatives.',
+  title: 'Quesos Zampa — Quesería Artesanal de Oveja',
+  description: 'Elaboración de quesos artesanales de oveja de la más alta calidad, con maduración tradicional y respeto por el bienestar animal. Desde 1984.',
   icons: {
     icon: [
-      { url: '/assets/images/app_logo.png', type: 'image/x-icon' }
+      { url: '/zampaico.ico', type: 'image/x-icon' }
     ],
   },
 };
