@@ -86,6 +86,16 @@ export default function ImpactSection() {
     <section id="impact" ref={sectionRef} className="py-24 lg:py-32 bg-umber-dark px-6 lg:px-12 relative overflow-hidden">
       {/* Atmospheric overlays */}
       <div className="absolute inset-0 pointer-events-none">
+        {/* Transparent Background Image */}
+        <div 
+          className="absolute inset-0 opacity-[0.08] mix-blend-overlay"
+          style={{ 
+            backgroundImage: 'url("/assets/Quesos Zampa/6de54990-a007-4692-8898-b1dda1296784.jpg")', 
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }} 
+        />
         <div className="absolute top-0 right-0 w-1/2 h-1/2 opacity-10"
         style={{ background: 'radial-gradient(ellipse at 80% 10%, rgba(201,168,76,0.4) 0%, transparent 60%)' }} />
         <div className="absolute bottom-0 left-0 w-1/3 h-1/2 opacity-8"
@@ -147,45 +157,7 @@ export default function ImpactSection() {
             )}
           </div>
 
-          {/* Testimonials row */}
-          <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {[
-            {
-              quote: "El Pecorino Zampa le dio a nuestra tabla de quesos un valor único esta temporada. Los comensales lo eligen una y otra vez por su intensidad.",
-              name: 'Ignacio Soria',
-              role: 'Dueño y Chef de Restaurante de Autor, Buenos Aires',
-              avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop"
-            },
-            {
-              quote: "El control en el origen de la leche de oveja y el respeto por el pastoreo tradicional hacen de Quesos Zampa la marca más consistente del mercado.",
-              name: 'Dr. Martín Valenzuela',
-              role: 'Especialista en Producción Alimentaria y Catador de Quesos',
-              avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop"
-            }].
-            map((t) =>
-            <div key={t.name} className="p-7 rounded-4xl border border-wheat/15 bg-charcoal/40">
-                <div className="flex items-start gap-1 mb-4 text-wheat">
-                  {[1, 2, 3, 4, 5].map((s) =>
-                <svg key={s} className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                )}
-                </div>
-                <blockquote className="font-fraunces text-lg font-light italic text-limestone leading-relaxed mb-5">
-                  "{t.quote}"
-                </blockquote>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border border-wheat/20">
-                    <img src={t.avatar} alt={`Portrait of ${t.name}`} className="w-full h-full object-cover" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-limestone">{t.name}</p>
-                    <p className="text-xs text-limestone/55 font-light">{t.role}</p>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
+
         </div>
       </div>
     </section>);

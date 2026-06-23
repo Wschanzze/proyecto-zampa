@@ -17,13 +17,12 @@ export default function Header() {
         scrolled ? 'nav-blur py-2' : 'bg-transparent py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-center gap-4 lg:gap-8">
-        {/* Left: Nav links (INICIO, PRODUCTOS, NUESTRA HISTORIA) */}
-        <div className="hidden lg:flex items-center gap-6 lg:gap-8 justify-end">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative flex items-center justify-center min-h-[80px]">
+        {/* Left: Nav links (NUESTRA HISTORIA, NUESTROS QUESOS) */}
+        <div className="hidden lg:flex items-center gap-6 lg:gap-10 mr-4 lg:mr-8">
           {[
-            { label: 'INICIO', href: '#' },
-            { label: 'PRODUCTOS', href: '#cultivars' },
             { label: 'NUESTRA HISTORIA', href: '#timeline' },
+            { label: 'NUESTROS QUESOS', href: '#cultivars' },
           ].map((item) => (
             <a
               key={item.label}
@@ -36,21 +35,20 @@ export default function Header() {
         </div>
 
         {/* Center: Logo (No text, larger and centered) */}
-        <div className="flex justify-center items-center flex-shrink-0 mx-2 lg:mx-4">
+        <div className="flex justify-center items-center flex-shrink-0 z-10">
           <AppLogo
             src="/IMG_1960(1).png"
-            size={scrolled ? 80 : 110}
-            className="text-umber transition-all duration-500 hover:scale-105"
+            size={scrolled ? 90 : 140}
+            className="text-umber transition-all duration-500 hover:scale-105 cursor-pointer drop-shadow-md"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           />
         </div>
 
-        {/* Right: Nav links (ELABORACIÓN, COMUNIDAD, REVENDEDORES, CONTACTO) */}
-        <div className="hidden lg:flex items-center gap-6 lg:gap-8 justify-start">
+        {/* Right: Nav links (CALIDAD, NOSOTROS) */}
+        <div className="hidden lg:flex items-center gap-6 lg:gap-10 ml-4 lg:ml-8">
           {[
-            { label: 'ELABORACIÓN', href: '#about' },
-            { label: 'COMUNIDAD', href: '#impact' },
-            { label: 'REVENDEDORES', href: '#about' },
+            { label: 'CALIDAD', href: '#about' },
+            { label: 'NOSOTROS', href: '#impact' },
           ].map((item) => (
             <a
               key={item.label}
@@ -60,10 +58,13 @@ export default function Header() {
               {item.label}
             </a>
           ))}
-          {/* Contact button */}
+        </div>
+
+        {/* Right Edge: Contact button */}
+        <div className="absolute right-6 lg:right-12 hidden lg:block">
           <a
-            href="#about"
-            className="text-xs font-bold text-umber-dark border border-umber-dark/60 px-4 py-2 rounded-md hover:bg-umber-dark hover:text-cream transition-all duration-300 tracking-widest"
+            href="#contacto"
+            className="text-xs font-bold text-umber-dark border border-umber-dark/60 px-5 py-2.5 rounded hover:bg-umber-dark hover:text-cream transition-all duration-300 tracking-widest"
           >
             CONTACTO
           </a>
