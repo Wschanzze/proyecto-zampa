@@ -52,17 +52,17 @@ export default function HeroSection() {
         <h1
           ref={headlineRef}
           className="font-fraunces text-6xl lg:text-8xl font-light leading-tight text-cream mb-6 drop-shadow-2xl">
-          Tres Generaciones<br />
-          en la Tierra.<br />
+          Tambo Ovino Familiar.<br />
+          Quesos Artesanales.<br />
           <em className="font-light italic text-wheat-light">
-            Sabor de Origen.
+            Pasión de Origen.
           </em>
         </h1>
 
         <p
           ref={subRef}
           className="text-lg lg:text-xl font-light text-limestone-soft/90 leading-relaxed max-w-2xl mb-12 drop-shadow-md">
-          En Quesos Zampa elaboramos quesos artesanales de oveja de la más alta calidad, cuidando a nuestro rebaño en pasturas naturales donde el respeto por la tierra define el carácter de cada pieza.
+          En Quesos Zampa elaboramos quesos artesanales de oveja de la más alta calidad, cuidando a nuestro rebaño en pasturas naturales cerca de Napaleofú, donde el respeto por la tierra define el carácter de cada pieza.
         </p>
 
         {/* CTAs */}

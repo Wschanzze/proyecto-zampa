@@ -18,60 +18,49 @@ interface TimelineEntry {
 
 const entries: TimelineEntry[] = [
 {
-  year: '1984',
-  era: 'Fundación',
-  title: 'Primeros Pasos y Pasturas',
-  description: 'Introducción de las primeras ovejas seleccionadas en pasturas locales para iniciar el rebaño original.',
-  detail: 'Los fundadores comenzaron con un pequeño grupo de ovejas criadas con métodos de pastoreo natural. El objetivo era elaborar quesos con una identidad única, respetando los ciclos climáticos y el suelo. Las recetas originales de esta época sentaron las bases para nuestro característico sabor rústico y duradero.',
-  yieldNote: 'Lote inicial: 50 ovejas seleccionadas para un pastoreo de alta adaptabilidad.',
-  regionNote: 'Zona de origen: Pasturas originales de la quesería.',
+  year: '2018',
+  era: 'El Origen',
+  title: 'El Comienzo del Tambo',
+  description: 'Adquisición de las primeras ovejas frisonas y puesta en marcha del tambo en Napaleofú.',
+  detail: 'Tras asistir a una charla sobre tambos ovinos en Tandil, Juan Cruz, Isabel y Gonzalo decidieron emprender en el campo. Comenzaron con la compra de 40 borregas frisonas de aptitud lechera, iniciando así un camino de aprendizaje constante y manejo de pasturas bajo el nombre de Ovinos Zampa.',
+  yieldNote: 'Rodeo inicial: 40 borregas ovinas frisonas seleccionadas.',
+  regionNote: 'Establecimiento en Napaleofú, Buenos Aires (Ruta 226).',
   thumb: "/assets/Quesos%20Zampa/07B73847-614E-4FDC-B7AF-F639064C64CB.jpg",
-  thumbAlt: 'Fotografía histórica del rebaño original y pasturas de la quesería, 1984',
-  filter: 'grayscale(100%) contrast(1.05)'
+  thumbAlt: 'Fotografía del rebaño y pasturas de la quesería',
+  filter: 'grayscale(10%) contrast(1.05)'
 },
 {
-  year: '1997',
-  era: 'Crecimiento',
-  title: 'La Primera Quesería Tradicional',
-  description: 'Construcción de la planta de elaboración artesanal y la primera cámara de maduración tradicional.',
-  detail: 'Con el crecimiento del rebaño, se inauguró una instalación dedicada a la elaboración y control de temperatura de maduración. Esto permitió estandarizar la receta de nuestro queso Pecorino y aumentar la producción manteniendo la fermentación natural de la leche de oveja sin aditivos.',
-  yieldNote: 'Capacidad de maduración: Consolidación de la receta del Pecorino tradicional.',
-  regionNote: 'Expansión: Distribución ampliada a comunidades vecinas.',
+  year: '2020',
+  era: 'Quesería',
+  title: 'La Transformación en Quesos',
+  description: 'Decisión estratégica de integrar la cadena y elaborar quesos artesanales propios.',
+  detail: 'Para capturar mayor valor agregado, Zampa dejó de vender leche cruda a terceros y comenzó a procesarla en quesos de autor. Juan Cruz, con su formación gastronómica, desarrolló recetas inspiradas en las tradiciones francesa, italiana y española, elaborando quesos con leche fresca del mismo día.',
+  yieldNote: 'Integración: Elaboración diaria de lunes a lunes con leche fresca.',
+  regionNote: 'Desarrollo de las primeras recetas de Camembert y Pecorino.',
   thumb: "/assets/Quesos%20Zampa/68C50477-1C39-48B6-86FE-640DEDCA65B1.jpg",
-  thumbAlt: 'Cámara de maduración tradicional con estantes de madera y quesos curándose'
+  thumbAlt: 'Quesos madurando en estanterías tradicionales'
 },
 {
-  year: '2009',
-  era: 'Reconocimiento',
-  title: 'Distribución en Tiendas Especializadas',
-  description: 'Los quesos Zampa llegan a los primeros almacenes gourmet y tiendas de especialidad en la región.',
-  detail: 'La reputación del sabor curado y el cuidado artesanal abrió las puertas de los mercados más exigentes. Se estableció un sistema de distribución enfocado en mantener la cadena de frío y preservar las cualidades del queso desde el campo hasta la mesa de los consumidores.',
-  yieldNote: 'Presencia de marca: Primeras fiambrerías gourmet y restaurantes de autor selectos.',
-  regionNote: 'Distribución regional en las principales tiendas gourmet de la provincia.',
+  year: '2023',
+  era: 'Crecimiento',
+  title: 'Reconocimiento y Expansión',
+  description: 'Los quesos Zampa llegan a los locales gourmet más exigentes de Tandil y la zona.',
+  detail: 'La excelente calidad láctica de la leche de oveja frisona consolidó a Zampa en el mercado regional. Dietéticas, fiambrerías gourmet y vinerías seleccionadas en Tandil comenzaron a ofrecer nuestras variedades, construyendo una reputación de sabor único y cuidado artesanal.',
+  yieldNote: 'Canal Gourmet: Distribución consolidada en locales seleccionados.',
+  regionNote: 'Presencia regional fuerte en Tandil, Napaleofú y la zona.',
   thumb: "/assets/Quesos%20Zampa/6de54990-a007-4692-8898-b1dda1296784.jpg",
-  thumbAlt: 'Presentación de quesos Zampa en un mercado gourmet regional'
-},
-{
-  year: '2019',
-  era: 'Sostenibilidad',
-  title: 'Pastoreo Rotativo y Bienestar Animal',
-  description: 'El bienestar del rebaño es la base del sabor. Implementación de un manejo de pastura rotativa.',
-  detail: 'Estudios en nuestros suelos nos impulsaron a adoptar protocolos de regeneración del pasto. El pastoreo rotativo asegura que las ovejas tengan alimento de la más alta calidad y que el suelo se recupere de forma natural, aumentando el contenido de nutrientes en la leche que luego se transmite a nuestros quesos.',
-  yieldNote: 'Sostenibilidad: 100% de pasturas bajo manejo rotativo y regenerativo.',
-  regionNote: 'Certificación de prácticas de pastoreo respetuosas con el medio ambiente.',
-  thumb: "/assets/Quesos%20Zampa/BAB4C1FD-5368-4434-ADE4-498A3AE4D8C6.jpg",
-  thumbAlt: 'Vista de ovejas pastando en el campo bajo el protocolo de pastoreo rotativo'
+  thumbAlt: 'Presentación de quesos en almacén regional'
 },
 {
   year: '2026',
   era: 'Presente',
-  title: 'Tradición y Nuevas Variedades',
-  description: 'Maduración de recetas y lanzamiento de quesos de autor de edición limitada.',
-  detail: 'Con más de 40 años perfeccionando el arte de la quesería artesanal de oveja, combinamos la experiencia de tres generaciones con técnicas modernas de análisis de calidad. Seguimos empujando los límites de la maduración para ofrecer quesos con texturas y matices únicos en cada temporada.',
-  yieldNote: 'Producción actual: 23 lotes anuales de maduración prolongada y quesos de autor.',
-  regionNote: 'Mercado de exportación y tiendas seleccionadas a nivel nacional.',
+  title: 'Cadena Completa y Nuevos Desafíos',
+  description: 'Quesería habilitada en el propio campo y enfoque en maduraciones prolongadas.',
+  detail: 'Con una majada de 100 ovejas y la quesería a solo 100 metros del tambo, controlamos cada paso del proceso sin intermediarios. Nuestros próximos grandes hitos son abrir un local exclusivo de la marca en Tandil y consolidar nuestro Pecorino de larga maduración (9 a 12 meses en cava).',
+  yieldNote: 'Producción actual: ~100 kg de queso artesanal por semana.',
+  regionNote: 'Proyecto futuro: Local propio exclusivo de Quesos Zampa en Tandil.',
   thumb: "/assets/Quesos%20Zampa/IMG_9824.JPG",
-  thumbAlt: 'Corteza y textura detallada de un queso madurado Zampa en 2026'
+  thumbAlt: 'Queso madurado de oveja Zampa en cava'
 }];
 
 
@@ -103,11 +92,11 @@ export default function TimelineGallery() {
           
           <p className="text-xs font-medium uppercase tracking-widest text-teal mb-3">Nuestra Trayectoria</p>
           <h2 className="font-fraunces text-4xl lg:text-5xl font-semibold text-umber-dark leading-tight max-w-2xl">
-            Cuatro Décadas de Tradición,<br />
-            <em className="font-light italic">Un Legado Familiar en Cada Lote.</em>
+            Un Tambo Ovino Familiar,<br />
+            <em className="font-light italic">Pasión de Origen en Cada Queso.</em>
           </h2>
           <p className="mt-5 text-umber-light font-light text-lg max-w-xl leading-relaxed">
-            Cada etapa representa el esfuerzo de nuestra familia para perfeccionar el queso de oveja artesanal. Haz clic en cualquier época para leer más.
+            Cada hito representa el esfuerzo de nuestro equipo para perfeccionar el queso de oveja artesanal. Haz clic en cualquier época para conocer más.
           </p>
         </div>
 

@@ -57,8 +57,8 @@ export default function HeritageSection() {
               ref={headlineRef}
               className="font-fraunces text-5xl lg:text-6xl font-semibold leading-[1.05] text-umber-dark">
               
-              Tres Generaciones<br />
-              en la Tierra.<br />
+              La Esencia del<br />
+              Tambo Familiar.<br />
               <em className="font-light italic text-umber" style={{ fontStyle: 'italic' }}>
                 Sabor de Origen.
               </em>
@@ -68,7 +68,7 @@ export default function HeritageSection() {
               ref={subRef}
               className="text-lg font-light text-umber-light leading-relaxed max-w-md">
               
-              En Quesos Zampa elaboramos quesos artesanales de oveja de la más alta calidad, cuidando a nuestro rebaño en pasturas naturales donde el respeto por la tierra define el carácter de cada pieza.
+              En Quesos Zampa elaboramos quesos artesanales en Napaleofú, controlando todo el proceso desde la siembra de nuestras pasturas y el ordeñe diario, hasta la maduración en cava a solo 100 metros del tambo.
             </p>
 
             {/* CTAs */}

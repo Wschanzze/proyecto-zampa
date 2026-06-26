@@ -12,17 +12,18 @@ interface Metric {
 }
 
 const metrics: Metric[] = [
-{ value: 40, suffix: ' años', label: 'Historia y Tradición', sub: 'Elaboración ininterrumpida desde 1984', icon: 'CalendarIcon' },
-{ value: 4.8, suffix: 'M L', label: 'Leche Procesada', sub: 'Control de calidad en cada etapa', icon: 'GlobeAltIcon' },
-{ value: 23, suffix: '', label: 'Lotes de Selección', sub: 'Lotes gourmet en cámara este año', icon: 'BeakerIcon' },
-{ value: 98, suffix: '%', label: 'Satisfacción Gourmet', sub: 'Aceptación en tiendas gourmet y restaurantes', icon: 'ChartBarIcon' }];
+  { value: 100, suffix: ' Ovejas', label: 'Rodeo Lechero', sub: 'Ovejas frisonas lecheras seleccionadas en ordeñe diario', icon: 'SparklesIcon' },
+  { value: 100, suffix: ' kg/sem', label: 'Producción Limitada', sub: 'Quesos elaborados artesanalmente en lotes pequeños', icon: 'InboxIcon' },
+  { value: 100, suffix: '%', label: 'Cadena de Valor', sub: 'Ordeñe y quesería a solo 100 metros en el mismo campo', icon: 'CheckCircleIcon' },
+  { value: 2018, suffix: '', label: 'Año de Inicio', sub: 'Emprendimiento familiar fundado en Napaleofú', icon: 'CalendarIcon' }
+];
 
 
 const adoptionZones = [
-{ region: 'Mercado de Buenos Aires & Centro', hectares: '2.1M L', pct: 0.88, note: 'Almacenes boutique, vinerías y restaurantes' },
-{ region: 'Región Pampeana', hectares: '1.4M L', pct: 0.72, note: 'Tiendas de especialidad en toda la provincia' },
-{ region: 'Patagonia & Sur', hectares: '820K L', pct: 0.48, note: 'Hoteles boutique y distribución directa' },
-{ region: 'Mercados de Exportación', hectares: '480K L', pct: 0.32, note: 'Tiendas de productos selectos de importación' }];
+  { region: 'Tandil & Locales Regionales', hectares: '60%', pct: 0.60, note: 'Almacenes gourmet, dietéticas y vinerías de especialidad' },
+  { region: 'Napaleofú & Zona de Influencia', hectares: '25%', pct: 0.25, note: 'Venta directa en la zona y comercios de cercanía' },
+  { region: 'Distribución Especial Directa', hectares: '15%', pct: 0.15, note: 'Despachos directos desde el campo a clientes y eventos' }
+];
 
 
 function useCountUp(target: number, duration = 1800, start = false) {
@@ -88,9 +89,9 @@ export default function ImpactSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/assets/Quesos%20Zampa/6de54990-a007-4692-8898-b1dda1296784.jpg" 
+          src="/assets/Quesos%20Zampa/IMG_1034.jpg" 
           alt="Origen de la Leche de Oveja" 
-          className="w-full h-full object-cover object-center opacity-40 transition-transform duration-[20s] hover:scale-105"
+          className="w-full h-full object-cover object-center opacity-25 transition-transform duration-[20s] hover:scale-105"
         />
         {/* Gradient overlays to blend with the rest of the site */}
         <div className="absolute inset-0 bg-gradient-to-t from-umber-dark via-charcoal/80 to-umber-dark opacity-90" />

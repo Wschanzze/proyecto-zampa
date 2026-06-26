@@ -25,7 +25,7 @@ export default function VisitSection() {
         
         {/* Texts */}
         <div className={`transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-umber-light mb-6">Origen Campoveja</p>
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-umber-light mb-6">Establecimiento Zampa</p>
           
           <h2 className="font-fraunces text-5xl lg:text-7xl font-light text-umber-dark leading-tight mb-16 mx-auto max-w-4xl">
             UN VIAJE PARA DESCUBRIR LA TRADICIÓN QUESERA.<br />

@@ -25,7 +25,7 @@ export default function CtaSection() {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <AppImage
-          src="/assets/Quesos%20Zampa/footer.png"
+          src="/assets/Quesos%20Zampa/IMG_1900.jpg"
           alt="Vista panorámica de la quesería Zampa y pasturas al atardecer"
           fill
           className="w-full h-full object-cover opacity-15"
@@ -45,20 +45,20 @@ export default function CtaSection() {
           <p className="text-xs font-medium uppercase tracking-widest text-teal mb-5">El Legado Continúa</p>
 
           <h2 className="font-fraunces text-5xl lg:text-6xl font-semibold text-umber-dark leading-tight mb-7">
-            Cuatro Décadas de Pasión.<br />
-            <em className="font-light italic">Sabor Artesanal en tu Mesa.</em>
+            Del Campo a tu Mesa.<br />
+            <em className="font-light italic">Sabor Artesanal de Oveja.</em>
           </h2>
 
           <p className="text-xl font-light text-umber-light leading-relaxed max-w-2xl mx-auto mb-10">
-            Cada variedad de nuestra quesería se elabora bajo estrictos controles de origen y bienestar animal, asegurando que disfrutes de un producto premium directo del campo.
+            Cada una de nuestras piezas gourmet se elabora de lunes a lunes con leche de oveja fresca del mismo día, garantizando la máxima pureza, trazabilidad y bienestar animal.
           </p>
 
           {/* Evidence strip */}
           <div className="flex items-center justify-center gap-8 flex-wrap mb-12">
             {[
-            { icon: 'BeakerIcon', text: '5 Variedades de Queso' },
+            { icon: 'BeakerIcon', text: '6 Variedades de Queso' },
             { icon: 'GlobeAltIcon', text: 'Origen y Trazabilidad' },
-            { icon: 'ShieldCheckIcon', text: 'Procesos de Calidad' }].
+            { icon: 'ShieldCheckIcon', text: 'Procesos Integrados' }].
             map((item) =>
             <div key={item.text} className="flex items-center gap-2 text-sm font-medium text-umber">
                 <Icon name={item.icon as any} size={16} variant="outline" className="text-teal" />
