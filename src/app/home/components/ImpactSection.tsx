@@ -83,10 +83,10 @@ export default function ImpactSection() {
         <img 
           src="/assets/Quesos%20Zampa/IMG_1034.jpg" 
           alt="Origen de la Leche de Oveja" 
-          className="w-full h-full object-cover object-center opacity-25 transition-transform duration-[20s] hover:scale-105"
+          className="w-full h-full object-cover object-center opacity-45 transition-transform duration-[20s] hover:scale-105"
         />
         {/* Gradient overlays to blend with the rest of the site */}
-        <div className="absolute inset-0 bg-gradient-to-t from-umber-dark via-charcoal/80 to-umber-dark opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-umber-dark via-charcoal/80 to-umber-dark opacity-80" />
         <div className="absolute inset-0 bg-gradient-to-r from-umber-dark/50 via-transparent to-umber-dark/50" />
       </div>
 
