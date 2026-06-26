@@ -54,7 +54,7 @@ export default function SliderSection() {
   }, []);
 
   return (
-    <section className="relative min-h-[600px] lg:min-h-[750px] w-full overflow-hidden bg-charcoal text-white flex items-center">
+    <section className="relative min-h-[600px] lg:min-h-[750px] w-full overflow-hidden bg-gray-soft text-charcoal flex items-center">
       {/* Background Slides (Full screen bleed) */}
       <div className="absolute inset-0 z-0">
         {slides.map((slide, idx) => (
@@ -68,14 +68,14 @@ export default function SliderSection() {
               src={slide.image}
               alt={slide.title}
               fill
-              className="object-cover"
+              className="object-cover opacity-20"
               priority={idx === 0}
             />
           </div>
         ))}
-        {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-charcoal/50 z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-charcoal/30 z-10" />
+        {/* Light overlay for readability */}
+        <div className="absolute inset-0 bg-gray-soft/60 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-soft via-transparent to-gray-soft/40 z-10" />
       </div>
 
       {/* Main Content Container */}
@@ -90,13 +90,13 @@ export default function SliderSection() {
                   : 'opacity-0 -translate-x-12 absolute pointer-events-none'
               }`}
             >
-              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-wheat-light drop-shadow-md">
+              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-teal">
                 {slide.subtitle}
               </span>
-              <h2 className="font-fraunces text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] text-white uppercase tracking-wider drop-shadow-lg">
+              <h2 className="font-fraunces text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] text-umber-dark uppercase tracking-wider">
                 {slide.title}
               </h2>
-              <p className="text-sm md:text-base lg:text-lg font-light text-white/90 leading-relaxed max-w-xl drop-shadow-md">
+              <p className="text-sm md:text-base lg:text-lg font-light text-charcoal/90 leading-relaxed max-w-xl">
                 {slide.excerpt}
               </p>
               
@@ -105,11 +105,11 @@ export default function SliderSection() {
                 href={slide.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-4 text-xs md:text-sm font-semibold tracking-[0.2em] uppercase text-white hover:text-wheat transition-colors duration-300 mt-4 w-fit"
+                className="group inline-flex items-center gap-4 text-xs md:text-sm font-semibold tracking-[0.2em] uppercase text-charcoal hover:text-teal transition-colors duration-300 mt-4 w-fit"
               >
                 <span>{slide.buttonText}</span>
-                <span className="flex items-center justify-center w-10 h-10 rounded-full border border-white/30 group-hover:border-wheat transition-colors duration-300">
-                  <Icon name="ArrowRightIcon" size={14} className="text-white group-hover:text-wheat transition-all duration-300 group-hover:translate-x-1" />
+                <span className="flex items-center justify-center w-10 h-10 rounded-full border border-charcoal/30 group-hover:border-teal transition-colors duration-300">
+                  <Icon name="ArrowRightIcon" size={14} className="text-charcoal group-hover:text-teal transition-all duration-300 group-hover:translate-x-1" />
                 </span>
               </a>
             </div>
@@ -126,13 +126,13 @@ export default function SliderSection() {
             className="flex items-center justify-end text-right group py-2 focus:outline-none"
             aria-label={`Ir al slide ${idx + 1}`}
           >
-            <span className={`text-xs uppercase tracking-[0.2em] text-white/70 mr-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:inline-block`}>
+            <span className={`text-xs uppercase tracking-[0.2em] text-charcoal/70 mr-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:inline-block`}>
               {slide.subtitle}
             </span>
             <div className="flex items-center gap-3">
-              {current === idx && <div className="w-8 h-px bg-wheat transition-all duration-500" />}
+              {current === idx && <div className="w-8 h-px bg-teal transition-all duration-500" />}
               <span className={`font-fraunces text-sm md:text-base transition-all duration-300 ${
-                current === idx ? 'text-wheat font-semibold scale-110' : 'text-white/40 hover:text-white/80'
+                current === idx ? 'text-teal font-semibold scale-110' : 'text-charcoal/40 hover:text-charcoal/80'
               }`}>
                 0{idx + 1}
               </span>

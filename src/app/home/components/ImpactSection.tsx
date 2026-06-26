@@ -44,16 +44,16 @@ function MetricCard({ metric, started }: { metric: Metric; started: boolean }) {
   const displayValue = useCountUp(metric.value, 1800, started);
   return (
     <div className="flex flex-col items-center text-center group relative p-6">
-      <div className="absolute inset-0 border border-wheat/10 rounded-2xl bg-white/5 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500" />
+      <div className="absolute inset-0 border border-teal/15 rounded-2xl bg-white/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500" />
       <div className="relative z-10">
-        <div className="text-wheat mb-4 transform group-hover:scale-110 transition-transform duration-500">
+        <div className="text-teal mb-4 transform group-hover:scale-110 transition-transform duration-500">
           <Icon name={metric.icon as any} size={28} />
         </div>
-        <div className="font-fraunces text-4xl lg:text-5xl font-semibold text-cream mb-2 tracking-tight">
+        <div className="font-fraunces text-4xl lg:text-5xl font-semibold text-charcoal mb-2 tracking-tight">
           {metric.prefix}{displayValue}{metric.suffix}
         </div>
-        <div className="text-sm font-medium text-wheat-light tracking-widest uppercase mb-2">{metric.label}</div>
-        <p className="text-xs text-limestone-soft/60 font-light max-w-[160px] mx-auto">{metric.sub}</p>
+        <div className="text-sm font-medium text-teal-dark tracking-widest uppercase mb-2">{metric.label}</div>
+        <p className="text-xs text-charcoal/70 font-light max-w-[160px] mx-auto">{metric.sub}</p>
       </div>
     </div>
   );
@@ -77,34 +77,34 @@ export default function ImpactSection() {
   }, []);
 
   return (
-    <section id="impact" ref={sectionRef} className="relative py-32 lg:py-48 flex flex-col items-center justify-center overflow-hidden bg-charcoal">
+    <section id="impact" ref={sectionRef} className="relative py-32 lg:py-48 flex flex-col items-center justify-center overflow-hidden bg-gray-soft">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src="/assets/Quesos%20Zampa/IMG_1034.jpg" 
           alt="Origen de la Leche de Oveja" 
-          className="w-full h-full object-cover object-center opacity-45 transition-transform duration-[20s] hover:scale-105"
+          className="w-full h-full object-cover object-center opacity-15 transition-transform duration-[20s] hover:scale-105"
         />
         {/* Gradient overlays to blend with the rest of the site */}
-        <div className="absolute inset-0 bg-gradient-to-t from-umber-dark via-charcoal/80 to-umber-dark opacity-80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-umber-dark/50 via-transparent to-umber-dark/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-soft via-gray-soft/80 to-gray-soft" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-soft/40 via-transparent to-gray-soft/40" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full">
         {/* Premium Header */}
         <div className={`flex flex-col items-center text-center mb-20 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           <div className="flex items-center gap-4 mb-6">
-            <div className="h-px w-12 bg-wheat/60" />
-            <p className="text-sm font-medium uppercase tracking-[0.3em] text-wheat">Compromiso con el Origen</p>
-            <div className="h-px w-12 bg-wheat/60" />
+            <div className="h-px w-12 bg-teal/60" />
+            <p className="text-sm font-medium uppercase tracking-[0.3em] text-teal">Compromiso con el Origen</p>
+            <div className="h-px w-12 bg-teal/60" />
           </div>
           
-          <h2 className="font-fraunces text-5xl lg:text-7xl font-light text-cream leading-tight mb-8 drop-shadow-lg">
+          <h2 className="font-fraunces text-5xl lg:text-7xl font-light text-umber-dark leading-tight mb-8">
             Cuando la Calidad es Constante,<br />
-            <span className="italic font-normal text-wheat-light">el Sabor se Vuelve Inolvidable.</span>
+            <span className="italic font-normal text-teal">el Sabor se Vuelve Inolvidable.</span>
           </h2>
           
-          <p className="max-w-2xl text-limestone-soft/80 text-lg lg:text-xl font-light leading-relaxed">
+          <p className="max-w-2xl text-charcoal/80 text-lg lg:text-xl font-light leading-relaxed">
             Nuestro secreto reside en la pureza de nuestra leche de oveja y en el respeto absoluto 
             por los tiempos de maduración. Un proceso artesanal que garantiza una experiencia gourmet 
             en cada bocado.

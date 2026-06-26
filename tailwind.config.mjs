@@ -21,6 +21,7 @@ export default {
         'teal-light': '#3D7A76',
         'teal-dark': '#1E3D3B',
         charcoal: '#2A2018',
+        'gray-soft': '#F3F4F6',
       },
       fontFamily: {
         fraunces: ['Fraunces', 'serif'],
