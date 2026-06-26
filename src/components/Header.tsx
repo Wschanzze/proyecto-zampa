@@ -27,7 +27,9 @@ export default function Header() {
             <a
               key={item.label}
               href={item.href}
-              className="text-xs font-bold text-umber-dark hover:text-teal transition-colors duration-200 tracking-widest"
+              className={`text-xs font-bold transition-colors duration-300 tracking-widest ${
+                scrolled ? 'text-umber-dark hover:text-teal' : 'text-cream hover:text-wheat-light'
+              }`}
             >
               {item.label}
             </a>
@@ -53,7 +55,9 @@ export default function Header() {
             <a
               key={item.label}
               href={item.href}
-              className="text-xs font-bold text-umber-dark hover:text-teal transition-colors duration-200 tracking-widest"
+              className={`text-xs font-bold transition-colors duration-300 tracking-widest ${
+                scrolled ? 'text-umber-dark hover:text-teal' : 'text-cream hover:text-wheat-light'
+              }`}
             >
               {item.label}
             </a>
@@ -66,7 +70,11 @@ export default function Header() {
             href="https://www.instagram.com/quesos_zampa"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-bold text-umber-dark border border-umber-dark/60 px-5 py-2.5 rounded hover:bg-umber-dark hover:text-cream transition-all duration-300 tracking-widest"
+            className={`text-xs font-bold border px-5 py-2.5 rounded transition-all duration-300 tracking-widest ${
+              scrolled 
+                ? 'text-umber-dark border-umber-dark/60 hover:bg-umber-dark hover:text-cream' 
+                : 'text-cream border-cream/50 hover:bg-cream hover:text-charcoal'
+            }`}
           >
             CONTACTO
           </a>
