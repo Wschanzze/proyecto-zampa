@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from './components/HeroSection';
+import ProductParallaxSection from './components/ProductParallaxSection';
 import AudienceSection from './components/AudienceSection';
 import SliderSection from './components/SliderSection';
 import TimelineGallery from './components/TimelineGallery';
@@ -15,6 +16,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-limestone-soft">
       <Header />
       <HeroSection />
+      <ProductParallaxSection />
       <AudienceSection />
       <SliderSection />
       <TimelineGallery />

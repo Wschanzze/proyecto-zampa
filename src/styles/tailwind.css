@@ -343,3 +343,250 @@ a.teal-link:hover {
 .animate-spin-slow {
   animation: spinSlow 18s linear infinite;
 }
+
+/* Product Parallax Section Styling */
+.parallax-section {
+  position: relative;
+  background-color: var(--gray-soft);
+  padding: 6rem 1.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 650px;
+}
+
+@media (min-width: 1024px) {
+  .parallax-section {
+    padding: 8rem 3rem;
+  }
+}
+
+/* Floating Wrappers */
+.parallax-img-wrapper {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  will-change: transform;
+}
+
+.wrapper-1 {
+  left: 5%;
+  top: 15%;
+  width: 220px;
+  animation: float-gentle-1 8s ease-in-out infinite;
+}
+
+.wrapper-2 {
+  right: 6%;
+  top: 15%;
+  width: 210px;
+  animation: float-gentle-2 10s ease-in-out infinite 1s;
+}
+
+.wrapper-3 {
+  right: 5%;
+  bottom: 8%;
+  width: 230px;
+  animation: float-gentle-3 9s ease-in-out infinite 0.5s;
+}
+
+@media (max-width: 1200px) {
+  .wrapper-1 { width: 170px; }
+  .wrapper-2 { width: 160px; }
+  .wrapper-3 { width: 180px; }
+}
+
+@media (max-width: 1023px) {
+  .wrapper-1 {
+    width: 120px;
+    left: 2%;
+    top: 5%;
+  }
+  .wrapper-2 {
+    width: 110px;
+    right: 2%;
+    top: 8%;
+  }
+  .wrapper-3 {
+    width: 130px;
+    right: 1%;
+    bottom: 5%;
+  }
+}
+
+@media (max-width: 640px) {
+  .parallax-img-wrapper {
+    opacity: 0.35; /* Soften on small mobile to not block the text card */
+  }
+}
+
+.parallax-img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+/* Central Container & Glass Card */
+.parallax-container {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  max-width: 680px;
+}
+
+.parallax-card {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 30px 60px -15px rgba(42, 32, 24, 0.05),
+              inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .parallax-card {
+    padding: 4.5rem 3.5rem;
+    border-radius: 2.5rem;
+  }
+}
+
+/* Card Logo */
+.parallax-card-logo-container {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(42, 32, 24, 0.06);
+  margin-bottom: 2rem;
+}
+
+.parallax-card-logo {
+  width: 52px;
+  height: auto;
+}
+
+/* Badge */
+.parallax-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.badge-line {
+  height: 1px;
+  width: 40px;
+  background: rgba(107, 66, 38, 0.2);
+}
+
+.badge-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: var(--teal);
+  text-transform: uppercase;
+}
+
+/* Title */
+.parallax-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--charcoal);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .parallax-title {
+    font-size: 2.25rem;
+    line-height: 1.25;
+  }
+}
+
+.parallax-title .text-highlight {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--umber-light);
+  text-transform: uppercase;
+}
+
+/* Divider */
+.parallax-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+  width: 100%;
+}
+
+.divider-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--wheat);
+  box-shadow: 0 0 8px var(--wheat);
+}
+
+/* Description */
+.parallax-description {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--umber-dark);
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+@media (min-width: 768px) {
+  .parallax-description {
+    font-size: 1.05rem;
+  }
+}
+
+/* Footer / Signature */
+.parallax-footer {
+  width: 100%;
+  border-top: 1px dashed rgba(107, 66, 38, 0.15);
+  padding-top: 1.5rem;
+}
+
+.aesthetic-signature {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: var(--umber-light);
+  text-transform: uppercase;
+}
+
+/* Keyframe Animations */
+@keyframes float-gentle-1 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+@keyframes float-gentle-2 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(15px) rotate(-3deg); }
+}
+
+@keyframes float-gentle-3 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1.5deg); }
+}
