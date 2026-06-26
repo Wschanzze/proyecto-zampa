@@ -45,7 +45,7 @@ function MetricCard({ metric, started }: { metric: Metric; started: boolean }) {
   const displayValue = useCountUp(metric.value, 1800, started);
   return (
     <div className="flex flex-col items-start text-left group relative p-5">
-      <div className="absolute inset-0 border border-teal/10 rounded-2xl bg-gray-soft/20 group-hover:bg-gray-soft/60 group-hover:border-teal/20 transition-all duration-500" />
+      <div className="absolute inset-0 border border-teal/5 group-hover:border-teal/15 rounded-2xl bg-white/40 group-hover:bg-white/85 shadow-[0_2px_8px_rgba(46,93,90,0.02)] group-hover:shadow-[0_8px_24px_rgba(46,93,90,0.08)] transition-all duration-500" />
       <div className="relative z-10">
         <div className="text-teal mb-3 transform group-hover:scale-110 transition-transform duration-500">
           <Icon name={metric.icon as any} size={24} />
@@ -78,7 +78,7 @@ export default function ImpactSection() {
   }, []);
 
   return (
-    <section id="impact" ref={sectionRef} className="relative py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-white">
+    <section id="impact" ref={sectionRef} className="relative py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-gray-soft">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           

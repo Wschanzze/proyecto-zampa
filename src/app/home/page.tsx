@@ -4,7 +4,6 @@ import HeroSection from './components/HeroSection';
 import AudienceSection from './components/AudienceSection';
 import SliderSection from './components/SliderSection';
 import TimelineGallery from './components/TimelineGallery';
-import CultivarGrid from './components/CultivarGrid';
 import ImpactSection from './components/ImpactSection';
 import VisitSection from './components/VisitSection';
 import HeritageSection from './components/HeritageSection';
@@ -19,7 +18,6 @@ export default function HomePage() {
       <AudienceSection />
       <SliderSection />
       <TimelineGallery />
-      <CultivarGrid />
       <ImpactSection />
       <VisitSection />
       <HeritageSection />

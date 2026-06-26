@@ -24,7 +24,7 @@ export default function HeritageSection() {
   }, []);
 
   return (
-    <section id="heritage" className="relative py-24 lg:py-32 bg-white overflow-hidden flex items-center grain-overlay">
+    <section id="heritage" className="relative py-24 lg:py-32 bg-gray-soft overflow-hidden flex items-center grain-overlay">
       {/* Atmospheric gradient background */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div

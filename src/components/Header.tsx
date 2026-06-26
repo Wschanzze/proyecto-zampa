@@ -18,11 +18,11 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative flex items-center justify-center min-h-[80px]">
-        {/* Left: Nav links (NUESTRA HISTORIA, NUESTROS QUESOS) */}
+        {/* Left: Nav links (NUESTRA HISTORIA, PRODUCTOS) */}
         <div className="hidden lg:flex items-center gap-6 lg:gap-10 mr-4 lg:mr-8">
           {[
-            { label: 'NUESTRA HISTORIA', href: '#timeline' },
-            { label: 'NUESTROS QUESOS', href: '#cultivars' },
+            { label: 'NUESTRA HISTORIA', href: '/#timeline' },
+            { label: 'PRODUCTOS', href: '/productos' },
           ].map((item) => (
             <a
               key={item.label}
@@ -49,8 +49,8 @@ export default function Header() {
         {/* Right: Nav links (CALIDAD, NOSOTROS) */}
         <div className="hidden lg:flex items-center gap-6 lg:gap-10 ml-4 lg:ml-8">
           {[
-            { label: 'CALIDAD', href: '#about' },
-            { label: 'NOSOTROS', href: '#impact' },
+            { label: 'CALIDAD', href: '/#about' },
+            { label: 'NOSOTROS', href: '/#impact' },
           ].map((item) => (
             <a
               key={item.label}

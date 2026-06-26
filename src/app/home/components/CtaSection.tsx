@@ -20,7 +20,7 @@ export default function CtaSection() {
     <section
       id="about"
       ref={sectionRef}
-      className="relative py-24 lg:py-36 px-6 lg:px-12 bg-limestone overflow-hidden">
+      className="relative py-24 lg:py-36 px-6 lg:px-12 bg-white overflow-hidden">
       
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
@@ -31,7 +31,7 @@ export default function CtaSection() {
           className="w-full h-full object-cover opacity-15"
           priority />
         
-        <div className="absolute inset-0 bg-gradient-to-b from-limestone via-limestone/80 to-limestone" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white" />
       </div>
 
       {/* Wheat rule */}
@@ -49,7 +49,7 @@ export default function CtaSection() {
             <em className="font-light italic text-teal">Sabor Artesanal de Oveja.</em>
           </h2>
 
-          <p className="text-xl font-light text-umber-light leading-relaxed max-w-2xl mx-auto mb-10">
+          <p className="text-xl font-light text-charcoal/85 leading-relaxed max-w-2xl mx-auto mb-10">
             Cada una de nuestras piezas gourmet se elabora de lunes a lunes con leche de oveja fresca del mismo día, garantizando la máxima pureza, trazabilidad y bienestar animal.
           </p>
 
@@ -80,7 +80,7 @@ export default function CtaSection() {
             </a>
           </div>
 
-          <p className="text-sm text-umber-light font-light">
+          <p className="text-sm text-charcoal/70 font-light">
             Distribuidores y comercios interesados pueden{' '}
             <a 
               href="https://www.instagram.com/quesos_zampa" 
