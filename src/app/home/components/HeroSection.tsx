@@ -42,24 +42,27 @@ export default function HeroSection() {
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-5xl mx-auto w-full px-6 lg:px-12 pt-32 pb-24 flex flex-col items-center text-center">
-        {/* Season badge */}
-        <div className="inline-flex items-center gap-2 mb-8 border border-wheat/30 bg-charcoal/40 backdrop-blur-md px-5 py-2.5 rounded-full shadow-2xl">
-          <span className="w-2 h-2 rounded-full bg-wheat animate-pulse flex-shrink-0" />
-          <span className="text-xs font-medium text-cream tracking-[0.2em] uppercase">
-            Temporada 2026 Abierta
-          </span>
-        </div>
+        {/* Top small label from image */}
+        <p className="text-xs md:text-sm font-semibold tracking-[0.3em] text-white uppercase mb-6 drop-shadow-md">
+          De Tandil para tu Mesa | 100% Pastoril
+        </p>
 
         <h1
           ref={headlineRef}
-          className="font-fraunces text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.1] text-cream mb-6 drop-shadow-2xl">
-          Quesos de Oveja<br />
-          <em className="font-light italic text-wheat-light">con Pasión de Origen.</em>
+          className="font-fraunces text-6xl md:text-8xl lg:text-[100px] font-semibold leading-[1.05] text-white mb-6 uppercase tracking-wider drop-shadow-2xl">
+          Quesos Únicos
         </h1>
+
+        {/* Bottom small label from image */}
+        <div className="flex items-center gap-4 justify-center text-xs md:text-sm font-medium text-white/80 tracking-[0.2em] uppercase mb-8 drop-shadow-md">
+          <span>100% Pastoril</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
+          <span>Leche A2</span>
+        </div>
 
         <p
           ref={subRef}
-          className="text-lg lg:text-xl font-light text-limestone-soft/90 leading-relaxed max-w-2xl mb-12 drop-shadow-md">
+          className="text-base md:text-lg lg:text-xl font-light text-white leading-relaxed max-w-2xl mb-12 drop-shadow-md">
           En Napaleofú, Buenos Aires, criamos nuestro rebaño de ovejas frisonas y elaboramos quesos premium con leche fresca del día. Un proceso 100% familiar, de nuestras pasturas a la cava de maduración.
         </p>
 
@@ -67,7 +70,7 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-5">
           <a
             href="#cultivars"
-            className="flex items-center justify-center gap-2 h-14 px-8 rounded-full bg-wheat text-charcoal font-semibold text-sm hover:bg-wheat-light transition-all duration-300 shadow-[0_0_20px_rgba(201,168,76,0.3)] hover:shadow-[0_0_30px_rgba(201,168,76,0.5)] hover:-translate-y-1 tracking-widest uppercase">
+            className="flex items-center justify-center gap-2 h-14 px-8 rounded-full bg-white text-charcoal font-semibold text-sm hover:bg-white/90 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:-translate-y-1 tracking-widest uppercase">
             <Icon name="SparklesIcon" size={16} variant="solid" />
             Ver Variedades
           </a>
@@ -75,7 +78,7 @@ export default function HeroSection() {
             href="https://www.instagram.com/quesos_zampa"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 h-14 px-8 rounded-full border border-cream/50 bg-transparent text-cream font-medium text-sm hover:bg-cream/10 transition-all duration-300 backdrop-blur-sm tracking-widest uppercase">
+            className="flex items-center justify-center gap-2 h-14 px-8 rounded-full border border-white bg-transparent text-white font-medium text-sm hover:bg-white/10 transition-all duration-300 backdrop-blur-sm tracking-widest uppercase">
             <Icon name="ChatBubbleLeftRightIcon" size={16} variant="outline" />
             Contacto Directo
           </a>
