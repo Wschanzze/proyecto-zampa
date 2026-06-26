@@ -19,12 +19,6 @@ const metrics: Metric[] = [
 ];
 
 
-const adoptionZones = [
-  { region: 'Tandil & Locales Regionales', hectares: '60%', pct: 0.60, note: 'Almacenes gourmet, dietéticas y vinerías de especialidad' },
-  { region: 'Napaleofú & Zona de Influencia', hectares: '25%', pct: 0.25, note: 'Venta directa en la zona y comercios de cercanía' },
-  { region: 'Distribución Especial Directa', hectares: '15%', pct: 0.15, note: 'Despachos directos desde el campo a clientes y eventos' }
-];
-
 
 function useCountUp(target: number, duration = 1800, start = false) {
   const [count, setCount] = useState(0);
@@ -68,14 +62,12 @@ function MetricCard({ metric, started }: { metric: Metric; started: boolean }) {
 export default function ImpactSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);
-  const [barsAnimated, setBarsAnimated] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          setTimeout(() => setBarsAnimated(true), 400);
         }
       },
       { threshold: 0.1 }
@@ -125,40 +117,6 @@ export default function ImpactSection() {
             <MetricCard key={m.label} metric={m} started={visible} />
           ))}
         </div>
-
-        {/* Adoption Zones (Refined) */}
-        <div className={`max-w-4xl mx-auto transition-all duration-1000 delay-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <div className="flex items-center justify-center gap-3 mb-12">
-            <Icon name="MapPinIcon" size={20} variant="outline" className="text-wheat" />
-            <h3 className="font-fraunces text-3xl font-light text-cream tracking-wide">Presencia en el Mercado</h3>
-          </div>
-
-          <div className="space-y-8 bg-charcoal/40 backdrop-blur-md p-8 lg:p-10 rounded-3xl border border-wheat/10 shadow-2xl">
-            {adoptionZones.map((zone, i) => (
-              <div key={zone.region} className="group">
-                <div className="flex items-end justify-between mb-3">
-                  <div>
-                    <p className="text-base font-medium text-cream group-hover:text-wheat transition-colors">{zone.region}</p>
-                    <p className="text-sm text-limestone/50 font-light">{zone.note}</p>
-                  </div>
-                  <span className="font-fraunces text-xl font-medium text-wheat-light">{zone.hectares}</span>
-                </div>
-                <div className="h-1 bg-umber/30 rounded-full overflow-hidden">
-                  <div
-                    className="h-full rounded-full bg-gradient-to-r from-wheat to-wheat-light shadow-[0_0_10px_rgba(201,168,76,0.5)]"
-                    style={{
-                      width: `${zone.pct * 100}%`,
-                      transform: barsAnimated ? 'scaleX(1)' : 'scaleX(0)',
-                      transformOrigin: 'left',
-                      transition: `transform 1.5s cubic-bezier(0.22, 1, 0.36, 1) ${i * 200}ms`
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
       </div>
     </section>
   );
