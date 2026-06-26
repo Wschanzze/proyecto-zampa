@@ -23,7 +23,7 @@ export default function AudienceSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 lg:py-32 bg-cream px-6 lg:px-12 relative overflow-hidden"
+      className="py-24 lg:py-32 bg-white px-6 lg:px-12 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}

@@ -20,7 +20,7 @@ export default function VisitSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 lg:py-32 bg-cream text-charcoal relative overflow-hidden flex flex-col items-center justify-center">
+    <section ref={sectionRef} className="py-24 lg:py-32 bg-gray-soft text-charcoal relative overflow-hidden flex flex-col items-center justify-center">
       <div className="max-w-5xl mx-auto w-full px-6 lg:px-12 text-center">
         
         {/* Texts */}
@@ -48,7 +48,7 @@ export default function VisitSection() {
           <iframe
             className="absolute top-0 left-0 w-full h-full"
             src="https://www.youtube.com/embed/-Zb6oeexldo?autoplay=0&rel=0&controls=1"
-            title="Quesos Zampa - Origen Campoveja"
+            title="Quesos Zampa - Tambo Ovino Familiar"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen

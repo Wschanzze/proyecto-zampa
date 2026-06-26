@@ -81,7 +81,7 @@ export default function TimelineGallery() {
   const toggle = (i: number) => setActiveIndex((prev) => prev === i ? null : i);
 
   return (
-    <section id="timeline" ref={sectionRef} className="py-24 lg:py-32 bg-limestone px-6 lg:px-12 relative overflow-hidden">
+    <section id="timeline" ref={sectionRef} className="py-24 lg:py-32 bg-white px-6 lg:px-12 relative overflow-hidden">
       {/* Wheat rule top */}
       <div className="wheat-rule mb-16" />
 

@@ -83,7 +83,7 @@ export default function CultivarGrid() {
   }, []);
 
   return (
-    <section id="cultivars" ref={sectionRef} className="py-24 lg:py-32 bg-cream px-6 lg:px-12 relative overflow-hidden">
+    <section id="cultivars" ref={sectionRef} className="py-24 lg:py-32 bg-gray-soft px-6 lg:px-12 relative overflow-hidden">
       {/* Wheat rule top */}
       <div className="wheat-rule mb-16" />
 

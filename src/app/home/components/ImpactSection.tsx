@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import Icon from '@/components/ui/AppIcon';
+import AppImage from '@/components/ui/AppImage';
 
 interface Metric {
   value: number;
@@ -43,17 +44,17 @@ function useCountUp(target: number, duration = 1800, start = false) {
 function MetricCard({ metric, started }: { metric: Metric; started: boolean }) {
   const displayValue = useCountUp(metric.value, 1800, started);
   return (
-    <div className="flex flex-col items-center text-center group relative p-6">
-      <div className="absolute inset-0 border border-teal/15 rounded-2xl bg-white/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500" />
+    <div className="flex flex-col items-start text-left group relative p-5">
+      <div className="absolute inset-0 border border-teal/10 rounded-2xl bg-gray-soft/20 group-hover:bg-gray-soft/60 group-hover:border-teal/20 transition-all duration-500" />
       <div className="relative z-10">
-        <div className="text-teal mb-4 transform group-hover:scale-110 transition-transform duration-500">
-          <Icon name={metric.icon as any} size={28} />
+        <div className="text-teal mb-3 transform group-hover:scale-110 transition-transform duration-500">
+          <Icon name={metric.icon as any} size={24} />
         </div>
-        <div className="font-fraunces text-4xl lg:text-5xl font-semibold text-charcoal mb-2 tracking-tight">
+        <div className="font-fraunces text-3xl lg:text-4xl font-semibold text-charcoal mb-1 tracking-tight">
           {metric.prefix}{displayValue}{metric.suffix}
         </div>
-        <div className="text-sm font-medium text-teal-dark tracking-widest uppercase mb-2">{metric.label}</div>
-        <p className="text-xs text-charcoal/70 font-light max-w-[160px] mx-auto">{metric.sub}</p>
+        <div className="text-xs font-semibold text-teal-dark tracking-wider uppercase mb-1">{metric.label}</div>
+        <p className="text-xs text-charcoal/70 font-light max-w-[200px]">{metric.sub}</p>
       </div>
     </div>
   );
@@ -77,45 +78,52 @@ export default function ImpactSection() {
   }, []);
 
   return (
-    <section id="impact" ref={sectionRef} className="relative py-32 lg:py-48 flex flex-col items-center justify-center overflow-hidden bg-gray-soft">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="/assets/Quesos%20Zampa/IMG_1034.jpg" 
-          alt="Origen de la Leche de Oveja" 
-          className="w-full h-full object-cover object-center opacity-15 transition-transform duration-[20s] hover:scale-105"
-        />
-        {/* Gradient overlays to blend with the rest of the site */}
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-soft via-gray-soft/80 to-gray-soft" />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-soft/40 via-transparent to-gray-soft/40" />
-      </div>
-
+    <section id="impact" ref={sectionRef} className="relative py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full">
-        {/* Premium Header */}
-        <div className={`flex flex-col items-center text-center mb-20 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <div className="flex items-center gap-4 mb-6">
-            <div className="h-px w-12 bg-teal/60" />
-            <p className="text-sm font-medium uppercase tracking-[0.3em] text-teal">Compromiso con el Origen</p>
-            <div className="h-px w-12 bg-teal/60" />
-          </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          <h2 className="font-fraunces text-5xl lg:text-7xl font-light text-umber-dark leading-tight mb-8">
-            Cuando la Calidad es Constante,<br />
-            <span className="italic font-normal text-teal">el Sabor se Vuelve Inolvidable.</span>
-          </h2>
-          
-          <p className="max-w-2xl text-charcoal/80 text-lg lg:text-xl font-light leading-relaxed">
-            Nuestro secreto reside en la pureza de nuestra leche de oveja y en el respeto absoluto 
-            por los tiempos de maduración. Un proceso artesanal que garantiza una experiencia gourmet 
-            en cada bocado.
-          </p>
-        </div>
+          {/* Left Side: Content & Metrics */}
+          <div className="lg:col-span-7 flex flex-col gap-8">
+            {/* Premium Header */}
+            <div className={`flex flex-col items-start text-left transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+              <div className="flex items-center gap-4 mb-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-teal">Compromiso con el Origen</p>
+                <div className="h-px w-12 bg-teal/60" />
+              </div>
+              
+              <h2 className="font-fraunces text-4xl md:text-5xl font-light text-umber-dark leading-tight mb-6">
+                Cuando la Calidad es Constante,<br />
+                <span className="italic font-normal text-teal">el Sabor se Vuelve Inolvidable.</span>
+              </h2>
+              
+              <p className="text-charcoal/80 text-base md:text-lg font-light leading-relaxed max-w-xl">
+                Nuestro secreto reside en la pureza de nuestra leche de oveja y en el respeto absoluto 
+                por los tiempos de maduración. Un proceso artesanal que garantiza una experiencia gourmet 
+                en cada bocado.
+              </p>
+            </div>
 
-        {/* Minimalist Metrics */}
-        <div className={`grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 mb-24 transition-all duration-1000 delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          {metrics.map((m) => (
-            <MetricCard key={m.label} metric={m} started={visible} />
-          ))}
+            {/* Minimalist Metrics Grid */}
+            <div className={`grid grid-cols-2 gap-x-6 gap-y-8 mt-4 transition-all duration-1000 delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+              {metrics.map((m) => (
+                <MetricCard key={m.label} metric={m} started={visible} />
+              ))}
+            </div>
+          </div>
+
+          {/* Right Side: Sharp, fully visible image */}
+          <div className={`lg:col-span-5 w-full transition-all duration-1000 delay-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+            <div className="relative aspect-[4/5] rounded-[32px] overflow-hidden shadow-2xl group border border-teal/10">
+              <AppImage 
+                src="/assets/Quesos%20Zampa/IMG_1034.jpg" 
+                alt="Origen de la Leche de Oveja - Ovejas frisonas en pasturas" 
+                fill
+                className="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

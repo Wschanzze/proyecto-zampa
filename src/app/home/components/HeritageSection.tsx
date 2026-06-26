@@ -24,7 +24,7 @@ export default function HeritageSection() {
   }, []);
 
   return (
-    <section id="heritage" className="relative py-24 lg:py-32 bg-limestone-soft overflow-hidden flex items-center grain-overlay">
+    <section id="heritage" className="relative py-24 lg:py-32 bg-white overflow-hidden flex items-center grain-overlay">
       {/* Atmospheric gradient background */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div
@@ -169,7 +169,7 @@ export default function HeritageSection() {
                     <path id="hero-curve" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
                     <text className="text-[7px] uppercase font-bold tracking-widest" fill="#C9A84C">
                       <textPath href="#hero-curve">
-                        · Quesos de Oveja · Sabor de Origen · Desde 1984 ·
+                        · Quesos de Oveja · Sabor de Origen · Desde 2018 ·
                       </textPath>
                     </text>
                   </svg>

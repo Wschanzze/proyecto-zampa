@@ -68,14 +68,14 @@ export default function SliderSection() {
               src={slide.image}
               alt={slide.title}
               fill
-              className="object-cover opacity-20"
+              className="object-cover opacity-100"
               priority={idx === 0}
             />
           </div>
         ))}
-        {/* Light overlay for readability */}
-        <div className="absolute inset-0 bg-gray-soft/60 z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-soft via-transparent to-gray-soft/40 z-10" />
+        {/* Light overlays for readability and image clarity */}
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-soft via-gray-soft/90 to-transparent/10 z-10 hidden md:block" />
+        <div className="absolute inset-0 bg-gray-soft/75 z-10 md:hidden" />
       </div>
 
       {/* Main Content Container */}
@@ -118,21 +118,21 @@ export default function SliderSection() {
       </div>
 
       {/* Numbered slide indicators */}
-      <div className="absolute right-6 lg:right-16 top-1/2 -translate-y-1/2 z-30 flex flex-col gap-6">
+      <div className="absolute right-6 lg:right-16 top-1/2 -translate-y-1/2 z-30 flex flex-col gap-4 bg-white/70 backdrop-blur-md px-4 py-6 rounded-3xl border border-teal/10 shadow-lg">
         {slides.map((slide, idx) => (
           <button
             key={slide.id}
             onClick={() => setCurrent(idx)}
-            className="flex items-center justify-end text-right group py-2 focus:outline-none"
+            className="flex items-center justify-end text-right group py-1.5 focus:outline-none"
             aria-label={`Ir al slide ${idx + 1}`}
           >
-            <span className={`text-xs uppercase tracking-[0.2em] text-charcoal/70 mr-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:inline-block`}>
+            <span className={`text-[10px] font-bold uppercase tracking-[0.2em] text-charcoal/80 mr-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:inline-block`}>
               {slide.subtitle}
             </span>
             <div className="flex items-center gap-3">
-              {current === idx && <div className="w-8 h-px bg-teal transition-all duration-500" />}
-              <span className={`font-fraunces text-sm md:text-base transition-all duration-300 ${
-                current === idx ? 'text-teal font-semibold scale-110' : 'text-charcoal/40 hover:text-charcoal/80'
+              {current === idx && <div className="w-6 h-px bg-teal transition-all duration-500" />}
+              <span className={`font-fraunces text-xs md:text-sm transition-all duration-300 ${
+                current === idx ? 'text-teal font-semibold scale-110' : 'text-charcoal/50 hover:text-charcoal/90'
               }`}>
                 0{idx + 1}
               </span>
