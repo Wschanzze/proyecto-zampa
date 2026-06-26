@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
+import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 
 export default function HeroSection() {
@@ -24,22 +25,20 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen overflow-hidden flex items-center justify-center">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        poster="/assets/Quesos%20Zampa/IMG_1134.jpg"
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src="/assets/Quesos%20Zampa/IMG_1145.mp4" type="video/mp4" />
-      </video>
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <AppImage
+          src="/assets/Quesos%20Zampa/IMG_1134.jpg"
+          alt="Paisaje de las pasturas y el establecimiento Quesos Zampa en Napaleofú al atardecer"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
 
       {/* Overlays for text readability */}
-      <div className="absolute inset-0 z-0 bg-charcoal/20" />
-      <div className="absolute inset-0 z-0 bg-gradient-to-t from-charcoal via-transparent to-charcoal/40" />
+      <div className="absolute inset-0 z-0 bg-charcoal/35" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-t from-charcoal via-transparent to-charcoal/50" />
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-5xl mx-auto w-full px-6 lg:px-12 pt-32 pb-24 flex flex-col items-center text-center">
