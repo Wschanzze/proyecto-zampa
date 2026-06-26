@@ -18,9 +18,9 @@ export default function HomePage() {
       <AudienceSection />
       <SliderSection />
       <TimelineGallery />
-      <ImpactSection />
-      <VisitSection />
       <HeritageSection />
+      <VisitSection />
+      <ImpactSection />
       <CtaSection />
       <Footer />
       <FloatingPill />

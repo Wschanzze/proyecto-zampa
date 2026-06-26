@@ -47,7 +47,7 @@ export default function VisitSection() {
         <div className={`relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl transition-all duration-1000 delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/-Zb6oeexldo?autoplay=0&rel=0&controls=1"
+            src="https://www.youtube-nocookie.com/embed/qnO8U5v48u4?autoplay=0&rel=0&controls=1"
             title="Quesos Zampa - Tambo Ovino Familiar"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
