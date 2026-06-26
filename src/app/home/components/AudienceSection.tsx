@@ -23,7 +23,7 @@ export default function AudienceSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 lg:py-32 bg-limestone-soft px-6 lg:px-12 relative overflow-hidden"
+      className="py-24 lg:py-32 bg-cream px-6 lg:px-12 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -47,7 +47,7 @@ export default function AudienceSection() {
 
         {/* Bento Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-12">
-          {/* Card 1: Gourmet Experiences (Left - Large) */}
+          {/* Card 1: Tambo Familiar (Left - Large) */}
           <div
             className={`lg:col-span-7 rounded-[32px] overflow-hidden relative min-h-[460px] lg:min-h-[580px] flex flex-col justify-end p-8 md:p-12 group shadow-xl transition-all duration-1000 delay-100 ${
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
@@ -55,8 +55,8 @@ export default function AudienceSection() {
           >
             {/* Background image */}
             <AppImage
-              src="/assets/Quesos%20Zampa/tipos%20de%20quesos.jpg"
-              alt="Tabla gourmet de quesos Zampa cortados al atardecer"
+              src="/assets/Quesos%20Zampa/IMG_1900.jpg"
+              alt="Establecimiento Zampa y pasturas en Napaleofú al atardecer"
               fill
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -66,28 +66,55 @@ export default function AudienceSection() {
             {/* Content */}
             <div className="relative z-20">
               <span className="inline-block bg-teal text-cream px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">
-                Experiencias Gourmet
+                Tambo Familiar
               </span>
               <h3 className="font-fraunces text-3xl md:text-4xl font-medium text-white leading-tight">
-                Tablas, maridajes y el centro de tu mesa.
+                Elaboración de lunes a lunes con leche fresca.
               </h3>
               <p className="text-sm text-white/80 font-light leading-relaxed mt-4 mb-8 max-w-xl">
-                Nuestras variedades de oveja —Camembert, Pecorino, Brie, Manchego— están pensadas para los paladares más exigentes. Sabores intensos y texturas artesanales perfectas para compartir momentos inolvidables.
+                En Napaleofú, controlamos cada etapa sin intermediarios. La leche del ordeñe diario se traslada a la quesería a solo 100 metros del tambo, garantizando frescura y trazabilidad absoluta en cada horma.
               </p>
               <a
-                href="#cultivars"
+                href="#timeline"
                 className="inline-flex items-center justify-center h-12 px-8 rounded-2xl bg-white text-charcoal hover:bg-[#FAF7F0] text-sm font-semibold tracking-wider transition-all duration-300 shadow-md"
               >
-                Explorar Quesos
+                Nuestra Historia
               </a>
             </div>
           </div>
 
           {/* Right Stack */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            {/* Card 2: Cava & Aging (Right Top) */}
+            {/* Card 2: Gourmet Experiences (Right Top) */}
             <div
               className={`rounded-[32px] overflow-hidden relative h-[270px] lg:h-[278px] flex flex-col justify-end p-8 group shadow-xl transition-all duration-1000 delay-200 ${
+                visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+              }`}
+            >
+              {/* Background image */}
+              <AppImage
+                src="/assets/Quesos%20Zampa/tipos%20de%20quesos.jpg"
+                alt="Degustación gourmet de quesos Zampa"
+                fill
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent z-10" />
+
+              {/* Content */}
+              <div className="relative z-20">
+                <span className="inline-block bg-teal text-cream px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-3">
+                  Experiencias Gourmet
+                </span>
+                <h3 className="font-fraunces text-xl md:text-2xl font-medium text-white leading-snug">
+                  Variedades de oveja diseñadas para los paladares más exigentes.
+                </h3>
+              </div>
+            </div>
+
+            {/* Card 3: Cava & Aging (Right Bottom) */}
+            <div
+              className={`rounded-[32px] overflow-hidden relative h-[270px] lg:h-[278px] flex flex-col justify-end p-8 group shadow-xl transition-all duration-1000 delay-300 ${
                 visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
             >
@@ -107,34 +134,7 @@ export default function AudienceSection() {
                   Maduración en Cava
                 </span>
                 <h3 className="font-fraunces text-xl md:text-2xl font-medium text-white leading-snug">
-                  El tiempo y el frío esculpen el sabor perfecto de cada horma.
-                </h3>
-              </div>
-            </div>
-
-            {/* Card 3: Tambo & Pastures (Right Bottom) */}
-            <div
-              className={`rounded-[32px] overflow-hidden relative h-[270px] lg:h-[278px] flex flex-col justify-end p-8 group shadow-xl transition-all duration-1000 delay-300 ${
-                visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-              }`}
-            >
-              {/* Background image */}
-              <AppImage
-                src="/assets/Quesos%20Zampa/IMG_0773.jpg"
-                alt="Ovejas frisonas pastando libremente en Napaleofú"
-                fill
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent z-10" />
-
-              {/* Content */}
-              <div className="relative z-20">
-                <span className="inline-block bg-teal text-cream px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-3">
-                  Tambo Pastoril
-                </span>
-                <h3 className="font-fraunces text-xl md:text-2xl font-medium text-white leading-snug">
-                  El respeto por el rebaño define la pureza de nuestra leche.
+                  Cuidado artesanal y maduraciones prolongadas de 9 a 12 meses.
                 </h3>
               </div>
             </div>
