@@ -107,13 +107,13 @@ export default function TimelineGallery() {
               {/* Row trigger */}
               <button
               onClick={() => toggle(i)}
-              className="w-full flex items-start gap-6 py-7 text-left group hover:bg-limestone-soft/60 rounded-xl px-4 -mx-4 transition-colors duration-200"
+              className="w-full flex items-start gap-3 sm:gap-6 py-7 text-left group hover:bg-limestone-soft/60 rounded-xl px-4 -mx-4 transition-colors duration-200"
               aria-expanded={activeIndex === i}>
               
                 {/* Year + dot */}
-                <div className="flex items-center gap-3 flex-shrink-0 w-28">
+                <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 w-20 sm:w-28">
                   <div className="timeline-dot" />
-                  <span className="font-fraunces text-2xl font-semibold text-wheat">{entry.year}</span>
+                  <span className="font-fraunces text-xl sm:text-2xl font-semibold text-wheat">{entry.year}</span>
                 </div>
 
                 {/* Era badge */}
@@ -123,16 +123,16 @@ export default function TimelineGallery() {
 
                 {/* Title */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-fraunces text-xl font-medium text-umber-dark group-hover:text-teal transition-colors duration-200">
+                  <h3 className="font-fraunces text-lg sm:text-xl font-medium text-umber-dark group-hover:text-teal transition-colors duration-200 animate-fade-in">
                     {entry.title}
                   </h3>
-                  <p className="text-sm text-umber-light font-light mt-1 leading-relaxed line-clamp-1">
+                  <p className="text-xs sm:text-sm text-umber-light font-light mt-1 leading-relaxed line-clamp-1">
                     {entry.description}
                   </p>
                 </div>
 
                 {/* Thumb */}
-                <div className="w-20 h-14 rounded-xl overflow-hidden flex-shrink-0 timeline-thumb transition-transform duration-300">
+                <div className="hidden sm:block w-20 h-14 rounded-xl overflow-hidden flex-shrink-0 timeline-thumb transition-transform duration-300">
                   <AppImage
                   src={entry.thumb}
                   alt={entry.thumbAlt}

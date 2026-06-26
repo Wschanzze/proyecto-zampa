@@ -114,8 +114,14 @@ body {
 }
 
 .timeline-panel.open {
-  max-height: 600px;
+  max-height: 1500px;
   opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .timeline-panel.open {
+    max-height: 600px;
+  }
 }
 
 /* Cultivar cards */
