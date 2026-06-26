@@ -30,14 +30,16 @@ export default function HeroSection() {
         loop
         muted
         playsInline
+        preload="auto"
+        poster="/assets/Quesos%20Zampa/IMG_1134.jpg"
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
         <source src="/assets/Quesos%20Zampa/IMG_1145.mp4" type="video/mp4" />
       </video>
 
       {/* Overlays for text readability */}
-      <div className="absolute inset-0 z-0 bg-charcoal/40" />
-      <div className="absolute inset-0 z-0 bg-gradient-to-t from-charcoal via-transparent to-charcoal/60" />
+      <div className="absolute inset-0 z-0 bg-charcoal/20" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-t from-charcoal via-transparent to-charcoal/40" />
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-5xl mx-auto w-full px-6 lg:px-12 pt-32 pb-24 flex flex-col items-center text-center">
