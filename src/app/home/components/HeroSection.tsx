@@ -42,29 +42,22 @@ export default function HeroSection() {
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-5xl mx-auto w-full px-6 lg:px-12 pt-32 pb-24 flex flex-col items-center text-center">
-        {/* Top small label from image */}
+        {/* Top small label */}
         <p className="text-xs md:text-sm font-semibold tracking-[0.3em] text-white uppercase mb-6 drop-shadow-md">
-          De Tandil para tu Mesa | 100% Pastoril
+          Quesería Artesanal Zampa · Napaleofú
         </p>
 
         <h1
           ref={headlineRef}
-          className="font-fraunces text-6xl md:text-8xl lg:text-[90px] font-semibold leading-[1.05] text-white mb-6 uppercase tracking-wider drop-shadow-2xl">
+          className="font-fraunces text-6xl md:text-8xl lg:text-[90px] font-semibold leading-[1.05] text-white mb-8 uppercase tracking-wider drop-shadow-2xl">
           Quesos de Oveja<br />
           con Pasión de Origen
         </h1>
 
-        {/* Bottom small label from image */}
-        <div className="flex items-center gap-4 justify-center text-xs md:text-sm font-medium text-white/80 tracking-[0.2em] uppercase mb-8 drop-shadow-md">
-          <span>100% Pastoril</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
-          <span>Leche A2</span>
-        </div>
-
         <p
           ref={subRef}
           className="text-base md:text-lg lg:text-xl font-light text-white leading-relaxed max-w-2xl mb-12 drop-shadow-md">
-          En Napaleofú, Buenos Aires, criamos nuestro rebaño de ovejas frisonas y elaboramos quesos premium con leche fresca del día. Un proceso 100% familiar, de nuestras pasturas a la cava de maduración.
+          Criamos ovejas frisonas en pasturas naturales y elaboramos quesos premium con leche fresca del día. Un proceso 100% familiar.
         </p>
 
         {/* CTAs */}
