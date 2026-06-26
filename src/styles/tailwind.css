@@ -373,43 +373,43 @@ a.teal-link:hover {
 .wrapper-1 {
   left: 5%;
   top: 15%;
-  width: 220px;
+  width: 330px;
   animation: float-gentle-1 8s ease-in-out infinite;
 }
 
 .wrapper-2 {
   right: 6%;
   top: 15%;
-  width: 210px;
+  width: 315px;
   animation: float-gentle-2 10s ease-in-out infinite 1s;
 }
 
 .wrapper-3 {
   right: 5%;
   bottom: 8%;
-  width: 230px;
+  width: 345px;
   animation: float-gentle-3 9s ease-in-out infinite 0.5s;
 }
 
 @media (max-width: 1200px) {
-  .wrapper-1 { width: 170px; }
-  .wrapper-2 { width: 160px; }
-  .wrapper-3 { width: 180px; }
+  .wrapper-1 { width: 250px; }
+  .wrapper-2 { width: 240px; }
+  .wrapper-3 { width: 260px; }
 }
 
 @media (max-width: 1023px) {
   .wrapper-1 {
-    width: 120px;
+    width: 160px;
     left: 2%;
     top: 5%;
   }
   .wrapper-2 {
-    width: 110px;
+    width: 150px;
     right: 2%;
     top: 8%;
   }
   .wrapper-3 {
-    width: 130px;
+    width: 170px;
     right: 1%;
     bottom: 5%;
   }
