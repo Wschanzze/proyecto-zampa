@@ -125,8 +125,8 @@ export default function HeritageSection() {
               {/* Main tall image — researcher hands inspecting grain */}
               <div className="photo-main rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
                 <AppImage
-                  src="/assets/Quesos%20Zampa/IMG_9816.JPG"
-                  alt="Manos artesanas inspeccionando la corteza de un queso en la sala de maduración"
+                  src="/assets/Quesos%20Zampa/IMG_9821.JPG"
+                  alt="Proceso de elaboración artesanal de queso de oveja Zampa"
                   fill
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 
@@ -140,8 +140,8 @@ export default function HeritageSection() {
               {/* Top wide — golden-hour trial rows */}
               <div className="photo-top-wide rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
                 <AppImage
-                  src="/assets/Quesos%20Zampa/tipos%20de%20quesos.jpg"
-                  alt="Tabla variada de quesos Zampa cortados listos para degustar al atardecer"
+                  src="/assets/Quesos%20Zampa/IMG_2809.jpg"
+                  alt="Maduración en cava de los quesos de oveja Zampa"
                   fill
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 
@@ -155,8 +155,8 @@ export default function HeritageSection() {
               {/* Bottom left — close-up grain */}
               <div className="photo-bottom-left rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
                 <AppImage
-                  src="/assets/Quesos%20Zampa/pecorino.jpeg"
-                  alt="Queso Pecorino Zampa madurado de corteza rústica"
+                  src="/assets/Quesos%20Zampa/IMG_9858.JPG"
+                  alt="Detalle de los quesos artesanales en Napaleofú"
                   fill
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 
