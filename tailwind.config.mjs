@@ -10,7 +10,7 @@ export default {
       colors: {
         limestone: '#E8DCC8',
         'limestone-soft': '#F2EDE0',
-        cream: '#FAF7F2',
+        cream: '#F5F5F3',
         umber: '#6B4226',
         'umber-light': '#8B5A38',
         'umber-dark': '#4A2C16',
