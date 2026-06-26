@@ -33,7 +33,9 @@ export default function VisitSection() {
           </h2>
           
           <a
-            href="#contacto"
+            href="https://www.instagram.com/quesos_zampa"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-4 text-sm font-semibold uppercase tracking-[0.2em] text-umber hover:text-teal transition-colors duration-300 group mb-20"
           >
             Reserva tu experiencia 

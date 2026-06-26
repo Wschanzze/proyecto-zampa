@@ -15,7 +15,9 @@ export default function FloatingPill() {
 
   return (
     <a
-      href="#"
+      href="https://www.instagram.com/quesos_zampa"
+      target="_blank"
+      rel="noopener noreferrer"
       className="floating-pill"
       style={{
         opacity: show ? 1 : 0,
@@ -23,10 +25,10 @@ export default function FloatingPill() {
         pointerEvents: show ? 'auto' : 'none',
         transition: 'opacity 0.4s ease, transform 0.4s cubic-bezier(0.23,1,0.32,1), background 0.3s ease, box-shadow 0.3s ease',
       }}
-      aria-label="Request Trial Seed"
+      aria-label="Contactar por Instagram"
     >
-      <Icon name="BeakerIcon" size={15} variant="outline" />
-      Request Trial Seed
+      <Icon name="ChatBubbleLeftRightIcon" size={15} variant="outline" />
+      Contacto @quesos_zampa
     </a>
   );
 }

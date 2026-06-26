@@ -63,7 +63,9 @@ export default function Header() {
         {/* Right Edge: Contact button */}
         <div className="absolute right-6 lg:right-12 hidden lg:block">
           <a
-            href="#contacto"
+            href="https://www.instagram.com/quesos_zampa"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-xs font-bold text-umber-dark border border-umber-dark/60 px-5 py-2.5 rounded hover:bg-umber-dark hover:text-cream transition-all duration-300 tracking-widest"
           >
             CONTACTO

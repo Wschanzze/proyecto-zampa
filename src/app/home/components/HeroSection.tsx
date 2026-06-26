@@ -52,18 +52,15 @@ export default function HeroSection() {
 
         <h1
           ref={headlineRef}
-          className="font-fraunces text-6xl lg:text-8xl font-light leading-tight text-cream mb-6 drop-shadow-2xl">
-          Tambo Ovino Familiar.<br />
-          Quesos Artesanales.<br />
-          <em className="font-light italic text-wheat-light">
-            Pasión de Origen.
-          </em>
+          className="font-fraunces text-5xl md:text-7xl lg:text-8xl font-semibold leading-[1.1] text-cream mb-6 drop-shadow-2xl">
+          Quesos de Oveja<br />
+          <em className="font-light italic text-wheat-light">con Pasión de Origen.</em>
         </h1>
 
         <p
           ref={subRef}
           className="text-lg lg:text-xl font-light text-limestone-soft/90 leading-relaxed max-w-2xl mb-12 drop-shadow-md">
-          En Quesos Zampa elaboramos quesos artesanales de oveja de la más alta calidad, cuidando a nuestro rebaño en pasturas naturales cerca de Napaleofú, donde el respeto por la tierra define el carácter de cada pieza.
+          En Napaleofú, Buenos Aires, criamos nuestro rebaño de ovejas frisonas y elaboramos quesos premium con leche fresca del día. Un proceso 100% familiar, de nuestras pasturas a la cava de maduración.
         </p>
 
         {/* CTAs */}
@@ -71,12 +68,16 @@ export default function HeroSection() {
           <a
             href="#cultivars"
             className="flex items-center justify-center gap-2 h-14 px-8 rounded-full bg-wheat text-charcoal font-semibold text-sm hover:bg-wheat-light transition-all duration-300 shadow-[0_0_20px_rgba(201,168,76,0.3)] hover:shadow-[0_0_30px_rgba(201,168,76,0.5)] hover:-translate-y-1 tracking-widest uppercase">
-            Explorar Variedades
+            <Icon name="SparklesIcon" size={16} variant="solid" />
+            Ver Variedades
           </a>
           <a
-            href="#timeline"
+            href="https://www.instagram.com/quesos_zampa"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 h-14 px-8 rounded-full border border-cream/50 bg-transparent text-cream font-medium text-sm hover:bg-cream/10 transition-all duration-300 backdrop-blur-sm tracking-widest uppercase">
-            Nuestra Historia
+            <Icon name="ChatBubbleLeftRightIcon" size={16} variant="outline" />
+            Contacto Directo
           </a>
         </div>
       </div>
