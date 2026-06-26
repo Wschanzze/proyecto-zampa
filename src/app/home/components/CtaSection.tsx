@@ -25,7 +25,7 @@ export default function CtaSection() {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <AppImage
-          src="/assets/Quesos%20Zampa/IMG_1900.jpg"
+          src="/assets/images/footer.png"
           alt="Vista panorámica de la quesería Zampa y pasturas al atardecer"
           fill
           className="w-full h-full object-cover opacity-15"
