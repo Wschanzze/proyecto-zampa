@@ -22,7 +22,7 @@ const OurProducts = () => {
   ];
 
   return (
-    <section className="our-products-section py-24 lg:py-32 bg-[#FAF8F5] relative overflow-hidden">
+    <section className="py-24 lg:py-32 bg-[#FAF8F5] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center mb-16">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-teal mb-3">NUESTROS PRODUCTOS</p>
         <h2 className="font-fraunces text-4xl md:text-5xl font-light text-umber-dark leading-tight">100% Leche de Oveja</h2>
