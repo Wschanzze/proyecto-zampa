@@ -32,20 +32,20 @@ const InstagramCarousel = () => {
   };
 
   return (
-    <section className="instagram-section">
-      <div className="instagram-header">
-        <span className="instagram-subtitle">FILOSOFÍA EN IMÁGENES</span>
-        <h2 className="instagram-title">
-          <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
+    <section className="py-24 lg:py-32 bg-[#FAF8F5] relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center mb-16">
+        <span className="text-xs font-semibold uppercase tracking-[0.25em] text-teal mb-3 block">FILOSOFÍA EN IMÁGENES</span>
+        <h2 className="font-fraunces text-4xl md:text-5xl font-semibold text-umber-dark tracking-wide uppercase mb-3">
+          <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-teal transition-colors duration-300">
             @quesos.zampa
           </a>
         </h2>
-        <p className="instagram-desc">Seguinos para ver el día a día en nuestro tambo pastoril en Tandil</p>
+        <p className="text-sm md:text-base font-light text-charcoal/80">Seguinos para ver el día a día en nuestro tambo pastoril en Tandil</p>
       </div>
 
-      <div className="instagram-carousel-wrapper">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
         <button 
-          className="carousel-nav-btn prev" 
+          className="absolute left-10 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-teal text-white flex items-center justify-center hover:bg-teal-light shadow-lg hover:scale-105 transition-all duration-300 z-30" 
           onClick={() => scroll('left')}
           aria-label="Previous posts"
         >
@@ -54,16 +54,16 @@ const InstagramCarousel = () => {
           </svg>
         </button>
 
-        <div className="instagram-scroll-container" ref={scrollContainerRef}>
+        <div className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-8" ref={scrollContainerRef} style={{ scrollbarWidth: 'none' }}>
           {items.map((item, index) => (
             <a 
               key={index} 
               href={instagramUrl} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="instagram-item-card"
+              className="flex-shrink-0 w-[280px] md:w-[320px] aspect-square rounded-[24px] overflow-hidden relative shadow-lg group border border-teal/5 transition-all duration-500 hover:shadow-xl"
             >
-              <div className="instagram-media-wrapper">
+              <div className="relative w-full h-full">
                 {item.type === 'video' ? (
                   <video 
                     src={item.src} 
@@ -71,24 +71,24 @@ const InstagramCarousel = () => {
                     loop 
                     muted 
                     playsInline 
-                    className="instagram-media"
+                    className="w-full h-full object-cover"
                   />
                 ) : (
                   <Image 
                     src={item.src} 
                     alt={`Zampa Instagram Post ${index + 1}`} 
                     fill
-                    className="instagram-media"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="320px"
                   />
                 )}
-                <div className="instagram-hover-overlay">
-                  <svg className="instagram-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 backdrop-blur-[2px] transition-all duration-500 z-10 flex flex-col items-center justify-center gap-3">
+                  <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                   </svg>
-                  <span className="instagram-hover-text">Ver en Instagram</span>
+                  <span className="text-xs font-semibold text-white uppercase tracking-widest">Ver en Instagram</span>
                 </div>
               </div>
             </a>
@@ -96,7 +96,7 @@ const InstagramCarousel = () => {
         </div>
 
         <button 
-          className="carousel-nav-btn next" 
+          className="absolute right-10 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-teal text-white flex items-center justify-center hover:bg-teal-light shadow-lg hover:scale-105 transition-all duration-300 z-30" 
           onClick={() => scroll('right')}
           aria-label="Next posts"
         >
