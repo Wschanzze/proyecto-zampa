@@ -11,11 +11,39 @@ import HeritageSection from './components/HeritageSection';
 import CtaSection from './components/CtaSection';
 import FloatingPill from './components/FloatingPill';
 
+// Legacy Home Components
+import IntroStatement from './components/legacy/IntroStatement';
+import OurProducts from './components/legacy/OurProducts';
+import BannerBW from './components/legacy/BannerBW';
+import Introduction from './components/legacy/Introduction';
+import PastoralSystem from './components/legacy/PastoralSystem';
+import LegacyVisitSection from './components/legacy/LegacyVisitSection';
+import JoinFamily from './components/legacy/JoinFamily';
+import InstagramCarousel from './components/legacy/InstagramCarousel';
+import QuickContact from './components/legacy/QuickContact';
+
+// Legacy styles
+import '@/styles/legacy-home.css';
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-limestone-soft">
       <Header />
       <HeroSection />
+      
+      {/* --- INICIO LEGACY (Antiguo Home) --- */}
+      <IntroStatement />
+      <OurProducts />
+      <BannerBW />
+      <Introduction />
+      <PastoralSystem />
+      <LegacyVisitSection />
+      <JoinFamily />
+      <InstagramCarousel />
+      <QuickContact />
+      {/* --- FIN INICIO LEGACY --- */}
+
+      {/* --- INICIO NUEVO (Nuevos Apartados) --- */}
       <ProductParallaxSection />
       <AudienceSection />
       <SliderSection />
@@ -24,6 +52,8 @@ export default function HomePage() {
       <VisitSection />
       <ImpactSection />
       <CtaSection />
+      {/* --- FIN INICIO NUEVO --- */}
+
       <Footer />
       <FloatingPill />
     </div>
