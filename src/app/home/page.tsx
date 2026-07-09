@@ -15,7 +15,6 @@ import FloatingPill from './components/FloatingPill';
 import IntroStatement from './components/legacy/IntroStatement';
 import OurProducts from './components/legacy/OurProducts';
 import BannerBW from './components/legacy/BannerBW';
-import Introduction from './components/legacy/Introduction';
 import PastoralSystem from './components/legacy/PastoralSystem';
 import LegacyVisitSection from './components/legacy/LegacyVisitSection';
 import JoinFamily from './components/legacy/JoinFamily';
@@ -35,7 +34,6 @@ export default function HomePage() {
       <IntroStatement />
       <OurProducts />
       <BannerBW />
-      <Introduction />
       <PastoralSystem />
       <LegacyVisitSection />
       <JoinFamily />
