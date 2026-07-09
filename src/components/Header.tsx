@@ -24,7 +24,8 @@ export default function Header() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      style={{ position: 'fixed', top: 0, left: 0, right: 0 }}
+      className={`w-full z-50 transition-all duration-500 ${
         scrolled ? 'nav-blur py-2' : 'bg-transparent py-4'
       }`}
     >
