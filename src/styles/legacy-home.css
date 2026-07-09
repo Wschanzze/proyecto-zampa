@@ -1449,9 +1449,9 @@ h1, h2, h3, h4, h5, h6 {
         font-family: var(--font-sub);
         font-weight: bold;
     }
-    body {
-        padding-top: 50px !important; /* Offset for mobile fixed navbar */
-    }
+    /* body {
+        padding-top: 50px !important; 
+    } */
     .navbar {
         height: 50px !important; /* Alto fijo y reducido en móvil */
         padding: 0 5% !important;
@@ -5229,14 +5229,14 @@ h1, h2, h3, h4, h5, h6 {
     top: 38px !important;
 }
 
-body {
-    padding-top: 108px !important; /* 70px default + 38px banner */
-}
+/* body {
+    padding-top: 108px !important;
+} */
 
 @media (max-width: 768px) {
-    body {
-        padding-top: 88px !important; /* 50px default + 38px banner */
-    }
+    /* body {
+        padding-top: 88px !important;
+    } */
 }
 
 /* ====== PRINT MEDIA QUERIES ====== */
