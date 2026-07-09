@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Introduction = () => {
   return (
-    <section className="intro-section py-24 lg:py-32 bg-gray-soft relative overflow-hidden">
+    <section className="intro-section py-24 lg:py-32 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-teal mb-3">FILOSOFÍA ZAMPA</p>

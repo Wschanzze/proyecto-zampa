@@ -26,7 +26,7 @@ export default function LegacyVisitSection() {
   };
 
   return (
-    <section ref={sectionRef} className="py-24 lg:py-32 bg-gray-soft text-charcoal relative overflow-hidden flex flex-col items-center justify-center">
+    <section ref={sectionRef} className="py-24 lg:py-32 bg-white text-charcoal relative overflow-hidden flex flex-col items-center justify-center">
       <div className="max-w-7xl mx-auto w-full px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           

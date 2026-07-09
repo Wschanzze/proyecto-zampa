@@ -78,7 +78,7 @@ export default function ImpactSection() {
   }, []);
 
   return (
-    <section id="impact" ref={sectionRef} className="relative py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-gray-soft">
+    <section id="impact" ref={sectionRef} className="relative py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           

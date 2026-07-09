@@ -17,7 +17,7 @@ const PastoralSystem = () => {
   }, []);
 
   return (
-    <section className="pastoral-system py-24 lg:py-32 bg-white relative overflow-hidden">
+    <section className="pastoral-system py-24 lg:py-32 bg-[#FAF8F5] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Copy */}
