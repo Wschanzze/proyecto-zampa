@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from 'react';
+import Image from 'next/image';
 
 const InstagramCarousel = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -73,11 +74,12 @@ const InstagramCarousel = () => {
                     className="instagram-media"
                   />
                 ) : (
-                  <img 
-                    src={item.src} 
+                  <Image 
+                    src={item.src.replace(' ', '%20')} 
                     alt={`Zampa Instagram Post ${index + 1}`} 
+                    fill
                     className="instagram-media"
-                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 )}
                 <div className="instagram-hover-overlay">

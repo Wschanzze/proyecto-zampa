@@ -1,12 +1,15 @@
 import React from 'react';
+import Image from 'next/image';
 
 const BannerBW = () => {
   return (
     <section className="banner-bw">
-      <img 
-        src="/assets/Quesos Zampa/IMG_0019.JPG" 
+      <Image 
+        src="/assets/Quesos%20Zampa/IMG_0019.JPG" 
         alt="Trabajo en el tambo" 
-        className="banner-bg" 
+        fill
+        className="banner-bg"
+        style={{ objectFit: 'cover' }}
       />
       <div className="banner-content">
         <h3 className="banner-text left-text">QUESOS DE OVEJA<br />DE AUTOR</h3>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const IntroStatement = () => {
   return (
@@ -16,9 +17,11 @@ const IntroStatement = () => {
           Conocé nuestra historia
         </Link>
       </div>
-      <img 
-        src="/assets/Quesos Zampa/ovejas_render.png" 
+      <Image 
+        src="/assets/Quesos%20Zampa/ovejas_render.png" 
         alt="Ovejas en Napaleofú" 
+        width={1200}
+        height={300}
         className="statement-watermark" 
       />
     </section>

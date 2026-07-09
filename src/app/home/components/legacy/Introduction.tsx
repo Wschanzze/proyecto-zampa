@@ -1,5 +1,6 @@
 import React from 'react';
 import DecoratedTitle from '@/components/ui/DecoratedTitle';
+import Image from 'next/image';
 
 const Introduction = () => {
   return (
@@ -13,10 +14,13 @@ const Introduction = () => {
         <div className="intro-grid">
           <div className="intro-image-column">
             <div className="intro-image-wrapper">
-              <img 
-                src="/assets/Quesos Zampa/imagen_lapis.jfif" 
+              <Image 
+                src="/assets/Quesos%20Zampa/imagen_lapis.jfif" 
                 alt="Filosofía Zampa y Sistema Pastoril" 
+                width={800}
+                height={800}
                 className="intro-image"
+                style={{ width: '100%', height: 'auto' }}
               />
               <div className="intro-badge">
                 <span className="intro-badge-number">100%</span>

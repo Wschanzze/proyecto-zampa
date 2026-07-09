@@ -1,13 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const JoinFamily = () => {
   return (
     <section className="join-family">
-      <img 
-        src="/assets/Quesos Zampa/6de54990-a007-4692-8898-b1dda1296784.jpg" 
+      <Image 
+        src="/assets/Quesos%20Zampa/6de54990-a007-4692-8898-b1dda1296784.jpg" 
         alt="Quesos en maduración" 
-        className="join-bg" 
+        fill
+        className="join-bg"
+        style={{ objectFit: 'cover' }}
       />
       <div className="join-content">
         <p className="join-subtitle">EL VALOR DE LO ARTESANAL</p>

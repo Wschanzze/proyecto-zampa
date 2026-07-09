@@ -1,6 +1,7 @@
 import React from 'react';
 import DecoratedTitle from '@/components/ui/DecoratedTitle';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const OurProducts = () => {
   const categories = [
@@ -33,7 +34,7 @@ const OurProducts = () => {
           <div key={idx} className="product-card">
             <Link href={cat.link} className="product-link">
               <div className="product-img-wrapper">
-                <img src={cat.image} alt={cat.title} className="product-img" />
+                <Image src={cat.image.replaceAll(' ', '%20')} alt={cat.title} fill className="product-img" sizes="(max-width: 768px) 100vw, 33vw" />
                 <div className="product-overlay"></div>
                 <div className="product-title-wrapper">
                   <h6 className="product-category-title">{cat.title}</h6>
