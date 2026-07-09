@@ -43,9 +43,9 @@ const InstagramCarousel = () => {
         <p className="text-sm md:text-base font-light text-charcoal/80">Seguinos para ver el día a día en nuestro tambo pastoril en Tandil</p>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="relative max-w-[1600px] mx-auto px-6 lg:px-12">
         <button 
-          className="absolute left-10 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-teal text-white flex items-center justify-center hover:bg-teal-light shadow-lg hover:scale-105 transition-all duration-300 z-30" 
+          className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-teal text-white flex items-center justify-center hover:bg-teal-light shadow-xl hover:scale-105 transition-all duration-300 z-30" 
           onClick={() => scroll('left')}
           aria-label="Previous posts"
         >
@@ -61,7 +61,7 @@ const InstagramCarousel = () => {
               href={instagramUrl} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex-shrink-0 w-[280px] md:w-[320px] aspect-square rounded-[24px] overflow-hidden relative shadow-lg group border border-teal/5 transition-all duration-500 hover:shadow-xl"
+              className="flex-shrink-0 w-[300px] md:w-[420px] aspect-square rounded-[32px] overflow-hidden relative shadow-lg group border border-teal/5 transition-all duration-500 hover:shadow-2xl"
             >
               <div className="relative w-full h-full">
                 {item.type === 'video' ? (
@@ -79,7 +79,7 @@ const InstagramCarousel = () => {
                     alt={`Zampa Instagram Post ${index + 1}`} 
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="320px"
+                    sizes="420px"
                   />
                 )}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 backdrop-blur-[2px] transition-all duration-500 z-10 flex flex-col items-center justify-center gap-3">
@@ -96,7 +96,7 @@ const InstagramCarousel = () => {
         </div>
 
         <button 
-          className="absolute right-10 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-teal text-white flex items-center justify-center hover:bg-teal-light shadow-lg hover:scale-105 transition-all duration-300 z-30" 
+          className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-teal text-white flex items-center justify-center hover:bg-teal-light shadow-xl hover:scale-105 transition-all duration-300 z-30" 
           onClick={() => scroll('right')}
           aria-label="Next posts"
         >
