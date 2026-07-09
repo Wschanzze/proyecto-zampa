@@ -2,25 +2,25 @@ import React from 'react';
 
 const ProductParallaxSection = () => {
   return (
-    <section className="parallax-section">
+    <section className="parallax-section" style={{ backgroundColor: '#FAF8F5' }}>
       {/* Elementos Flotantes */}
       <div className="parallax-img-wrapper wrapper-1">
         <img 
-          src="/assets/Quesos Zampa/producto_1.png" 
+          src="/assets/Quesos Zampa/nuevas/10669c4a-4810-4945-b53a-b80f8ab4fc63.jfif" 
           alt="Queso Provoleta Zampa" 
           className="parallax-img" 
         />
       </div>
       <div className="parallax-img-wrapper wrapper-2">
         <img 
-          src="/assets/Quesos Zampa/producto_2.png" 
+          src="/assets/Quesos Zampa/nuevas/14ce3b07-ee68-478b-acfd-b41fce3de55a.jfif" 
           alt="Queso Brie Zampa" 
           className="parallax-img" 
         />
       </div>
       <div className="parallax-img-wrapper wrapper-3">
         <img 
-          src="/assets/Quesos Zampa/producto_3.png" 
+          src="/assets/Quesos Zampa/nuevas/18dc7d71-6187-4119-b0dc-020910b30b5e.jfif" 
           alt="Queso Camembert Zampa" 
           className="parallax-img" 
         />
