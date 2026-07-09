@@ -5,7 +5,7 @@ const BannerBW = () => {
   return (
     <section className="banner-bw">
       <Image 
-        src="/assets/Quesos%20Zampa/IMG_0019.JPG" 
+        src="/assets/Quesos Zampa/IMG_0019.JPG" 
         alt="Trabajo en el tambo" 
         fill
         className="banner-bg"

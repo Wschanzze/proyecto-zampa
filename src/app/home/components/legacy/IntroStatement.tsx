@@ -18,7 +18,7 @@ const IntroStatement = () => {
         </Link>
       </div>
       <Image 
-        src="/assets/Quesos%20Zampa/ovejas_render.png" 
+        src="/assets/Quesos Zampa/ovejas_render.png" 
         alt="Ovejas en Napaleofú" 
         width={1200}
         height={300}

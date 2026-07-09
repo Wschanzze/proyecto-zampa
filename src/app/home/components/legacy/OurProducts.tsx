@@ -34,7 +34,7 @@ const OurProducts = () => {
           <div key={idx} className="product-card">
             <Link href={cat.link} className="product-link">
               <div className="product-img-wrapper">
-                <Image src={cat.image.replaceAll(' ', '%20')} alt={cat.title} fill className="product-img" sizes="(max-width: 768px) 100vw, 33vw" />
+                <Image src={cat.image} alt={cat.title} fill className="product-img" sizes="(max-width: 768px) 100vw, 33vw" />
                 <div className="product-overlay"></div>
                 <div className="product-title-wrapper">
                   <h6 className="product-category-title">{cat.title}</h6>

@@ -15,7 +15,7 @@ const Introduction = () => {
           <div className="intro-image-column">
             <div className="intro-image-wrapper">
               <Image 
-                src="/assets/Quesos%20Zampa/imagen_lapis.jfif" 
+                src="/assets/Quesos Zampa/imagen_lapis.jfif" 
                 alt="Filosofía Zampa y Sistema Pastoril" 
                 width={800}
                 height={800}

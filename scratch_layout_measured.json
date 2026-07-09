@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "rect": {
+      "top": 0,
+      "bottom": 172,
+      "left": 0,
+      "right": 749,
+      "width": 749,
+      "height": 172
+    },
+    "position": "fixed",
+    "topStyle": "0px",
+    "zIndex": "50",
+    "display": "block",
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "backgroundColor": "rgba(0, 0, 0, 0)"
+  },
+  "section": {
+    "rect": {
+      "top": 0,
+      "bottom": 641,
+      "left": 0,
+      "right": 749,
+      "width": 749,
+      "height": 641
+    },
+    "position": "relative",
+    "marginTop": "0px",
+    "paddingTop": "0px"
+  },
+  "body": {
+    "paddingTop": "0px",
+    "marginTop": "0px"
+  }
+}

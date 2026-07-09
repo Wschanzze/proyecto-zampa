@@ -75,7 +75,7 @@ const InstagramCarousel = () => {
                   />
                 ) : (
                   <Image 
-                    src={item.src.replace(' ', '%20')} 
+                    src={item.src} 
                     alt={`Zampa Instagram Post ${index + 1}`} 
                     fill
                     className="instagram-media"
