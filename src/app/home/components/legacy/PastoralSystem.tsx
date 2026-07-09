@@ -46,7 +46,7 @@ const PastoralSystem = () => {
 
           {/* Right Column: Video */}
           <div className="lg:col-span-6">
-            <div className="relative aspect-video w-full rounded-[32px] overflow-hidden shadow-2xl border border-teal/5">
+            <div className="relative aspect-[3/4] w-full max-w-[480px] mx-auto rounded-[32px] overflow-hidden shadow-2xl border border-teal/5">
               <video 
                 ref={videoRef}
                 src="/assets/Quesos Zampa/IMG_1145.mp4" 
