@@ -400,7 +400,6 @@ a.teal-link:hover {
   background: rgba(243, 244, 246, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(46, 93, 90, 0.15);
 }
 
 /* Image zoom on hover */
