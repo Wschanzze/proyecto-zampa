@@ -58,15 +58,14 @@ export default function HeritageSection() {
               className="text-5xl lg:text-6xl font-light uppercase tracking-[0.06em] leading-tight text-charcoal">
               
               La Esencia del<br />
-              Tambo Familiar.<br />
-              Sabor de Origen.
+              Tambo Familiar.
             </h2>
 
             <p
               ref={subRef}
               className="text-lg font-light text-umber-light leading-relaxed max-w-md">
               
-              En Quesos Zampa elaboramos quesos artesanales en Napaleofú, controlando todo el proceso desde la siembra de nuestras pasturas y el ordeñe diario, hasta la maduración en cava a solo 100 metros del tambo.
+              En Quesos Zampa elaboramos quesos artesanales en las pasturas de Tandil, controlando todo el proceso desde la siembra de nuestras pasturas y el ordeñe diario, hasta la maduración en cava a solo 100 metros del tambo.
             </p>
 
             {/* CTAs */}
@@ -146,7 +145,7 @@ export default function HeritageSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-umber-dark/40 via-transparent to-transparent" />
                 <div className="absolute top-4 right-4 glass-dark px-3 py-1.5 rounded-full flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-wheat animate-pulse" />
-                  <span className="text-xs font-medium text-cream">Productos Orgánicos</span>
+                  <span className="text-xs font-medium text-cream">Leche A2</span>
                 </div>
               </div>
 
