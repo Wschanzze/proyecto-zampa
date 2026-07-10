@@ -24,7 +24,7 @@ export default {
         'gray-soft': '#F3F4F6',
       },
       fontFamily: {
-        fraunces: ['Fraunces', 'serif'],
+        fraunces: ['Urbanist', 'sans-serif'],
         sans: ['Urbanist', 'sans-serif'],
         urbanist: ['Urbanist', 'sans-serif'],
       },

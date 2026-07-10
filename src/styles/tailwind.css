@@ -43,7 +43,7 @@
   --clr-dark: var(--charcoal);
   --clr-border: var(--limestone);
 
-  --font-brand: 'Fraunces', serif;
+  --font-brand: 'Urbanist', sans-serif;
   --font-body: 'Urbanist', sans-serif;
   --font-sub: 'Urbanist', sans-serif;
 
@@ -69,7 +69,7 @@ body {
 
 /* Typography */
 .font-fraunces {
-  font-family: 'Fraunces', serif;
+  font-family: 'Urbanist', sans-serif;
 }
 
 /* Wheat Gold Dividers */
@@ -550,7 +550,7 @@ a.teal-link:hover {
 }
 
 .parallax-title .text-highlight {
-  font-family: 'Fraunces', serif;
+  font-family: 'Urbanist', sans-serif;
   font-style: italic;
   font-weight: 400;
   color: var(--umber-light);
