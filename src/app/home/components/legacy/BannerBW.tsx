@@ -20,7 +20,7 @@ const BannerBW = () => {
         <div className="flex flex-col gap-2">
           <span className="text-[10px] font-bold tracking-[0.3em] text-wheat-light/80 uppercase">Tradición Familiar</span>
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white uppercase tracking-[0.06em] leading-tight">
-            Quesos de Oveja <br className="hidden md:block" /><span className="text-wheat-light italic font-normal">de Autor</span>
+            Quesos de Oveja <br className="hidden md:block" />de Autor
           </h3>
         </div>
         
@@ -30,7 +30,7 @@ const BannerBW = () => {
         <div className="flex flex-col gap-2 md:items-end text-center md:text-right">
           <span className="text-[10px] font-bold tracking-[0.3em] text-wheat-light/80 uppercase">Compromiso</span>
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white uppercase tracking-[0.06em] leading-tight">
-            Sistema Pastoril <br className="hidden md:block" /><span className="text-wheat-light italic font-normal">100% en Libertad</span>
+            Sistema Pastoril <br className="hidden md:block" />100% en Libertad
           </h3>
         </div>
       </div>

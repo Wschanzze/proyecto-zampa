@@ -93,7 +93,7 @@ export default function ImpactSection() {
               
               <h2 className="text-4xl md:text-5xl font-light text-charcoal leading-tight mb-6 uppercase">
                 Cuando la Calidad es Constante,<br />
-                <span className="italic font-normal text-teal">el Sabor se Vuelve Inolvidable.</span>
+                el Sabor se Vuelve Inolvidable.
               </h2>
               
               <p className="text-charcoal/80 text-base md:text-lg font-light leading-relaxed max-w-xl">

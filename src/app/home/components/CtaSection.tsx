@@ -46,7 +46,7 @@ export default function CtaSection() {
 
           <h2 className="text-5xl lg:text-6xl font-light text-charcoal leading-tight uppercase tracking-[0.06em] mb-7">
             Del Campo a tu Mesa.<br />
-            <em className="font-light italic text-teal">Sabor Artesanal de Oveja.</em>
+            Sabor Artesanal de Oveja.
           </h2>
 
           <p className="text-xl font-light text-charcoal/85 leading-relaxed max-w-2xl mx-auto mb-10">

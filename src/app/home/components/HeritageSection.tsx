@@ -59,9 +59,7 @@ export default function HeritageSection() {
               
               La Esencia del<br />
               Tambo Familiar.<br />
-              <em className="font-light italic text-umber" style={{ fontStyle: 'italic' }}>
-                Sabor de Origen.
-              </em>
+              Sabor de Origen.
             </h2>
 
             <p
