@@ -190,7 +190,7 @@ body {
 
 /* Typography */
 .font-fraunces {
-  font-family: 'Fraunces', serif;
+  font-family: var(--font-fraunces), serif;
 }
 
 /* Wheat Gold Dividers */

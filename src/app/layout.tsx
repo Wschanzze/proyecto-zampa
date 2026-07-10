@@ -1,6 +1,13 @@
 import type { Metadata, Viewport } from 'next';
 import { ReactNode } from 'react';
+import { Fraunces } from 'next/font/google';
 import '../styles/tailwind.css';
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-fraunces',
+});
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -23,7 +30,7 @@ export default function RootLayout({
   children: ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={fraunces.variable}>
       <body>{children}</body>
     </html>
   );
