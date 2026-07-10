@@ -60,13 +60,11 @@ const OurProducts = () => {
                 
                 {/* Content container */}
                 <div className="absolute inset-x-0 bottom-0 p-8 z-20 text-left flex flex-col gap-2">
-                  <span className="text-[10px] font-bold tracking-[0.25em] text-wheat-light uppercase">
-                    {cat.subtitle}
-                  </span>
+
                   <h3 className="text-2xl md:text-3xl font-light text-white tracking-wide uppercase">
                     {cat.title}
                   </h3>
-                  <p className="text-xs md:text-sm font-light text-white/80 leading-relaxed mt-2 max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-500 overflow-hidden">
+                  <p className="text-xs md:text-sm font-light text-white/80 leading-relaxed mt-2 max-h-20 opacity-100 md:max-h-0 md:opacity-0 md:group-hover:max-h-20 md:group-hover:opacity-100 transition-all duration-500 overflow-hidden">
                     {cat.desc}
                   </p>
                   <span className="inline-flex items-center gap-2 text-xs font-semibold text-wheat-light uppercase tracking-widest mt-4">
