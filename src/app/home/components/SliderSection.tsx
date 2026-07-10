@@ -34,12 +34,12 @@ const slides: Slide[] = [
   },
   {
     id: 3,
-    subtitle: 'Sabor Añejado',
-    title: 'Secretos de la Cava',
-    excerpt: 'Adentrate en nuestra cava subterránea de maduración. Descubrí de la mano de nuestros expertos cómo el Pecorino adquiere su carácter único tras 9 a 12 meses de guarda paciente.',
-    image: '/assets/Quesos%20Zampa/IMG_2809.jpg',
-    buttonText: 'Conocer Más',
-    href: 'https://www.instagram.com/quesos_zampa',
+    subtitle: 'Bienestar Animal',
+    title: 'Sistema Pastoril',
+    excerpt: 'En Zampa, nuestras ovejas se alimentan mediante un sistema pastoril. Este enfoque respeta el bienestar animal y los ciclos naturales, permitiéndoles pastar al aire libre durante todo el año.',
+    image: '/assets/Quesos%20Zampa/IMG_1145.mp4',
+    buttonText: 'Descubrí más',
+    href: '/nuestra-historia',
   },
 ];
 
@@ -97,13 +97,24 @@ export default function SliderSection() {
                 isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
             >
-              <AppImage
-                src={slide.image}
-                alt={slide.title}
-                fill
-                className={`object-cover ${isActive ? 'animate-ken-burns' : ''}`}
-                priority={idx === 0}
-              />
+              {slide.image.endsWith('.mp4') ? (
+                <video
+                  src={slide.image}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className={`w-full h-full object-cover ${isActive ? 'scale-105 transition-transform duration-[20s] ease-linear' : ''}`}
+                />
+              ) : (
+                <AppImage
+                  src={slide.image}
+                  alt={slide.title}
+                  fill
+                  className={`object-cover ${isActive ? 'animate-ken-burns' : ''}`}
+                  priority={idx === 0}
+                />
+              )}
             </div>
           );
         })}
