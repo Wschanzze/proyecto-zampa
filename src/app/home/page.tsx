@@ -35,6 +35,7 @@ export default function HomePage() {
       <OurProducts />
       <BannerBW />
       <PastoralSystem />
+      <SliderSection />
       <LegacyVisitSection />
       <JoinFamily />
       <InstagramCarousel />
@@ -44,7 +45,6 @@ export default function HomePage() {
       {/* --- INICIO NUEVO (Nuevos Apartados) --- */}
       <ProductParallaxSection />
       <AudienceSection />
-      <SliderSection />
       <TimelineGallery />
       <HeritageSection />
       <VisitSection />
