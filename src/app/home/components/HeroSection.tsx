@@ -121,7 +121,7 @@ export default function HeroSection() {
 
         <h1
           ref={headlineRef}
-          className="font-fraunces text-6xl md:text-8xl lg:text-[90px] font-light leading-[1.1] text-white mb-8 uppercase tracking-[0.06em] drop-shadow-2xl">
+          className="font-fraunces text-4xl sm:text-6xl md:text-8xl lg:text-[90px] font-light leading-[1.1] text-white mb-8 uppercase tracking-[0.06em] drop-shadow-2xl">
           {heroTitles[titleIdx].line1}<br />
           {heroTitles[titleIdx].line2}
         </h1>
@@ -151,10 +151,10 @@ export default function HeroSection() {
         </div>
       </div>
       
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-bounce">
-        <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-wheat-light/70">Descubrir</span>
-        <Icon name="ArrowDownIcon" size={16} className="text-wheat-light/70" />
+      {/* Scroll indicator - Centered, pure white, adjusted height */}
+      <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-bounce">
+        <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-white/80">Descubrir</span>
+        <Icon name="ArrowDownIcon" size={16} className="text-white" />
       </div>
 
       {/* Wheat-gold divider */}
