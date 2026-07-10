@@ -5,7 +5,7 @@ import Icon from '@/components/ui/AppIcon';
 
 const heroImages = [
   {
-    src: '/assets/Quesos%20Zampa/IMG_1134.jpg',
+    src: '/assets/Quesos%20Zampa/07B73847-614E-4FDC-B7AF-F639064C64CB.jpg',
     alt: 'Paisaje de las pasturas y el establecimiento Quesos Zampa en Napaleofú al atardecer'
   },
   {
