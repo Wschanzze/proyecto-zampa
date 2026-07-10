@@ -85,7 +85,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-[100dvh] lg:h-screen lg:min-h-[700px] lg:max-h-[950px] w-full overflow-hidden flex items-end">
+    <section className="relative h-[100dvh] lg:h-screen lg:min-h-[700px] lg:max-h-[950px] w-full overflow-hidden flex items-center">
       {/* Background Images */}
       <div className="absolute inset-0 w-full h-full z-0">
         {heroImages.map((image, idx) => (
@@ -108,13 +108,13 @@ export default function HeroSection() {
           </div>
         ))}
         {/* Soft elegant gradients - localized to where text will be */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent z-10 pointer-events-none hidden lg:block" />
       </div>
 
       {/* Hero Content (Asymmetric Layout) */}
-      <div className="relative z-20 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16 pb-8 sm:pb-12 lg:pb-20 pt-20 sm:pt-28 lg:pt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-16 items-end">
+      <div className="relative z-20 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16 pt-24 lg:pt-32 pb-16 lg:pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-center">
           
           {/* Left Column: Massive Title (takes 7 columns) */}
           <div className="lg:col-span-7 flex flex-col justify-end">
