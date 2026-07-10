@@ -24,7 +24,7 @@ export default function HeritageSection() {
   }, []);
 
   return (
-    <section id="heritage" className="relative py-24 lg:py-32 bg-white overflow-hidden flex items-center grain-overlay">
+    <section id="heritage" className="relative py-16 lg:py-32 bg-white overflow-hidden flex items-center grain-overlay">
       {/* Atmospheric gradient background */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div
@@ -40,11 +40,11 @@ export default function HeritageSection() {
           }} />
         
       </div>
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
 
           {/* Left: Copy */}
-          <div className="lg:col-span-5 flex flex-col gap-7">
+          <div className="lg:col-span-5 flex flex-col gap-6 lg:gap-7">
             {/* Season badge */}
             <div className="inline-flex items-center gap-2 self-start border border-wheat/50 bg-cream px-4 py-2 rounded-full">
               <span className="w-2 h-2 rounded-full bg-teal animate-pulse flex-shrink-0" />
@@ -55,7 +55,7 @@ export default function HeritageSection() {
 
             <h2
               ref={headlineRef}
-              className="text-5xl lg:text-6xl font-light uppercase tracking-[0.06em] leading-tight text-charcoal">
+              className="text-3xl sm:text-4xl lg:text-6xl font-light uppercase tracking-[0.06em] leading-tight text-charcoal">
               
               La Esencia del<br />
               Tambo Familiar.
@@ -63,64 +63,66 @@ export default function HeritageSection() {
 
             <p
               ref={subRef}
-              className="text-lg font-light text-umber-light leading-relaxed max-w-md">
+              className="text-base sm:text-lg font-light text-umber-light leading-relaxed max-w-md">
               
               En Quesos Zampa elaboramos quesos artesanales en las pasturas de Tandil, controlando todo el proceso desde la siembra de nuestras pasturas y el ordeñe diario, hasta la maduración en cava a solo 100 metros del tambo.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2">
               <a
                 href="#cultivars"
-                className="flex items-center justify-center gap-2 h-14 px-8 rounded-2xl bg-limestone-soft border border-umber/30 text-umber font-medium text-base hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                className="flex items-center justify-center gap-2 h-12 sm:h-14 px-6 sm:px-8 rounded-2xl bg-limestone-soft border border-umber/30 text-umber font-medium text-sm sm:text-base hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 style={{ boxShadow: '0 8px 32px rgba(46,93,90,0.28)' }}>
                 
                 <Icon name="SparklesIcon" size={18} variant="outline" />
-                Explorar Variedades
+                <span className="hidden sm:inline">Explorar</span>
+                <span className="sm:hidden">Variedades</span>
               </a>
               <a
                 href="#timeline"
-                className="flex items-center justify-center gap-2 h-14 px-8 rounded-2xl border border-wheat/60 bg-limestone text-umber font-medium text-base hover:bg-wheat-muted hover:border-wheat transition-all duration-300 group">
+                className="flex items-center justify-center gap-2 h-12 sm:h-14 px-6 sm:px-8 rounded-2xl border border-wheat/60 bg-limestone text-umber font-medium text-sm sm:text-base hover:bg-wheat-muted hover:border-wheat transition-all duration-300 group">
                 
                 <Icon name="ClockIcon" size={18} variant="outline" className="group-hover:text-teal transition-colors" />
-                Nuestra Historia
+                <span className="hidden sm:inline">Nuestra Historia</span>
+                <span className="sm:hidden">Historia</span>
               </a>
             </div>
 
             {/* Social proof strip */}
-            <div className="pt-5 border-t border-wheat/30 flex items-center gap-6 flex-wrap">
+            <div className="pt-5 border-t border-wheat/30 flex items-center gap-4 sm:gap-6 flex-wrap">
               <div className="flex -space-x-3">
                 {[
                 'https://images.pexels.com/photos/2132180/pexels-photo-2132180.jpeg?auto=compress&w=64&h=64&fit=crop',
                 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&w=64&h=64&fit=crop',
                 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&w=64&h=64&fit=crop']?.
                 map((src, i) =>
-                <div key={i} className="w-10 h-10 rounded-full border-2 border-limestone-soft overflow-hidden flex-shrink-0">
+                <div key={i} className="w-8 sm:w-10 h-8 sm:h-10 rounded-full border-2 border-limestone-soft overflow-hidden flex-shrink-0">
                     <AppImage src={src} alt={`Customer ${i + 1}`} width={40} height={40} className="w-full h-full object-cover" />
                   </div>
                 )}
-                <div className="w-10 h-10 rounded-full border-2 border-limestone-soft bg-wheat-muted flex items-center justify-center text-xs font-semibold text-umber flex-shrink-0">
+                <div className="w-8 sm:w-10 h-8 sm:h-10 rounded-full border-2 border-limestone-soft bg-wheat-muted flex items-center justify-center text-xs font-semibold text-umber flex-shrink-0">
                   +500
                 </div>
               </div>
               <div>
                 <div className="flex items-center gap-1 text-wheat">
                   {[1, 2, 3, 4, 5]?.map((s) =>
-                  <svg key={s} className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <svg key={s} className="w-3 sm:w-3.5 h-3 sm:h-3.5 fill-current" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
                   )}
                 </div>
-                <p className="text-xs text-umber-light mt-0.5 font-light">Elegido por los amantes del buen queso artesanal</p>
+                <p className="text-xs text-umber-light mt-0.5 font-light">Elegido por los amantes del buen queso</p>
               </div>
             </div>
           </div>
 
           {/* Right: Asymmetric photo grid */}
-          <div className="w-full mt-12 lg:mt-0 lg:col-span-7 relative">
+          <div className="w-full mt-8 lg:mt-0 lg:col-span-7 relative">
             <div className="hero-photo-grid">
               {/* Main tall image — researcher hands inspecting grain */}
-              <div className="photo-main rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
+              <div className="photo-main rounded-3xl sm:rounded-5xl overflow-hidden relative group shadow-lg sm:shadow-2xl img-zoom">
                 <AppImage
                   src="/assets/Quesos%20Zampa/IMG_9821.JPG"
                   alt="Proceso de elaboración artesanal de queso de oveja Zampa"
@@ -128,14 +130,14 @@ export default function HeritageSection() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-umber-dark/50 via-transparent to-transparent" />
-                <div className="absolute bottom-5 left-5 text-cream">
+                <div className="absolute bottom-3 sm:bottom-5 left-3 sm:left-5 text-cream">
                   <p className="text-xs font-medium uppercase tracking-widest text-wheat-light mb-1">Crianza y Cuidado</p>
-                  <h3 className="text-lg font-light uppercase">Lote Z-47</h3>
+                  <h3 className="text-base sm:text-lg font-light uppercase">Lote Z-47</h3>
                 </div>
               </div>
 
               {/* Top wide — golden-hour trial rows */}
-              <div className="photo-top-wide rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
+              <div className="photo-top-wide rounded-3xl sm:rounded-5xl overflow-hidden relative group shadow-lg sm:shadow-2xl img-zoom">
                 <AppImage
                   src="/assets/Quesos%20Zampa/IMG_2809.jpg"
                   alt="Maduración en cava de los quesos de oveja Zampa"
@@ -143,14 +145,14 @@ export default function HeritageSection() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-umber-dark/40 via-transparent to-transparent" />
-                <div className="absolute top-4 right-4 glass-dark px-3 py-1.5 rounded-full flex items-center gap-2">
+                <div className="absolute top-3 sm:top-4 right-3 sm:right-4 glass-dark px-3 py-1.5 rounded-full flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-wheat animate-pulse" />
                   <span className="text-xs font-medium text-cream">Leche A2</span>
                 </div>
               </div>
 
               {/* Bottom left — close-up grain */}
-              <div className="photo-bottom-left rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
+              <div className="photo-bottom-left rounded-3xl sm:rounded-5xl overflow-hidden relative group shadow-lg sm:shadow-2xl img-zoom">
                 <AppImage
                   src="/assets/Quesos%20Zampa/IMG_9858.JPG"
                   alt="Detalle de los quesos artesanales en Napaleofú"
@@ -160,11 +162,11 @@ export default function HeritageSection() {
               </div>
 
               {/* Circular spinning element */}
-              <div className="photo-circular-element flex items-center justify-center relative">
-                <div className="relative w-32 h-32 flex items-center justify-center">
+              <div className="photo-circular-element flex items-center justify-center relative justify-self-center">
+                <div className="relative w-24 sm:w-32 h-24 sm:h-32 flex items-center justify-center">
                   <svg className="w-full h-full absolute animate-spin-slow" viewBox="0 0 100 100">
                     <path id="hero-curve" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
-                    <text className="text-[7px] uppercase font-bold tracking-widest" fill="#C9A84C">
+                    <text className="text-[6px] sm:text-[7px] uppercase font-bold tracking-widest" fill="#C9A84C">
                       <textPath href="#hero-curve">
                         · Quesos de Oveja · Sabor de Origen · Desde 2018 ·
                       </textPath>
@@ -172,10 +174,10 @@ export default function HeritageSection() {
                   </svg>
                   <a
                     href="#cultivars"
-                    className="w-16 h-16 rounded-full bg-limestone-soft border border-umber/30 text-umber flex items-center justify-center hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-lg z-10 hover:scale-110"
+                    className="w-14 sm:w-16 h-14 sm:h-16 rounded-full bg-limestone-soft border border-umber/30 text-umber flex items-center justify-center hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-lg z-10 hover:scale-110"
                     aria-label="Explorar catálogo">
                     
-                    <Icon name="ArrowUpRightIcon" size={22} variant="outline" className="text-cream" />
+                    <Icon name="ArrowUpRightIcon" size={20} variant="outline" className="text-cream" />
                   </a>
                 </div>
               </div>
