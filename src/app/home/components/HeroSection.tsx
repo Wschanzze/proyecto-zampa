@@ -108,8 +108,9 @@ export default function HeroSection() {
           </div>
         ))}
         {/* Soft elegant gradients - localized to where text will be */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent z-10 pointer-events-none hidden lg:block" />
+        <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent z-10 pointer-events-none hidden lg:block" />
       </div>
 
       {/* Hero Content (Asymmetric Layout) */}
@@ -117,20 +118,24 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-center">
           
           {/* Left Column: Massive Title (takes 7 columns) */}
-          <div className="lg:col-span-7 flex flex-col justify-end">
-            <div className="mb-3 sm:mb-4 lg:mb-6 flex items-center gap-3 sm:gap-4">
-              <span className="w-8 sm:w-12 h-[1px] bg-white/60"></span>
-              <p className="text-[9px] sm:text-xs font-semibold tracking-[0.4em] text-white/90 uppercase drop-shadow-md">
+          <div className="lg:col-span-7 flex flex-col justify-center">
+            <div className="mb-4 sm:mb-6 lg:mb-8 flex items-center gap-3 sm:gap-4 opacity-90">
+              <span className="w-8 sm:w-16 h-[1px] bg-white"></span>
+              <p className="text-[10px] sm:text-xs font-bold tracking-[0.4em] text-white uppercase drop-shadow-md">
                 De Tandil a tu Mesa
               </p>
             </div>
 
-            <div className="min-h-[90px] sm:min-h-[140px] lg:min-h-[220px] flex items-end">
+            <div className="min-h-[120px] sm:min-h-[160px] lg:min-h-[220px] flex flex-col justify-center">
               <h1
                 ref={headlineRef}
-                className="font-urbanist text-4xl sm:text-6xl md:text-7xl lg:text-[85px] xl:text-[95px] font-light leading-[1.05] text-white uppercase tracking-wide drop-shadow-2xl">
-                {heroTitles[titleIdx].line1}<br />
-                <span className="text-white/90 italic font-medium">{heroTitles[titleIdx].line2}</span>
+                className="font-urbanist text-white drop-shadow-2xl">
+                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[75px] xl:text-[85px] font-extrabold uppercase tracking-tight leading-[1]">
+                  {heroTitles[titleIdx].line1}
+                </span>
+                <span className="block mt-2 sm:mt-3 lg:mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[60px] font-light italic text-white/90 tracking-wide leading-[1.1]">
+                  {heroTitles[titleIdx].line2}
+                </span>
               </h1>
             </div>
           </div>
@@ -138,26 +143,26 @@ export default function HeroSection() {
           {/* Right Column: Description & CTAs (takes 5 columns) */}
           <div 
             ref={subRef}
-            className="lg:col-span-5 flex flex-col lg:pb-2 w-full"
+            className="lg:col-span-5 flex flex-col w-full"
           >
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 sm:p-8 lg:p-10 rounded-[1.8rem] sm:rounded-[2rem] shadow-2xl">
-              <p className="text-xs sm:text-sm lg:text-base font-light text-white/90 leading-relaxed mb-6 sm:mb-8">
+            <div className="bg-black/30 backdrop-blur-xl border border-white/15 p-6 sm:p-8 lg:p-12 rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)]">
+              <p className="text-sm sm:text-base lg:text-lg font-light text-white/95 leading-relaxed mb-8 sm:mb-10">
                 Criamos ovejas frisonas en pasturas naturales y elaboramos quesos premium. Un proceso 100% familiar que respeta los tiempos de la tierra y el verdadero sabor artesanal.
               </p>
 
-              <div className="grid grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3 sm:flex sm:flex-row lg:flex-col xl:flex-row">
+              <div className="grid grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 sm:flex sm:flex-row lg:flex-col xl:flex-row">
                 <a
                   href="#cultivars"
-                  className="flex items-center justify-center gap-2 sm:gap-3 h-11 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)] tracking-[0.1em] sm:tracking-[0.15em] uppercase w-full">
-                  <Icon name="SparklesIcon" size={14} variant="solid" className="sm:w-4 sm:h-4" />
+                  className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] tracking-[0.15em] uppercase w-full">
+                  <Icon name="SparklesIcon" size={16} variant="solid" className="sm:w-5 sm:h-5" />
                   <span>Variedades</span>
                 </a>
                 <a
                   href="https://www.instagram.com/quesos_zampa"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 sm:gap-3 h-11 sm:h-14 rounded-full border border-white/40 bg-white/5 text-white font-bold text-[10px] sm:text-xs hover:bg-white/20 hover:border-white transition-all duration-300 tracking-[0.1em] sm:tracking-[0.15em] uppercase w-full">
-                  <Icon name="ChatBubbleLeftRightIcon" size={14} variant="outline" className="sm:w-4 sm:h-4" />
+                  className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full border border-white/30 bg-white/5 text-white font-bold text-[10px] sm:text-xs hover:bg-white/15 hover:border-white/60 transition-all duration-300 tracking-[0.15em] uppercase w-full">
+                  <Icon name="ChatBubbleLeftRightIcon" size={16} variant="outline" className="sm:w-5 sm:h-5" />
                   <span>Contacto</span>
                 </a>
               </div>
