@@ -128,7 +128,7 @@ export default function HeroSection() {
             <div className="min-h-[90px] sm:min-h-[140px] lg:min-h-[220px] flex items-end">
               <h1
                 ref={headlineRef}
-                className="font-fraunces text-4xl sm:text-6xl md:text-7xl lg:text-[85px] xl:text-[95px] font-light leading-[1.05] text-white uppercase tracking-wide drop-shadow-2xl">
+                className="font-urbanist text-4xl sm:text-6xl md:text-7xl lg:text-[85px] xl:text-[95px] font-light leading-[1.05] text-white uppercase tracking-wide drop-shadow-2xl">
                 {heroTitles[titleIdx].line1}<br />
                 <span className="text-white/90 italic font-medium">{heroTitles[titleIdx].line2}</span>
               </h1>
