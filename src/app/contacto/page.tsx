@@ -160,7 +160,7 @@ export default function ContactoPage() {
 
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 bg-teal text-white px-6 py-3 rounded-lg shadow-lg font-medium tracking-wide animate-fade-in text-sm text-center">
+        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 bg-limestone-soft border border-umber/30 text-umber px-6 py-3 rounded-lg shadow-lg font-medium tracking-wide animate-fade-in text-sm text-center">
           {toastMessage}
         </div>
       )}

@@ -75,7 +75,7 @@ export default function HeritageSection() {
             <div className="flex flex-col sm:flex-row gap-4 mt-2">
               <a
                 href="#cultivars"
-                className="flex items-center justify-center gap-2 h-14 px-8 rounded-2xl bg-teal text-cream font-medium text-base hover:bg-teal-light transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                className="flex items-center justify-center gap-2 h-14 px-8 rounded-2xl bg-limestone-soft border border-umber/30 text-umber font-medium text-base hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 style={{ boxShadow: '0 8px 32px rgba(46,93,90,0.28)' }}>
                 
                 <Icon name="SparklesIcon" size={18} variant="outline" />
@@ -175,7 +175,7 @@ export default function HeritageSection() {
                   </svg>
                   <a
                     href="#cultivars"
-                    className="w-16 h-16 rounded-full bg-teal flex items-center justify-center hover:bg-teal-light transition-all duration-300 shadow-lg z-10 hover:scale-110"
+                    className="w-16 h-16 rounded-full bg-limestone-soft border border-umber/30 text-umber flex items-center justify-center hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-lg z-10 hover:scale-110"
                     aria-label="Explorar catálogo">
                     
                     <Icon name="ArrowUpRightIcon" size={22} variant="outline" className="text-cream" />

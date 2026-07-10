@@ -65,7 +65,7 @@ export default function AudienceSection() {
 
             {/* Content */}
             <div className="relative z-20">
-              <span className="inline-block bg-teal text-cream px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">
+              <span className="inline-block bg-limestone-soft border border-umber/30 text-umber px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">
                 Tambo Familiar
               </span>
               <h3 className="font-fraunces text-3xl md:text-4xl font-medium text-white leading-tight">
@@ -103,7 +103,7 @@ export default function AudienceSection() {
 
               {/* Content */}
               <div className="relative z-20">
-                <span className="inline-block bg-teal text-cream px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-3">
+                <span className="inline-block bg-limestone-soft border border-umber/30 text-umber px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-3">
                   Experiencias Gourmet
                 </span>
                 <h3 className="font-fraunces text-xl md:text-2xl font-medium text-white leading-snug">
@@ -130,7 +130,7 @@ export default function AudienceSection() {
 
               {/* Content */}
               <div className="relative z-20">
-                <span className="inline-block bg-teal text-cream px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-3">
+                <span className="inline-block bg-limestone-soft border border-umber/30 text-umber px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-3">
                   Maduración en Cava
                 </span>
                 <h3 className="font-fraunces text-xl md:text-2xl font-medium text-white leading-snug">

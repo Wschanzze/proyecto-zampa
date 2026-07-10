@@ -37,7 +37,7 @@ const PastoralSystem = () => {
             </p>
             <Link 
               href="/nuestra-historia" 
-              className="inline-flex items-center justify-center h-14 px-8 rounded-2xl bg-teal text-cream font-medium text-base hover:bg-teal-light transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 mt-2 self-start tracking-widest uppercase"
+              className="inline-flex items-center justify-center h-14 px-8 rounded-2xl bg-limestone-soft border border-umber/30 text-umber font-medium text-base hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 mt-2 self-start tracking-widest uppercase"
               style={{ boxShadow: '0 8px 32px rgba(46,93,90,0.2)' }}
             >
               DESCUBRE MÁS

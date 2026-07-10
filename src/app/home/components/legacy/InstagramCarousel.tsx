@@ -45,7 +45,7 @@ const InstagramCarousel = () => {
 
       <div className="relative max-w-[1600px] mx-auto px-6 lg:px-12">
         <button 
-          className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-teal text-white flex items-center justify-center hover:bg-teal-light shadow-xl hover:scale-105 transition-all duration-300 z-30" 
+          className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-limestone-soft border border-umber/30 text-umber flex items-center justify-center hover:bg-umber hover:text-white hover:border-umber shadow-xl hover:scale-105 transition-all duration-300 z-30" 
           onClick={() => scroll('left')}
           aria-label="Previous posts"
         >
@@ -96,7 +96,7 @@ const InstagramCarousel = () => {
         </div>
 
         <button 
-          className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-teal text-white flex items-center justify-center hover:bg-teal-light shadow-xl hover:scale-105 transition-all duration-300 z-30" 
+          className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-limestone-soft border border-umber/30 text-umber flex items-center justify-center hover:bg-umber hover:text-white hover:border-umber shadow-xl hover:scale-105 transition-all duration-300 z-30" 
           onClick={() => scroll('right')}
           aria-label="Next posts"
         >
