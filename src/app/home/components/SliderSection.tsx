@@ -82,144 +82,127 @@ export default function SliderSection() {
 
   return (
     <section 
-      className="relative py-20 lg:py-28 w-full overflow-hidden bg-gray-soft text-charcoal flex items-center border-b border-charcoal/5"
+      className="relative min-h-[700px] h-screen max-h-[900px] w-full overflow-hidden bg-black flex items-end justify-center lg:justify-start"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Background soft decoration */}
-      <div className="absolute top-0 right-0 w-[40%] h-[100%] bg-gradient-to-l from-white/30 to-transparent pointer-events-none z-0" />
-      
-      <div className="max-w-7xl mx-auto w-full px-6 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      {/* Full Bleed Background Images */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        {slides.map((slide, idx) => {
+          const isActive = current === idx;
+          return (
+            <div
+              key={slide.id}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'
+              }`}
+            >
+              <AppImage
+                src={slide.image}
+                alt={slide.title}
+                fill
+                className={`object-cover ${isActive ? 'animate-ken-burns' : ''}`}
+                priority={idx === 0}
+              />
+            </div>
+          );
+        })}
+        {/* Subtle shadow overlay only at the very bottom and left for text legibility edge cases */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent z-10 pointer-events-none hidden lg:block" />
+      </div>
+
+      {/* Glassmorphic Floating Content Card */}
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-12 lg:pb-20 pt-20 flex justify-start h-full items-end">
+        
+        <div className="w-full lg:max-w-xl xl:max-w-2xl bg-white/70 backdrop-blur-xl border border-white/40 shadow-2xl rounded-[2.5rem] p-8 lg:p-12 transition-all duration-500 hover:bg-white/80">
           
-          {/* Columna Izquierda: Información (span 5 en lg) - Orden 2 en móvil para quedar abajo de la imagen */}
-          <div className="order-2 lg:order-1 lg:col-span-5 flex flex-col justify-between min-h-[460px] relative z-10">
-            {/* Slide Info (with transitions) */}
-            <div className="relative flex-grow min-h-[300px]">
-              {slides.map((slide, idx) => {
-                const isActive = current === idx;
-                return (
-                  <div
-                    key={slide.id}
-                    className={`transition-all duration-700 ease-in-out flex flex-col gap-6 ${
-                      isActive 
-                        ? 'opacity-100 translate-y-0 relative z-10' 
-                        : 'opacity-0 translate-y-8 absolute pointer-events-none'
-                    }`}
-                  >
-                    {/* Contador y Categoría */}
-                    <div className="flex items-center gap-4">
-                      <span className="font-fraunces text-2xl italic text-teal/80">
-                        0{idx + 1}
-                      </span>
-                      <div className="h-px w-8 bg-teal/40" />
-                      <span className="text-xs font-semibold uppercase tracking-[0.25em] text-teal">
-                        {slide.subtitle}
-                      </span>
-                    </div>
-
-                    {/* Título */}
-                    <h2 className="font-fraunces text-4xl md:text-5xl lg:text-6xl font-light text-umber-dark leading-[1.1] uppercase tracking-[0.03em]">
-                      {slide.title}
-                    </h2>
-
-                    {/* Descripción */}
-                    <p className="text-sm md:text-base text-charcoal/80 leading-relaxed font-light max-w-md">
-                      {slide.excerpt}
-                    </p>
-
-                    {/* Botón */}
-                    <a
-                      href={slide.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group inline-flex items-center gap-4 text-xs md:text-sm font-semibold tracking-[0.2em] uppercase text-charcoal hover:text-teal transition-colors duration-300 mt-4 w-fit"
-                    >
-                      <span>{slide.buttonText}</span>
-                      <span className="flex items-center justify-center w-11 h-11 rounded-full border border-charcoal/20 group-hover:border-teal/50 bg-white/40 group-hover:bg-white transition-all duration-300 shadow-sm">
-                        <Icon name="ArrowRightIcon" size={14} className="text-charcoal group-hover:text-teal transition-all duration-300 group-hover:translate-x-1" />
-                      </span>
-                    </a>
+          {/* Dynamic Content */}
+          <div className="relative min-h-[220px] lg:min-h-[200px]">
+            {slides.map((slide, idx) => {
+              const isActive = current === idx;
+              return (
+                <div
+                  key={slide.id}
+                  className={`absolute top-0 left-0 w-full transition-all duration-700 ease-in-out flex flex-col gap-4 lg:gap-5 ${
+                    isActive 
+                      ? 'opacity-100 translate-y-0 relative z-10' 
+                      : 'opacity-0 translate-y-4 absolute pointer-events-none'
+                  }`}
+                >
+                  {/* Category */}
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 rounded-full bg-teal animate-pulse" />
+                    <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-teal-dark">
+                      {slide.subtitle}
+                    </span>
                   </div>
-                );
-              })}
-            </div>
 
-            {/* Controles de Navegación e Indicador de Progreso en la base */}
-            <div className="mt-8 flex flex-col gap-6 border-t border-charcoal/10 pt-6">
-              <div className="flex items-center justify-between">
-                {/* Botones Flechas */}
-                <div className="flex items-center gap-3">
-                  <button
-                    onClick={handlePrev}
-                    className="w-12 h-12 rounded-full border border-charcoal/20 hover:border-teal hover:bg-white flex items-center justify-center transition-all duration-300 group shadow-sm bg-white/50"
-                    aria-label="Anterior"
+                  {/* Title */}
+                  <h2 className="font-fraunces text-3xl sm:text-4xl lg:text-5xl font-semibold text-umber-dark leading-tight uppercase tracking-wide">
+                    {slide.title}
+                  </h2>
+
+                  {/* Excerpt */}
+                  <p className="text-sm sm:text-base text-charcoal/85 leading-relaxed font-light max-w-lg">
+                    {slide.excerpt}
+                  </p>
+
+                  {/* Button */}
+                  <a
+                    href={slide.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-3 text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-charcoal hover:text-teal transition-colors duration-300 mt-2 w-fit"
                   >
-                    <Icon name="ArrowLeftIcon" size={16} className="text-charcoal group-hover:text-teal transition-all duration-300 group-hover:-translate-x-0.5" />
-                  </button>
-                  <button
-                    onClick={handleNext}
-                    className="w-12 h-12 rounded-full border border-charcoal/20 hover:border-teal hover:bg-white flex items-center justify-center transition-all duration-300 group shadow-sm bg-white/50"
-                    aria-label="Siguiente"
-                  >
-                    <Icon name="ArrowRightIcon" size={16} className="text-charcoal group-hover:text-teal transition-all duration-300 group-hover:translate-x-0.5" />
-                  </button>
+                    <span>{slide.buttonText}</span>
+                    <span className="flex items-center justify-center w-9 h-9 rounded-full bg-white shadow-sm border border-charcoal/10 group-hover:border-teal/30 group-hover:shadow-md transition-all duration-300">
+                      <Icon name="ArrowRightIcon" size={14} className="text-charcoal group-hover:text-teal transition-all duration-300 group-hover:translate-x-0.5" />
+                    </span>
+                  </a>
                 </div>
-
-                {/* Contador total */}
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
-                  <span className="text-charcoal font-bold">0{current + 1}</span> / 0{slides.length}
-                </span>
-              </div>
-
-              {/* Barra de progreso de time */}
-              <div className="w-full h-[2px] bg-charcoal/10 rounded-full overflow-hidden">
-                <div 
-                  className="h-full bg-teal transition-all duration-100 ease-linear"
-                  style={{ width: `${progress}%` }}
-                />
-              </div>
-            </div>
+              );
+            })}
           </div>
 
-          {/* Columna Derecha: Imagen Destacada (span 7 en lg) - Orden 1 en móvil para quedar arriba */}
-          <div className="order-1 lg:order-2 lg:col-span-7 w-full">
-            <div className="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-[1.3] w-full rounded-[2.5rem] overflow-hidden shadow-2xl bg-white border border-teal/5">
-              {slides.map((slide, idx) => {
-                const isActive = current === idx;
-                return (
-                  <div
-                    key={slide.id}
-                    className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-                      isActive 
-                        ? 'opacity-100 scale-100 z-10' 
-                        : 'opacity-0 scale-105 pointer-events-none'
-                    }`}
-                  >
-                    <AppImage
-                      src={slide.image}
-                      alt={slide.title}
-                      fill
-                      className={`object-cover ${isActive ? 'animate-ken-burns' : ''}`}
-                      priority={idx === 0}
-                    />
-                    
-                    {/* Degradado sutil en bordes para realzar la imagen */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-                  </div>
-                );
-              })}
+          {/* Navigation Controls inside the card */}
+          <div className="mt-8 pt-6 border-t border-charcoal/10 flex flex-col gap-5">
+            <div className="flex items-center justify-between">
+              
+              {/* Pagination */}
+              <div className="flex items-center gap-2">
+                <span className="font-fraunces text-2xl italic text-teal font-medium">0{current + 1}</span>
+                <span className="text-sm font-light text-charcoal/40">/ 0{slides.length}</span>
+              </div>
 
-              {/* Badge Flotante Glassmorphic */}
-              <div className="absolute top-6 left-6 z-20 bg-white/70 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/40 shadow-md">
-                <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-teal-dark flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
-                  Quesos Zampa Experiencia
-                </span>
+              {/* Arrow Buttons */}
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={handlePrev}
+                  className="w-10 h-10 rounded-full bg-white shadow-sm border border-charcoal/10 hover:border-teal/50 flex items-center justify-center transition-all duration-300 group"
+                  aria-label="Anterior"
+                >
+                  <Icon name="ArrowLeftIcon" size={16} className="text-charcoal group-hover:text-teal transition-all duration-300 group-hover:-translate-x-0.5" />
+                </button>
+                <button
+                  onClick={handleNext}
+                  className="w-10 h-10 rounded-full bg-white shadow-sm border border-charcoal/10 hover:border-teal/50 flex items-center justify-center transition-all duration-300 group"
+                  aria-label="Siguiente"
+                >
+                  <Icon name="ArrowRightIcon" size={16} className="text-charcoal group-hover:text-teal transition-all duration-300 group-hover:translate-x-0.5" />
+                </button>
               </div>
             </div>
-          </div>
 
+            {/* Time Progress Bar */}
+            <div className="w-full h-1 bg-charcoal/5 rounded-full overflow-hidden">
+              <div 
+                className="h-full bg-gradient-to-r from-teal to-teal-light transition-all duration-100 ease-linear"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
