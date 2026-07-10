@@ -92,7 +92,7 @@ export default function CultivarGrid() {
         <div
           className={`mb-24 text-center transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal mb-4">Nuestra Selección</p>
-          <h2 className="font-fraunces text-4xl lg:text-6xl font-light text-umber-dark leading-tight tracking-[0.15em] max-w-4xl mx-auto uppercase">
+          <h2 className="font-fraunces text-4xl lg:text-6xl font-light text-umber-dark leading-tight tracking-[0.06em] max-w-4xl mx-auto uppercase">
             Variedades Artesanales<br />
             <em className="font-light italic text-umber-light">Elaboradas con Leche 100% de Oveja</em>
           </h2>
@@ -113,7 +113,7 @@ export default function CultivarGrid() {
               }}>
               
               {/* Product Title */}
-              <h3 className="font-fraunces text-3xl lg:text-5xl font-light text-charcoal uppercase tracking-[0.15em] mb-12">
+              <h3 className="font-fraunces text-3xl lg:text-5xl font-light text-charcoal uppercase tracking-[0.06em] mb-12">
                 {cultivar.name}
               </h3>
 

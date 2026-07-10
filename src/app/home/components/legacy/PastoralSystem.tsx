@@ -23,7 +23,7 @@ const PastoralSystem = () => {
           {/* Left Column: Copy */}
           <div className="lg:col-span-6 flex flex-col gap-6">
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-teal">CRIADAS EN LIBERTAD</span>
-            <h3 className="font-fraunces text-4xl md:text-5xl font-light text-umber-dark leading-tight uppercase tracking-[0.15em]">Sistema Pastoril</h3>
+            <h3 className="font-fraunces text-4xl md:text-5xl font-light text-umber-dark leading-tight uppercase tracking-[0.06em]">Sistema Pastoril</h3>
             <p className="text-base md:text-lg font-light text-charcoal/80 leading-relaxed">
               En Zampa, nuestras ovejas se alimentan mediante un sistema pastoril en los fértiles campos de Napaleofú. Este enfoque respeta el bienestar animal y los ciclos naturales, permitiéndoles pastar al aire libre durante todo el año.
             </p>

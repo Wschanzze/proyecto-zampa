@@ -35,7 +35,7 @@ const InstagramCarousel = () => {
     <section className="py-24 lg:py-32 bg-[#FAF8F5] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center mb-16">
         <span className="text-xs font-semibold uppercase tracking-[0.25em] text-teal mb-3 block">FILOSOFÍA EN IMÁGENES</span>
-        <h2 className="font-fraunces text-4xl md:text-5xl font-light text-umber-dark tracking-[0.15em] uppercase mb-3">
+        <h2 className="font-fraunces text-4xl md:text-5xl font-light text-umber-dark tracking-[0.06em] uppercase mb-3">
           <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-teal transition-colors duration-300">
             @quesos.zampa
           </a>

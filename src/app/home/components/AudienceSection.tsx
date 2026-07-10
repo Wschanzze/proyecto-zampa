@@ -39,7 +39,7 @@ export default function AudienceSection() {
             </span>
           </div>
 
-          <h2 className="font-fraunces text-4xl md:text-5xl lg:text-6xl font-light text-umber-dark leading-tight max-w-3xl uppercase tracking-[0.15em]">
+          <h2 className="font-fraunces text-4xl md:text-5xl lg:text-6xl font-light text-umber-dark leading-tight max-w-3xl uppercase tracking-[0.06em]">
             El sabor del origen<br />
             encuentra a quienes buscan <em className="font-normal italic text-teal">lo extraordinario.</em>
           </h2>

@@ -88,7 +88,7 @@ export default function HeroSection() {
 
         <h1
           ref={headlineRef}
-          className="font-fraunces text-6xl md:text-8xl lg:text-[90px] font-light leading-[1.1] text-white mb-8 uppercase tracking-[0.15em] drop-shadow-2xl">
+          className="font-fraunces text-6xl md:text-8xl lg:text-[90px] font-light leading-[1.1] text-white mb-8 uppercase tracking-[0.06em] drop-shadow-2xl">
           Quesos de Oveja<br />
           con Pasión de Origen
         </h1>

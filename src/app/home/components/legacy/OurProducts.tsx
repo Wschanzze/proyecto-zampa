@@ -32,7 +32,7 @@ const OurProducts = () => {
       {/* Header section */}
       <div className="max-w-4xl mx-auto px-6 text-center mb-16 md:mb-24">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-teal mb-4 block">NUESTROS PRODUCTOS</p>
-        <h2 className="font-fraunces text-4xl md:text-5xl lg:text-6xl font-light text-umber-dark leading-tight uppercase tracking-[0.15em] mb-6">
+        <h2 className="font-fraunces text-4xl md:text-5xl lg:text-6xl font-light text-umber-dark leading-tight uppercase tracking-[0.06em] mb-6">
           100% Leche de Oveja <br className="hidden md:block" />
           <em className="font-normal italic text-teal text-3xl md:text-5xl">Quesos con Identidad y Cuidado Artesanal</em>
         </h2>
