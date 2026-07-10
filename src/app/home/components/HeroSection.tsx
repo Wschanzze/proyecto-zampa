@@ -22,11 +22,18 @@ const heroImages = [
   }
 ];
 
+const heroTitles = [
+  { line1: 'Quesos de Oveja', line2: 'con Pasión de Origen' },
+  { line1: 'Elaboramos', line2: 'nuestros quesos' },
+  { line1: 'Criamos', line2: 'nuestras ovejas' }
+];
+
 export default function HeroSection() {
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subRef = useRef<HTMLParagraphElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const [currentIdx, setCurrentIdx] = useState(0);
+  const [titleIdx, setTitleIdx] = useState(0);
 
   useEffect(() => {
     const elements = [headlineRef?.current, subRef?.current, cardRef?.current];
@@ -46,6 +53,32 @@ export default function HeroSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIdx((prev) => (prev + 1) % heroImages.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const el = headlineRef.current;
+      if (el) {
+        // Smooth slide out (upward)
+        el.style.transition = 'opacity 0.6s cubic-bezier(0.23,1,0.32,1), transform 0.6s cubic-bezier(0.23,1,0.32,1)';
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(-15px)';
+        
+        setTimeout(() => {
+          setTitleIdx((prev) => (prev + 1) % heroTitles.length);
+          // Position it below for the slide-in animation without transitioning
+          el.style.transition = 'none';
+          el.style.transform = 'translateY(15px)';
+          // Force layout reflow
+          el.getBoundingClientRect();
+          // Smooth slide in (from below)
+          el.style.transition = 'opacity 0.6s cubic-bezier(0.23,1,0.32,1), transform 0.6s cubic-bezier(0.23,1,0.32,1)';
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, 600);
+      }
     }, 6000);
     return () => clearInterval(timer);
   }, []);
@@ -83,14 +116,14 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-5xl mx-auto w-full px-6 lg:px-12 pt-32 pb-24 flex flex-col items-center text-center">
         {/* Top small label */}
         <p className="text-xs md:text-sm font-semibold tracking-[0.3em] text-white uppercase mb-6 drop-shadow-md">
-          Quesería Artesanal Zampa · Napaleofú
+          DE TANDIL A TU MESA | 100% PASTORIL
         </p>
 
         <h1
           ref={headlineRef}
           className="font-fraunces text-6xl md:text-8xl lg:text-[90px] font-light leading-[1.1] text-white mb-8 uppercase tracking-[0.06em] drop-shadow-2xl">
-          Quesos de Oveja<br />
-          con Pasión de Origen
+          {heroTitles[titleIdx].line1}<br />
+          {heroTitles[titleIdx].line2}
         </h1>
 
         <p
