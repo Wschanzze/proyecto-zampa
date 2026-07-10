@@ -158,11 +158,11 @@ export default function HeroSection() {
                   <span>Variedades</span>
                 </a>
                 <a
-                  href="https://www.instagram.com/quesos_zampa"
+                  href="https://wa.me/5491132554757?text=%C2%A1Hola!%20Te%20escribo%20desde%20el%20sitio%20web%20de%20Quesos%20Zampa.%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full border border-white/30 bg-white/5 text-white font-bold text-[10px] sm:text-xs hover:bg-white/15 hover:border-white/60 transition-all duration-300 tracking-[0.15em] uppercase w-full">
-                  <Icon name="ChatBubbleLeftRightIcon" size={16} variant="outline" className="sm:w-5 sm:h-5" />
+                  <Icon name="WhatsApp" size={16} className="sm:w-5 sm:h-5" />
                   <span>Contacto</span>
                 </a>
               </div>

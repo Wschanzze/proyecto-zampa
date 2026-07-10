@@ -126,8 +126,13 @@ export default function CultivarGrid() {
                     {cultivar.yieldGain}
                   </p>
                   
-                  <a href="#" className="inline-flex items-center gap-4 text-base font-medium text-charcoal hover:text-teal transition-colors duration-300 group mt-auto">
-                    Descubre Más
+                  <a 
+                    href={`https://wa.me/5491132554757?text=${encodeURIComponent(`¡Hola! Estoy interesado en el queso ${cultivar.name} que vi en su sitio web. ¿Me dirías precio y disponibilidad?`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-4 text-base font-medium text-charcoal hover:text-teal transition-colors duration-300 group mt-auto"
+                  >
+                    Consultar por WhatsApp
                     <div className="w-12 h-px bg-umber-dark group-hover:bg-teal transition-colors duration-300" />
                   </a>
                 </div>

@@ -33,7 +33,7 @@ export default function VisitSection() {
           </h2>
           
           <a
-            href="https://www.instagram.com/quesos_zampa"
+            href="https://wa.me/5491132554757?text=%C2%A1Hola!%20Me%20interesa%20visitar%20el%20establecimiento%20de%20Quesos%20Zampa%20y%20reservar%20una%20experiencia."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-4 text-sm font-semibold uppercase tracking-[0.2em] text-umber hover:text-teal transition-colors duration-300 group mb-20"

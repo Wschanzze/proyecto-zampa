@@ -83,7 +83,7 @@ export default function CtaSection() {
           <p className="text-sm text-charcoal/70 font-light">
             Distribuidores y comercios interesados pueden{' '}
             <a 
-              href="https://www.instagram.com/quesos_zampa" 
+              href="https://wa.me/5491132554757?text=%C2%A1Hola!%20Te%20contacto%20desde%20la%20web%20de%20Quesos%20Zampa.%20Somos%20un%20comercio/distribuidor%20y%20nos%20gustar%C3%ADa%20vender%20sus%20productos." 
               target="_blank" 
               rel="noopener noreferrer" 
               className="teal-link font-medium"

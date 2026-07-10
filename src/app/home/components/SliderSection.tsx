@@ -21,7 +21,7 @@ const slides: Slide[] = [
     excerpt: 'Vení a Napaleofú a conocer el proceso desde el inicio. Caminá entre nuestras pasturas y observá el ordeñe diario de nuestras ovejas frisonas en un entorno natural único.',
     image: '/assets/Quesos%20Zampa/BAB4C1FD-5368-4434-ADE4-498A3AE4D8C6.jpg',
     buttonText: 'Reservar Visita',
-    href: 'https://www.instagram.com/quesos_zampa',
+    href: 'https://wa.me/5491132554757?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20coordinar/reservar%20un%20recorrido%20guiado%20para%20conocer%20el%20tambo%20en%20Napaleof%C3%BA.',
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const slides: Slide[] = [
     excerpt: 'Participá de nuestros talleres sensoriales. Degustá nuestras 6 variedades de queso de oveja junto a una cuidada selección de vinos boutique de Tandil y la región.',
     image: '/assets/Quesos%20Zampa/07B73847-614E-4FDC-B7AF-F639064C64CB.jpg',
     buttonText: 'Reservar Experiencia',
-    href: 'https://www.instagram.com/quesos_zampa',
+    href: 'https://wa.me/5491132554757?text=%C2%A1Hola!%20Me%20interesa%20participar%20de%20las%20experiencias%20de%20cata%20y%20maridaje%20de%20Quesos%20Zampa.',
   },
   {
     id: 3,

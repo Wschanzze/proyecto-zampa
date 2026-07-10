@@ -22,10 +22,16 @@ export default function ContactoPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Contact Form Submitted:', formData);
     
+    // Format WhatsApp message with form data
+    const messageText = `¡Hola! Te contacto desde la web de Quesos Zampa.\n\nNombre: ${formData.name}\nEmail: ${formData.email}\nAsunto: ${formData.subject}\nMensaje: ${formData.message}`;
+    const whatsappUrl = `https://wa.me/5491132554757?text=${encodeURIComponent(messageText)}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
     // Show success toast locally
-    setToastMessage('¡Mensaje enviado con éxito! Nos comunicaremos a la brevedad.');
+    setToastMessage('¡Redirigiendo a WhatsApp para enviar el mensaje!');
     setTimeout(() => {
       setToastMessage(null);
     }, 5000);
