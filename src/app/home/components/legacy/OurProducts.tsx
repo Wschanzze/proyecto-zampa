@@ -37,7 +37,7 @@ const OurProducts = () => {
           Quesos con Identidad y Cuidado Artesanal
         </h2>
         <p className="text-base md:text-lg font-light text-charcoal/80 max-w-2xl mx-auto leading-relaxed">
-          Elaboramos cada horma de lunes a lunes con leche de ordeñe diario en Napaleofú, Buenos Aires. Descubrí nuestras tres grandes familias de quesos de autor.
+          Descubrí nuestras tres grandes familias de quesos de autor.
         </p>
       </div>
 
@@ -80,16 +80,7 @@ const OurProducts = () => {
         ))}
       </div>
 
-      {/* Call to action at bottom */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center mt-16 md:mt-20">
-        <Link 
-          href="/productos" 
-          className="inline-flex items-center justify-center h-14 px-8 rounded-2xl bg-limestone-soft border border-umber/30 text-umber font-medium text-base hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 tracking-widest uppercase"
-          style={{ boxShadow: '0 8px 32px rgba(46,93,90,0.2)' }}
-        >
-          EXPLORAR CATÁLOGO COMPLETO
-        </Link>
-      </div>
+
     </section>
   );
 };
