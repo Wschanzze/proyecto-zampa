@@ -4,6 +4,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=DM+Sans:wght@300;400;500;600&display=swap');
 
+@font-face {
+    font-family: 'Urbanist';
+    src: url('/assets/fonts/Urbanist[wght].ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('/assets/fonts/Urbanist-Italic[wght].ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
 :root {
   --limestone: #E8DCC8;
   --limestone-soft: #F2EDE0;
@@ -30,8 +44,8 @@
   --clr-border: var(--limestone);
 
   --font-brand: 'Fraunces', serif;
-  --font-body: 'DM Sans', sans-serif;
-  --font-sub: 'DM Sans', sans-serif;
+  --font-body: 'Urbanist', sans-serif;
+  --font-sub: 'Urbanist', sans-serif;
 
   --container-max: 1400px;
   --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -46,7 +60,7 @@ html {
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Urbanist', sans-serif;
   background-color: var(--limestone-soft);
   color: var(--umber);
   overflow-x: hidden;
@@ -209,7 +223,7 @@ a.teal-link:hover {
   color: var(--limestone-soft);
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Urbanist', sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -518,7 +532,7 @@ a.teal-link:hover {
 
 /* Title */
 .parallax-title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Urbanist', sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.3;
