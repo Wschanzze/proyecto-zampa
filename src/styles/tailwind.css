@@ -494,6 +494,14 @@ a.teal-link:hover {
   animation: spinSlow 18s linear infinite;
 }
 
+@keyframes kenBurns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.06); }
+}
+.animate-ken-burns {
+  animation: kenBurns 7.2s ease-out forwards;
+}
+
 /* Product Parallax Section Styling */
 .parallax-section {
   position: relative;
