@@ -133,10 +133,10 @@ export default function HeroSection() {
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-5">
+        <div className="flex flex-col sm:flex-row gap-5 justify-center w-full">
           <a
             href="#cultivars"
-            className="flex items-center justify-center gap-2 h-14 px-8 rounded-full bg-white text-charcoal font-semibold text-sm hover:bg-white/90 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:-translate-y-1 tracking-widest uppercase">
+            className="flex items-center justify-center gap-2 h-14 w-full sm:w-60 rounded-full bg-white text-charcoal font-semibold text-sm hover:bg-white/90 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:-translate-y-1 tracking-widest uppercase">
             <Icon name="SparklesIcon" size={16} variant="solid" />
             Ver Variedades
           </a>
@@ -144,7 +144,7 @@ export default function HeroSection() {
             href="https://www.instagram.com/quesos_zampa"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 h-14 px-8 rounded-full border border-white bg-transparent text-white font-medium text-sm hover:bg-white/10 transition-all duration-300 backdrop-blur-sm tracking-widest uppercase">
+            className="flex items-center justify-center gap-2 h-14 w-full sm:w-60 rounded-full border border-white bg-transparent text-white font-medium text-sm hover:bg-white/10 transition-all duration-300 backdrop-blur-sm tracking-widest uppercase">
             <Icon name="ChatBubbleLeftRightIcon" size={16} variant="outline" />
             Contacto Directo
           </a>
@@ -153,7 +153,7 @@ export default function HeroSection() {
       
       {/* Scroll indicator - Centered, pure white, adjusted height */}
       <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-bounce">
-        <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-white/80">Descubrir</span>
+        <span className="text-[10px] font-medium uppercase tracking-[0.3em] pl-[0.3em] text-white/80">Descubrir</span>
         <Icon name="ArrowDownIcon" size={16} className="text-white" />
       </div>
 
