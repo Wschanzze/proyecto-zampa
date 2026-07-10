@@ -19,7 +19,7 @@ const BannerBW = () => {
       <div className="relative z-20 max-w-7xl mx-auto w-full px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-12 text-center md:text-left">
         <div className="flex flex-col gap-2">
           <span className="text-[10px] font-bold tracking-[0.3em] text-wheat-light/80 uppercase">Tradición Familiar</span>
-          <h3 className="font-fraunces text-3xl md:text-4xl lg:text-5xl font-semibold text-white uppercase tracking-wider leading-tight">
+          <h3 className="font-fraunces text-3xl md:text-4xl lg:text-5xl font-light text-white uppercase tracking-[0.15em] leading-tight">
             Quesos de Oveja <br className="hidden md:block" /><span className="text-wheat-light italic font-normal">de Autor</span>
           </h3>
         </div>
@@ -29,7 +29,7 @@ const BannerBW = () => {
         
         <div className="flex flex-col gap-2 md:items-end text-center md:text-right">
           <span className="text-[10px] font-bold tracking-[0.3em] text-wheat-light/80 uppercase">Compromiso</span>
-          <h3 className="font-fraunces text-3xl md:text-4xl lg:text-5xl font-semibold text-white uppercase tracking-wider leading-tight">
+          <h3 className="font-fraunces text-3xl md:text-4xl lg:text-5xl font-light text-white uppercase tracking-[0.15em] leading-tight">
             Sistema Pastoril <br className="hidden md:block" /><span className="text-wheat-light italic font-normal">100% en Libertad</span>
           </h3>
         </div>

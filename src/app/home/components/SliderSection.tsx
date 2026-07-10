@@ -93,7 +93,7 @@ export default function SliderSection() {
               <span className="text-xs font-semibold uppercase tracking-[0.25em] text-teal">
                 {slide.subtitle}
               </span>
-              <h2 className="font-fraunces text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] text-umber-dark uppercase tracking-wider">
+              <h2 className="font-fraunces text-4xl md:text-6xl lg:text-7xl font-light leading-[1.1] text-umber-dark uppercase tracking-[0.15em]">
                 {slide.title}
               </h2>
               <p className="text-sm md:text-base lg:text-lg font-light text-charcoal/90 leading-relaxed max-w-xl">

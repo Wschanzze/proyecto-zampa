@@ -55,7 +55,7 @@ export default function HeritageSection() {
 
             <h2
               ref={headlineRef}
-              className="font-fraunces text-5xl lg:text-6xl font-semibold leading-[1.05] text-umber-dark">
+              className="font-fraunces text-5xl lg:text-6xl font-light uppercase tracking-[0.15em] leading-tight text-umber-dark">
               
               La Esencia del<br />
               Tambo Familiar.<br />

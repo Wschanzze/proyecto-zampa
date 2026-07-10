@@ -91,7 +91,7 @@ export default function TimelineGallery() {
           className={`mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           
           <p className="text-xs font-medium uppercase tracking-widest text-teal mb-3">Nuestra Trayectoria</p>
-          <h2 className="font-fraunces text-4xl lg:text-5xl font-semibold text-umber-dark leading-tight max-w-2xl">
+          <h2 className="font-fraunces text-4xl lg:text-5xl font-light text-umber-dark leading-tight max-w-2xl uppercase tracking-[0.15em]">
             Un Tambo Ovino Familiar,<br />
             <em className="font-light italic">Pasión de Origen en Cada Queso.</em>
           </h2>

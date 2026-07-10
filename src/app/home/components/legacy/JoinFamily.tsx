@@ -18,7 +18,7 @@ const JoinFamily = () => {
       
       <div className="relative z-20 max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
         <span className="text-xs font-semibold uppercase tracking-[0.25em] text-wheat-light">EL VALOR DE LO ARTESANAL</span>
-        <h2 className="font-fraunces text-4xl md:text-5xl lg:text-6xl font-semibold text-white tracking-wide uppercase">SABORES ÚNICOS DESDE EL TAMBO</h2>
+        <h2 className="font-fraunces text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-[0.15em] uppercase">SABORES ÚNICOS DESDE EL TAMBO</h2>
         <p className="text-base md:text-lg lg:text-xl font-light text-white/80 leading-relaxed max-w-2xl mx-auto">
           <span className="desktop-text-only">
             Integramos todo el proceso de elaboración: desde la cría y ordeñe de nuestras ovejas en los pastos de Napaleofú, hasta la maduración perfecta de cada horma. Te invitamos a probar un queso con identidad y carácter real.
