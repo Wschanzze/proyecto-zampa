@@ -29,46 +29,43 @@ export default function Header() {
         scrolled ? 'nav-blur py-2 shadow-sm' : 'bg-transparent py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative flex items-center min-h-[80px]">
-        {/* Left/Center Logo Container */}
-        <div 
-          className={`absolute top-1/2 -translate-y-1/2 transition-all duration-500 z-30 ${
-            scrolled 
-              ? 'left-1/2 -translate-x-1/2 lg:left-12 lg:translate-x-0' 
-              : 'left-1/2 -translate-x-1/2'
-          }`}
-        >
-          <AppLogo
-            src="/IMG_1960(1).png"
-            size={scrolled ? 75 : 120}
-            className="text-umber transition-all duration-500 hover:scale-105 cursor-pointer drop-shadow-md"
-            onClick={handleLogoClick}
-          />
-        </div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative flex items-center justify-center min-h-[80px]">
+        {/* Centered Group Container */}
+        <div className="flex items-center gap-6 lg:gap-10 transition-all duration-500">
+          {/* Logo */}
+          <div className="flex-shrink-0 transition-all duration-500">
+            <AppLogo
+              src="/IMG_1960(1).png"
+              size={scrolled ? 75 : 120}
+              className="text-umber transition-all duration-500 hover:scale-105 cursor-pointer drop-shadow-md"
+              onClick={handleLogoClick}
+            />
+          </div>
 
-        {/* Nav Links Container (positioned next to the logo when scrolled) */}
-        <div 
-          className={`hidden lg:flex items-center gap-6 lg:gap-8 absolute top-1/2 -translate-y-1/2 transition-all duration-500 ${
-            scrolled 
-              ? 'left-[130px] lg:left-[150px] opacity-100 pointer-events-auto' 
-              : 'left-[160px] lg:left-[180px] opacity-0 pointer-events-none'
-          }`}
-        >
-          {[
-            { label: 'NUESTRA HISTORIA', href: '/nuestra-historia' },
-            { label: 'PRODUCTOS', href: '/productos' },
-            { label: 'ELABORACIÓN', href: '/elaboracion' },
-            { label: 'COMUNIDAD', href: '/comunidad' },
-            { label: 'REVENDEDORES', href: '/revendedores' },
-          ].map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="text-xs font-bold transition-colors duration-300 tracking-widest text-umber-dark hover:text-teal whitespace-nowrap"
-            >
-              {item.label}
-            </a>
-          ))}
+          {/* Links Container (expands on scroll) */}
+          <div 
+            className={`hidden lg:flex items-center gap-6 lg:gap-8 transition-all duration-500 ease-in-out overflow-hidden ${
+              scrolled 
+                ? 'opacity-100 max-w-[900px] pointer-events-auto translate-x-0' 
+                : 'opacity-0 max-w-0 pointer-events-none -translate-x-6'
+            }`}
+          >
+            {[
+              { label: 'NUESTRA HISTORIA', href: '/nuestra-historia' },
+              { label: 'PRODUCTOS', href: '/productos' },
+              { label: 'ELABORACIÓN', href: '/elaboracion' },
+              { label: 'COMUNIDAD', href: '/comunidad' },
+              { label: 'REVENDEDORES', href: '/revendedores' },
+            ].map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="text-xs font-bold transition-colors duration-300 tracking-widest text-umber-dark hover:text-teal whitespace-nowrap"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </nav>
