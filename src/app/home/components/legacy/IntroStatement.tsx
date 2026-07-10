@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const IntroStatement = () => {
   return (
-    <section className="bg-white py-24 lg:py-32 border-b border-wheat/20 overflow-hidden flex items-center justify-center relative">
+    <section className="bg-white pt-28 pb-48 md:pb-56 lg:pt-36 lg:pb-64 border-b border-wheat/20 overflow-hidden flex items-center justify-center relative">
       <div className="intro-statement-container max-w-5xl mx-auto w-full px-6 text-center flex flex-col items-center gap-6 relative z-10">
         <h2 className="font-fraunces text-4xl md:text-5xl lg:text-6xl font-light text-charcoal tracking-[0.06em] leading-snug uppercase">
           Frescura y naturalidad<br />
@@ -15,7 +15,7 @@ const IntroStatement = () => {
         </p>
         <Link 
           href="/nuestra-historia" 
-          className="inline-flex items-center justify-center h-14 px-8 rounded-2xl bg-teal text-cream font-medium text-base hover:bg-teal-light transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 mt-4 tracking-widest uppercase"
+          className="inline-flex items-center justify-center h-14 px-8 rounded-2xl bg-teal text-cream font-medium text-base hover:bg-teal-light transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 mt-8 tracking-widest uppercase"
           style={{ boxShadow: '0 8px 32px rgba(46,93,90,0.2)' }}
         >
           Conocé nuestra historia
@@ -24,9 +24,9 @@ const IntroStatement = () => {
       <Image 
         src="/assets/Quesos Zampa/ovejas_render.png" 
         alt="Ovejas en Napaleofú" 
-        width={1200}
-        height={300}
-        className="statement-watermark absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-auto max-h-[280px] object-contain opacity-40 pointer-events-none z-0" 
+        width={1400}
+        height={400}
+        className="statement-watermark absolute -bottom-6 md:-bottom-10 lg:-bottom-12 left-1/2 -translate-x-1/2 w-[110%] lg:w-full max-w-8xl h-auto max-h-[320px] md:max-h-[380px] lg:max-h-[440px] object-contain opacity-40 pointer-events-none z-0" 
       />
     </section>
   );

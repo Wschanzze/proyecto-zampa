@@ -174,7 +174,7 @@ export default function HeroSection() {
       
       {/* Scroll indicator - Visible on mobile and desktop */}
       <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 lg:bottom-12 lg:right-12 z-20 flex flex-col items-center gap-2 sm:gap-3 animate-bounce opacity-80">
-        <span className="text-[8px] sm:text-[9px] font-medium uppercase tracking-[0.4em] text-white [writing-mode:vertical-rl] rotate-180 mb-1 sm:mb-2">Scroll</span>
+        <span className="text-[8px] sm:text-[9px] font-medium uppercase tracking-[0.4em] text-white [writing-mode:vertical-rl] rotate-180 mb-1 sm:mb-2">Conoce</span>
         <div className="w-[1px] h-8 sm:h-12 bg-gradient-to-b from-white to-transparent" />
       </div>
 
