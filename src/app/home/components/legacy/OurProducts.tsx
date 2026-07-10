@@ -44,7 +44,7 @@ const OurProducts = () => {
       {/* Categories Grid */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         {categories.map((cat, idx) => (
-          <div key={idx} className="product-card group relative aspect-[3/4] md:aspect-[4/5] rounded-[32px] overflow-hidden shadow-xl hover:shadow-2xl border border-teal/5 transition-all duration-500 hover:-translate-y-2 bg-white">
+          <div key={idx} className="product-card group relative aspect-square sm:aspect-[4/3] md:aspect-[4/5] rounded-[32px] overflow-hidden shadow-xl hover:shadow-2xl border border-teal/5 transition-all duration-500 hover:-translate-y-2 bg-white">
             <Link href={cat.link} className="absolute inset-0 z-20">
               <div className="relative w-full h-full">
                 <Image 
