@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingPill from '@/app/home/components/FloatingPill';
 import RecipesPairings from '@/components/RecipesPairings';
+import ProductParallaxSection from '@/app/home/components/ProductParallaxSection';
 
 interface ChefSection {
   id: number;
@@ -111,12 +112,15 @@ export default function ElaboracionPage() {
         <div className="products-hero-overlay"></div>
         <div className="products-hero-content">
           <p className="hero-subtitle">NUESTRO PROCESO</p>
-          <h1 className="hero-title">Elaboración</h1>
+          <h1 className="hero-title font-light uppercase">Elaboración</h1>
           <p className="hero-description">
             El arte de transformar la leche más pura en quesos extraordinarios. Conocé nuestra sala de elaboración diaria, el cuidado de la materia prima y las técnicas culinarias que nos definen.
           </p>
         </div>
       </header>
+
+      {/* PARALLAX PRODUCT SECTION */}
+      <ProductParallaxSection />
 
       {/* RECIPES & PAIRINGS SECTION */}
       <RecipesPairings />
@@ -126,7 +130,7 @@ export default function ElaboracionPage() {
         
         <div className="section-header chef-main-header">
           <p className="text-xs font-medium uppercase tracking-widest text-teal mb-3">LA GASTRONOMÍA DETRÁS DE ZAMPA</p>
-          <h3 className="font-fraunces text-3xl lg:text-4xl font-semibold text-umber-dark leading-tight mb-4">EL CHEF: JUAN CRUZ</h3>
+          <h3 className="text-3xl lg:text-4xl font-light text-charcoal leading-tight mb-4 uppercase">EL CHEF: JUAN CRUZ</h3>
         </div>
 
         <div className="chef-scroll-wrapper max-w-6xl mx-auto">
@@ -141,7 +145,7 @@ export default function ElaboracionPage() {
               >
                 <div className="story-text">
                   <p className="text-xs uppercase tracking-widest text-teal mb-2">{section.subtitle}</p>
-                  <h3 className="font-fraunces text-2xl lg:text-3xl font-semibold text-umber-dark mb-6">{section.title}</h3>
+                  <h3 className="text-2xl lg:text-3xl font-light text-charcoal mb-6 uppercase">{section.title}</h3>
                   {section.text.map((paragraph, i) => (
                     <p key={i} className="text-umber-light font-light text-base mb-4 leading-relaxed">{paragraph}</p>
                   ))}
@@ -166,7 +170,7 @@ export default function ElaboracionPage() {
                   className={`chef-sticky-image ${activeImage === section.image ? 'active' : ''}`}
                 />
               ))}
-              <h1 className="watermark-logo absolute bottom-[-5%] right-[-5%] opacity-10 pointer-events-none select-none font-bold text-right leading-none text-charcoal">
+              <h1 className="watermark-logo absolute bottom-[-5%] right-[-5%] opacity-10 pointer-events-none select-none font-light text-right leading-none text-charcoal uppercase">
                 ZAMPA<br />QUESOS<br />TANDIL
               </h1>
             </div>

@@ -53,7 +53,7 @@ export default function RevendedoresPage() {
         <div className="products-hero-overlay"></div>
         <div className="products-hero-content">
           <p className="hero-subtitle">ALIANZAS COMERCIALES</p>
-          <h1 className="hero-title">Revendedores</h1>
+          <h1 className="hero-title font-light uppercase">Revendedores</h1>
           <p className="hero-description">
             Llevá el sabor único de nuestros quesos de oveja pastoriles a tu restaurante, fiambrería o red de distribución. Simplificamos tu logística y te ofrecemos condiciones comerciales estratégicas.
           </p>
@@ -105,7 +105,7 @@ export default function RevendedoresPage() {
         <div className="b2b-layout max-w-7xl mx-auto">
           {/* Specifications Section */}
           <div className="b2b-specs-container rounded-lg">
-            <h3 className="vintage-header">DATOS ESTRATÉGICOS PARA PROVEEDORES</h3>
+            <h3 className="vintage-header font-light uppercase">DATOS ESTRATÉGICOS PARA PROVEEDORES</h3>
             <p className="text-sm text-charcoal mb-6">
               Agilizamos tus compras con información técnica detallada de nuestros productos estrella:
             </p>
@@ -157,7 +157,7 @@ export default function RevendedoresPage() {
 
           {/* Contact Form Section */}
           <div className="b2b-form-container rounded-lg">
-            <h3 className="vintage-header">SOLICITUD DE ALTA PARA REVENDEDORES</h3>
+            <h3 className="vintage-header font-light uppercase">SOLICITUD DE ALTA PARA REVENDEDORES</h3>
             <form className="b2b-form mt-6" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="businessName">Razón Social / Nombre Comercial *</label>

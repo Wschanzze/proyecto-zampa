@@ -55,7 +55,7 @@ export default function ContactoPage() {
           {/* Info Column */}
           <div className="b2b-specs-container rounded-lg flex flex-col gap-8">
             <div>
-              <h3 className="vintage-header">ATENCIÓN DIRECTA</h3>
+              <h3 className="vintage-header font-light uppercase">ATENCIÓN DIRECTA</h3>
               <p className="text-sm mt-2 text-charcoal leading-relaxed">
                 Estamos en Napaleofú, en el partido de Balcarce, cerca de Tandil, Provincia de Buenos Aires, Argentina.
               </p>
@@ -100,7 +100,7 @@ export default function ContactoPage() {
 
           {/* Form Column */}
           <div className="b2b-form-container rounded-lg">
-            <h3 className="vintage-header">ENVIANOS UN MENSAJE</h3>
+            <h3 className="vintage-header font-light uppercase">ENVIANOS UN MENSAJE</h3>
             <form className="b2b-form mt-6" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Nombre Completo *</label>

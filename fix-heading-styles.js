@@ -18,7 +18,7 @@ function walk(dir) {
   return results;
 }
 
-const files = walk('./src/app/home');
+const files = walk('./src/app');
 let changedFiles = 0;
 
 files.forEach(file => {

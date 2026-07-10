@@ -21,7 +21,7 @@ export default function NuestraHistoriaPage() {
         <div className="products-hero-overlay"></div>
         <div className="products-hero-content">
           <p className="hero-subtitle">DESDE NAPALEOFÚ</p>
-          <h1 className="hero-title">Nuestra Historia</h1>
+          <h1 className="hero-title font-light uppercase">Nuestra Historia</h1>
           <p className="hero-description">
             Un proyecto familiar que nació de la curiosidad y la pasión. Conocé el origen de nuestro tambo de ovejas y nuestra quesería artesanal en las sierras de Tandil.
           </p>
@@ -35,7 +35,7 @@ export default function NuestraHistoriaPage() {
           {/* CABECERA DEL PERIÓDICO */}
           <header className="newspaper-header">
             <DecoratedTitle tag="h1" className="masthead">El Diario de Zampa</DecoratedTitle>
-            <p className="font-fraunces text-center text-lg italic mt-2 tracking-wide text-charcoal">
+            <p className="text-center text-lg italic mt-2 tracking-wide text-charcoal">
               Crónicas de la Cría Pastoril y la Quesería Artesanal
             </p>
             <div className="newspaper-meta text-charcoal">
@@ -51,7 +51,7 @@ export default function NuestraHistoriaPage() {
             {/* PÁGINA IZQUIERDA */}
             <section className="newspaper-page-left">
               <span className="article-tag">Historia de Familia</span>
-              <h2 className="article-title font-fraunces">El Origen de un Sueño de Oveja en Tandil</h2>
+              <h2 className="article-title font-light uppercase">El Origen de un Sueño de Oveja en Tandil</h2>
               <p className="article-subtitle">
                 Cómo Juan Cruz e Isabel unieron la gastronomía y el paisajismo en un tambo ovino referente en Napaleofú.
               </p>
@@ -64,7 +64,7 @@ export default function NuestraHistoriaPage() {
                 <p className="newspaper-img-caption">
                   Juan Cruz Moy Peña (37) e Isabel Sáenz Rozas (31) en el predio donde comenzó su historia productiva.
                 </p>
-                <h1 className="watermark-logo absolute bottom-4 right-4 opacity-15 pointer-events-none select-none font-bold text-right leading-none text-charcoal">
+                <h1 className="watermark-logo absolute bottom-4 right-4 opacity-15 pointer-events-none select-none font-light text-right leading-none text-charcoal uppercase">
                   ZAMPA<br />QUESOS<br />TANDIL
                 </h1>
               </div>
@@ -83,13 +83,13 @@ export default function NuestraHistoriaPage() {
                 </div>
               </div>
 
-              <blockquote className="article-quote font-fraunces">
+              <blockquote className="article-quote ">
                 "Adquirimos nuestras primeras 40 borregas sin tener una estructura armada. Fue un salto de fe que hoy da vida a quesos artesanales con identidad y terruño propio."
               </blockquote>
 
               <div className="sub-article border-b-0 pb-0">
                 <span className="article-tag">El Tambo Ovino</span>
-                <h3 className="article-title font-fraunces text-2xl">El Ordeñe Diario y el Cuidado del Rebaño</h3>
+                <h3 className="article-title text-2xl font-light uppercase">El Ordeñe Diario y el Cuidado del Rebaño</h3>
                 <p className="text-sm leading-relaxed text-charcoal mb-6">
                   La jornada en Napaleofú comienza muy temprano con los dos ordeñes diarios. La leche fresca es transportada inmediatamente a la quesería para preservar sus cualidades intactas. El pastoreo directo sobre pasturas de alta calidad garantiza que nuestras ovejas gocen de una alimentación natural, libre de químicos, reflejándose en una materia prima superior.
                 </p>
@@ -112,7 +112,7 @@ export default function NuestraHistoriaPage() {
                 
                 <div className="sub-article">
                   <span className="article-tag">Elaboración Artesanal</span>
-                  <h3 className="article-title font-fraunces text-2xl">Quesos de Autor y Habilitación Local</h3>
+                  <h3 className="article-title text-2xl font-light uppercase">Quesos de Autor y Habilitación Local</h3>
                   <p className="text-sm leading-relaxed text-charcoal mb-6">
                     En Zampa nos enfocamos en producciones limitadas donde cada horma se cuida individualmente. Elaboramos variedades selectas como Pecorino, Ahumado, Orégano y Manchego. El gran objetivo del proyecto es avanzar con la habilitación definitiva de la quesería propia para vender directo al público y potenciar el valor agregado en origen.
                   </p>
@@ -129,7 +129,7 @@ export default function NuestraHistoriaPage() {
 
                 <div className="sub-article border-b-0 pb-0">
                   <span className="article-tag">Identidad</span>
-                  <h3 className="article-title font-fraunces text-2xl">Zampa: La Resiliencia de la Estepa</h3>
+                  <h3 className="article-title text-2xl font-light uppercase">Zampa: La Resiliencia de la Estepa</h3>
                   <p className="text-sm leading-relaxed text-charcoal mb-6">
                     El nombre del emprendimiento hace honor al arbusto 'Zampa', característico de las regiones más áridas del sur argentino. En la estepa, este arbusto está muy asociado a la calidad del ganado ovino de pastoreo por su alto valor nutritivo y resistencia. Adoptar su nombre simboliza la rusticidad, resiliencia y el carácter natural que impregna a nuestros quesos.
                   </p>

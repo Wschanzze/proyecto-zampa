@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingPill from '@/app/home/components/FloatingPill';
 import TimelineGallery from '@/app/home/components/TimelineGallery';
+import AudienceSection from '@/app/home/components/AudienceSection';
 
 export default function ComunidadPage() {
   return (
@@ -22,7 +23,7 @@ export default function ComunidadPage() {
         <div className="comunidad-hero-overlay"></div>
         <div className="comunidad-hero-content">
           <p className="hero-subtitle">ZAMPA Y LA COMUNIDAD</p>
-          <h1 className="hero-title">Compromiso con Nuestra Tierra</h1>
+          <h1 className="hero-title font-light uppercase">Compromiso con Nuestra Tierra</h1>
         </div>
       </section>
 
@@ -30,7 +31,7 @@ export default function ComunidadPage() {
       <section className="comunidad-intro-section">
         <div className="comunidad-intro-title">
           <span>VALOR EN ORIGEN</span>
-          <h2 className="font-fraunces text-umber-dark">Arraigo y Crecimiento Cooperativo en Tandil</h2>
+          <h2 className="text-charcoal font-light uppercase">Arraigo y Crecimiento Cooperativo en Tandil</h2>
         </div>
         <div className="comunidad-intro-desc text-umber-light font-light text-base leading-relaxed">
           <p className="mb-4">
@@ -67,7 +68,7 @@ export default function ComunidadPage() {
       {/* SECCIÓN COMPROMISOS / PILARES */}
       <section className="initiatives-section py-24 px-[5%]">
         <div className="initiatives-header">
-          <h2 className="font-fraunces text-umber-dark">Nuestros Pilares de Impacto</h2>
+          <h2 className="text-charcoal font-light uppercase">Nuestros Pilares de Impacto</h2>
           <p className="text-umber-light text-base leading-relaxed max-w-2xl mx-auto mt-4">
             Trabajamos día a día bajo lineamientos claros de responsabilidad social y ambiental, 
             articulando acciones en beneficio de la comunidad regional.
@@ -77,7 +78,7 @@ export default function ComunidadPage() {
         <div className="initiatives-grid">
           <div className="initiative-card rounded-lg">
             <span className="initiative-number">01</span>
-            <h3 className="font-fraunces text-xl font-semibold mb-3">Arraigo y Empleo Local</h3>
+            <h3 className="text-xl font-light mb-3 uppercase">Arraigo y Empleo Local</h3>
             <p>
               Generamos oportunidades de empleo formal y capacitaciones técnicas en el sector rural. 
               Promovemos que las familias jóvenes se establezcan y proyecten su vida en el campo, 
@@ -87,7 +88,7 @@ export default function ComunidadPage() {
           
           <div className="initiative-card rounded-lg">
             <span className="initiative-number">02</span>
-            <h3 className="font-fraunces text-xl font-semibold mb-3">Pastoreo Regenerativo</h3>
+            <h3 className="text-xl font-light mb-3 uppercase">Pastoreo Regenerativo</h3>
             <p>
               Fomentamos prácticas de pastoreo ovino rotativo y regeneración de suelos. 
               Colaboramos estrechamente con ingenieros y productores vecinos compartiendo aprendizajes 
@@ -97,7 +98,7 @@ export default function ComunidadPage() {
           
           <div className="initiative-card rounded-lg">
             <span className="initiative-number">03</span>
-            <h3 className="font-fraunces text-xl font-semibold mb-3">Educación y Puertas Abiertas</h3>
+            <h3 className="text-xl font-light mb-3 uppercase">Educación y Puertas Abiertas</h3>
             <p>
               Mantenemos un vínculo constante con escuelas agro técnicas y espacios educativos de la zona, 
               abriendo nuestras instalaciones para dar a conocer el valor de los tambos ovinos y el 
@@ -110,7 +111,7 @@ export default function ComunidadPage() {
       {/* SECCIÓN DOCUMENTAL / VIDEO DE YOUTUBE */}
       <section className="documentary-section">
         <div className="documentary-header">
-          <h2 className="font-fraunces text-umber-dark">Conoce Más de Zampa</h2>
+          <h2 className="text-charcoal font-light uppercase">Conoce Más de Zampa</h2>
           <p className="text-umber-light text-base leading-relaxed max-w-2xl mx-auto mt-4">
             Te invitamos a ver el siguiente documental sobre nuestros orígenes, nuestro tambo pastoril 
             y el testimonio directo de Juan Cruz e Isabel en su día a día.
@@ -126,6 +127,8 @@ export default function ComunidadPage() {
           ></iframe>
         </div>
       </section>
+
+      <AudienceSection />
 
       {/* GALERÍA CRONOLÓGICA DE TRAYECTORIA */}
       <TimelineGallery />
