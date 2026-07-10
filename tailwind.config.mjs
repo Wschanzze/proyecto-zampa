@@ -25,7 +25,8 @@ export default {
       },
       fontFamily: {
         fraunces: ['Fraunces', 'serif'],
-        sans: ['DM Sans', 'sans-serif'],
+        sans: ['Urbanist', 'sans-serif'],
+        urbanist: ['Urbanist', 'sans-serif'],
       },
       borderRadius: {
         '4xl': '2rem',
