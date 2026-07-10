@@ -6,7 +6,7 @@ const IntroStatement = () => {
   return (
     <section className="bg-white pt-28 pb-48 md:pb-56 lg:pt-36 lg:pb-64 border-b border-wheat/20 overflow-hidden flex items-center justify-center relative">
       <div className="intro-statement-container max-w-5xl mx-auto w-full px-6 text-center flex flex-col items-center gap-6 relative z-10">
-        <h2 className="font-fraunces text-4xl md:text-5xl lg:text-6xl font-light text-charcoal tracking-[0.06em] leading-snug uppercase">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-charcoal tracking-[0.06em] leading-snug uppercase">
           Frescura y naturalidad<br />
           son los principios de nuestra producción
         </h2>

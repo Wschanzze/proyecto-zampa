@@ -24,7 +24,7 @@ const PastoralSystem = () => {
           <div className="lg:col-span-6 flex flex-col gap-8">
             <div className="flex flex-col gap-2">
               <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-umber/80">Criadas en Libertad</span>
-              <h3 className="font-fraunces text-4xl md:text-5xl lg:text-6xl font-light text-charcoal leading-tight uppercase tracking-[0.05em]">
+              <h3 className="text-4xl md:text-5xl lg:text-6xl font-light text-charcoal leading-tight uppercase tracking-[0.05em]">
                 Sistema <br className="hidden lg:block"/>Pastoril
               </h3>
             </div>

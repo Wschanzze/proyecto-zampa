@@ -50,7 +50,7 @@ function MetricCard({ metric, started }: { metric: Metric; started: boolean }) {
         <div className="text-teal mb-3 transform group-hover:scale-110 transition-transform duration-500">
           <Icon name={metric.icon as any} size={24} />
         </div>
-        <div className="font-fraunces text-3xl lg:text-4xl font-semibold text-charcoal mb-1 tracking-tight">
+        <div className="text-3xl lg:text-4xl font-semibold text-charcoal mb-1 tracking-tight">
           {metric.prefix}{displayValue}{metric.suffix}
         </div>
         <div className="text-xs font-semibold text-teal-dark tracking-wider uppercase mb-1">{metric.label}</div>
@@ -91,7 +91,7 @@ export default function ImpactSection() {
                 <div className="h-px w-12 bg-teal/60" />
               </div>
               
-              <h2 className="font-fraunces text-4xl md:text-5xl font-light text-umber-dark leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl font-light text-charcoal leading-tight mb-6">
                 Cuando la Calidad es Constante,<br />
                 <span className="italic font-normal text-teal">el Sabor se Vuelve Inolvidable.</span>
               </h2>

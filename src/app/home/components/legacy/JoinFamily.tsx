@@ -18,7 +18,7 @@ const JoinFamily = () => {
       
       <div className="relative z-20 max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
         <span className="text-xs font-semibold uppercase tracking-[0.25em] text-wheat-light">EL VALOR DE LO ARTESANAL</span>
-        <h2 className="font-fraunces text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-[0.06em] uppercase">SABORES ÚNICOS DESDE EL TAMBO</h2>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-[0.06em] uppercase">SABORES ÚNICOS DESDE EL TAMBO</h2>
         <p className="text-base md:text-lg lg:text-xl font-light text-white/80 leading-relaxed max-w-2xl mx-auto">
           <span className="desktop-text-only">
             Integramos todo el proceso de elaboración: desde la cría y ordeñe de nuestras ovejas en los pastos de Napaleofú, hasta la maduración perfecta de cada horma. Te invitamos a probar un queso con identidad y carácter real.
@@ -36,7 +36,7 @@ const JoinFamily = () => {
           PROBAR NUESTROS QUESOS
         </Link>
       </div>
-      <h1 className="absolute right-12 bottom-12 font-fraunces text-8xl md:text-9xl font-bold text-white/5 uppercase select-none tracking-tighter leading-none hidden lg:block text-right">
+      <h1 className="absolute right-12 bottom-12 text-8xl md:text-9xl font-bold text-white/5 uppercase select-none tracking-tighter leading-none hidden lg:block text-right">
         ZAMPA<br />QUESOS<br />TANDIL
       </h1>
     </section>

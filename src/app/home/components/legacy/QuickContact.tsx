@@ -45,7 +45,7 @@ const QuickContact = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-teal mb-3 block">VISÍTANOS O ESCRÍBENOS</span>
-          <h2 className="font-fraunces text-4xl md:text-5xl font-light text-umber-dark leading-tight max-w-3xl mx-auto uppercase tracking-[0.06em]">
+          <h2 className="text-4xl md:text-5xl font-light text-charcoal leading-tight max-w-3xl mx-auto uppercase tracking-[0.06em]">
             ¿Por qué nuestros quesos son tan deliciosos? ¡Descubre el secreto!
           </h2>
         </div>
@@ -55,7 +55,7 @@ const QuickContact = () => {
               <div className="w-16 h-16 rounded-full bg-teal/5 flex items-center justify-center mb-6">
                 {item.icon}
               </div>
-              <h4 className="font-fraunces text-lg font-semibold text-umber-dark mb-2">{item.title}</h4>
+              <h4 className="text-lg font-semibold text-charcoal mb-2">{item.title}</h4>
               <p className="text-sm font-light text-charcoal/80 whitespace-pre-line leading-relaxed">{item.desc}</p>
             </div>
           ))}

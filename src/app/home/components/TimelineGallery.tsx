@@ -91,7 +91,7 @@ export default function TimelineGallery() {
           className={`mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           
           <p className="text-xs font-medium uppercase tracking-widest text-teal mb-3">Nuestra Trayectoria</p>
-          <h2 className="font-fraunces text-4xl lg:text-5xl font-light text-umber-dark leading-tight max-w-2xl uppercase tracking-[0.06em]">
+          <h2 className="text-4xl lg:text-5xl font-light text-charcoal leading-tight max-w-2xl uppercase tracking-[0.06em]">
             Un Tambo Ovino Familiar,<br />
             <em className="font-light italic">Pasión de Origen en Cada Queso.</em>
           </h2>
@@ -113,7 +113,7 @@ export default function TimelineGallery() {
                 {/* Year + dot */}
                 <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 w-20 sm:w-28">
                   <div className="timeline-dot" />
-                  <span className="font-fraunces text-xl sm:text-2xl font-semibold text-wheat">{entry.year}</span>
+                  <span className="text-xl sm:text-2xl font-semibold text-wheat">{entry.year}</span>
                 </div>
 
                 {/* Era badge */}
@@ -123,7 +123,7 @@ export default function TimelineGallery() {
 
                 {/* Title */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-fraunces text-lg sm:text-xl font-medium text-umber-dark group-hover:text-teal transition-colors duration-200 animate-fade-in">
+                  <h3 className="text-lg sm:text-xl font-medium text-charcoal group-hover:text-teal transition-colors duration-200 animate-fade-in">
                     {entry.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-umber-light font-light mt-1 leading-relaxed line-clamp-1">

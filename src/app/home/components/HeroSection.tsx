@@ -130,10 +130,10 @@ export default function HeroSection() {
               <h1
                 ref={headlineRef}
                 className="font-urbanist text-white drop-shadow-2xl">
-                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[75px] xl:text-[85px] font-extrabold uppercase tracking-tight leading-[1]">
+                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[75px] xl:text-[85px] font-light uppercase tracking-tight leading-[1]">
                   {heroTitles[titleIdx].line1}
                 </span>
-                <span className="block mt-2 sm:mt-3 lg:mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[60px] font-light italic text-white/90 tracking-wide leading-[1.1]">
+                <span className="block mt-2 sm:mt-3 lg:mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[60px] font-light uppercase text-white tracking-widest leading-[1.1]">
                   {heroTitles[titleIdx].line2}
                 </span>
               </h1>

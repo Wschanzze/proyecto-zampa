@@ -55,7 +55,7 @@ export default function HeritageSection() {
 
             <h2
               ref={headlineRef}
-              className="font-fraunces text-5xl lg:text-6xl font-light uppercase tracking-[0.06em] leading-tight text-umber-dark">
+              className="text-5xl lg:text-6xl font-light uppercase tracking-[0.06em] leading-tight text-charcoal">
               
               La Esencia del<br />
               Tambo Familiar.<br />
@@ -133,7 +133,7 @@ export default function HeritageSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-umber-dark/50 via-transparent to-transparent" />
                 <div className="absolute bottom-5 left-5 text-cream">
                   <p className="text-xs font-medium uppercase tracking-widest text-wheat-light mb-1">Crianza y Cuidado</p>
-                  <h3 className="font-fraunces text-lg font-medium">Lote Z-47</h3>
+                  <h3 className="text-lg font-medium">Lote Z-47</h3>
                 </div>
               </div>
 
@@ -198,7 +198,7 @@ export default function HeritageSection() {
                   <Icon name="SparklesIcon" size={18} variant="outline" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-umber-dark">Pecorino Zampa</p>
+                  <p className="text-sm font-semibold text-charcoal">Pecorino Zampa</p>
                   <p className="text-xs text-umber-light">Maduración: 6 a 12 meses</p>
                 </div>
               </div>

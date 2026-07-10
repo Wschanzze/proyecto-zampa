@@ -92,7 +92,7 @@ export default function CultivarGrid() {
         <div
           className={`mb-24 text-center transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal mb-4">Nuestra Selección</p>
-          <h2 className="font-fraunces text-4xl lg:text-6xl font-light text-umber-dark leading-tight tracking-[0.06em] max-w-4xl mx-auto uppercase">
+          <h2 className="text-4xl lg:text-6xl font-light text-charcoal leading-tight tracking-[0.06em] max-w-4xl mx-auto uppercase">
             Variedades Artesanales<br />
             <em className="font-light italic text-umber-light">Elaboradas con Leche 100% de Oveja</em>
           </h2>
@@ -113,7 +113,7 @@ export default function CultivarGrid() {
               }}>
               
               {/* Product Title */}
-              <h3 className="font-fraunces text-3xl lg:text-5xl font-light text-charcoal uppercase tracking-[0.06em] mb-12">
+              <h3 className="text-3xl lg:text-5xl font-light text-charcoal uppercase tracking-[0.06em] mb-12">
                 {cultivar.name}
               </h3>
 
@@ -126,7 +126,7 @@ export default function CultivarGrid() {
                     {cultivar.yieldGain}
                   </p>
                   
-                  <a href="#" className="inline-flex items-center gap-4 text-base font-medium text-umber-dark hover:text-teal transition-colors duration-300 group mt-auto">
+                  <a href="#" className="inline-flex items-center gap-4 text-base font-medium text-charcoal hover:text-teal transition-colors duration-300 group mt-auto">
                     Descubre Más
                     <div className="w-12 h-px bg-umber-dark group-hover:bg-teal transition-colors duration-300" />
                   </a>
@@ -149,7 +149,7 @@ export default function CultivarGrid() {
                     <span className="text-xs font-medium uppercase tracking-widest text-limestone-soft/0 text-umber-light/50 mb-1 block">
                       Curación:
                     </span>
-                    <span className="font-fraunces text-xl font-light text-umber-dark uppercase tracking-wider">
+                    <span className="text-xl font-light text-charcoal uppercase tracking-wider">
                       {cultivar.droughtTolerance}
                     </span>
                   </div>
@@ -158,7 +158,7 @@ export default function CultivarGrid() {
                     <span className="text-xs font-medium uppercase tracking-widest text-umber-light/50 mb-1 block">
                       Elaboración:
                     </span>
-                    <span className="text-base text-umber-dark font-light">
+                    <span className="text-base text-charcoal font-light">
                       Leche cruda de oveja, {cultivar.region}
                     </span>
                   </div>
@@ -167,7 +167,7 @@ export default function CultivarGrid() {
                     <span className="text-xs font-medium uppercase tracking-widest text-umber-light/50 mb-1 block">
                       Notas:
                     </span>
-                    <span className="text-base text-umber-dark font-light">
+                    <span className="text-base text-charcoal font-light">
                       Aromas intensos, textura firme, sabor profundo.
                     </span>
                   </div>

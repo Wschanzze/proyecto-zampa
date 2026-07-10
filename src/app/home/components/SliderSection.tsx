@@ -139,7 +139,7 @@ export default function SliderSection() {
                   </div>
 
                   {/* Title */}
-                  <h2 className="font-fraunces text-3xl sm:text-4xl lg:text-5xl font-semibold text-umber-dark leading-tight uppercase tracking-wide">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-charcoal leading-tight uppercase tracking-wide">
                     {slide.title}
                   </h2>
 
@@ -171,7 +171,7 @@ export default function SliderSection() {
               
               {/* Pagination */}
               <div className="flex items-center gap-2">
-                <span className="font-fraunces text-2xl italic text-teal font-medium">0{current + 1}</span>
+                <span className="text-2xl italic text-teal font-medium">0{current + 1}</span>
                 <span className="text-sm font-light text-charcoal/40">/ 0{slides.length}</span>
               </div>
 
