@@ -133,7 +133,7 @@ export default function HeritageSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-umber-dark/50 via-transparent to-transparent" />
                 <div className="absolute bottom-5 left-5 text-cream">
                   <p className="text-xs font-medium uppercase tracking-widest text-wheat-light mb-1">Crianza y Cuidado</p>
-                  <h3 className="text-lg font-medium">Lote Z-47</h3>
+                  <h3 className="text-lg font-light uppercase">Lote Z-47</h3>
                 </div>
               </div>
 

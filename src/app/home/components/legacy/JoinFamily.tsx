@@ -36,7 +36,7 @@ const JoinFamily = () => {
           PROBAR NUESTROS QUESOS
         </Link>
       </div>
-      <h1 className="absolute right-12 bottom-12 text-8xl md:text-9xl font-bold text-white/5 uppercase select-none tracking-tighter leading-none hidden lg:block text-right">
+      <h1 className="absolute right-12 bottom-12 text-8xl md:text-9xl font-light text-white/5 uppercase select-none tracking-tighter leading-none hidden lg:block text-right">
         ZAMPA<br />QUESOS<br />TANDIL
       </h1>
     </section>

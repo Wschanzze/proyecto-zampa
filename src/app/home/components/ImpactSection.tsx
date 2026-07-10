@@ -91,7 +91,7 @@ export default function ImpactSection() {
                 <div className="h-px w-12 bg-teal/60" />
               </div>
               
-              <h2 className="text-4xl md:text-5xl font-light text-charcoal leading-tight mb-6">
+              <h2 className="text-4xl md:text-5xl font-light text-charcoal leading-tight mb-6 uppercase">
                 Cuando la Calidad es Constante,<br />
                 <span className="italic font-normal text-teal">el Sabor se Vuelve Inolvidable.</span>
               </h2>

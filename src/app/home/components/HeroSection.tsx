@@ -129,7 +129,7 @@ export default function HeroSection() {
             <div className="min-h-[120px] sm:min-h-[160px] lg:min-h-[220px] flex flex-col justify-center">
               <h1
                 ref={headlineRef}
-                className="font-urbanist text-white drop-shadow-2xl">
+                className="font-urbanist text-white drop-shadow-2xl font-light uppercase">
                 <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[75px] xl:text-[85px] font-light uppercase tracking-tight leading-[1]">
                   {heroTitles[titleIdx].line1}
                 </span>

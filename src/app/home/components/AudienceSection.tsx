@@ -68,7 +68,7 @@ export default function AudienceSection() {
               <span className="inline-block bg-limestone-soft border border-umber/30 text-umber px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">
                 Tambo Familiar
               </span>
-              <h3 className="text-3xl md:text-4xl font-medium text-white leading-tight">
+              <h3 className="text-3xl md:text-4xl font-light text-white leading-tight uppercase">
                 Elaboración de lunes a lunes con leche fresca.
               </h3>
               <p className="text-sm text-white/80 font-light leading-relaxed mt-4 mb-8 max-w-xl">
@@ -106,7 +106,7 @@ export default function AudienceSection() {
                 <span className="inline-block bg-limestone-soft border border-umber/30 text-umber px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-3">
                   Experiencias Gourmet
                 </span>
-                <h3 className="text-xl md:text-2xl font-medium text-white leading-snug">
+                <h3 className="text-xl md:text-2xl font-light text-white leading-snug uppercase">
                   Variedades de oveja diseñadas para los paladares más exigentes.
                 </h3>
               </div>
@@ -133,7 +133,7 @@ export default function AudienceSection() {
                 <span className="inline-block bg-limestone-soft border border-umber/30 text-umber px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-3">
                   Maduración en Cava
                 </span>
-                <h3 className="text-xl md:text-2xl font-medium text-white leading-snug">
+                <h3 className="text-xl md:text-2xl font-light text-white leading-snug uppercase">
                   Cuidado artesanal y maduraciones prolongadas de 9 a 12 meses.
                 </h3>
               </div>

@@ -139,7 +139,7 @@ export default function SliderSection() {
                   </div>
 
                   {/* Title */}
-                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-charcoal leading-tight uppercase tracking-wide">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-charcoal leading-tight uppercase tracking-wide">
                     {slide.title}
                   </h2>
 

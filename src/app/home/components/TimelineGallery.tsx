@@ -123,7 +123,7 @@ export default function TimelineGallery() {
 
                 {/* Title */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-lg sm:text-xl font-medium text-charcoal group-hover:text-teal transition-colors duration-200 animate-fade-in">
+                  <h3 className="text-lg sm:text-xl font-light text-charcoal group-hover:text-teal transition-colors duration-200 animate-fade-in uppercase">
                     {entry.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-umber-light font-light mt-1 leading-relaxed line-clamp-1">

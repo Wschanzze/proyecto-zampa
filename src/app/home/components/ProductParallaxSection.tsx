@@ -45,7 +45,7 @@ const ProductParallaxSection = () => {
           </div>
 
           {/* Título Principal */}
-          <h2 className="parallax-title">
+          <h2 className="parallax-title font-light uppercase">
             Frescura y <span className="text-highlight">Naturalidad</span>
             <br />
             son los principios de

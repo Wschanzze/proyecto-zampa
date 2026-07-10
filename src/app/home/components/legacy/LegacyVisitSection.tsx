@@ -34,7 +34,7 @@ export default function LegacyVisitSection() {
           <div className={`lg:col-span-6 flex flex-col gap-6 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-teal">Establecimiento Zampa</span>
             
-            <h2 className="text-4xl md:text-5xl font-semibold text-charcoal leading-tight">
+            <h2 className="text-4xl md:text-5xl font-light text-charcoal leading-tight uppercase">
               UN VIAJE PARA DESCUBRIR LA TRADICIÓN QUESERA.<br />
               ¡VEN A VISITARNOS!
             </h2>

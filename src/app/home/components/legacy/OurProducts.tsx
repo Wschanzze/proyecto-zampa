@@ -63,7 +63,7 @@ const OurProducts = () => {
                   <span className="text-[10px] font-bold tracking-[0.25em] text-wheat-light uppercase">
                     {cat.subtitle}
                   </span>
-                  <h3 className="text-2xl md:text-3xl font-semibold text-white tracking-wide uppercase">
+                  <h3 className="text-2xl md:text-3xl font-light text-white tracking-wide uppercase">
                     {cat.title}
                   </h3>
                   <p className="text-xs md:text-sm font-light text-white/80 leading-relaxed mt-2 max-h-0 opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-500 overflow-hidden">

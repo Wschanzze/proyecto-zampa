@@ -7,7 +7,7 @@ const Introduction = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-teal mb-3">FILOSOFÍA ZAMPA</p>
-          <h2 className="text-4xl md:text-5xl font-light text-charcoal leading-tight">Nuestra Vocación</h2>
+          <h2 className="text-4xl md:text-5xl font-light text-charcoal leading-tight uppercase">Nuestra Vocación</h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -33,7 +33,7 @@ const Introduction = () => {
             <div className="philosophy-item flex gap-6 items-start">
               <span className="text-4xl font-light text-teal/40 leading-none">01</span>
               <div>
-                <h3 className="text-2xl font-semibold text-charcoal mb-3">Integración Vertical: Del Pasto al Mostrador</h3>
+                <h3 className="text-2xl font-light text-charcoal mb-3 uppercase">Integración Vertical: Del Pasto al Mostrador</h3>
                 <p className="text-sm md:text-base font-light text-charcoal/80 leading-relaxed">
                   <span className="desktop-text-only">
                     Zampa funciona bajo un modelo de cadena completa: criamos nuestras propias ovejas, producimos la leche, elaboramos los quesos y los comercializamos directamente. Sin intermediarios. Este modelo, sumamente exigente, nos permite un control absoluto sobre la calidad de nuestros productos en cada paso del proceso.
@@ -48,7 +48,7 @@ const Introduction = () => {
             <div className="philosophy-item flex gap-6 items-start">
               <span className="text-4xl font-light text-teal/40 leading-none">02</span>
               <div>
-                <h3 className="text-2xl font-semibold text-charcoal mb-3">Materia Prima Noble: El Secreto de la Oveja</h3>
+                <h3 className="text-2xl font-light text-charcoal mb-3 uppercase">Materia Prima Noble: El Secreto de la Oveja</h3>
                 <p className="text-sm md:text-base font-light text-charcoal/80 leading-relaxed">
                   <span className="desktop-text-only">
                     La leche de oveja supera a la vacuna en concentración de grasas y proteínas. Esto se traduce en quesos con sabores más pronunciados, texturas más ricas y una cremosidad inigualable. Aprovechamos este rendimiento único elaborando nuestros quesos con leche fresca del mismo día, preservando intactas sus propiedades organolépticas naturales.
