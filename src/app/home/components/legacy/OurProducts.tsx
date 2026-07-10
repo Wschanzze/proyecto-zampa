@@ -34,7 +34,7 @@ const OurProducts = () => {
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-teal mb-4 block">NUESTROS PRODUCTOS</p>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-charcoal leading-tight uppercase tracking-[0.06em] mb-6">
           100% Leche de Oveja <br className="hidden md:block" />
-          <em className="font-normal italic text-teal text-3xl md:text-5xl">Quesos con Identidad y Cuidado Artesanal</em>
+          Quesos con Identidad y Cuidado Artesanal
         </h2>
         <p className="text-base md:text-lg font-light text-charcoal/80 max-w-2xl mx-auto leading-relaxed">
           Elaboramos cada horma de lunes a lunes con leche de ordeñe diario en Napaleofú, Buenos Aires. Descubrí nuestras tres grandes familias de quesos de autor.
