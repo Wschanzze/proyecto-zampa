@@ -23,7 +23,7 @@ const heroImages = [
 ];
 
 const heroTitles = [
-  { line1: 'Quesos de Oveja', line2: 'con Pasión de Origen' },
+  { line1: 'Quesos', line2: 'con Pasión de Origen' },
   { line1: 'Elaboramos', line2: 'nuestros quesos' },
   { line1: 'Criamos', line2: 'nuestras ovejas' }
 ];
@@ -129,7 +129,7 @@ export default function HeroSection() {
         <p
           ref={subRef}
           className="text-base md:text-lg lg:text-xl font-light text-white leading-relaxed max-w-2xl mb-12 drop-shadow-md">
-          Criamos ovejas frisonas en pasturas naturales y elaboramos quesos premium con leche fresca del día. Un proceso 100% familiar.
+          Criamos ovejas frisonas en pasturas naturales y elaboramos quesos premium. Un proceso 100% familiar.
         </p>
 
         {/* CTAs */}
