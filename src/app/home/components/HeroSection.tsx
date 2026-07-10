@@ -1,12 +1,32 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
+
+const heroImages = [
+  {
+    src: '/assets/Quesos%20Zampa/IMG_1134.jpg',
+    alt: 'Paisaje de las pasturas y el establecimiento Quesos Zampa en Napaleofú al atardecer'
+  },
+  {
+    src: '/assets/Quesos%20Zampa/IMG_9858.JPG',
+    alt: 'Hormas de quesos artesanales Zampa madurando en la cava familiar'
+  },
+  {
+    src: '/assets/Quesos%20Zampa/IMG_9816.JPG',
+    alt: 'Proceso de elaboración artesanal de quesos Zampa'
+  },
+  {
+    src: '/assets/Quesos%20Zampa/68C50477-1C39-48B6-86FE-640DEDCA65B1.jpg',
+    alt: 'Detalle de quesos de oveja madurados listos para consumo'
+  }
+];
 
 export default function HeroSection() {
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subRef = useRef<HTMLParagraphElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
+  const [currentIdx, setCurrentIdx] = useState(0);
 
   useEffect(() => {
     const elements = [headlineRef?.current, subRef?.current, cardRef?.current];
@@ -23,17 +43,36 @@ export default function HeroSection() {
     });
   }, []);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIdx((prev) => (prev + 1) % heroImages.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative min-h-screen overflow-hidden flex items-center justify-center">
-      {/* Background Image */}
+      {/* Background Images Carousel with smooth Ken Burns transition */}
       <div className="absolute inset-0 z-0">
-        <AppImage
-          src="/assets/Quesos%20Zampa/IMG_1134.jpg"
-          alt="Paisaje de las pasturas y el establecimiento Quesos Zampa en Napaleofú al atardecer"
-          fill
-          className="object-cover"
-          priority
-        />
+        {heroImages.map((image, idx) => (
+          <div
+            key={image.src}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              idx === currentIdx ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <AppImage
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-cover transition-transform duration-[6000ms] ease-out"
+              style={{
+                transform: idx === currentIdx ? 'scale(1)' : 'scale(1.05)'
+              }}
+              priority={idx === 0}
+            />
+          </div>
+        ))}
       </div>
 
       {/* Overlays for text readability */}
