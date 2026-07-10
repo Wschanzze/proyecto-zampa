@@ -46,12 +46,12 @@ export default function Header() {
           />
         </div>
 
-        {/* Right Nav Links Container (only visible when scrolled) */}
+        {/* Nav Links Container (positioned next to the logo when scrolled) */}
         <div 
-          className={`hidden lg:flex items-center gap-8 lg:gap-10 ml-auto transition-all duration-500 ${
+          className={`hidden lg:flex items-center gap-6 lg:gap-8 absolute top-1/2 -translate-y-1/2 transition-all duration-500 ${
             scrolled 
-              ? 'opacity-100 pointer-events-auto translate-x-0' 
-              : 'opacity-0 pointer-events-none translate-x-8'
+              ? 'left-[130px] lg:left-[150px] opacity-100 pointer-events-auto' 
+              : 'left-[160px] lg:left-[180px] opacity-0 pointer-events-none'
           }`}
         >
           {[
@@ -64,7 +64,7 @@ export default function Header() {
             <a
               key={item.label}
               href={item.href}
-              className="text-xs font-bold transition-colors duration-300 tracking-widest text-umber-dark hover:text-teal"
+              className="text-xs font-bold transition-colors duration-300 tracking-widest text-umber-dark hover:text-teal whitespace-nowrap"
             >
               {item.label}
             </a>
