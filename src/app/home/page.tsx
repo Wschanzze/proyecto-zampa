@@ -2,9 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from './components/HeroSection';
 import SliderSection from './components/SliderSection';
-import ImpactSection from './components/ImpactSection';
 import HeritageSection from './components/HeritageSection';
-import CtaSection from './components/CtaSection';
 import FloatingPill from './components/FloatingPill';
 
 // Legacy Home Components
@@ -38,11 +36,6 @@ export default function HomePage() {
       <InstagramCarousel />
       <QuickContact />
       {/* --- FIN INICIO LEGACY --- */}
-
-      {/* --- INICIO NUEVO (Nuevos Apartados) --- */}
-      <ImpactSection />
-      <CtaSection />
-      {/* --- FIN INICIO NUEVO --- */}
 
       <Footer />
       <FloatingPill />

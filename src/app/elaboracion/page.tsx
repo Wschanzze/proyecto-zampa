@@ -5,6 +5,8 @@ import Footer from '@/components/Footer';
 import FloatingPill from '@/app/home/components/FloatingPill';
 import RecipesPairings from '@/components/RecipesPairings';
 import ProductParallaxSection from '@/app/home/components/ProductParallaxSection';
+import ImpactSection from '@/app/home/components/ImpactSection';
+import CtaSection from '@/app/home/components/CtaSection';
 
 interface ChefSection {
   id: number;
@@ -177,6 +179,10 @@ export default function ElaboracionPage() {
           </div>
         </div>
       </section>
+
+      {/* APARTADOS MOVIDOS DESDE INICIO */}
+      <ImpactSection />
+      <CtaSection />
 
       <Footer />
       <FloatingPill />

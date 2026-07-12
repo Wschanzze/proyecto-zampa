@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const BannerBW = () => {
   return (
-    <section className="relative h-[280px] md:h-[350px] w-full overflow-hidden flex items-center justify-center border-y border-wheat/20">
+    <section className="relative min-h-[500px] md:min-h-[600px] w-full overflow-hidden flex items-center justify-center py-24 px-6 lg:px-12">
       <Image 
         src="/assets/Quesos Zampa/IMG_0019.JPG" 
         alt="Trabajo en el tambo" 
@@ -12,28 +12,32 @@ const BannerBW = () => {
         sizes="100vw"
       />
       {/* Overlays for premium contrast and readability */}
-      <div className="absolute inset-0 bg-charcoal/60 z-10" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/45 z-10" />
+      <div className="absolute inset-0 bg-black/60 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
       
       {/* Content wrapper */}
-      <div className="relative z-20 max-w-7xl mx-auto w-full px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-12 text-center md:text-left">
-        <div className="flex flex-col gap-2">
-          <span className="text-[10px] font-bold tracking-[0.3em] text-wheat-light/80 uppercase">Tradición Familiar</span>
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white uppercase tracking-[0.06em] leading-tight">
+      <div className="relative z-20 max-w-7xl mx-auto w-full px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-12 md:gap-16 text-center md:text-left">
+        <div className="flex flex-col gap-4">
+          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-wheat-light">Tradición Familiar</span>
+          <h3 className="text-4xl md:text-5xl lg:text-6xl font-light text-white uppercase tracking-[0.06em] leading-tight">
             Quesos de Oveja <br className="hidden md:block" />de Autor
           </h3>
         </div>
         
         {/* Elegant vertical divider for desktop, horizontal for mobile */}
-        <div className="w-16 h-[1px] md:w-[1px] md:h-20 bg-wheat/30" />
+        <div className="w-20 h-[1px] md:w-[1px] md:h-32 bg-wheat/30 z-20" />
         
-        <div className="flex flex-col gap-2 md:items-end text-center md:text-right">
-          <span className="text-[10px] font-bold tracking-[0.3em] text-wheat-light/80 uppercase">Compromiso</span>
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white uppercase tracking-[0.06em] leading-tight">
+        <div className="flex flex-col gap-4 md:items-end text-center md:text-right">
+          <span className="text-xs font-semibold uppercase tracking-[0.25em] text-wheat-light">Compromiso</span>
+          <h3 className="text-4xl md:text-5xl lg:text-6xl font-light text-white uppercase tracking-[0.06em] leading-tight">
             Sistema Pastoril <br className="hidden md:block" />100% en Libertad
           </h3>
         </div>
       </div>
+      
+      <h1 className="absolute right-12 bottom-12 text-8xl md:text-9xl font-light text-white/5 uppercase select-none tracking-tighter leading-none hidden lg:block text-right">
+        ZAMPA<br />QUESOS<br />TANDIL
+      </h1>
     </section>
   );
 };
