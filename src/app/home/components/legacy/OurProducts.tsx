@@ -33,11 +33,10 @@ const OurProducts = () => {
       <div className="max-w-4xl mx-auto px-6 text-center mb-16 md:mb-24">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-teal mb-4 block">NUESTROS PRODUCTOS</p>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-charcoal leading-tight uppercase tracking-[0.06em] mb-6">
-          100% Leche de Oveja <br className="hidden md:block" />
-          Quesos con Identidad y Cuidado Artesanal
+          Descubrí nuestros quesos de autor
         </h2>
         <p className="text-base md:text-lg font-light text-charcoal/80 max-w-2xl mx-auto leading-relaxed">
-          Descubrí nuestras tres grandes familias de quesos de autor.
+          Todos nuestros productos están elaborados 100% con Leche de Oveja y con Cuidado Artesanal.
         </p>
       </div>
 

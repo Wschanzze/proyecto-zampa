@@ -126,10 +126,10 @@ export default function SliderSection() {
       {/* Glassmorphic Floating Content Card */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-12 lg:pb-20 pt-20 flex justify-start h-full items-end">
         
-        <div className="w-full lg:max-w-xl xl:max-w-2xl bg-white/70 backdrop-blur-xl border border-white/40 shadow-2xl rounded-[2.5rem] p-8 lg:p-12 transition-all duration-500 hover:bg-white/80">
+        <div className="w-full lg:max-w-xl xl:max-w-2xl bg-white/80 backdrop-blur-xl border border-white/50 shadow-2xl rounded-[2.5rem] p-8 lg:p-12 transition-all duration-500 hover:bg-white/90 relative overflow-hidden">
           
           {/* Dynamic Content */}
-          <div className="relative min-h-[220px] lg:min-h-[200px]">
+          <div className="relative min-h-[220px] lg:min-h-[190px]">
             {slides.map((slide, idx) => {
               const isActive = current === idx;
               return (
@@ -159,63 +159,47 @@ export default function SliderSection() {
                     {slide.excerpt}
                   </p>
 
-                  {/* Button */}
+                  {/* Improved CTA Button */}
                   <a
                     href={slide.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-3 text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-charcoal hover:text-teal transition-colors duration-300 mt-2 w-fit"
+                    className="group inline-flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-13 px-6 sm:px-8 rounded-full bg-charcoal text-white hover:bg-teal hover:scale-[1.02] transition-all duration-300 shadow-md hover:shadow-lg mt-3 w-fit text-[10px] sm:text-xs font-bold tracking-[0.15em] uppercase"
                   >
                     <span>{slide.buttonText}</span>
-                    <span className="flex items-center justify-center w-9 h-9 rounded-full bg-white shadow-sm border border-charcoal/10 group-hover:border-teal/30 group-hover:shadow-md transition-all duration-300">
-                      <Icon name="ArrowRightIcon" size={14} className="text-charcoal group-hover:text-teal transition-all duration-300 group-hover:translate-x-0.5" />
-                    </span>
+                    <Icon name="ArrowRightIcon" size={14} className="text-white transition-transform duration-300 group-hover:translate-x-1" />
                   </a>
                 </div>
               );
             })}
           </div>
 
-          {/* Navigation Controls inside the card */}
-          <div className="mt-8 pt-6 border-t border-charcoal/10 flex flex-col gap-5">
-            <div className="flex items-center justify-between">
-              
-              {/* Pagination */}
-              <div className="flex items-center gap-2">
-                <span className="text-2xl italic text-teal font-medium">0{current + 1}</span>
-                <span className="text-sm font-light text-charcoal/40">/ 0{slides.length}</span>
-              </div>
-
-              {/* Arrow Buttons */}
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={handlePrev}
-                  className="w-10 h-10 rounded-full bg-white shadow-sm border border-charcoal/10 hover:border-teal/50 flex items-center justify-center transition-all duration-300 group"
-                  aria-label="Anterior"
-                >
-                  <Icon name="ArrowLeftIcon" size={16} className="text-charcoal group-hover:text-teal transition-all duration-300 group-hover:-translate-x-0.5" />
-                </button>
-                <button
-                  onClick={handleNext}
-                  className="w-10 h-10 rounded-full bg-white shadow-sm border border-charcoal/10 hover:border-teal/50 flex items-center justify-center transition-all duration-300 group"
-                  aria-label="Siguiente"
-                >
-                  <Icon name="ArrowRightIcon" size={16} className="text-charcoal group-hover:text-teal transition-all duration-300 group-hover:translate-x-0.5" />
-                </button>
-              </div>
-            </div>
-
-            {/* Time Progress Bar */}
-            <div className="w-full h-1 bg-charcoal/5 rounded-full overflow-hidden">
-              <div 
-                className="h-full bg-gradient-to-r from-teal to-teal-light transition-all duration-100 ease-linear"
-                style={{ width: `${progress}%` }}
-              />
-            </div>
+          {/* Minimalist Progress Line at the very bottom edge of the card */}
+          <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-charcoal/5">
+            <div 
+              className="h-full bg-teal transition-all duration-100 ease-linear"
+              style={{ width: `${progress}%` }}
+            />
           </div>
           
         </div>
       </div>
+
+      {/* Floating Side Navigation Arrows (Minimalist & Professional) */}
+      <button
+        onClick={handlePrev}
+        className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/20 hover:bg-white backdrop-blur-md flex items-center justify-center border border-white/20 hover:border-white shadow-lg text-white hover:text-charcoal transition-all duration-300 hover:scale-105 group"
+        aria-label="Anterior"
+      >
+        <Icon name="ArrowLeftIcon" size={20} className="transition-transform duration-300 group-hover:-translate-x-0.5" />
+      </button>
+      <button
+        onClick={handleNext}
+        className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/20 hover:bg-white backdrop-blur-md flex items-center justify-center border border-white/20 hover:border-white shadow-lg text-white hover:text-charcoal transition-all duration-300 hover:scale-105 group"
+        aria-label="Siguiente"
+      >
+        <Icon name="ArrowRightIcon" size={20} className="transition-transform duration-300 group-hover:translate-x-0.5" />
+      </button>
     </section>
   );
 }
