@@ -27,10 +27,10 @@ export default function HomePage() {
       {/* --- INICIO LEGACY (Antiguo Home) --- */}
       <OurProducts />
       <IntroStatement />
-      <BannerBW />
+      {/* <BannerBW /> */}
+      <SliderSection />
       <HeritageSection />
 
-      <SliderSection />
       <LegacyVisitSection />
       <JoinFamily />
       <InstagramCarousel />
