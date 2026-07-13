@@ -49,21 +49,21 @@ export default function HeritageSection() {
             <div className="inline-flex items-center gap-2 self-start border border-wheat/50 bg-cream px-4 py-2 rounded-full">
               <span className="w-2 h-2 rounded-full bg-teal animate-pulse flex-shrink-0" />
               <span className="text-xs font-medium text-teal tracking-widest uppercase">
-                Temporada 2026 Abierta
+                Quesos Estacionales • Leche A2
               </span>
             </div>
 
             <h2
               ref={headlineRef}
               className="text-5xl lg:text-6xl font-light uppercase tracking-[0.06em] leading-tight text-charcoal">
-              La Esencia del<br />
-              Tambo Familiar.
+              El Valor del<br />
+              Pecorino de Estación.
             </h2>
 
             <p
               ref={subRef}
               className="text-lg font-light text-umber-light leading-relaxed max-w-md">
-              En Quesos Zampa elaboramos quesos artesanales en las pasturas de Tandil, controlando todo el proceso desde la siembra de nuestras pasturas and el ordeñe diario, hasta la maduración en cava a solo 100 metros del tambo.
+              Nuestros quesos se elaboran exclusivamente con leche 100% de oveja, naturalmente rica en proteína A2 para una fácil digestión. Al respetar el ciclo biológico natural del rebaño, la producción es estacional, convirtiendo a cada horma de Pecorino en una edición limitada, única y atada al ritmo de la tierra.
             </p>
 
             {/* CTAs */}
@@ -179,7 +179,7 @@ export default function HeritageSection() {
               ref={cardRef}
               className="absolute top-[38%] right-[-28px] glass-stone p-5 rounded-3xl w-64 shadow-2xl animate-float border border-wheat/30 hidden lg:block">
               <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-medium uppercase tracking-wide text-umber-light">Queso del Mes</span>
+                <span className="text-xs font-medium uppercase tracking-wide text-umber-light">Edición Limitada</span>
                 <Icon name="EllipsisHorizontalIcon" size={16} variant="outline" className="text-umber-light" />
               </div>
               <div className="flex items-center gap-3 mb-4">
@@ -188,16 +188,16 @@ export default function HeritageSection() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-charcoal">Pecorino Zampa</p>
-                  <p className="text-xs text-umber-light">Maduración: 6 a 12 meses</p>
+                  <p className="text-xs text-umber-light">Producción Estacional</p>
                 </div>
               </div>
               <div className="flex items-center justify-between p-3 rounded-xl border border-wheat/30 bg-cream">
-                <span className="text-xs text-umber-light">Sabor Intenso</span>
-                <span className="text-sm font-semibold text-teal">100% Oveja</span>
+                <span className="text-xs text-umber-light">Proteína A2</span>
+                <span className="text-sm font-semibold text-teal">Fácil Digestión</span>
               </div>
               <div className="mt-3 flex items-center gap-2 text-xs font-medium px-2 py-1 rounded-md text-teal bg-teal/10 w-max">
                 <Icon name="CheckCircleIcon" size={12} variant="outline" />
-                Stock Limitado
+                Lotes de Estación
               </div>
             </div>
           </div>
