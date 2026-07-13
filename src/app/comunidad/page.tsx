@@ -11,21 +11,22 @@ export default function ComunidadPage() {
     <div className="min-h-screen bg-cream community-wrapper">
       <Header />
 
-      {/* HERO SECTION CON VIDEO DE FONDO */}
-      <section className="comunidad-hero">
-        <video 
-          src="/assets/Quesos Zampa/sheeps.mp4" 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
+      {/* HERO SECTION */}
+      <header className="products-hero">
+        <img 
+          src="/assets/Quesos Zampa/68C50477-1C39-48B6-86FE-640DEDCA65B1.jpg" 
+          alt="Comunidad - Quesos Zampa" 
+          className="products-hero-bg" 
         />
-        <div className="comunidad-hero-overlay"></div>
-        <div className="comunidad-hero-content">
+        <div className="products-hero-overlay"></div>
+        <div className="products-hero-content">
           <p className="hero-subtitle">ZAMPA Y LA COMUNIDAD</p>
           <h1 className="hero-title font-light uppercase">Compromiso con Nuestra Tierra</h1>
+          <p className="hero-description">
+            Entendemos la producción artesanal como un acto social. Trabajamos en armonía con nuestro entorno en Napaleofú, promoviendo el arraigo familiar y la sustentabilidad del suelo.
+          </p>
         </div>
-      </section>
+      </header>
 
       {/* SECCIÓN INTRODUCCIÓN / FILOSOFÍA */}
       <section className="comunidad-intro-section">
