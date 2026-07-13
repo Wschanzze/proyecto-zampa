@@ -70,14 +70,14 @@ export default function HeritageSection() {
             <div className="flex flex-col sm:flex-row gap-4 mt-2">
               <a
                 href="/productos"
-                className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-teal text-white font-bold text-[10px] sm:text-xs hover:bg-teal-light hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_20px_rgba(46,93,90,0.25)] tracking-[0.15em] uppercase px-8 sm:w-auto">
-                <Icon name="SparklesIcon" size={16} variant="solid" className="sm:w-5 sm:h-5 text-white/90" />
+                className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 shadow-md hover:shadow-lg border border-charcoal/10 tracking-[0.15em] uppercase px-8 sm:w-auto">
+                <Icon name="SparklesIcon" size={16} variant="solid" className="sm:w-5 sm:h-5 text-charcoal/90" />
                 <span>Explorar Variedades</span>
               </a>
               <a
                 href="/nuestra-historia"
-                className="group flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full border border-teal/35 bg-teal/5 text-teal font-bold text-[10px] sm:text-xs hover:bg-teal hover:text-white hover:scale-[1.02] transition-all duration-300 tracking-[0.15em] uppercase px-8 sm:w-auto shadow-[0_4px_20px_rgba(46,93,90,0.15)]">
-                <Icon name="ClockIcon" size={18} className="w-5 h-5 transition-transform duration-300 group-hover:scale-110 text-teal group-hover:text-white" />
+                className="group flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 shadow-md hover:shadow-lg border border-charcoal/10 tracking-[0.15em] uppercase px-8 sm:w-auto">
+                <Icon name="ClockIcon" size={18} className="w-5 h-5 transition-transform duration-300 group-hover:scale-110 text-charcoal" />
                 <span>Nuestra Historia</span>
               </a>
             </div>

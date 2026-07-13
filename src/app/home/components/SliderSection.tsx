@@ -162,12 +162,20 @@ export default function SliderSection() {
                   {/* Improved CTA Button */}
                   <a
                     href={slide.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-13 px-6 sm:px-8 rounded-full bg-charcoal text-white hover:bg-teal hover:scale-[1.02] transition-all duration-300 shadow-md hover:shadow-lg mt-3 w-fit text-[10px] sm:text-xs font-bold tracking-[0.15em] uppercase"
+                    target={slide.href.startsWith('http') ? "_blank" : undefined}
+                    rel={slide.href.startsWith('http') ? "noopener noreferrer" : undefined}
+                    className={`group inline-flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-13 px-6 sm:px-8 rounded-full font-bold text-[10px] sm:text-xs tracking-[0.15em] uppercase transition-all duration-300 shadow-md hover:shadow-lg mt-3 w-fit border border-charcoal/10 ${
+                      slide.href.includes('wa.me')
+                        ? 'bg-white text-charcoal hover:bg-[#25D366] hover:text-white hover:border-[#25D366] hover:scale-[1.02]'
+                        : 'bg-white text-charcoal hover:bg-white/90 hover:scale-[1.02]'
+                    }`}
                   >
+                    {slide.href.includes('wa.me') ? (
+                      <Icon name="WhatsApp" size={16} className="text-charcoal transition-colors duration-300 group-hover:text-white group-hover:scale-110" />
+                    ) : (
+                      <Icon name="ArrowRightIcon" size={14} className="text-charcoal transition-transform duration-300 group-hover:translate-x-1" />
+                    )}
                     <span>{slide.buttonText}</span>
-                    <Icon name="ArrowRightIcon" size={14} className="text-white transition-transform duration-300 group-hover:translate-x-1" />
                   </a>
                 </div>
               );

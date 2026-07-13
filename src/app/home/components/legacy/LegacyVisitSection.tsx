@@ -42,9 +42,9 @@ export default function LegacyVisitSection() {
             
             <button
               onClick={handleBookExperience}
-              className="group flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-teal text-white font-bold text-[10px] sm:text-xs hover:bg-[#25D366] hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl mt-2 self-start tracking-[0.15em] uppercase px-8"
+              className="group flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal border border-charcoal/10 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] hover:scale-[1.02] transition-all duration-300 shadow-md hover:shadow-lg mt-2 self-start tracking-[0.15em] uppercase px-8"
             >
-              <Icon name="WhatsApp" size={18} className="w-5 h-5 text-white transition-transform duration-300 group-hover:scale-110" />
+              <Icon name="WhatsApp" size={18} className="w-5 h-5 text-charcoal transition-transform duration-300 group-hover:scale-110 group-hover:text-white" />
               <span>Reserva tu experiencia</span>
             </button>
           </div>
