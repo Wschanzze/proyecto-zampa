@@ -25,8 +25,8 @@ export default function HomePage() {
       <HeroSection />
       
       {/* --- INICIO LEGACY (Antiguo Home) --- */}
-      <IntroStatement />
       <OurProducts />
+      <IntroStatement />
       <BannerBW />
       <HeritageSection />
 

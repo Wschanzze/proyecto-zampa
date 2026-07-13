@@ -53,8 +53,8 @@ export default function Header() {
               }`}
             >
               {[
-                { label: 'NUESTRA HISTORIA', href: '/nuestra-historia' },
                 { label: 'PRODUCTOS', href: '/productos' },
+                { label: 'NUESTRA HISTORIA', href: '/nuestra-historia' },
                 { label: 'ELABORACIÓN', href: '/elaboracion' },
                 { label: 'COMUNIDAD', href: '/comunidad' },
                 { label: 'REVENDEDORES', href: '/revendedores' },
@@ -129,8 +129,8 @@ export default function Header() {
             {/* Vertical Menu Links */}
             <nav className="flex flex-col gap-6 mt-4">
               {[
-                { label: 'NUESTRA HISTORIA', href: '/nuestra-historia' },
                 { label: 'PRODUCTOS', href: '/productos' },
+                { label: 'NUESTRA HISTORIA', href: '/nuestra-historia' },
                 { label: 'ELABORACIÓN', href: '/elaboracion' },
                 { label: 'COMUNIDAD', href: '/comunidad' },
                 { label: 'REVENDEDORES', href: '/revendedores' },
