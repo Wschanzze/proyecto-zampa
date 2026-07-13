@@ -13,7 +13,7 @@ const IntroStatement = () => {
           alt="Paisaje de ovejas y nubes de queso" 
           fill
           priority
-          className="object-cover object-center opacity-65" 
+          className="object-cover object-center opacity-30" 
         />
       </div>
 
