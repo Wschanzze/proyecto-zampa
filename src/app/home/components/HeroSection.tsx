@@ -152,7 +152,7 @@ export default function HeroSection() {
       </div>
 
       {/* Right Side Vertical Navigation (Reference Style) */}
-      <div className="absolute right-4 sm:right-8 lg:right-16 top-[40%] sm:top-[38%] lg:top-[40%] -translate-y-1/2 z-30 flex flex-col items-end gap-3 sm:gap-4 select-none">
+      <div className="absolute right-4 sm:right-8 lg:right-16 top-[40%] sm:top-[38%] lg:top-[40%] -translate-y-1/2 z-30 hidden md:flex flex-col items-end gap-3 sm:gap-4 select-none">
         {heroSlides.map((slide, idx) => {
           const isActive = currentIdx === idx;
           return (
