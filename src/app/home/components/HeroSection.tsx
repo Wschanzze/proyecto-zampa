@@ -3,36 +3,59 @@ import React, { useEffect, useRef, useState } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 
-const heroImages = [
-  {
-    src: '/assets/Quesos%20Zampa/07B73847-614E-4FDC-B7AF-F639064C64CB.jpg',
-    alt: 'Paisaje de las pasturas y el establecimiento Quesos Zampa en Napaleofú al atardecer'
-  },
-  {
-    src: '/assets/Quesos%20Zampa/IMG_9858.JPG',
-    alt: 'Hormas de quesos artesanales Zampa madurando en la cava familiar'
-  },
-  {
-    src: '/assets/Quesos%20Zampa/IMG_9816.JPG',
-    alt: 'Proceso de elaboración artesanal de quesos Zampa'
-  },
-  {
-    src: '/assets/Quesos%20Zampa/68C50477-1C39-48B6-86FE-640DEDCA65B1.jpg',
-    alt: 'Detalle de quesos de oveja madurados listos para consumo'
-  }
-];
+interface HeroSlide {
+  id: number;
+  label: string;
+  line1: string;
+  line2: string;
+  image: string;
+  alt: string;
+  desc: string;
+}
 
-const heroTitles = [
-  { line1: 'Quesos', line2: 'con Pasión de Origen' },
-  { line1: 'Elaboramos', line2: 'Nuestros Quesos' },
-  { line1: 'Criamos', line2: 'Nuestras Ovejas' }
+const heroSlides: HeroSlide[] = [
+  {
+    id: 1,
+    label: 'Origen',
+    line1: 'Quesos',
+    line2: 'con Pasión de Origen',
+    image: '/assets/Quesos%20Zampa/07B73847-614E-4FDC-B7AF-F639064C64CB.jpg',
+    alt: 'Paisaje de las pasturas y el establecimiento Quesos Zampa en Napaleofú al atardecer',
+    desc: 'Criamos ovejas frisonas en pasturas naturales y elaboramos quesos premium. Un proceso 100% familiar que respeta los tiempos de la tierra y el verdadero sabor artesanal.'
+  },
+  {
+    id: 2,
+    label: 'Elaboración',
+    line1: 'Elaboramos',
+    line2: 'Nuestros Quesos',
+    image: '/assets/Quesos%20Zampa/IMG_9816.JPG',
+    alt: 'Proceso de elaboración artesanal de quesos Zampa',
+    desc: 'En nuestra quesería transformamos diariamente la leche fresca en hormas únicas. Cuidado de autor, higiene rigurosa y pasión en cada etapa del proceso.'
+  },
+  {
+    id: 3,
+    label: 'La Cava',
+    line1: 'Añejamos',
+    line2: 'con Calma y Tiempo',
+    image: '/assets/Quesos%20Zampa/IMG_9858.JPG',
+    alt: 'Hormas de quesos artesanales Zampa madurando en la cava familiar',
+    desc: 'Nuestros quesos maduran lentamente en una cava familiar controlada, donde adquieren el carácter, picor e intensidad de sabor que nos distinguen.'
+  },
+  {
+    id: 4,
+    label: 'El Tambo',
+    line1: 'Criamos',
+    line2: 'Nuestras Ovejas',
+    image: '/assets/Quesos%20Zampa/68C50477-1C39-48B6-86FE-640DEDCA65B1.jpg',
+    alt: 'Detalle de quesos de oveja madurados listos para consumo',
+    desc: 'Criamos nuestras ovejas bajo un sistema pastoril sustentable en el corazón de Napaleofú. Su libre pastoreo garantiza una leche de altísima calidad.'
+  }
 ];
 
 export default function HeroSection() {
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subRef = useRef<HTMLDivElement>(null);
   const [currentIdx, setCurrentIdx] = useState(0);
-  const [titleIdx, setTitleIdx] = useState(0);
 
   // Initial load animation
   useEffect(() => {
@@ -50,54 +73,69 @@ export default function HeroSection() {
     });
   }, []);
 
-  // Image rotation
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIdx((prev) => (prev + 1) % heroImages.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, []);
-
-  // Title rotation
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const el = headlineRef.current;
-      if (el) {
-        // Slide out up
-        el.style.transition = 'opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1)';
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(-20px)';
-        
-        setTimeout(() => {
-          setTitleIdx((prev) => (prev + 1) % heroTitles.length);
-          // Set below
-          el.style.transition = 'none';
-          el.style.transform = 'translateY(20px)';
-          el.getBoundingClientRect(); // reflow
-          // Slide in from bottom
-          el.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-          el.style.opacity = '1';
-          el.style.transform = 'translateY(0)';
-        }, 800);
+  // Slide transition handler with animations
+  const goToSlide = (idx: number) => {
+    if (idx === currentIdx) return;
+    
+    const titleEl = headlineRef.current;
+    const descEl = subRef.current;
+    
+    if (titleEl) {
+      titleEl.style.transition = 'opacity 0.4s cubic-bezier(0.5, 0, 0, 1), transform 0.4s cubic-bezier(0.5, 0, 0, 1)';
+      titleEl.style.opacity = '0';
+      titleEl.style.transform = 'translateY(-15px)';
+    }
+    if (descEl) {
+      descEl.style.transition = 'opacity 0.4s cubic-bezier(0.5, 0, 0, 1), transform 0.4s cubic-bezier(0.5, 0, 0, 1)';
+      descEl.style.opacity = '0';
+      descEl.style.transform = 'translateY(15px)';
+    }
+    
+    setTimeout(() => {
+      setCurrentIdx(idx);
+      
+      if (titleEl) {
+        titleEl.style.transition = 'none';
+        titleEl.style.transform = 'translateY(15px)';
+        titleEl.getBoundingClientRect(); // trigger reflow
+        titleEl.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+        titleEl.style.opacity = '1';
+        titleEl.style.transform = 'translateY(0)';
       }
-    }, 6000);
+      if (descEl) {
+        descEl.style.transition = 'none';
+        descEl.style.transform = 'translateY(-15px)';
+        descEl.getBoundingClientRect(); // trigger reflow
+        descEl.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+        descEl.style.opacity = '1';
+        descEl.style.transform = 'translateY(0)';
+      }
+    }, 400);
+  };
+
+  // Auto rotation interval (triggers goToSlide for a clean transition)
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const nextIdx = (currentIdx + 1) % heroSlides.length;
+      goToSlide(nextIdx);
+    }, 7000);
     return () => clearInterval(timer);
-  }, []);
+  }, [currentIdx]);
 
   return (
-    <section className="relative h-[100dvh] lg:h-screen lg:min-h-[700px] lg:max-h-[950px] w-full overflow-hidden flex items-center">
+    <section className="relative h-[100dvh] lg:h-screen lg:min-h-[700px] lg:max-h-[950px] w-full overflow-hidden flex items-center bg-charcoal">
       {/* Background Images */}
       <div className="absolute inset-0 w-full h-full z-0">
-        {heroImages.map((image, idx) => (
+        {heroSlides.map((slide, idx) => (
           <div
-            key={image.src}
+            key={slide.id}
             className={`absolute inset-0 transition-opacity duration-[1500ms] ease-in-out ${
               idx === currentIdx ? 'opacity-100 z-10' : 'opacity-0 z-0'
             }`}
           >
             <AppImage
-              src={image.src}
-              alt={image.alt}
+              src={slide.image}
+              alt={slide.alt}
               fill
               className="object-cover transition-transform duration-[10000ms] ease-out"
               style={{
@@ -111,6 +149,33 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-black/25 z-10 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent z-10 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent z-10 pointer-events-none hidden lg:block" />
+      </div>
+
+      {/* Right Side Vertical Navigation (Reference Style) */}
+      <div className="absolute right-4 sm:right-8 lg:right-16 top-[40%] sm:top-[38%] lg:top-[40%] -translate-y-1/2 z-30 flex flex-col items-end gap-3 sm:gap-4 select-none">
+        {heroSlides.map((slide, idx) => {
+          const isActive = currentIdx === idx;
+          return (
+            <button
+              key={slide.id}
+              onClick={() => goToSlide(idx)}
+              className="group flex items-center justify-end gap-3 sm:gap-4 text-right cursor-pointer py-1.5 focus:outline-none"
+            >
+              <span className={`text-[10px] sm:text-xs font-semibold tracking-[0.25em] uppercase transition-all duration-300 ${
+                isActive 
+                  ? 'text-white font-bold opacity-100 drop-shadow-md' 
+                  : 'text-white/40 hover:text-white/80 opacity-100 drop-shadow-sm'
+              }`}>
+                {slide.label}
+              </span>
+              <span className={`h-[1px] bg-white transition-all duration-500 ${
+                isActive 
+                  ? 'w-10 sm:w-16 bg-white' 
+                  : 'w-4 sm:w-6 bg-white/20 group-hover:w-8 group-hover:bg-white/45'
+              }`} />
+            </button>
+          );
+        })}
       </div>
 
       {/* Hero Content (Full Width Column Flow) */}
@@ -131,10 +196,10 @@ export default function HeroSection() {
               ref={headlineRef}
               className="font-urbanist text-white drop-shadow-2xl font-light uppercase">
               <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[75px] xl:text-[85px] font-light uppercase tracking-tight leading-[1]">
-                {heroTitles[titleIdx].line1}
+                {heroSlides[currentIdx].line1}
               </span>
               <span className="block mt-2 sm:mt-3 lg:mt-4 text-5xl sm:text-6xl md:text-7xl lg:text-[75px] xl:text-[85px] font-light uppercase tracking-tight leading-[1]">
-                {heroTitles[titleIdx].line2}
+                {heroSlides[currentIdx].line2}
               </span>
             </h1>
           </div>
@@ -145,7 +210,7 @@ export default function HeroSection() {
             className="w-full max-w-3xl flex flex-col gap-6 sm:gap-8 mt-2"
           >
             <p className="text-sm sm:text-base lg:text-lg font-light text-white/95 leading-relaxed max-w-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
-              Criamos ovejas frisonas en pasturas naturales y elaboramos quesos premium. Un proceso 100% familiar que respeta los tiempos de la tierra y el verdadero sabor artesanal.
+              {heroSlides[currentIdx].desc}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
