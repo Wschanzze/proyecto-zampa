@@ -85,7 +85,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-[100dvh] lg:h-screen lg:min-h-[700px] lg:max-h-[950px] w-full overflow-hidden flex items-center">
+    <section className="relative min-h-[680px] lg:h-[90vh] lg:min-h-[750px] lg:max-h-[900px] w-full overflow-hidden flex items-center">
       {/* Background Images */}
       <div className="absolute inset-0 w-full h-full z-0">
         {heroImages.map((image, idx) => (
@@ -108,64 +108,61 @@ export default function HeroSection() {
           </div>
         ))}
         {/* Soft elegant gradients - localized to where text will be */}
-        <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent z-10 pointer-events-none hidden lg:block" />
+        <div className="absolute inset-0 bg-black/25 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent z-10 pointer-events-none hidden lg:block" />
       </div>
 
-      {/* Hero Content (Asymmetric Layout) */}
-      <div className="relative z-20 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16 pt-24 lg:pt-32 pb-16 lg:pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-center">
+      {/* Hero Content (Full Width Column Flow) */}
+      <div className="relative z-20 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16 pt-28 lg:pt-36 pb-16 lg:pb-20">
+        <div className="max-w-4xl flex flex-col gap-6 sm:gap-8">
           
-          {/* Left Column: Massive Title (takes 7 columns) */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
-            <div className="mb-4 sm:mb-6 lg:mb-8 flex items-center gap-3 sm:gap-4 opacity-90">
-              <span className="w-8 sm:w-16 h-[1px] bg-white"></span>
-              <p className="text-[10px] sm:text-xs font-bold tracking-[0.4em] text-white uppercase drop-shadow-md">
-                De Tandil a tu Mesa
-              </p>
-            </div>
-
-            <div className="min-h-[120px] sm:min-h-[160px] lg:min-h-[220px] flex flex-col justify-center">
-              <h1
-                ref={headlineRef}
-                className="font-urbanist text-white drop-shadow-2xl font-light uppercase">
-                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[75px] xl:text-[85px] font-light uppercase tracking-tight leading-[1]">
-                  {heroTitles[titleIdx].line1}
-                </span>
-                <span className="block mt-2 sm:mt-3 lg:mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-[50px] xl:text-[60px] font-light uppercase text-white tracking-widest leading-[1.1]">
-                  {heroTitles[titleIdx].line2}
-                </span>
-              </h1>
-            </div>
+          {/* Subtitle */}
+          <div className="flex items-center gap-3 sm:gap-4 opacity-90">
+            <span className="w-8 sm:w-16 h-[1px] bg-white"></span>
+            <p className="text-[10px] sm:text-xs font-bold tracking-[0.4em] text-white uppercase drop-shadow-md">
+              De Tandil a tu Mesa
+            </p>
           </div>
 
-          {/* Right Column: Description & CTAs (takes 5 columns) */}
+          {/* Title Area */}
+          <div className="min-h-[120px] sm:min-h-[160px] lg:min-h-[200px] flex flex-col justify-center">
+            <h1
+              ref={headlineRef}
+              className="font-urbanist text-white drop-shadow-2xl font-light uppercase">
+              <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-[75px] xl:text-[85px] font-light uppercase tracking-tight leading-[1]">
+                {heroTitles[titleIdx].line1}
+              </span>
+              <span className="block mt-2 sm:mt-3 lg:mt-4 text-5xl sm:text-6xl md:text-7xl lg:text-[75px] xl:text-[85px] font-light uppercase tracking-tight leading-[1]">
+                {heroTitles[titleIdx].line2}
+              </span>
+            </h1>
+          </div>
+
+          {/* Description & CTAs (Glassmorphic box underneath) */}
           <div 
             ref={subRef}
-            className="lg:col-span-5 flex flex-col w-full"
+            className="w-full max-w-3xl bg-black/30 backdrop-blur-xl border border-white/10 p-6 sm:p-8 lg:p-10 rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_20px_50px_-15px_rgba(0,0,0,0.6)] mt-2"
           >
-            <div className="bg-black/30 backdrop-blur-xl border border-white/15 p-6 sm:p-8 lg:p-12 rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)]">
-              <p className="text-sm sm:text-base lg:text-lg font-light text-white/95 leading-relaxed mb-8 sm:mb-10">
-                Criamos ovejas frisonas en pasturas naturales y elaboramos quesos premium. Un proceso 100% familiar que respeta los tiempos de la tierra y el verdadero sabor artesanal.
-              </p>
+            <p className="text-sm sm:text-base lg:text-lg font-light text-white/90 leading-relaxed mb-6 sm:mb-8 max-w-2xl">
+              Criamos ovejas frisonas en pasturas naturales y elaboramos quesos premium. Un proceso 100% familiar que respeta los tiempos de la tierra y el verdadero sabor artesanal.
+            </p>
 
-              <div className="grid grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4 sm:flex sm:flex-row lg:flex-col xl:flex-row">
-                <a
-                  href="#cultivars"
-                  className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] tracking-[0.15em] uppercase w-full">
-                  <Icon name="SparklesIcon" size={16} variant="solid" className="sm:w-5 sm:h-5" />
-                  <span>Variedades</span>
-                </a>
-                <a
-                  href="https://wa.me/5491132554757?text=%C2%A1Hola!%20Te%20escribo%20desde%20el%20sitio%20web%20de%20Quesos%20Zampa.%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full border border-white/30 bg-white/5 text-white font-bold text-[10px] sm:text-xs hover:bg-white/15 hover:border-white/60 transition-all duration-300 tracking-[0.15em] uppercase w-full">
-                  <Icon name="WhatsApp" size={16} className="sm:w-5 sm:h-5" />
-                  <span>Contacto</span>
-                </a>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#cultivars"
+                className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] tracking-[0.15em] uppercase px-8 sm:w-auto">
+                <Icon name="SparklesIcon" size={16} variant="solid" className="sm:w-5 sm:h-5" />
+                <span>Variedades</span>
+              </a>
+              <a
+                href="https://wa.me/5491132554757?text=%C2%A1Hola!%20Te%20escribo%20desde%20el%20sitio%20web%20de%20Quesos%20Zampa.%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full border border-white/30 bg-white/5 text-white font-bold text-[10px] sm:text-xs hover:bg-white/15 hover:border-white/60 transition-all duration-300 tracking-[0.15em] uppercase px-8 sm:w-auto">
+                <Icon name="WhatsApp" size={16} className="sm:w-5 sm:h-5" />
+                <span>Contacto</span>
+              </a>
             </div>
           </div>
 
