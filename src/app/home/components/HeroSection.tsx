@@ -85,7 +85,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-[680px] lg:h-[90vh] lg:min-h-[750px] lg:max-h-[900px] w-full overflow-hidden flex items-center">
+    <section className="relative h-[100dvh] lg:h-screen lg:min-h-[700px] lg:max-h-[950px] w-full overflow-hidden flex items-center">
       {/* Background Images */}
       <div className="absolute inset-0 w-full h-full z-0">
         {heroImages.map((image, idx) => (
@@ -139,19 +139,19 @@ export default function HeroSection() {
             </h1>
           </div>
 
-          {/* Description & CTAs (Glassmorphic box underneath) */}
+          {/* Description & CTAs (Clean borderless transparent flow) */}
           <div 
             ref={subRef}
-            className="w-full max-w-3xl bg-black/30 backdrop-blur-xl border border-white/10 p-6 sm:p-8 lg:p-10 rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_20px_50px_-15px_rgba(0,0,0,0.6)] mt-2"
+            className="w-full max-w-3xl flex flex-col gap-6 sm:gap-8 mt-2"
           >
-            <p className="text-sm sm:text-base lg:text-lg font-light text-white/90 leading-relaxed mb-6 sm:mb-8 max-w-2xl">
+            <p className="text-sm sm:text-base lg:text-lg font-light text-white/95 leading-relaxed max-w-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
               Criamos ovejas frisonas en pasturas naturales y elaboramos quesos premium. Un proceso 100% familiar que respeta los tiempos de la tierra y el verdadero sabor artesanal.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#cultivars"
-                className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)] tracking-[0.15em] uppercase px-8 sm:w-auto">
+                className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.25)] tracking-[0.15em] uppercase px-8 sm:w-auto">
                 <Icon name="SparklesIcon" size={16} variant="solid" className="sm:w-5 sm:h-5" />
                 <span>Variedades</span>
               </a>
@@ -159,9 +159,9 @@ export default function HeroSection() {
                 href="https://wa.me/5491132554757?text=%C2%A1Hola!%20Te%20escribo%20desde%20el%20sitio%20web%20de%20Quesos%20Zampa.%20Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full border border-white/30 bg-white/5 text-white font-bold text-[10px] sm:text-xs hover:bg-white/15 hover:border-white/60 transition-all duration-300 tracking-[0.15em] uppercase px-8 sm:w-auto">
-                <Icon name="WhatsApp" size={16} className="sm:w-5 sm:h-5" />
-                <span>Contacto</span>
+                className="group flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full border border-white/35 bg-black/15 backdrop-blur-sm text-white font-bold text-[10px] sm:text-xs hover:bg-[#25D366] hover:border-[#25D366] hover:scale-[1.02] transition-all duration-300 tracking-[0.15em] uppercase px-8 sm:w-auto shadow-[0_4px_20px_rgba(0,0,0,0.25)]">
+                <Icon name="WhatsApp" size={18} className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+                <span>Escribinos por WhatsApp</span>
               </a>
             </div>
           </div>
