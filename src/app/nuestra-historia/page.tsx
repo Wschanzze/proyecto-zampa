@@ -56,14 +56,14 @@ export default function NuestraHistoriaPage() {
                 Cómo Juan Cruz e Isabel unieron la gastronomía y el paisajismo en un tambo ovino referente en Napaleofú.
               </p>
               
-              <div className="newspaper-img-container main-img relative block mx-auto max-w-[650px] w-full">
+              <div className="newspaper-img-container main-img relative block mx-auto max-w-[450px] w-full">
                 <img 
-                  src="/assets/Quesos Zampa/IMG_9879.JPG" 
+                  src="/assets/Quesos Zampa/nuevas/e86d00df-bd8f-464c-93ea-ecd85bf7f3a8.jpg" 
                   alt="Juan Cruz e Isabel - Zampa" 
-                  className="h-[300px] md:h-[380px] w-full object-cover"
+                  className="h-[220px] md:h-[280px] w-full object-cover"
                 />
                 <p className="newspaper-img-caption">
-                  Juan Cruz Moy Peña (37) e Isabel Sáenz Rozas (31) en el predio donde comenzó su historia productiva.
+                  Juan Cruz Moy Peña e Isabel Sáenz Rozas, fundadores de Quesos Zampa.
                 </p>
                 <h1 className="watermark-logo absolute bottom-12 right-4 opacity-15 pointer-events-none select-none font-light text-right leading-none text-charcoal uppercase">
                   ZAMPA<br />QUESOS<br />TANDIL
@@ -91,14 +91,14 @@ export default function NuestraHistoriaPage() {
               <div className="sub-article border-b-0 pb-0">
                 <span className="article-tag">El Tambo Ovino</span>
                 <h3 className="article-title text-2xl font-light uppercase">El Ordeñe Diario y el Cuidado del Rebaño</h3>
-                <div className="newspaper-img-container md:float-right md:ml-6 md:mb-4 md:max-w-[240px] w-full">
+                <div className="newspaper-img-container float-right ml-4 mb-2 sm:ml-6 sm:mb-4 w-[130px] sm:w-[180px] md:w-[200px]">
                   <img 
                     src="/assets/Quesos Zampa/IMG_8715.jpg" 
                     alt="Pastoreo de ovejas Zampa" 
-                    className="h-[180px] w-full object-cover"
+                    className="h-[95px] sm:h-[130px] md:h-[150px] w-full object-cover"
                   />
                   <p className="newspaper-img-caption">
-                    El rebaño de ovejas frisonas en pastoreo diario en las sierras de Tandil.
+                    Rebaño de ovejas frisonas en pastoreo.
                   </p>
                 </div>
                 <p className="text-sm leading-relaxed text-charcoal mb-4 text-justify">
@@ -115,14 +115,14 @@ export default function NuestraHistoriaPage() {
                 <div className="sub-article">
                   <span className="article-tag">Elaboración Artesanal</span>
                   <h3 className="article-title text-2xl font-light uppercase">Quesos de Autor y Habilitación Local</h3>
-                  <div className="newspaper-img-container md:float-left md:mr-6 md:mb-4 md:max-w-[240px] w-full">
+                  <div className="newspaper-img-container float-left mr-4 mb-2 sm:mr-6 sm:mb-4 w-[130px] sm:w-[180px] md:w-[200px]">
                     <img 
                       src="/assets/Quesos Zampa/IMG_9821.JPG" 
                       alt="Quesos Zampa madurando" 
-                      className="h-[180px] w-full object-cover"
+                      className="h-[95px] sm:h-[130px] md:h-[150px] w-full object-cover"
                     />
                     <p className="newspaper-img-caption">
-                      Quesos de oveja en su proceso controlado de maduración sobre estanterías de madera.
+                      Quesos de oveja en proceso de maduración.
                     </p>
                   </div>
                   <p className="text-sm leading-relaxed text-charcoal mb-4 text-justify">
@@ -133,14 +133,14 @@ export default function NuestraHistoriaPage() {
                 <div className="sub-article border-b-0 pb-0">
                   <span className="article-tag">Identidad</span>
                   <h3 className="article-title text-2xl font-light uppercase">Zampa: La Resiliencia de la Estepa</h3>
-                  <div className="newspaper-img-container md:float-right md:ml-6 md:mb-4 md:max-w-[240px] w-full">
+                  <div className="newspaper-img-container float-right ml-4 mb-2 sm:ml-6 sm:mb-4 w-[130px] sm:w-[180px] md:w-[200px]">
                     <img 
                       src="/assets/Quesos Zampa/IMG_9823.JPG" 
                       alt="Quesos Zampa terminados" 
-                      className="h-[180px] w-full object-cover"
+                      className="h-[95px] sm:h-[130px] md:h-[150px] w-full object-cover"
                     />
                     <p className="newspaper-img-caption">
-                      Hormas listas para ser marcadas con el logo original de la quesería.
+                      Hormas listas para ser marcadas.
                     </p>
                   </div>
                   <p className="text-sm leading-relaxed text-charcoal mb-4 text-justify">
