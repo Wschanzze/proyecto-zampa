@@ -37,7 +37,7 @@ const slides: Slide[] = [
     subtitle: 'Bienestar Animal',
     title: 'Sistema Pastoril',
     excerpt: 'En Zampa, nuestras ovejas se alimentan mediante un sistema pastoril. Este enfoque respeta el bienestar animal y los ciclos naturales, permitiéndoles pastar al aire libre durante todo el año.',
-    image: '/assets/Quesos%20Zampa/IMG_1145.mp4',
+    image: '/assets/Quesos%20Zampa/nuevas/a15ed077-6d9c-4c40-891b-b17af3cbac6c.jfif',
     buttonText: 'Descubrí más',
     href: '/nuestra-historia',
   },

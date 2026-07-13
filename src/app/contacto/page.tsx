@@ -70,7 +70,7 @@ export default function ContactoPage() {
             <div className="spec-row">
               <span className="spec-label">WhatsApp</span>
               <a 
-                href="https://wa.me/5491132554757" 
+                href="https://wa.me/5491132554757?text=%C2%A1Hola!%20Te%20contacto%20desde%20su%20sitio%20web.%20Me%20gustar%C3%ADa%20hacerles%20una%20consulta." 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-lg text-teal font-semibold hover:text-teal-light transition-colors"

@@ -215,7 +215,7 @@ export default function HeroSection() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#cultivars"
+                href="/productos"
                 className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.25)] tracking-[0.15em] uppercase px-8 sm:w-auto">
                 <Icon name="SparklesIcon" size={16} variant="solid" className="sm:w-5 sm:h-5" />
                 <span>Variedades</span>

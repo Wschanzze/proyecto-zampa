@@ -8,8 +8,9 @@ const QuickContact = () => {
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
       ),
-      title: "Teléfono",
-      desc: "+54 9 249 123-4567"
+      title: "Teléfono / WhatsApp",
+      desc: "+54 9 11 3255-4757",
+      href: "https://wa.me/5491132554757?text=%C2%A1Hola!%20Te%20contacto%20desde%20su%20sitio%20web.%20Me%20gustar%C3%ADa%20hacerles%20una%20consulta."
     },
     {
       icon: (
@@ -18,7 +19,8 @@ const QuickContact = () => {
         </svg>
       ),
       title: "Ubicación",
-      desc: "Tandil, Buenos Aires, Argentina"
+      desc: "Napaleofú, Tandil\nBuenos Aires, Argentina",
+      href: "https://maps.google.com/?q=Napaleof%C3%BA,+Tandil,+Buenos+Aires,+Argentina"
     },
     {
       icon: (
@@ -27,7 +29,8 @@ const QuickContact = () => {
         </svg>
       ),
       title: "Email",
-      desc: "contacto@quesoszampa.com"
+      desc: "hola@quesoszampa.com",
+      href: "mailto:hola@quesoszampa.com"
     },
     {
       icon: (
@@ -56,7 +59,18 @@ const QuickContact = () => {
                 {item.icon}
               </div>
               <h4 className="text-lg font-semibold text-charcoal mb-2">{item.title}</h4>
-              <p className="text-sm font-light text-charcoal/80 whitespace-pre-line leading-relaxed">{item.desc}</p>
+              {item.href ? (
+                <a 
+                  href={item.href}
+                  target={item.href.startsWith('http') ? "_blank" : undefined}
+                  rel={item.href.startsWith('http') ? "noopener noreferrer" : undefined}
+                  className="text-sm font-light text-charcoal/80 hover:text-teal transition-colors whitespace-pre-line leading-relaxed"
+                >
+                  {item.desc}
+                </a>
+              ) : (
+                <p className="text-sm font-light text-charcoal/80 whitespace-pre-line leading-relaxed">{item.desc}</p>
+              )}
             </div>
           ))}
         </div>

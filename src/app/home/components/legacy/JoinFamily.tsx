@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const JoinFamily = () => {
   return (
-    <section className="relative min-h-[500px] md:min-h-[600px] w-full overflow-hidden flex items-center justify-center py-24 px-6 lg:px-12">
+    <section className="relative min-h-[400px] md:min-h-[480px] w-full overflow-hidden flex items-center justify-center py-16 px-6 lg:px-12">
       <Image 
         src="/assets/Quesos Zampa/6de54990-a007-4692-8898-b1dda1296784.jpg" 
         alt="Quesos en maduración" 

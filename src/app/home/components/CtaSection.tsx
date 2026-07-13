@@ -70,7 +70,7 @@ export default function CtaSection() {
           {/* Primary CTA — full-width button */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <a
-              href="#cultivars"
+              href="/productos"
               className="flex items-center justify-center gap-3 h-16 px-12 rounded-2xl bg-limestone-soft border border-umber/30 text-umber font-medium text-lg hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 group"
               style={{ boxShadow: '0 16px 48px rgba(46,93,90,0.32)' }}>
               
