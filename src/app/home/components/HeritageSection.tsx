@@ -38,8 +38,8 @@ export default function HeritageSection() {
           style={{
             background: 'radial-gradient(ellipse at 20% 80%, rgba(46,93,90,0.15) 0%, transparent 55%)'
           }} />
-        
       </div>
+
       <div className="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
@@ -56,7 +56,6 @@ export default function HeritageSection() {
             <h2
               ref={headlineRef}
               className="text-5xl lg:text-6xl font-light uppercase tracking-[0.06em] leading-tight text-charcoal">
-              
               La Esencia del<br />
               Tambo Familiar.
             </h2>
@@ -64,8 +63,7 @@ export default function HeritageSection() {
             <p
               ref={subRef}
               className="text-lg font-light text-umber-light leading-relaxed max-w-md">
-              
-              En Quesos Zampa elaboramos quesos artesanales en las pasturas de Tandil, controlando todo el proceso desde la siembra de nuestras pasturas y el ordeñe diario, hasta la maduración en cava a solo 100 metros del tambo.
+              En Quesos Zampa elaboramos quesos artesanales en las pasturas de Tandil, controlando todo el proceso desde la siembra de nuestras pasturas and el ordeñe diario, hasta la maduración en cava a solo 100 metros del tambo.
             </p>
 
             {/* CTAs */}
@@ -74,14 +72,12 @@ export default function HeritageSection() {
                 href="/productos"
                 className="flex items-center justify-center gap-2 h-14 px-8 rounded-2xl bg-limestone-soft border border-umber/30 text-umber font-medium text-base hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 style={{ boxShadow: '0 8px 32px rgba(46,93,90,0.28)' }}>
-                
                 <Icon name="SparklesIcon" size={18} variant="outline" />
                 Explorar Variedades
               </a>
               <a
                 href="/nuestra-historia"
                 className="flex items-center justify-center gap-2 h-14 px-8 rounded-2xl border border-wheat/60 bg-limestone text-umber font-medium text-base hover:bg-wheat-muted hover:border-wheat transition-all duration-300 group">
-                
                 <Icon name="ClockIcon" size={18} variant="outline" className="group-hover:text-teal transition-colors" />
                 Nuestra Historia
               </a>
@@ -118,9 +114,9 @@ export default function HeritageSection() {
 
           {/* Right: Asymmetric photo grid */}
           <div className="w-full mt-12 lg:mt-0 lg:col-span-7 relative">
-            <div className="grid grid-cols-2 lg:grid-cols-12 gap-4 h-auto lg:h-[600px]">
+            <div className="hero-photo-grid">
               {/* Main tall image — researcher hands inspecting grain */}
-              <div className="col-span-2 lg:col-span-5 lg:row-span-6 h-[300px] sm:h-[380px] lg:h-full rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
+              <div className="photo-main rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
                 <AppImage
                   src="/assets/Quesos%20Zampa/IMG_9821.JPG"
                   alt="Proceso de elaboración artesanal de queso de oveja Zampa"
@@ -135,7 +131,7 @@ export default function HeritageSection() {
               </div>
 
               {/* Top wide — golden-hour trial rows */}
-              <div className="col-span-2 lg:col-span-7 lg:row-span-3 h-[180px] sm:h-[240px] lg:h-full rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
+              <div className="photo-top-wide rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
                 <AppImage
                   src="/assets/Quesos%20Zampa/IMG_2809.jpg"
                   alt="Maduración en cava de los quesos de oveja Zampa"
@@ -150,17 +146,16 @@ export default function HeritageSection() {
               </div>
 
               {/* Bottom left — close-up grain */}
-              <div className="col-span-1 lg:col-span-4 lg:row-span-3 h-[150px] sm:h-[200px] lg:h-full rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
+              <div className="photo-bottom-left rounded-5xl overflow-hidden relative group shadow-2xl img-zoom">
                 <AppImage
                   src="/assets/Quesos%20Zampa/IMG_9858.JPG"
                   alt="Detalle de los quesos artesanales en Napaleofú"
                   fill
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                
               </div>
 
               {/* Circular spinning element */}
-              <div className="col-span-1 lg:col-span-3 lg:row-span-3 h-[150px] sm:h-[200px] lg:h-full flex items-center justify-center relative">
+              <div className="photo-circular-element flex items-center justify-center relative">
                 <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center">
                   <svg className="w-full h-full absolute animate-spin-slow" viewBox="0 0 100 100">
                     <path id="hero-curve" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
@@ -174,7 +169,6 @@ export default function HeritageSection() {
                     href="/productos"
                     className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-limestone-soft border border-umber/30 text-umber flex items-center justify-center hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-lg z-10 hover:scale-110 group"
                     aria-label="Explorar catálogo">
-                    
                     <Icon name="ArrowUpRightIcon" size={20} variant="outline" className="text-umber group-hover:text-white transition-colors duration-300" />
                   </a>
                 </div>
@@ -184,8 +178,7 @@ export default function HeritageSection() {
             {/* Floating trial card */}
             <div
               ref={cardRef}
-              className="absolute top-[38%] right-[-28px] glass-stone p-5 rounded-3xl w-64 shadow-2xl animate-float border border-wheat/30 hidden md:block">
-              
+              className="absolute top-[38%] right-[-28px] glass-stone p-5 rounded-3xl w-64 shadow-2xl animate-float border border-wheat/30 hidden lg:block">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-medium uppercase tracking-wide text-umber-light">Queso del Mes</span>
                 <Icon name="EllipsisHorizontalIcon" size={16} variant="outline" className="text-umber-light" />
@@ -209,6 +202,7 @@ export default function HeritageSection() {
               </div>
             </div>
           </div>
+
         </div>
       </div>
       {/* Wheat-gold divider */}
