@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Icon from '@/components/ui/AppIcon';
 
 const JoinFamily = () => {
   return (
@@ -29,10 +30,10 @@ const JoinFamily = () => {
         
         <Link 
           href="/productos" 
-          className="inline-flex items-center justify-center h-14 px-8 rounded-2xl bg-limestone-soft border border-umber/30 text-umber font-medium text-base hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 mt-4 tracking-widest uppercase"
-          style={{ boxShadow: '0 8px 32px rgba(46,93,90,0.3)' }}
+          className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.25)] tracking-[0.15em] uppercase px-8 mt-4"
         >
-          CONOCÉ NUESTROS QUESOS
+          <Icon name="SparklesIcon" size={16} variant="solid" className="sm:w-5 sm:h-5 text-charcoal/90" />
+          <span>CONOCÉ NUESTROS QUESOS</span>
         </Link>
       </div>
       <h1 className="absolute right-12 bottom-12 text-8xl md:text-9xl font-light text-white/5 uppercase select-none tracking-tighter leading-none hidden lg:block text-right">

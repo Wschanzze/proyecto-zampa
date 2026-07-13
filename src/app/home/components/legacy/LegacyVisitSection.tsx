@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from 'react';
+import Icon from '@/components/ui/AppIcon';
 
 export default function LegacyVisitSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -41,10 +42,10 @@ export default function LegacyVisitSection() {
             
             <button
               onClick={handleBookExperience}
-              className="inline-flex items-center justify-center h-14 px-8 rounded-2xl bg-limestone-soft border border-umber/30 text-umber font-medium text-base hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 mt-2 self-start tracking-widest uppercase"
-              style={{ boxShadow: '0 8px 32px rgba(46,93,90,0.2)' }}
+              className="group flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-teal text-white font-bold text-[10px] sm:text-xs hover:bg-[#25D366] hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl mt-2 self-start tracking-[0.15em] uppercase px-8"
             >
-              Reserva tu experiencia 
+              <Icon name="WhatsApp" size={18} className="w-5 h-5 text-white transition-transform duration-300 group-hover:scale-110" />
+              <span>Reserva tu experiencia</span>
             </button>
           </div>
 

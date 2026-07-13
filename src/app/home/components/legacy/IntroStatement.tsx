@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Icon from '@/components/ui/AppIcon';
 
 const IntroStatement = () => {
   return (
@@ -15,10 +16,10 @@ const IntroStatement = () => {
         </p>
         <Link 
           href="/nuestra-historia" 
-          className="inline-flex items-center justify-center h-14 px-8 rounded-2xl bg-limestone-soft border border-umber/30 text-umber font-medium text-base hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 mt-8 tracking-widest uppercase"
-          style={{ boxShadow: '0 8px 32px rgba(46,93,90,0.2)' }}
+          className="group inline-flex items-center justify-center gap-2 h-12 sm:h-14 px-8 rounded-full bg-teal text-white font-bold text-[10px] sm:text-xs hover:bg-teal-light hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl mt-8 tracking-[0.15em] uppercase"
         >
-          Conocé nuestra historia
+          <span>Conocé nuestra historia</span>
+          <Icon name="ArrowRightIcon" size={14} className="text-white transition-transform duration-300 group-hover:translate-x-0.5" />
         </Link>
       </div>
       <Image 

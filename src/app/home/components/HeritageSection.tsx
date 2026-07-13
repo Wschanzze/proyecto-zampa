@@ -70,16 +70,15 @@ export default function HeritageSection() {
             <div className="flex flex-col sm:flex-row gap-4 mt-2">
               <a
                 href="/productos"
-                className="flex items-center justify-center gap-2 h-14 px-8 rounded-2xl bg-limestone-soft border border-umber/30 text-umber font-medium text-base hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-                style={{ boxShadow: '0 8px 32px rgba(46,93,90,0.28)' }}>
-                <Icon name="SparklesIcon" size={18} variant="outline" />
-                Explorar Variedades
+                className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-teal text-white font-bold text-[10px] sm:text-xs hover:bg-teal-light hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_20px_rgba(46,93,90,0.25)] tracking-[0.15em] uppercase px-8 sm:w-auto">
+                <Icon name="SparklesIcon" size={16} variant="solid" className="sm:w-5 sm:h-5 text-white/90" />
+                <span>Explorar Variedades</span>
               </a>
               <a
                 href="/nuestra-historia"
-                className="flex items-center justify-center gap-2 h-14 px-8 rounded-2xl border border-wheat/60 bg-limestone text-umber font-medium text-base hover:bg-wheat-muted hover:border-wheat transition-all duration-300 group">
-                <Icon name="ClockIcon" size={18} variant="outline" className="group-hover:text-teal transition-colors" />
-                Nuestra Historia
+                className="group flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full border border-teal/35 bg-teal/5 text-teal font-bold text-[10px] sm:text-xs hover:bg-teal hover:text-white hover:scale-[1.02] transition-all duration-300 tracking-[0.15em] uppercase px-8 sm:w-auto shadow-[0_4px_20px_rgba(46,93,90,0.15)]">
+                <Icon name="ClockIcon" size={18} className="w-5 h-5 transition-transform duration-300 group-hover:scale-110 text-teal group-hover:text-white" />
+                <span>Nuestra Historia</span>
               </a>
             </div>
 
