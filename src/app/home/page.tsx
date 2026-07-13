@@ -8,7 +8,7 @@ import FloatingPill from './components/FloatingPill';
 // Legacy Home Components
 import IntroStatement from './components/legacy/IntroStatement';
 import OurProducts from './components/legacy/OurProducts';
-import BannerBW from './components/legacy/BannerBW';
+// import BannerBW from './components/legacy/BannerBW';
 
 import LegacyVisitSection from './components/legacy/LegacyVisitSection';
 import JoinFamily from './components/legacy/JoinFamily';

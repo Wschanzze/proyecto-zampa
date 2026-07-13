@@ -56,15 +56,16 @@ export default function NuestraHistoriaPage() {
                 Cómo Juan Cruz e Isabel unieron la gastronomía y el paisajismo en un tambo ovino referente en Napaleofú.
               </p>
               
-              <div className="newspaper-img-container relative">
+              <div className="newspaper-img-container main-img relative block mx-auto max-w-[650px] w-full">
                 <img 
                   src="/assets/Quesos Zampa/IMG_9879.JPG" 
                   alt="Juan Cruz e Isabel - Zampa" 
+                  className="h-[300px] md:h-[380px] w-full object-cover"
                 />
                 <p className="newspaper-img-caption">
                   Juan Cruz Moy Peña (37) e Isabel Sáenz Rozas (31) en el predio donde comenzó su historia productiva.
                 </p>
-                <h1 className="watermark-logo absolute bottom-4 right-4 opacity-15 pointer-events-none select-none font-light text-right leading-none text-charcoal uppercase">
+                <h1 className="watermark-logo absolute bottom-12 right-4 opacity-15 pointer-events-none select-none font-light text-right leading-none text-charcoal uppercase">
                   ZAMPA<br />QUESOS<br />TANDIL
                 </h1>
               </div>
@@ -90,18 +91,19 @@ export default function NuestraHistoriaPage() {
               <div className="sub-article border-b-0 pb-0">
                 <span className="article-tag">El Tambo Ovino</span>
                 <h3 className="article-title text-2xl font-light uppercase">El Ordeñe Diario y el Cuidado del Rebaño</h3>
-                <p className="text-sm leading-relaxed text-charcoal mb-6">
-                  La jornada en Napaleofú comienza muy temprano con los dos ordeñes diarios. La leche fresca es transportada inmediatamente a la quesería para preservar sus cualidades intactas. El pastoreo directo sobre pasturas de alta calidad garantiza que nuestras ovejas gocen de una alimentación natural, libre de químicos, reflejándose en una materia prima superior.
-                </p>
-                <div className="newspaper-img-container">
+                <div className="newspaper-img-container md:float-right md:ml-6 md:mb-4 md:max-w-[240px] w-full">
                   <img 
                     src="/assets/Quesos Zampa/IMG_8715.jpg" 
                     alt="Pastoreo de ovejas Zampa" 
+                    className="h-[180px] w-full object-cover"
                   />
                   <p className="newspaper-img-caption">
                     El rebaño de ovejas frisonas en pastoreo diario en las sierras de Tandil.
                   </p>
                 </div>
+                <p className="text-sm leading-relaxed text-charcoal mb-4 text-justify">
+                  La jornada en Napaleofú comienza muy temprano con los dos ordeñes diarios. La leche fresca es transportada inmediatamente a la quesería para preservar sus cualidades intactas. El pastoreo directo sobre pasturas de alta calidad garantiza que nuestras ovejas gocen de una alimentación natural, libre de químicos, reflejándose en una materia prima superior.
+                </p>
               </div>
             </section>
 
@@ -113,35 +115,37 @@ export default function NuestraHistoriaPage() {
                 <div className="sub-article">
                   <span className="article-tag">Elaboración Artesanal</span>
                   <h3 className="article-title text-2xl font-light uppercase">Quesos de Autor y Habilitación Local</h3>
-                  <p className="text-sm leading-relaxed text-charcoal mb-6">
-                    En Zampa nos enfocamos en producciones limitadas donde cada horma se cuida individualmente. Elaboramos variedades selectas como Pecorino, Ahumado, Orégano y Manchego. El gran objetivo del proyecto es avanzar con la habilitación definitiva de la quesería propia para vender directo al público y potenciar el valor agregado en origen.
-                  </p>
-                  <div className="newspaper-img-container">
+                  <div className="newspaper-img-container md:float-left md:mr-6 md:mb-4 md:max-w-[240px] w-full">
                     <img 
                       src="/assets/Quesos Zampa/IMG_9821.JPG" 
                       alt="Quesos Zampa madurando" 
+                      className="h-[180px] w-full object-cover"
                     />
                     <p className="newspaper-img-caption">
                       Quesos de oveja en su proceso controlado de maduración sobre estanterías de madera.
                     </p>
                   </div>
+                  <p className="text-sm leading-relaxed text-charcoal mb-4 text-justify">
+                    En Zampa nos enfocamos en producciones limitadas donde cada horma se cuida individualmente. Elaboramos variedades selectas como Pecorino, Ahumado, Orégano y Manchego. El gran objetivo del proyecto es avanzar con la habilitación definitiva de la quesería propia para vender directo al público y potenciar el valor agregado en origen.
+                  </p>
                 </div>
 
                 <div className="sub-article border-b-0 pb-0">
                   <span className="article-tag">Identidad</span>
                   <h3 className="article-title text-2xl font-light uppercase">Zampa: La Resiliencia de la Estepa</h3>
-                  <p className="text-sm leading-relaxed text-charcoal mb-6">
-                    El nombre del emprendimiento hace honor al arbusto 'Zampa', característico de las regiones más áridas del sur argentino. En la estepa, este arbusto está muy asociado a la calidad del ganado ovino de pastoreo por su alto valor nutritivo y resistencia. Adoptar su nombre simboliza la rusticidad, resiliencia y el carácter natural que impregna a nuestros quesos.
-                  </p>
-                  <div className="newspaper-img-container">
+                  <div className="newspaper-img-container md:float-right md:ml-6 md:mb-4 md:max-w-[240px] w-full">
                     <img 
                       src="/assets/Quesos Zampa/IMG_9823.JPG" 
                       alt="Quesos Zampa terminados" 
+                      className="h-[180px] w-full object-cover"
                     />
                     <p className="newspaper-img-caption">
                       Hormas listas para ser marcadas con el logo original de la quesería.
                     </p>
                   </div>
+                  <p className="text-sm leading-relaxed text-charcoal mb-4 text-justify">
+                    El nombre del emprendimiento hace honor al arbusto 'Zampa', característico de las regiones más áridas del sur argentino. En la estepa, este arbusto está muy asociado a la calidad del ganado ovino de pastoreo por su alto valor nutritivo y resistencia. Adoptar su nombre simboliza la rusticidad, resiliencia y el carácter natural que impregna a nuestros quesos.
+                  </p>
                 </div>
 
                 {/* Marca de agua */}

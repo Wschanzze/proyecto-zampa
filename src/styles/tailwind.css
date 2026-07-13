@@ -887,11 +887,12 @@ a.teal-link:hover {
 .newspaper-container {
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #FDFCF7; /* Color de papel envejecido */
+    background-color: #FDFBF7; /* Color de papel envejecido muy prémium */
     border: 1px solid #E2DEC9;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 15px 40px rgba(42, 32, 24, 0.06); /* Sombra suave */
     padding: 3.5rem;
     position: relative;
+    font-family: 'Fraunces', Georgia, serif;
 }
 @media (max-width: 768px) {
     .newspaper-container {
@@ -906,10 +907,10 @@ a.teal-link:hover {
     margin-bottom: 2.5rem;
 }
 .newspaper-header .masthead {
-    font-family: var(--font-brand);
-    font-size: 3.8rem;
-    font-weight: 800;
-    letter-spacing: 0.02em;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: -0.01em;
     text-transform: uppercase;
     margin: 0;
     color: #2C2B29;
@@ -917,7 +918,7 @@ a.teal-link:hover {
 }
 @media (max-width: 768px) {
     .newspaper-header .masthead {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
     }
 }
 .newspaper-meta {
@@ -943,7 +944,7 @@ a.teal-link:hover {
 /* Cuadrícula / Pliegos */
 .newspaper-spread {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 3.5rem;
 }
 @media (max-width: 1024px) {
@@ -977,13 +978,14 @@ a.teal-link:hover {
     font-weight: 600;
 }
 .article-title {
-    font-family: var(--font-brand);
-    font-size: 2.3rem;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 2.4rem;
     font-weight: 800;
     line-height: 1.15;
     margin-top: 0;
     margin-bottom: 1rem;
     color: #2C2B29;
+    letter-spacing: -0.01em;
 }
 @media (max-width: 768px) {
     .article-title {
@@ -991,13 +993,14 @@ a.teal-link:hover {
     }
 }
 .article-subtitle {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 0.95rem;
     font-style: italic;
     color: var(--clr-text-light);
     margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    text-transform: none;
+    letter-spacing: normal;
+    line-height: 1.45;
 }
 .article-columns {
     column-count: 2;
@@ -1011,38 +1014,39 @@ a.teal-link:hover {
     }
 }
 .article-text p {
-    font-family: var(--font-body);
+    font-family: 'Fraunces', Georgia, serif;
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.65;
     margin-bottom: 1.2rem;
-    color: #3C3B39;
+    color: #2C2B29;
 }
 .article-text p.drop-cap::first-letter {
-    font-size: 4rem;
-    font-weight: 800;
-    font-family: var(--font-brand);
+    font-size: 4.5rem;
+    font-weight: 900;
+    font-family: 'Fraunces', Georgia, serif;
     float: left;
     margin-top: 4px;
-    margin-right: 8px;
+    margin-right: 10px;
     line-height: 0.8;
     color: #2C2B29;
 }
 /* Citas destacadas */
 .article-quote {
-    font-family: var(--font-brand);
+    font-family: 'Fraunces', Georgia, serif;
     font-style: italic;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     line-height: 1.5;
     text-align: center;
     color: var(--clr-accent);
-    padding: 1.5rem 1rem;
+    padding: 1.8rem 1rem;
     margin: 2.5rem 0;
     border-top: 1.5px solid #2C2B29;
     border-bottom: 1.5px solid #2C2B29;
 }
 /* Contenedores de fotos */
 .newspaper-img-container {
-    margin: 1.8rem 0;
+    margin: 1.5rem 0;
+    display: inline-block;
 }
 .newspaper-img-container img {
     width: 100%;
@@ -1054,13 +1058,13 @@ a.teal-link:hover {
     display: block;
 }
 .newspaper-img-caption {
-    font-family: var(--font-sub);
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 0.75rem;
+    font-style: italic;
     color: var(--clr-text-light);
     margin-top: 0.6rem;
     text-align: center;
+    line-height: 1.35;
 }
 /* Página Derecha */
 .newspaper-page-right {
@@ -1072,8 +1076,10 @@ a.teal-link:hover {
     gap: 3rem;
 }
 .sub-article {
+    display: flow-root;
     border-bottom: 1px dotted #E2DEC9;
     padding-bottom: 2.5rem;
+    clear: both;
 }
 .sub-article:last-child {
     border-bottom: none;
@@ -1165,12 +1171,62 @@ a.teal-link:hover {
     color: var(--clr-text-light);
 }
 
+/* ====== NUTRITIONAL BENEFITS (BASE) ====== */
+.benefits-section {
+    padding: 6rem 5%;
+    background-color: var(--clr-bg);
+}
+.benefits-header {
+    margin-bottom: 4rem;
+}
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+.benefit-card {
+    background: var(--clr-white);
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--clr-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+.benefit-image img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border: 1px solid var(--clr-border);
+    padding: 4px;
+    background-color: var(--clr-white);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+.benefit-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--clr-text-main);
+    font-family: var(--font-brand);
+}
+.benefit-card p {
+    color: var(--clr-text-light);
+    line-height: 1.6;
+    font-family: var(--font-body);
+}
+
+/* ====== VINTAGE AD ADAPTATION ====== */
 .benefits-section.vintage-ad {
     background: transparent;
     padding: 0;
 }
 .benefits-section.vintage-ad .benefits-header h2 {
-    font-family: var(--font-brand);
+    font-family: 'Fraunces', Georgia, serif;
     font-size: 2.2rem;
     font-weight: 800;
     color: #2C2B29;
@@ -1190,10 +1246,20 @@ a.teal-link:hover {
     background-color: rgba(140, 98, 57, 0.03);
 }
 .benefits-section.vintage-ad .benefit-card h3 {
-    font-family: var(--font-brand);
+    font-family: 'Fraunces', Georgia, serif;
     color: #2C2B29;
     font-size: 1.4rem;
     font-weight: 700;
+}
+.benefits-section.vintage-ad .benefit-card p {
+    font-family: 'Fraunces', Georgia, serif;
+    color: #2C2B29;
+}
+.benefits-section.vintage-ad .benefit-image img {
+    border: 1px solid #2C2B29;
+    background-color: #FFF;
+    filter: grayscale(100%) contrast(120%);
+    max-height: 120px;
 }
 
 @media (max-width: 768px) {
