@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 
 const InstagramCarousel = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const items = [
     { type: 'image', src: '/assets/Quesos Zampa/IMG_0773.jpg' },
@@ -19,6 +20,42 @@ const InstagramCarousel = () => {
   ];
 
   const instagramUrl = "https://www.instagram.com/quesos.zampa/";
+
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      const maxScroll = scrollWidth - clientWidth;
+      if (maxScroll <= 0) return;
+      const percentage = scrollLeft / maxScroll;
+
+      // Group into 3 dots
+      if (percentage < 0.33) {
+        setActiveIndex(0);
+      } else if (percentage < 0.66) {
+        setActiveIndex(1);
+      } else {
+        setActiveIndex(2);
+      }
+    }
+  };
+
+  const scrollToSection = (index: number) => {
+    if (scrollContainerRef.current) {
+      const { scrollWidth, clientWidth } = scrollContainerRef.current;
+      const maxScroll = scrollWidth - clientWidth;
+      let targetScroll = 0;
+      if (index === 1) {
+        targetScroll = maxScroll / 2;
+      } else if (index === 2) {
+        targetScroll = maxScroll;
+      }
+      scrollContainerRef.current.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth'
+      });
+      setActiveIndex(index);
+    }
+  };
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
@@ -54,7 +91,12 @@ const InstagramCarousel = () => {
           </svg>
         </button>
 
-        <div className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-8" ref={scrollContainerRef} style={{ scrollbarWidth: 'none' }}>
+        <div 
+          className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-8" 
+          ref={scrollContainerRef} 
+          style={{ scrollbarWidth: 'none' }}
+          onScroll={handleScroll}
+        >
           {items.map((item, index) => (
             <a 
               key={index} 
@@ -104,6 +146,22 @@ const InstagramCarousel = () => {
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </button>
+      </div>
+
+      {/* 3 Instagram-style Pagination Dots */}
+      <div className="flex justify-center gap-1.5 mt-4 z-20 relative">
+        {[0, 1, 2].map((idx) => (
+          <button
+            key={idx}
+            onClick={() => scrollToSection(idx)}
+            className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+              activeIndex === idx 
+                ? 'bg-teal scale-125' // Active dot is colored and slightly larger
+                : 'bg-teal/20 hover:bg-teal/40'  // Inactive dot is lighter
+            }`}
+            aria-label={`Go to page ${idx + 1}`}
+          />
+        ))}
       </div>
     </section>
   );
