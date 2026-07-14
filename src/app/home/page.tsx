@@ -31,8 +31,8 @@ export default function HomePage() {
       <SliderSection />
 
       <LegacyVisitSection />
-      <JoinFamily />
       <InstagramCarousel />
+      <JoinFamily />
       {/* <QuickContact /> */}
       {/* --- FIN INICIO LEGACY --- */}
 
