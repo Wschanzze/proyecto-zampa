@@ -9,8 +9,6 @@ interface Slide {
   title: string;
   excerpt: string;
   image: string;
-  buttonText: string;
-  href: string;
 }
 
 const slides: Slide[] = [
@@ -20,37 +18,29 @@ const slides: Slide[] = [
     title: 'Conocé Nuestro Tambo',
     excerpt: 'Vení a Napaleofú a conocer el proceso desde el inicio. Caminá entre nuestras pasturas y observá el ordeñe diario de nuestras ovejas frisonas en un entorno natural único.',
     image: '/assets/Quesos%20Zampa/BAB4C1FD-5368-4434-ADE4-498A3AE4D8C6.jpg',
-    buttonText: 'Reservar Visita',
-    href: 'https://wa.me/5491132554757?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20coordinar/reservar%20un%20recorrido%20guiado%20para%20conocer%20el%20tambo%20en%20Napaleof%C3%BA.',
   },
   {
     id: 2,
-    subtitle: 'Maridaje & Cata',
-    title: 'Experiencias de Cata',
-    excerpt: 'Participá de nuestros talleres sensoriales. Degustá nuestras 6 variedades de queso de oveja junto a una cuidada selección de vinos boutique de Tandil y la región.',
-    image: '/assets/Quesos%20Zampa/07B73847-614E-4FDC-B7AF-F639064C64CB.jpg',
-    buttonText: 'Reservar Experiencia',
-    href: 'https://wa.me/5491132554757?text=%C2%A1Hola!%20Me%20interesa%20participar%20de%20las%20experiencias%20de%20cata%20y%20maridaje%20de%20Quesos%20Zampa.',
+    subtitle: 'Alimentación Natural',
+    title: 'Sistema Pastoril',
+    excerpt: 'Nuestras ovejas pastan libremente en las pasturas de Napaleofú bajo un esquema de pastoreo rotativo. Esta alimentación natural y el respeto por el bienestar animal son la clave para obtener una leche de oveja de altísima calidad.',
+    image: '/assets/Quesos%20Zampa/nuevas/a15ed077-6d9c-4c40-891b-b17af3cbac6c.jpg',
   },
   {
     id: 3,
-    subtitle: 'Bienestar Animal',
-    title: 'Sistema Pastoril',
-    excerpt: 'En Zampa, nuestras ovejas se alimentan mediante un sistema pastoril. Este enfoque respeta el bienestar animal y los ciclos naturales, permitiéndoles pastar al aire libre durante todo el año.',
-    image: '/assets/Quesos%20Zampa/nuevas/a15ed077-6d9c-4c40-891b-b17af3cbac6c.jpg',
-    buttonText: 'Descubrí más',
-    href: '/nuestra-historia',
+    subtitle: 'De la Pastura a la Cava',
+    title: 'Ciclo Completo de Elaboración',
+    excerpt: 'Controlamos con absoluta dedicación cada etapa del proceso: desde el ordeñe higiénico y la elaboración manual de cada pieza, hasta la maduración controlada en nuestra cava de Tandil, garantizando un queso honesto y con carácter real.',
+    image: '/assets/Quesos%20Zampa/07B73847-614E-4FDC-B7AF-F639064C64CB.jpg',
   },
 ];
 
 export default function SliderSection() {
   const [current, setCurrent] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  // Auto-progress bar animation
+  // Auto-progress bar animation (does not pause on hover)
   useEffect(() => {
-    if (isHovered) return;
     setProgress(0);
     const intervalTime = 50; // update progress every 50ms for smoother animation
     const totalTime = 7000;
@@ -68,7 +58,7 @@ export default function SliderSection() {
     }, intervalTime);
 
     return () => clearInterval(timer);
-  }, [isHovered, current]);
+  }, [current]);
 
   const handlePrev = () => {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
@@ -83,8 +73,6 @@ export default function SliderSection() {
   return (
     <section 
       className="relative min-h-[700px] h-screen max-h-[900px] w-full overflow-hidden bg-black flex items-end justify-center lg:justify-start"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       {/* Full Bleed Background Images */}
       <div className="absolute inset-0 w-full h-full z-0">
@@ -158,25 +146,6 @@ export default function SliderSection() {
                   <p className="text-sm sm:text-base text-charcoal/85 leading-relaxed font-light max-w-lg">
                     {slide.excerpt}
                   </p>
-
-                  {/* Improved CTA Button */}
-                  <a
-                    href={slide.href}
-                    target={slide.href.startsWith('http') ? "_blank" : undefined}
-                    rel={slide.href.startsWith('http') ? "noopener noreferrer" : undefined}
-                    className={`group inline-flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-13 px-6 sm:px-8 rounded-full font-bold text-[10px] sm:text-xs tracking-[0.15em] uppercase transition-all duration-300 shadow-md hover:shadow-lg mt-3 w-fit border border-charcoal/10 ${
-                      slide.href.includes('wa.me')
-                        ? 'bg-white text-charcoal hover:bg-[#25D366] hover:text-white hover:border-[#25D366] hover:scale-[1.02]'
-                        : 'bg-white text-charcoal hover:bg-white/90 hover:scale-[1.02]'
-                    }`}
-                  >
-                    {slide.href.includes('wa.me') ? (
-                      <Icon name="WhatsApp" size={16} className="text-charcoal transition-colors duration-300 group-hover:text-white group-hover:scale-110" />
-                    ) : (
-                      <Icon name="ArrowRightIcon" size={14} className="text-charcoal transition-transform duration-300 group-hover:translate-x-1" />
-                    )}
-                    <span>{slide.buttonText}</span>
-                  </a>
                 </div>
               );
             })}
