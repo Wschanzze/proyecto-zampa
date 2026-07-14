@@ -16,7 +16,7 @@ const slides: Slide[] = [
   {
     id: 1,
     subtitle: 'RECORRIDO GUIADO',
-    title: 'Conocé nuestro <span class="font-fraunces italic lowercase font-normal text-white">tambo</span>',
+    title: 'Conocé nuestro tambo',
     excerpt: 'Vení a Napaleofú a conocer el proceso desde el inicio. Caminá entre nuestras pasturas y observá el ordeñe diario de nuestras ovejas frisonas en un entorno natural único.',
     image: '/assets/Quesos%20Zampa/BAB4C1FD-5368-4434-ADE4-498A3AE4D8C6.jpg',
     href: 'https://wa.me/5491132554757?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20coordinar/reservar%20un%20recorrido%20guiado%20para%20conocer%20el%20tambo%20en%20Napaleof%C3%BA.',
@@ -24,7 +24,7 @@ const slides: Slide[] = [
   {
     id: 2,
     subtitle: 'ALIMENTACIÓN NATURAL',
-    title: 'Sistema <span class="font-fraunces italic lowercase font-normal text-white">pastoril</span>',
+    title: 'Sistema pastoril',
     excerpt: 'Nuestras ovejas pastan libremente en las pasturas de Napaleofú bajo un esquema de pastoreo rotativo. Esta alimentación natural y el respeto por el bienestar animal son la clave para obtener una leche de oveja de altísima calidad.',
     image: '/assets/Quesos%20Zampa/nuevas/a15ed077-6d9c-4c40-891b-b17af3cbac6c.jpg',
     href: '/nuestra-historia',
@@ -32,7 +32,7 @@ const slides: Slide[] = [
   {
     id: 3,
     subtitle: 'DE LA PASTURA A LA CAVA',
-    title: 'Ciclo completo de <span class="font-fraunces italic lowercase font-normal text-white">elaboración</span>',
+    title: 'Ciclo completo de elaboración',
     excerpt: 'Controlamos con absoluta dedicación cada etapa del proceso: desde el ordeñe higiénico y la elaboración manual de cada pieza, hasta la maduración controlada en nuestra cava de Tandil, garantizando un queso honesto y con carácter real.',
     image: '/assets/Quesos%20Zampa/07B73847-614E-4FDC-B7AF-F639064C64CB.jpg',
     href: '/nuestra-historia',
@@ -136,10 +136,9 @@ export default function SliderSection() {
                 </span>
 
                 {/* Title */}
-                <h2 
-                  className="text-4xl sm:text-5xl lg:text-6xl font-light text-white leading-tight uppercase tracking-wide"
-                  dangerouslySetInnerHTML={{ __html: slide.title }}
-                />
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white leading-tight uppercase tracking-wide">
+                  {slide.title}
+                </h2>
 
                 {/* Excerpt */}
                 <p className="text-sm sm:text-base text-white/80 font-light max-w-lg leading-relaxed mt-2">
@@ -166,7 +165,7 @@ export default function SliderSection() {
       {/* Minimalist Progress Line at the very bottom edge of the section */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10 z-20">
         <div 
-          className="h-full bg-[#C9A84C] transition-all duration-100 ease-linear"
+          className="h-full bg-white transition-all duration-100 ease-linear"
           style={{ width: `${progress}%` }}
         />
       </div>
