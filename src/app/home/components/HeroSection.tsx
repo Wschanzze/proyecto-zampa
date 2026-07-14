@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import AppImage from '@/components/ui/AppImage';
-import Icon from '@/components/ui/AppIcon';
+// import Icon from '@/components/ui/AppIcon';
 
 interface HeroSlide {
   id: number;
