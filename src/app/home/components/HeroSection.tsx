@@ -213,6 +213,7 @@ export default function HeroSection() {
               {heroSlides[currentIdx].desc}
             </p>
 
+            {/* 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="/productos"
@@ -229,6 +230,7 @@ export default function HeroSection() {
                 <span>Escribinos por WhatsApp</span>
               </a>
             </div>
+            */}
           </div>
 
         </div>

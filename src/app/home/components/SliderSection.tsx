@@ -118,7 +118,7 @@ export default function SliderSection() {
 
       {/* Floating Content Wrapper */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-12 py-12 flex justify-start items-center h-full">
-        <div className="w-full lg:max-w-2xl text-left flex flex-col relative min-h-[280px] md:min-h-[240px] justify-center">
+        <div className="w-full lg:max-w-2xl text-left flex flex-col relative min-h-[340px] pb-16 lg:pb-0 md:min-h-[240px] justify-center">
           {slides.map((slide, idx) => {
             const isActive = current === idx;
             return (
@@ -173,14 +173,14 @@ export default function SliderSection() {
       {/* Floating Side Navigation Arrows (Minimalist & Professional) */}
       <button
         onClick={handlePrev}
-        className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/20 hover:bg-white backdrop-blur-md flex items-center justify-center border border-white/20 hover:border-white shadow-lg text-white hover:text-charcoal transition-all duration-300 hover:scale-105 group"
+        className="absolute left-6 bottom-8 lg:left-8 lg:top-1/2 lg:bottom-auto -translate-y-0 lg:-translate-y-1/2 z-30 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-white/20 hover:bg-white backdrop-blur-md flex items-center justify-center border border-white/20 hover:border-white shadow-lg text-white hover:text-charcoal transition-all duration-300 hover:scale-105 group"
         aria-label="Anterior"
       >
         <Icon name="ArrowLeftIcon" size={20} className="transition-transform duration-300 group-hover:-translate-x-0.5" />
       </button>
       <button
         onClick={handleNext}
-        className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/20 hover:bg-white backdrop-blur-md flex items-center justify-center border border-white/20 hover:border-white shadow-lg text-white hover:text-charcoal transition-all duration-300 hover:scale-105 group"
+        className="absolute left-20 lg:left-auto lg:right-8 bottom-8 lg:top-1/2 lg:bottom-auto -translate-y-0 lg:-translate-y-1/2 z-30 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-white/20 hover:bg-white backdrop-blur-md flex items-center justify-center border border-white/20 hover:border-white shadow-lg text-white hover:text-charcoal transition-all duration-300 hover:scale-105 group"
         aria-label="Siguiente"
       >
         <Icon name="ArrowRightIcon" size={20} className="transition-transform duration-300 group-hover:translate-x-0.5" />
