@@ -26,10 +26,10 @@ export default function HomePage() {
       
       {/* --- INICIO LEGACY (Antiguo Home) --- */}
       <OurProducts />
+      <HeritageSection />
       <IntroStatement />
       {/* <BannerBW /> */}
       <SliderSection />
-      <HeritageSection />
 
       <LegacyVisitSection />
       <JoinFamily />
