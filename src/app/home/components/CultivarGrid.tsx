@@ -99,11 +99,11 @@ export default function CultivarGrid() {
         </div>
 
         {/* List of Products */}
-        <div className="space-y-32">
+        <div className="space-y-16 lg:space-y-20">
           {cultivars.map((cultivar, index) => (
             <div
               key={cultivar.id}
-              className={`flex flex-col transition-all duration-1000 ${
+              className={`group flex flex-col bg-white/60 border border-charcoal/[0.04] backdrop-blur-[2px] rounded-3xl p-8 lg:p-12 transition-all duration-1000 shadow-sm hover:shadow-md ${
                 visible
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-16'
@@ -112,68 +112,77 @@ export default function CultivarGrid() {
                 transitionDelay: visible ? `${index * 150}ms` : '0ms'
               }}>
               
-              {/* Product Title */}
-              <h3 className="font-urbanist text-3xl lg:text-5xl font-light text-charcoal uppercase tracking-[0.06em] mb-12">
-                {cultivar.name}
-              </h3>
+              {/* Product Title + Swirl Flourish */}
+              <div className="text-center mb-8 flex flex-col items-center">
+                <h3 className="font-urbanist text-2xl lg:text-3xl font-light text-charcoal uppercase tracking-[0.08em]">
+                  {cultivar.name}
+                </h3>
+                {/* SVG Vignette Flourish (Classic swirl and loops with diamond center) */}
+                <svg className="w-16 h-8 text-[#C9A84C]/60 mt-3" viewBox="0 0 100 30" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M 50 15 C 35 15, 30 5, 20 5 C 10 5, 5 15, 12 18 C 18 20, 22 12, 15 10" />
+                  <path d="M 50 15 C 65 15, 70 5, 80 5 C 90 5, 95 15, 88 18 C 82 20, 78 12, 85 10" />
+                  <polygon points="50,11 53,15 50,19 47,15" fill="currentColor" />
+                </svg>
+              </div>
 
               {/* Product Content Row */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
                 
                 {/* Left: Description & Link */}
-                <div className="flex flex-col gap-8 order-2 lg:order-1">
-                  <p className="text-umber-light font-light text-base lg:text-lg leading-relaxed">
+                <div className="flex flex-col gap-6 order-2 lg:order-1 text-left h-full justify-between">
+                  <p className="text-charcoal/80 font-light text-sm lg:text-base leading-relaxed">
                     {cultivar.yieldGain}
                   </p>
                   
-                  <a 
-                    href={`https://wa.me/5491132554757?text=${encodeURIComponent(`¡Hola! Estoy interesado en el queso ${cultivar.name} que vi en su sitio web. ¿Me dirías precio y disponibilidad?`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-4 text-base font-medium text-charcoal hover:text-teal transition-colors duration-300 group mt-auto"
-                  >
-                    Consultar por WhatsApp
-                    <div className="w-12 h-px bg-umber-dark group-hover:bg-teal transition-colors duration-300" />
-                  </a>
+                  <div className="pt-4">
+                    <a 
+                      href={`https://wa.me/5491132554757?text=${encodeURIComponent(`¡Hola! Estoy interesado en el queso ${cultivar.name} que vi en su sitio web. ¿Me dirías precio y disponibilidad?`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-charcoal border-b border-[#C9A84C] pb-1 hover:text-[#C9A84C] hover:border-charcoal transition-all duration-300"
+                    >
+                      Consultar por WhatsApp
+                    </a>
+                  </div>
                 </div>
 
                 {/* Center: Image */}
-                <div className="relative aspect-square max-w-sm mx-auto w-full order-1 lg:order-2 group">
+                <div className="relative aspect-square max-w-xs mx-auto w-full order-1 lg:order-2 group-hover:scale-[1.03] transition-transform duration-700">
                   <AppImage
                     src={cultivar.image}
                     alt={cultivar.imageAlt}
                     width={500}
                     height={500}
-                    className="w-full h-full object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-contain drop-shadow-2xl"
                   />
                 </div>
 
                 {/* Right: Technical Details */}
-                <div className="flex flex-col justify-center gap-6 order-3 border-l border-wheat/30 pl-8 lg:pl-12">
+                <div className="flex flex-col justify-center gap-6 order-3 border-t lg:border-t-0 lg:border-l border-charcoal/10 pt-6 lg:pt-0 pl-0 lg:pl-12 text-left h-full">
                   <div>
-                    <span className="text-xs font-medium uppercase tracking-widest text-limestone-soft/0 text-umber-light/50 mb-1 block">
-                      Curación:
+                    <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-charcoal/40 mb-1 block">
+                      Curación
                     </span>
-                    <span className="text-xl font-light text-charcoal uppercase tracking-wider">
+                    <span className="text-lg font-light text-charcoal uppercase tracking-wider">
                       {cultivar.droughtTolerance}
                     </span>
                   </div>
                   
                   <div>
-                    <span className="text-xs font-medium uppercase tracking-widest text-umber-light/50 mb-1 block">
-                      Elaboración:
+                    <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-charcoal/40 mb-1 block">
+                      Elaboración
                     </span>
-                    <span className="text-base text-charcoal font-light">
+                    <span className="text-sm text-charcoal/80 font-light leading-relaxed">
                       Leche cruda de oveja, {cultivar.region}
                     </span>
                   </div>
 
                   <div>
-                    <span className="text-xs font-medium uppercase tracking-widest text-umber-light/50 mb-1 block">
-                      Notas:
+                    <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-charcoal/40 mb-1 block">
+                      Notas de Cata
                     </span>
-                    <span className="text-base text-charcoal font-light">
-                      Aromas intensos, textura firme, sabor profundo.
+                    <span className="text-sm text-charcoal/80 font-light leading-relaxed">
+                      Aromas intensos, textura firme, sabor profundo y natural.
                     </span>
                   </div>
                 </div>
