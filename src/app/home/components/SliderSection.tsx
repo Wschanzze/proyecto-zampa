@@ -9,29 +9,33 @@ interface Slide {
   title: string;
   excerpt: string;
   image: string;
+  href: string;
 }
 
 const slides: Slide[] = [
   {
     id: 1,
-    subtitle: 'Recorrido Guiado',
-    title: 'Conocé Nuestro Tambo',
+    subtitle: 'RECORRIDO GUIADO',
+    title: 'Conocé nuestro <span class="font-fraunces italic lowercase font-normal text-white">tambo</span>',
     excerpt: 'Vení a Napaleofú a conocer el proceso desde el inicio. Caminá entre nuestras pasturas y observá el ordeñe diario de nuestras ovejas frisonas en un entorno natural único.',
     image: '/assets/Quesos%20Zampa/BAB4C1FD-5368-4434-ADE4-498A3AE4D8C6.jpg',
+    href: 'https://wa.me/5491132554757?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20coordinar/reservar%20un%20recorrido%20guiado%20para%20conocer%20el%20tambo%20en%20Napaleof%C3%BA.',
   },
   {
     id: 2,
-    subtitle: 'Alimentación Natural',
-    title: 'Sistema Pastoril',
+    subtitle: 'ALIMENTACIÓN NATURAL',
+    title: 'Sistema <span class="font-fraunces italic lowercase font-normal text-white">pastoril</span>',
     excerpt: 'Nuestras ovejas pastan libremente en las pasturas de Napaleofú bajo un esquema de pastoreo rotativo. Esta alimentación natural y el respeto por el bienestar animal son la clave para obtener una leche de oveja de altísima calidad.',
     image: '/assets/Quesos%20Zampa/nuevas/a15ed077-6d9c-4c40-891b-b17af3cbac6c.jpg',
+    href: '/nuestra-historia',
   },
   {
     id: 3,
-    subtitle: 'De la Pastura a la Cava',
-    title: 'Ciclo Completo de Elaboración',
+    subtitle: 'DE LA PASTURA A LA CAVA',
+    title: 'Ciclo completo de <span class="font-fraunces italic lowercase font-normal text-white">elaboración</span>',
     excerpt: 'Controlamos con absoluta dedicación cada etapa del proceso: desde el ordeñe higiénico y la elaboración manual de cada pieza, hasta la maduración controlada en nuestra cava de Tandil, garantizando un queso honesto y con carácter real.',
     image: '/assets/Quesos%20Zampa/07B73847-614E-4FDC-B7AF-F639064C64CB.jpg',
+    href: '/nuestra-historia',
   },
 ];
 
@@ -106,60 +110,65 @@ export default function SliderSection() {
             </div>
           );
         })}
-        {/* Subtle shadow overlay only at the very bottom and left for text legibility edge cases */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent z-10 pointer-events-none hidden lg:block" />
+        {/* Dark overlays for high-contrast legibility */}
+        <div className="absolute inset-0 bg-black/35 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent z-10 pointer-events-none hidden lg:block" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 pointer-events-none" />
       </div>
 
-      {/* Glassmorphic Floating Content Card */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-12 lg:pb-20 pt-20 flex justify-start h-full items-end">
-        
-        <div className="w-full lg:max-w-xl xl:max-w-2xl bg-white/80 backdrop-blur-xl border border-white/50 shadow-2xl rounded-[2.5rem] p-8 lg:p-12 transition-all duration-500 hover:bg-white/90 relative overflow-hidden">
-          
-          {/* Dynamic Content */}
-          <div className="relative min-h-[220px] lg:min-h-[190px]">
-            {slides.map((slide, idx) => {
-              const isActive = current === idx;
-              return (
-                <div
-                  key={slide.id}
-                  className={`absolute top-0 left-0 w-full transition-all duration-700 ease-in-out flex flex-col gap-4 lg:gap-5 ${
-                    isActive 
-                      ? 'opacity-100 translate-y-0 relative z-10' 
-                      : 'opacity-0 translate-y-4 absolute pointer-events-none'
-                  }`}
-                >
-                  {/* Category */}
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-teal animate-pulse" />
-                    <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-teal-dark">
-                      {slide.subtitle}
-                    </span>
-                  </div>
+      {/* Floating Content Wrapper */}
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-16 lg:pb-24 flex justify-start items-end h-full pt-28">
+        <div className="w-full lg:max-w-2xl text-left flex flex-col relative min-h-[320px] md:min-h-[290px]">
+          {slides.map((slide, idx) => {
+            const isActive = current === idx;
+            return (
+              <div
+                key={slide.id}
+                className={`absolute bottom-0 left-0 w-full transition-all duration-1000 ease-in-out flex flex-col gap-4 lg:gap-6 ${
+                  isActive 
+                    ? 'opacity-100 translate-y-0 relative z-10' 
+                    : 'opacity-0 translate-y-8 absolute pointer-events-none'
+                }`}
+              >
+                {/* Subtitle */}
+                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
+                  {slide.subtitle}
+                </span>
 
-                  {/* Title */}
-                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-charcoal leading-tight uppercase tracking-wide">
-                    {slide.title}
-                  </h2>
+                {/* Title */}
+                <h2 
+                  className="text-4xl sm:text-5xl lg:text-6xl font-light text-white leading-tight uppercase tracking-wide"
+                  dangerouslySetInnerHTML={{ __html: slide.title }}
+                />
 
-                  {/* Excerpt */}
-                  <p className="text-sm sm:text-base text-charcoal/85 leading-relaxed font-light max-w-lg">
-                    {slide.excerpt}
-                  </p>
+                {/* Excerpt */}
+                <p className="text-sm sm:text-base text-white/80 font-light max-w-lg leading-relaxed mt-2">
+                  {slide.excerpt}
+                </p>
+
+                {/* Underlined Link Style CTA */}
+                <div className="mt-4">
+                  <a
+                    href={slide.href}
+                    target={slide.href.startsWith('http') ? "_blank" : undefined}
+                    rel={slide.href.startsWith('http') ? "noopener noreferrer" : undefined}
+                    className="inline-block text-xs font-bold uppercase tracking-[0.25em] text-white border-b border-[#C9A84C] pb-1 hover:text-[#C9A84C] hover:border-white transition-all duration-300"
+                  >
+                    MAS INFO
+                  </a>
                 </div>
-              );
-            })}
-          </div>
-
-          {/* Minimalist Progress Line at the very bottom edge of the card */}
-          <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-charcoal/5">
-            <div 
-              className="h-full bg-teal transition-all duration-100 ease-linear"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          
+              </div>
+            );
+          })}
         </div>
+      </div>
+
+      {/* Minimalist Progress Line at the very bottom edge of the section */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/10 z-20">
+        <div 
+          className="h-full bg-[#C9A84C] transition-all duration-100 ease-linear"
+          style={{ width: `${progress}%` }}
+        />
       </div>
 
       {/* Floating Side Navigation Arrows (Minimalist & Professional) */}
