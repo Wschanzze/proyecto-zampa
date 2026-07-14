@@ -23,11 +23,10 @@ export default function HomePage() {
     <div className="min-h-screen bg-limestone-soft">
       <Header />
       <HeroSection />
-      
       {/* --- INICIO LEGACY (Antiguo Home) --- */}
       <OurProducts />
       <HeritageSection />
-      <IntroStatement />
+      {/* <IntroStatement /> */}
       {/* <BannerBW /> */}
       <SliderSection />
 
