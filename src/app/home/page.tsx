@@ -6,7 +6,7 @@ import HeritageSection from './components/HeritageSection';
 import FloatingPill from './components/FloatingPill';
 
 // Legacy Home Components
-import IntroStatement from './components/legacy/IntroStatement';
+// import IntroStatement from './components/legacy/IntroStatement';
 import OurProducts from './components/legacy/OurProducts';
 // import BannerBW from './components/legacy/BannerBW';
 
