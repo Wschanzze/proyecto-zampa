@@ -76,7 +76,7 @@ export default function SliderSection() {
 
   return (
     <section 
-      className="relative min-h-[700px] h-screen max-h-[900px] w-full overflow-hidden bg-black flex items-end justify-center lg:justify-start"
+      className="relative min-h-[550px] h-[75vh] max-h-[750px] w-full overflow-hidden bg-black flex items-center justify-center lg:justify-start"
     >
       {/* Full Bleed Background Images */}
       <div className="absolute inset-0 w-full h-full z-0">
@@ -117,17 +117,17 @@ export default function SliderSection() {
       </div>
 
       {/* Floating Content Wrapper */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-16 lg:pb-24 flex justify-start items-end h-full pt-28">
-        <div className="w-full lg:max-w-2xl text-left flex flex-col relative min-h-[320px] md:min-h-[290px]">
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-12 py-12 flex justify-start items-center h-full">
+        <div className="w-full lg:max-w-2xl text-left flex flex-col relative min-h-[280px] md:min-h-[240px] justify-center">
           {slides.map((slide, idx) => {
             const isActive = current === idx;
             return (
               <div
                 key={slide.id}
-                className={`absolute bottom-0 left-0 w-full transition-all duration-1000 ease-in-out flex flex-col gap-4 lg:gap-6 ${
+                className={`absolute top-1/2 left-0 w-full transition-all duration-1000 ease-in-out flex flex-col gap-4 lg:gap-5 ${
                   isActive 
-                    ? 'opacity-100 translate-y-0 relative z-10' 
-                    : 'opacity-0 translate-y-8 absolute pointer-events-none'
+                    ? 'opacity-100 -translate-y-1/2 z-10' 
+                    : 'opacity-0 -translate-y-[40%] absolute pointer-events-none'
                 }`}
               >
                 {/* Subtitle */}
