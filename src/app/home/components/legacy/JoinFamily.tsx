@@ -22,8 +22,8 @@ const JoinFamily = () => {
         </svg>
       ),
       title: "Ubicación",
-      desc: "Napaleofú, Tandil\nBuenos Aires, Argentina",
-      href: "https://maps.google.com/?q=Napaleof%C3%BA,+Tandil,+Buenos+Aires,+Argentina"
+      desc: "Tandil\nBuenos Aires, Argentina",
+      href: "https://maps.google.com/?q=Tandil,+Buenos+Aires,+Argentina"
     },
     {
       icon: (
