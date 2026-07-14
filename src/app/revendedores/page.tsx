@@ -40,7 +40,7 @@ export default function RevendedoresPage() {
   };
 
   return (
-    <div className="min-h-screen bg-limestone-soft">
+    <div className="min-h-screen bg-cream">
       <Header />
 
       {/* HERO SECTION */}
