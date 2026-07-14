@@ -57,13 +57,13 @@ export default function HeritageSection() {
               ref={headlineRef}
               className="text-5xl lg:text-6xl font-light uppercase tracking-[0.06em] leading-tight text-charcoal">
               El Valor del<br />
-              Pecorino de Estación.
+              Queso de Estación.
             </h2>
 
             <p
               ref={subRef}
               className="text-lg font-light text-umber-light leading-relaxed max-w-md">
-              Nuestros quesos se elaboran exclusivamente con leche 100% de oveja, naturalmente rica en proteína A2 para una fácil digestión. Al respetar el ciclo biológico natural del rebaño, la producción es estacional, convirtiendo a cada horma de Pecorino en una edición limitada, única y atada al ritmo de la tierra.
+              Nuestros quesos se elaboran exclusivamente con leche 100% de oveja, naturalmente rica en proteína A2 para una fácil digestión. Al respetar el ciclo biológico natural del rebaño, la producción es estacional, convirtiendo a cada horma de queso en una edición limitada, única y atada al ritmo de la tierra.
             </p>
 
             {/* CTAs */}
