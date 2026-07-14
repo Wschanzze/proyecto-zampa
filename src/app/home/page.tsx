@@ -13,7 +13,7 @@ import OurProducts from './components/legacy/OurProducts';
 import LegacyVisitSection from './components/legacy/LegacyVisitSection';
 import JoinFamily from './components/legacy/JoinFamily';
 import InstagramCarousel from './components/legacy/InstagramCarousel';
-import QuickContact from './components/legacy/QuickContact';
+// import QuickContact from './components/legacy/QuickContact';
 
 // Legacy styles
 import '@/styles/legacy-home.css';
@@ -33,7 +33,7 @@ export default function HomePage() {
       <LegacyVisitSection />
       <JoinFamily />
       <InstagramCarousel />
-      <QuickContact />
+      {/* <QuickContact /> */}
       {/* --- FIN INICIO LEGACY --- */}
 
       <Footer />
