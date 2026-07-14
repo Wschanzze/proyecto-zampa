@@ -19,8 +19,8 @@ const heroSlides: HeroSlide[] = [
     label: 'Origen',
     line1: 'Quesos',
     line2: 'con Pasión de Origen',
-    image: '/assets/Quesos%20Zampa/07B73847-614E-4FDC-B7AF-F639064C64CB.jpg',
-    alt: 'Paisaje de las pasturas y el establecimiento Quesos Zampa en Napaleofú al atardecer',
+    image: '/assets/Quesos%20Zampa/IMG_9858.JPG',
+    alt: 'Hormas de quesos artesanales Zampa madurando en la cava familiar',
     desc: 'Criamos ovejas frisonas en pasturas naturales y elaboramos quesos premium. Un proceso 100% familiar que respeta los tiempos de la tierra y el verdadero sabor artesanal.'
   },
   {
@@ -34,15 +34,6 @@ const heroSlides: HeroSlide[] = [
   },
   {
     id: 3,
-    label: 'La Cava',
-    line1: 'Añejamos',
-    line2: 'con Calma y Tiempo',
-    image: '/assets/Quesos%20Zampa/IMG_9858.JPG',
-    alt: 'Hormas de quesos artesanales Zampa madurando en la cava familiar',
-    desc: 'Nuestros quesos maduran lentamente en una cava familiar controlada, donde adquieren el carácter, picor e intensidad de sabor que nos distinguen.'
-  },
-  {
-    id: 4,
     label: 'El Tambo',
     line1: 'Criamos',
     line2: 'Nuestras Ovejas',
@@ -118,7 +109,7 @@ export default function HeroSection() {
     const timer = setInterval(() => {
       const nextIdx = (currentIdx + 1) % heroSlides.length;
       goToSlide(nextIdx);
-    }, 7000);
+    }, 4000);
     return () => clearInterval(timer);
   }, [currentIdx]);
 
