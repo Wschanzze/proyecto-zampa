@@ -8,21 +8,21 @@ const OurProducts = () => {
       title: "QUESOS DUROS",
       subtitle: "Intensos & Madurados",
       desc: "Variedades de larga guarda en cava como nuestro Pecorino, de textura firme y sabor persistente.",
-      image: "/assets/Quesos Zampa/pecorino.jpeg",
+      image: "/assets/Quesos Zampa/nuevas/6f186d80-0486-4cb4-828e-8ed6073ed361.jpg",
       link: "/productos"
     },
     {
       title: "QUESOS SEMIDUROS",
       subtitle: "Texturas & Sabores Equilibrados",
       desc: "Texturas cremosas y firmes con notas mantecosas, ideales para tablas de maridaje.",
-      image: "/assets/Quesos Zampa/IMG_9816.JPG",
+      image: "/assets/Quesos Zampa/tipos de quesos.jpg",
       link: "/productos"
     },
     {
       title: "QUESOS BLANDOS",
       subtitle: "Cremosos & Fundentes",
       desc: "Recetas de influencia francesa como el Brie y Camembert, de corteza aterciopelada y corazón untuoso.",
-      image: "/assets/Quesos Zampa/tipos de quesos.jpg",
+      image: "/assets/Quesos Zampa/nuevas/4b457cc4-67fe-4db7-8880-c45f649d4de2.jpg",
       link: "/productos"
     }
   ];

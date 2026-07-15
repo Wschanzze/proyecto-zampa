@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
         {/* Fila de firma */}
-        <div className="border-t border-wheat/15 pt-6 flex justify-center md:justify-end items-center">
+        <div className="border-t border-wheat/15 pt-6 flex justify-center items-center">
           <a
             href="https://www.notanother.company/"
             target="_blank"
