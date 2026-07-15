@@ -15,7 +15,7 @@ const OurProducts = () => {
       title: "QUESOS SEMIDUROS",
       subtitle: "Texturas & Sabores Equilibrados",
       desc: "Texturas cremosas y firmes con notas mantecosas, ideales para tablas de maridaje.",
-      image: "/assets/Quesos Zampa/tipos de quesos.jpg",
+      image: "/assets/Quesos Zampa/nuevas/281392f0-9387-41d1-922d-e89715d35c97.jpg",
       link: "/productos"
     },
     {
