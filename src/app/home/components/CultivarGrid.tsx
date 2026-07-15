@@ -118,7 +118,7 @@ export default function CultivarGrid() {
                   {cultivar.name}
                 </h3>
                 {/* SVG Vignette Flourish (Classic swirl and loops with diamond center) */}
-                <svg className="w-16 h-8 text-[#C9A84C]/60 mt-3" viewBox="0 0 100 30" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="w-16 h-8 text-charcoal/50 mt-3" viewBox="0 0 100 30" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M 50 15 C 35 15, 30 5, 20 5 C 10 5, 5 15, 12 18 C 18 20, 22 12, 15 10" />
                   <path d="M 50 15 C 65 15, 70 5, 80 5 C 90 5, 95 15, 88 18 C 82 20, 78 12, 85 10" />
                   <polygon points="50,11 53,15 50,19 47,15" fill="currentColor" />
