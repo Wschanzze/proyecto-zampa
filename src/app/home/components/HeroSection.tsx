@@ -16,30 +16,30 @@ interface HeroSlide {
 const heroSlides: HeroSlide[] = [
   {
     id: 1,
-    label: 'Origen',
-    line1: 'Quesos',
-    line2: 'con Pasión de Origen',
-    image: '/assets/Quesos%20Zampa/IMG_9858.JPG',
-    alt: 'Hormas de quesos artesanales Zampa madurando en la cava familiar',
-    desc: 'Criamos ovejas frisonas en pasturas naturales y elaboramos quesos premium. Un proceso 100% familiar que respeta los tiempos de la tierra y el verdadero sabor artesanal.'
+    label: 'El Tambo',
+    line1: 'Criamos',
+    line2: 'Nuestras Ovejas',
+    image: '/assets/Quesos%20Zampa/68C50477-1C39-48B6-86FE-640DEDCA65B1.jpg',
+    alt: 'Ovejas frisonas pastando libremente en los campos de Tandil',
+    desc: 'Criamos nuestras ovejas bajo un sistema pastoril sustentable en el corazón de Napaleofú. Su libre pastoreo garantiza una leche de altísima calidad.'
   },
   {
     id: 2,
+    label: 'La Leche',
+    line1: 'Producimos',
+    line2: 'Nuestra Leche',
+    image: '/assets/Quesos%20Zampa/nuevas/44efe11c-249a-402a-9f4f-6e548e8ee9f2.jpg',
+    alt: 'Producción de leche de oveja fresca y pura para elaboración de quesos',
+    desc: 'Obtenemos una leche de oveja excepcional, con un perfil graso y proteico único. Un insumo de máxima pureza, base de la identidad de cada uno de nuestros quesos premium.'
+  },
+  {
+    id: 3,
     label: 'Elaboración',
     line1: 'Elaboramos',
     line2: 'Nuestros Quesos',
     image: '/assets/Quesos%20Zampa/IMG_9816.JPG',
     alt: 'Proceso de elaboración artesanal de quesos Zampa',
     desc: 'En nuestra quesería transformamos diariamente la leche fresca en hormas únicas. Cuidado de autor, higiene rigurosa y pasión en cada etapa del proceso.'
-  },
-  {
-    id: 3,
-    label: 'El Tambo',
-    line1: 'Criamos',
-    line2: 'Nuestras Ovejas',
-    image: '/assets/Quesos%20Zampa/68C50477-1C39-48B6-86FE-640DEDCA65B1.jpg',
-    alt: 'Detalle de quesos de oveja madurados listos para consumo',
-    desc: 'Criamos nuestras ovejas bajo un sistema pastoril sustentable en el corazón de Napaleofú. Su libre pastoreo garantiza una leche de altísima calidad.'
   }
 ];
 
