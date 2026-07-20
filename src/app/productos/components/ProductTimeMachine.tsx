@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import AppImage from "@/components/ui/AppImage";
 import AppIcon from "@/components/ui/AppIcon";
-import { ArchiveBoxIcon, ListBulletIcon } from "@heroicons/react/24/outline";
+import { ArchiveBoxIcon, ListBulletIcon, ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 interface Card {
   id: string;
@@ -114,98 +114,101 @@ function CheeseFlourish({ className = "w-16 h-6 text-[#C9A84C]" }: { className?:
 export default function ProductTimeMachine() {
   const [position, setPosition] = useState(0);
   const [viewMode, setViewMode] = useState<"stack" | "list">("stack");
+  const [isDragging, setIsDragging] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   
   const containerRef = useRef<HTMLDivElement>(null);
-  const touchStartPos = useRef<{ x: number; y: number } | null>(null);
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+  const touchStartTime = useRef<number>(0);
+  const startPos = useRef<number>(0);
   const positionRef = useRef(position);
-  const snapTimeout = useRef<NodeJS.Timeout | null>(null);
-  const isSnapping = useRef(false);
+  const wheelLock = useRef(false);
 
   useEffect(() => {
     positionRef.current = position;
   }, [position]);
 
-  // Smooth Snap Animation to ensure cards never get stuck halfway
-  const snapToCard = (targetIndex: number) => {
-    if (isSnapping.current) return;
-    isSnapping.current = true;
-    
-    const start = positionRef.current;
-    const end = Math.max(0, Math.min(cards.length - 1, targetIndex));
-    const startTime = performance.now();
-    const duration = 280; // ms
-
-    const step = (now: number) => {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      // easeOutCubic curve for smooth natural snapping
-      const ease = 1 - Math.pow(1 - progress, 3);
-      const current = start + (end - start) * ease;
-      
-      setPosition(current);
-      positionRef.current = current;
-
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      } else {
-        isSnapping.current = false;
-      }
-    };
-
-    requestAnimationFrame(step);
+  // Smooth Snap Animation to land cleanly on exact integer index
+  const goToCard = (targetIndex: number) => {
+    const clamped = Math.max(0, Math.min(cards.length - 1, targetIndex));
+    setPosition(clamped);
+    positionRef.current = clamped;
   };
 
+  // Wheel Handler for Desktop: Single Card Step with Cool-down
   const handleScroll = (e: WheelEvent) => {
     if (viewMode !== "stack") return;
     e.preventDefault();
 
-    const scrollSensitivity = 0.005;
-    const delta = e.deltaY * scrollSensitivity;
+    if (wheelLock.current) return;
 
-    const newPos = Math.max(0, Math.min(cards.length - 1, positionRef.current + delta));
-    setPosition(newPos);
-    positionRef.current = newPos;
+    if (Math.abs(e.deltaY) > 15) {
+      wheelLock.current = true;
+      const direction = e.deltaY > 0 ? 1 : -1;
+      const nextIdx = Math.max(0, Math.min(cards.length - 1, Math.round(positionRef.current) + direction));
+      goToCard(nextIdx);
 
-    if (snapTimeout.current) clearTimeout(snapTimeout.current);
-    snapTimeout.current = setTimeout(() => {
-      snapToCard(Math.round(positionRef.current));
-    }, 180);
-  };
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    if (viewMode !== "stack") return;
-    touchStartPos.current = {
-      x: e.touches[0].clientX,
-      y: e.touches[0].clientY,
-    };
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (viewMode !== "stack" || !touchStartPos.current) return;
-    
-    const deltaX = touchStartPos.current.x - e.touches[0].clientX;
-    const deltaY = touchStartPos.current.y - e.touches[0].clientY;
-    
-    // Only capture HORIZONTAL swipe gesture for mobile card navigation
-    // Native vertical scrolling up/down the page remains completely smooth
-    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 6) {
-      const scrollSensitivity = 0.006;
-      const newPos = Math.max(0, Math.min(cards.length - 1, positionRef.current + deltaX * scrollSensitivity));
-      setPosition(newPos);
-      positionRef.current = newPos;
-
-      touchStartPos.current = {
-        x: e.touches[0].clientX,
-        y: e.touches[0].clientY,
-      };
+      setTimeout(() => {
+        wheelLock.current = false;
+      }, 300);
     }
   };
 
-  const handleTouchEnd = () => {
-    touchStartPos.current = null;
-    snapToCard(Math.round(positionRef.current));
+  // Touch Handlers for Mobile (Native Momentum Swipe)
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (viewMode !== "stack") return;
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+    touchStartTime.current = performance.now();
+    startPos.current = positionRef.current;
+    setIsDragging(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (viewMode !== "stack" || touchStartX.current === null || touchStartY.current === null) return;
+    
+    const currentX = e.touches[0].clientX;
+    const currentY = e.touches[0].clientY;
+    const deltaX = touchStartX.current - currentX;
+    const deltaY = touchStartY.current - currentY;
+    
+    // Only capture HORIZONTAL swipe gesture for mobile card navigation
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 8) {
+      // Calculate drag distance relative to screen width (320px width reference)
+      const dragFactor = deltaX / 300;
+      const newPos = Math.max(0, Math.min(cards.length - 1, startPos.current + dragFactor));
+      setPosition(newPos);
+      positionRef.current = newPos;
+    }
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+
+    setIsDragging(false);
+    const endX = e.changedTouches[0].clientX;
+    const deltaX = touchStartX.current - endX;
+    const duration = performance.now() - touchStartTime.current;
+    const velocity = deltaX / duration; // px per ms
+
+    touchStartX.current = null;
+    touchStartY.current = null;
+
+    const currentPos = positionRef.current;
+
+    // Gesture intent detection: swipe flick or threshold drag
+    if (deltaX > 35 || velocity > 0.15) {
+      // Swiped Left -> Move to Next Card
+      goToCard(Math.min(cards.length - 1, Math.floor(startPos.current) + 1));
+    } else if (deltaX < -35 || velocity < -0.15) {
+      // Swiped Right -> Move to Previous Card
+      goToCard(Math.max(0, Math.ceil(startPos.current) - 1));
+    } else {
+      // Small movement -> Snap to closest card
+      goToCard(Math.round(currentPos));
+    }
   };
 
   useEffect(() => {
@@ -218,7 +221,7 @@ export default function ProductTimeMachine() {
   }, [viewMode]);
 
   const handleTimelineClick = (index: number) => {
-    snapToCard(index);
+    goToCard(index);
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -258,6 +261,31 @@ export default function ProductTimeMachine() {
         <>
           {/* Main 3D Card Stage Area */}
           <div className="relative w-full flex-1 flex items-center justify-center my-2 sm:my-6 px-3 sm:px-0" style={{ perspective: "1200px" }}>
+            
+            {/* Mobile Left Arrow Button */}
+            <button
+              onClick={() => goToCard(activeIndex - 1)}
+              disabled={activeIndex === 0}
+              className={`absolute left-2 top-1/2 -translate-y-1/2 z-40 p-2.5 rounded-full bg-white/90 shadow-lg border border-charcoal/10 text-charcoal sm:hidden transition-all duration-300 ${
+                activeIndex === 0 ? "opacity-30 pointer-events-none" : "opacity-90 active:scale-90"
+              }`}
+              aria-label="Anterior queso"
+            >
+              <ChevronLeftIcon className="w-5 h-5 text-charcoal" />
+            </button>
+
+            {/* Mobile Right Arrow Button */}
+            <button
+              onClick={() => goToCard(activeIndex + 1)}
+              disabled={activeIndex === cards.length - 1}
+              className={`absolute right-2 top-1/2 -translate-y-1/2 z-40 p-2.5 rounded-full bg-white/90 shadow-lg border border-charcoal/10 text-charcoal sm:hidden transition-all duration-300 ${
+                activeIndex === cards.length - 1 ? "opacity-30 pointer-events-none" : "opacity-90 active:scale-90"
+              }`}
+              aria-label="Siguiente queso"
+            >
+              <ChevronRightIcon className="w-5 h-5 text-charcoal" />
+            </button>
+
             <div className="relative h-[530px] sm:h-[640px] md:h-[670px] w-full max-w-[920px]" style={{ transformStyle: "preserve-3d" }}>
               {[...cards].reverse().map((card, reverseIndex) => {
                 const index = cards.length - 1 - reverseIndex;
@@ -287,7 +315,10 @@ export default function ProductTimeMachine() {
                       transform: `translateZ(${translateZ}px) translateY(${translateY}px) scale(${Math.max(0.7, scale)})`,
                       opacity: Math.max(0, opacity),
                       zIndex: Math.round((cards.length - Math.abs(distanceFromActive)) * 10),
-                      transition: isSnapping.current ? "none" : "transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.15s ease-out",
+                      // GPU Accelerated spring CSS transition when not actively dragging
+                      transition: isDragging 
+                        ? "transform 0.05s ease-out" 
+                        : "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease-out",
                       pointerEvents: Math.abs(distanceFromActive) < 0.5 ? "auto" : "none",
                     }}
                     onClick={() => handleTimelineClick(index)}
@@ -476,7 +507,7 @@ export default function ProductTimeMachine() {
                     className="flex-1 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-8 cursor-pointer"
                     onClick={() => {
                       setViewMode("stack");
-                      snapToCard(index);
+                      goToCard(index);
                     }}
                   >
                     <span className="w-auto sm:w-40 shrink-0 text-[10px] font-bold uppercase tracking-[0.15em] text-[#C9A84C]">
