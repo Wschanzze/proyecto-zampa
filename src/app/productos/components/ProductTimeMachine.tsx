@@ -144,16 +144,15 @@ export default function ProductTimeMachine() {
   const handleTouchMove = (e: React.TouchEvent) => {
     if (viewMode !== "stack" || !touchStartPos.current) return;
     
-    const deltaY = touchStartPos.current.y - e.touches[0].clientY;
     const deltaX = touchStartPos.current.x - e.touches[0].clientX;
+    const deltaY = touchStartPos.current.y - e.touches[0].clientY;
     
-    // Choose dominant axis for smooth swiping on mobile
-    const delta = Math.abs(deltaY) > Math.abs(deltaX) ? deltaY : deltaX;
-    const scrollSensitivity = 0.006;
-
-    if (Math.abs(delta) > 5) {
+    // Only capture HORIZONTAL swipe gesture for mobile card navigation
+    // This allows native vertical scrolling up/down the page without getting stuck
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 6) {
+      const scrollSensitivity = 0.007;
       setPosition((prev) => {
-        const newPosition = prev + delta * scrollSensitivity;
+        const newPosition = prev + deltaX * scrollSensitivity;
         return Math.max(0, Math.min(cards.length - 1, newPosition));
       });
       touchStartPos.current = {
@@ -406,7 +405,7 @@ export default function ProductTimeMachine() {
           </div>
 
           <div className="absolute bottom-8 sm:bottom-6 left-1/2 -translate-x-1/2 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-charcoal/40 animate-pulse text-center w-full px-4">
-            Desliza con el dedo o gira la rueda para explorar los quesos
+            Desliza lateralmente (👈 👉) con el dedo o gira la rueda para explorar
           </div>
         </>
       ) : (
