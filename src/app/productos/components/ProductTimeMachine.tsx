@@ -2,7 +2,8 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import AppImage from "@/components/ui/AppImage";
-import { ArchiveBoxIcon, ListBulletIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import AppIcon from "@/components/ui/AppIcon";
+import { ArchiveBoxIcon, ListBulletIcon } from "@heroicons/react/24/outline";
 
 interface Card {
   id: string;
@@ -115,7 +116,9 @@ export default function ProductTimeMachine() {
   const [viewMode, setViewMode] = useState<"stack" | "list">("stack");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  
   const containerRef = useRef<HTMLDivElement>(null);
+  const touchStartPos = useRef<{ x: number; y: number } | null>(null);
 
   const handleScroll = (e: WheelEvent) => {
     if (viewMode !== "stack") return;
@@ -128,6 +131,40 @@ export default function ProductTimeMachine() {
       const newPosition = prev + delta;
       return Math.max(0, Math.min(cards.length - 1, newPosition));
     });
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (viewMode !== "stack") return;
+    touchStartPos.current = {
+      x: e.touches[0].clientX,
+      y: e.touches[0].clientY,
+    };
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (viewMode !== "stack" || !touchStartPos.current) return;
+    
+    const deltaY = touchStartPos.current.y - e.touches[0].clientY;
+    const deltaX = touchStartPos.current.x - e.touches[0].clientX;
+    
+    // Choose dominant axis for smooth swiping on mobile
+    const delta = Math.abs(deltaY) > Math.abs(deltaX) ? deltaY : deltaX;
+    const scrollSensitivity = 0.006;
+
+    if (Math.abs(delta) > 5) {
+      setPosition((prev) => {
+        const newPosition = prev + delta * scrollSensitivity;
+        return Math.max(0, Math.min(cards.length - 1, newPosition));
+      });
+      touchStartPos.current = {
+        x: e.touches[0].clientX,
+        y: e.touches[0].clientY,
+      };
+    }
+  };
+
+  const handleTouchEnd = () => {
+    touchStartPos.current = null;
   };
 
   useEffect(() => {
@@ -152,11 +189,14 @@ export default function ProductTimeMachine() {
   return (
     <div
       ref={containerRef}
-      className="relative min-h-[95vh] w-full overflow-hidden bg-cream font-urbanist pt-12 pb-24"
+      className="relative min-h-[85vh] sm:min-h-[95vh] w-full overflow-hidden bg-cream font-urbanist pt-6 sm:pt-12 pb-16 sm:pb-24 select-none"
       onMouseMove={handleMouseMove}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
-      {/* Header Navigation Controls */}
-      <div className="absolute right-6 top-6 z-50 flex items-center gap-1 rounded-xl border border-charcoal/10 bg-white/80 p-1 shadow-sm backdrop-blur-md">
+      {/* Header Controls */}
+      <div className="absolute right-4 sm:right-6 top-4 sm:top-6 z-50 flex items-center gap-1 rounded-xl border border-charcoal/10 bg-white/80 p-1 shadow-sm backdrop-blur-md">
         <button
           className={`rounded-lg p-2 transition-colors ${viewMode === "stack" ? "bg-wheat-muted/50 text-[#C9A84C]" : "text-charcoal hover:bg-wheat-muted/30"}`}
           onClick={() => setViewMode("stack")}
@@ -175,9 +215,9 @@ export default function ProductTimeMachine() {
 
       {viewMode === "stack" ? (
         <>
-          {/* Cards Stack */}
-          <div className="absolute inset-0 flex items-center justify-center mt-10" style={{ perspective: "1500px" }}>
-            <div className="relative h-[680px] w-[92%] max-w-[900px]" style={{ transformStyle: "preserve-3d" }}>
+          {/* Cards Stack Container */}
+          <div className="absolute inset-0 flex items-center justify-center mt-6 sm:mt-10 px-3 sm:px-0" style={{ perspective: "1200px" }}>
+            <div className="relative h-[560px] sm:h-[650px] md:h-[680px] w-full max-w-[920px]" style={{ transformStyle: "preserve-3d" }}>
               {[...cards].reverse().map((card, reverseIndex) => {
                 const index = cards.length - 1 - reverseIndex;
                 const distanceFromActive = index - position;
@@ -190,7 +230,7 @@ export default function ProductTimeMachine() {
                 const isInFront = distanceFromActive < 0;
 
                 const translateZ = distanceFromActive * -85;
-                const translateY = distanceFromActive * -42;
+                const translateY = distanceFromActive * -40;
                 const scale = 1 - Math.abs(distanceFromActive) * 0.04;
 
                 let opacity = 1;
@@ -214,7 +254,7 @@ export default function ProductTimeMachine() {
                     <div className="h-full w-full overflow-hidden bg-white/95 backdrop-blur-sm shadow-2xl rounded-3xl border border-charcoal/5 flex flex-col md:flex-row">
                       
                       {/* Card Image Side */}
-                      <div className="relative w-full md:w-[44%] h-64 md:h-full overflow-hidden bg-cream/60 flex items-center justify-center p-8 border-b md:border-b-0 md:border-r border-charcoal/5">
+                      <div className="relative w-full md:w-[42%] h-44 sm:h-56 md:h-full overflow-hidden bg-cream/60 flex items-center justify-center p-4 sm:p-8 border-b md:border-b-0 md:border-r border-charcoal/5 flex-shrink-0">
                         <div className="relative w-full h-full group">
                           <AppImage
                             src={card.image || "/placeholder.svg"}
@@ -234,74 +274,75 @@ export default function ProductTimeMachine() {
                       </div>
 
                       {/* Card Content Side */}
-                      <div className="flex-1 p-8 md:p-10 flex flex-col justify-between overflow-y-auto">
+                      <div className="flex-1 p-5 sm:p-8 md:p-10 flex flex-col justify-between overflow-y-auto">
                         <div>
                           {/* Region / Category Badge */}
-                          <div className="flex items-center justify-between mb-2">
+                          <div className="flex items-center justify-between mb-1.5 sm:mb-2 flex-wrap gap-1">
                             <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C9A84C]">
                               {card.region}
                             </span>
-                            <span className="text-[9px] font-semibold uppercase tracking-wider text-charcoal/40 bg-charcoal/5 px-2.5 py-1 rounded-full">
+                            <span className="text-[9px] font-semibold uppercase tracking-wider text-charcoal/40 bg-charcoal/5 px-2 py-0.5 rounded-full">
                               {card.milkType}
                             </span>
                           </div>
 
                           {/* Title */}
-                          <h2 className="text-2xl md:text-4xl font-light uppercase tracking-wide text-charcoal leading-tight">
+                          <h2 className="text-xl sm:text-3xl md:text-4xl font-light uppercase tracking-wide text-charcoal leading-tight">
                             {card.title}
                           </h2>
 
                           {/* SVG Flourish */}
-                          <CheeseFlourish className="w-16 h-6 text-[#C9A84C]/70 my-2" />
+                          <CheeseFlourish className="w-14 sm:w-16 h-5 sm:h-6 text-[#C9A84C]/70 my-1 sm:my-2" />
 
                           {/* Subtitle / Description */}
-                          <p className="text-sm md:text-base text-charcoal/70 font-light leading-relaxed mb-6">
+                          <p className="text-xs sm:text-sm md:text-base text-charcoal/70 font-light leading-relaxed mb-4 sm:mb-6 line-clamp-3 sm:line-clamp-none">
                             {card.subtitle}
                           </p>
                         </div>
 
                         {/* Technical Details & Cata Block */}
-                        <div className="space-y-4 pt-4 border-t border-charcoal/10">
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
-                            <div className="bg-cream/40 p-3 rounded-xl border border-charcoal/5">
-                              <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-charcoal/50 mb-0.5 block">
+                        <div className="space-y-2.5 sm:space-y-4 pt-2 sm:pt-4 border-t border-charcoal/10">
+                          <div className="grid grid-cols-2 gap-2 sm:gap-3 text-left">
+                            <div className="bg-cream/40 p-2 sm:p-3 rounded-xl border border-charcoal/5">
+                              <span className="text-[8px] sm:text-[9px] font-bold uppercase tracking-[0.15em] text-charcoal/50 mb-0.5 block">
                                 Maduración en Cava
                               </span>
-                              <span className="text-xs font-semibold text-charcoal uppercase tracking-wider">
+                              <span className="text-[11px] sm:text-xs font-semibold text-charcoal uppercase tracking-wider block truncate">
                                 {card.maturationMonths}
                               </span>
                             </div>
 
-                            <div className="bg-cream/40 p-3 rounded-xl border border-charcoal/5">
-                              <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-charcoal/50 mb-0.5 block">
+                            <div className="bg-cream/40 p-2 sm:p-3 rounded-xl border border-charcoal/5">
+                              <span className="text-[8px] sm:text-[9px] font-bold uppercase tracking-[0.15em] text-charcoal/50 mb-0.5 block">
                                 Origen
                               </span>
-                              <span className="text-xs font-semibold text-charcoal uppercase tracking-wider">
-                                Leche A2 • Pasturas Tandil
+                              <span className="text-[11px] sm:text-xs font-semibold text-charcoal uppercase tracking-wider block truncate">
+                                Tandil • Pasturas
                               </span>
                             </div>
                           </div>
 
-                          <div className="bg-white/60 p-3 rounded-xl border border-charcoal/5">
-                            <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-[#C9A84C] mb-1 block">
+                          <div className="bg-white/60 p-2.5 sm:p-3 rounded-xl border border-charcoal/5">
+                            <span className="text-[8px] sm:text-[9px] font-bold uppercase tracking-[0.15em] text-[#C9A84C] mb-0.5 block">
                               Notas de Cata
                             </span>
-                            <p className="text-xs text-charcoal/80 font-light italic leading-snug">
+                            <p className="text-[11px] sm:text-xs text-charcoal/80 font-light italic leading-snug line-clamp-2">
                               "{card.tastingNotes}"
                             </p>
                           </div>
                         </div>
 
-                        {/* Action CTA */}
-                        <div className="pt-5 mt-2 flex items-center justify-end">
+                        {/* Action CTA: Green WhatsApp Button */}
+                        <div className="pt-3 sm:pt-5 mt-1 sm:mt-2 flex items-center justify-end">
                           <a 
                             href={`https://wa.me/5491132554757?text=${encodeURIComponent(`¡Hola! Estoy interesado en el queso ${card.title} (${card.maturationMonths}) que vi en su sitio web. ¿Me dirías precio y disponibilidad?`)}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-white bg-charcoal px-7 py-3.5 rounded-full hover:bg-[#C9A84C] transition-colors duration-300 pointer-events-auto shadow-md"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-white bg-[#25D366] hover:bg-[#20ba5a] active:scale-95 px-6 py-3 sm:py-3.5 rounded-full transition-all duration-300 pointer-events-auto shadow-md hover:shadow-lg"
                             onClick={(e) => e.stopPropagation()}
                           >
-                            Consultar por WhatsApp
+                            <AppIcon name="WhatsApp" size={18} className="text-white flex-shrink-0" />
+                            <span>Consultar por WhatsApp</span>
                           </a>
                         </div>
 
@@ -313,7 +354,7 @@ export default function ProductTimeMachine() {
             </div>
           </div>
 
-          {/* Timeline Navigation Bar */}
+          {/* Timeline Navigation Bar (Desktop & Tablet) */}
           <div className="absolute bottom-20 right-4 md:right-12 top-20 z-40 flex flex-col items-end justify-center py-8 gap-6 hidden sm:flex">
             {cards.map((card, index) => {
               const isActive = index === activeIndex;
@@ -350,53 +391,80 @@ export default function ProductTimeMachine() {
             })}
           </div>
 
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-[0.2em] text-charcoal/40 animate-pulse">
-            Desliza para explorar los quesos
+          {/* Mobile Dots Navigation Bar */}
+          <div className="absolute bottom-4 left-0 right-0 z-40 flex items-center justify-center gap-2 sm:hidden px-4">
+            {cards.map((card, index) => (
+              <button
+                key={card.id}
+                onClick={() => handleTimelineClick(index)}
+                aria-label={`Ir a ${card.title}`}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  index === activeIndex ? "w-6 bg-[#25D366]" : "w-2 bg-charcoal/20"
+                }`}
+              />
+            ))}
+          </div>
+
+          <div className="absolute bottom-8 sm:bottom-6 left-1/2 -translate-x-1/2 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-charcoal/40 animate-pulse text-center w-full px-4">
+            Desliza con el dedo o gira la rueda para explorar los quesos
           </div>
         </>
       ) : (
         <>
           {/* List View */}
-          <div className="mx-auto max-w-5xl px-6 pb-24 pt-24 min-h-screen">
-            <div className="mb-16 text-center">
-              <h2 className="text-4xl font-light uppercase tracking-wide text-charcoal mb-2">Catálogo de Autor</h2>
-              <CheeseFlourish className="w-20 h-6 text-[#C9A84C] mx-auto mb-3" />
-              <p className="text-charcoal/60 font-light">Quesos de oveja madurados en cava • Pasturas de Tandil</p>
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 pb-24 pt-20 sm:pt-24 min-h-screen">
+            <div className="mb-12 sm:mb-16 text-center">
+              <h2 className="text-3xl sm:text-4xl font-light uppercase tracking-wide text-charcoal mb-2">Catálogo de Autor</h2>
+              <CheeseFlourish className="w-16 sm:w-20 h-5 sm:h-6 text-[#C9A84C] mx-auto mb-3" />
+              <p className="text-xs sm:text-sm text-charcoal/60 font-light">Quesos de oveja madurados en cava • Pasturas de Tandil</p>
             </div>
             
             <div className="divide-y divide-charcoal/10 border-t border-b border-charcoal/10">
               {cards.map((card, index) => (
-                <button
+                <div
                   key={card.id}
-                  className="group flex w-full flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 py-6 text-left transition-colors hover:bg-white/50 px-4 rounded-xl -mx-4"
+                  className="group flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-8 py-5 sm:py-6 text-left transition-colors hover:bg-white/50 px-3 sm:px-4 rounded-xl"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
-                  onClick={() => {
-                    setViewMode("stack");
-                    setPosition(index);
-                  }}
                 >
-                  <span className="w-40 shrink-0 text-[10px] font-bold uppercase tracking-[0.15em] text-[#C9A84C]">
-                    {card.maturationMonths}
-                  </span>
-                  <div className="min-w-0 sm:w-64 shrink-0">
-                    <span className="font-light uppercase tracking-wide text-lg text-charcoal block">
-                      {card.title}
+                  <div 
+                    className="flex-1 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-8 cursor-pointer"
+                    onClick={() => {
+                      setViewMode("stack");
+                      setPosition(index);
+                    }}
+                  >
+                    <span className="w-auto sm:w-40 shrink-0 text-[10px] font-bold uppercase tracking-[0.15em] text-[#C9A84C]">
+                      {card.maturationMonths}
                     </span>
-                    <span className="text-[10px] text-charcoal/40 block uppercase tracking-wider">
-                      {card.milkType}
+                    <div className="min-w-0 sm:w-64 shrink-0">
+                      <span className="font-light uppercase tracking-wide text-base sm:text-lg text-charcoal block">
+                        {card.title}
+                      </span>
+                      <span className="text-[10px] text-charcoal/40 block uppercase tracking-wider">
+                        {card.milkType}
+                      </span>
+                    </div>
+                    <span className="min-w-0 flex-1 text-xs sm:text-sm text-charcoal/60 font-light line-clamp-2 sm:line-clamp-1">
+                      {card.subtitle}
                     </span>
                   </div>
-                  <span className="min-w-0 flex-1 text-sm text-charcoal/60 font-light line-clamp-2 sm:line-clamp-1">
-                    {card.subtitle}
-                  </span>
-                  <ChevronRightIcon className="hidden sm:block h-5 w-5 shrink-0 text-charcoal/20 transition-transform group-hover:translate-x-1 group-hover:text-[#C9A84C]" />
-                </button>
+
+                  <a
+                    href={`https://wa.me/5491132554757?text=${encodeURIComponent(`¡Hola! Estoy interesado en el queso ${card.title} (${card.maturationMonths}) que vi en su sitio web. ¿Me dirías precio y disponibilidad?`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="self-start sm:self-center inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-white bg-[#25D366] hover:bg-[#20ba5a] px-4 py-2 rounded-full transition-colors flex-shrink-0 shadow-sm"
+                  >
+                    <AppIcon name="WhatsApp" size={14} className="text-white" />
+                    <span>Consultar</span>
+                  </a>
+                </div>
               ))}
             </div>
           </div>
 
-          {/* Floating preview image */}
+          {/* Floating preview image (Desktop) */}
           {hoveredIndex !== null && (
             <div
               className="pointer-events-none fixed z-50 overflow-hidden shadow-2xl rounded-2xl bg-white p-4 transition-opacity duration-200 hidden md:block"
