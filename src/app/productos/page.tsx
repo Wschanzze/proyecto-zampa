@@ -1,7 +1,7 @@
 'use client';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import CultivarGrid from '@/app/home/components/CultivarGrid';
+import ProductTimeMachine from '@/app/productos/components/ProductTimeMachine';
 import FloatingPill from '@/app/home/components/FloatingPill';
 
 export default function ProductosPage() {
@@ -26,7 +26,7 @@ export default function ProductosPage() {
         </div>
       </header>
 
-      <CultivarGrid />
+      <ProductTimeMachine />
       <Footer />
       <FloatingPill />
     </div>
