@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = [
     '',
-    '/home',
+    '/inicio',
     '/elaboracion',
     '/nuestra-historia',
     '/productos',
@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: currentDate,
-    changeFrequency: route === '' || route === '/home' || route === '/productos' ? 'weekly' : 'monthly',
-    priority: route === '' || route === '/home' ? 1.0 : route === '/elaboracion' || route === '/productos' ? 0.9 : 0.8,
+    changeFrequency: route === '' || route === '/inicio' || route === '/productos' ? 'weekly' : 'monthly',
+    priority: route === '' || route === '/inicio' ? 1.0 : route === '/elaboracion' || route === '/productos' ? 0.9 : 0.8,
   }));
 }

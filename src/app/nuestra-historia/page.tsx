@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import FloatingPill from '@/app/home/components/FloatingPill';
+import FloatingPill from '@/app/inicio/components/FloatingPill';
 import DecoratedTitle from '@/components/ui/DecoratedTitle';
 import NutritionalBenefits from '@/components/NutritionalBenefits';
 

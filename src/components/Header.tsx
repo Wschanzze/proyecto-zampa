@@ -16,10 +16,10 @@ export default function Header() {
   }, []);
 
   const handleLogoClick = () => {
-    if (pathname === '/home') {
+    if (pathname === '/inicio') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      router.push('/home');
+      router.push('/inicio');
     }
   };
 
