@@ -45,8 +45,15 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* SEO Local & Keywords Footer note */}
+        <div className="border-t border-wheat/20 pt-6 text-center">
+          <p className="text-xs text-umber-light/80 font-light leading-relaxed max-w-4xl mx-auto">
+            <strong className="font-semibold text-charcoal">Quesos Zampa Tandil</strong> — Quesería Artesanal y Tambo Ovino Pastoril. Elaboración de queso pecorino de oveja, brie y especialidades pastoriles ovinas en Tandil, Buenos Aires, Argentina.
+          </p>
+        </div>
+
         {/* Fila de firma */}
-        <div className="border-t border-wheat/15 pt-6 flex justify-center items-center">
+        <div className="border-t border-wheat/15 pt-4 flex justify-center items-center">
           <a
             href="https://www.notanother.company/"
             target="_blank"
