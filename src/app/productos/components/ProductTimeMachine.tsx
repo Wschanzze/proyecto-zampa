@@ -52,7 +52,7 @@ const cards: Card[] = [
     tastingNotes: 'Matices complejos, cremosidad envolvente y notas de mantequilla rica.',
     milkType: 'Leche Cruda A2 de Oveja',
     timelineLabel: 'Brie',
-    image: '/assets/Quesos%20Zampa/producto_2.png',
+    image: '/assets/Quesos%20Zampa/productos/producto_brie.png',
     imageAlt: 'Queso Brie de oveja Zampa cortado'
   },
   {

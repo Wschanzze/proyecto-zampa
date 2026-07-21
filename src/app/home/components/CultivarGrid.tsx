@@ -37,7 +37,7 @@ const cultivars: Cultivar[] = [
     region: 'elaboración tradicional de pasta blanda',
     yieldGain: 'De estilo clásico francés y corteza aterciopelada blanca. El Brie de oveja Zampa aprovecha la gran riqueza grasa de la leche frisona, logrando un queso sumamente cremoso y untuoso con matices de sabor más complejos y redondos que la versión vacuna.',
     droughtTolerance: 'Pasta blanda madurada',
-    image: '/assets/Quesos%20Zampa/producto_2.png',
+    image: '/assets/Quesos%20Zampa/productos/producto_brie.png',
     imageAlt: 'Queso Brie de oveja Zampa cortado'
   },
   {
