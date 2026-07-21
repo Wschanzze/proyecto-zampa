@@ -28,7 +28,7 @@ const cultivars: Cultivar[] = [
     region: 'guarda prolongada en cava ovinos',
     yieldGain: 'El gran desafío técnico y orgullo de nuestro tambo. Inspirado en la tradición italiana, es un queso de pasta dura o semidura elaborado con leche cruda y madurado lentamente en cava para desarrollar un sabor robusto, notas herbales y una textura firme y quebradiza.',
     droughtTolerance: '9 a 12 meses en cava',
-    image: '/assets/Quesos%20Zampa/pecorino.jpeg',
+    image: '/assets/Quesos%20Zampa/productos/producto_pecorino.png',
     imageAlt: 'Queso Pecorino Zampa madurado rústico'
   },
   {
@@ -46,7 +46,7 @@ const cultivars: Cultivar[] = [
     region: 'receta tradicional de pasta firme',
     yieldGain: 'Inspirado en la gran tradición española. Un queso de pasta semidura o dura que resalta el dulzor natural y los sutiles matices herbales de nuestras pasturas de Napaleofú. Su textura compacta y sabor limpio lo hacen el compañero ideal de fiambrerías finas.',
     droughtTolerance: 'Maduración prolongada',
-    image: '/assets/Quesos%20Zampa/producto_1.png',
+    image: '/assets/Quesos%20Zampa/productos/producto_machego.png',
     imageAlt: 'Queso Manchego Zampa artesanal'
   },
   {
@@ -64,7 +64,7 @@ const cultivars: Cultivar[] = [
     region: 'ahumado natural con maderas selectas',
     yieldGain: 'Queso de autor sometido a un ahumado natural lento que le otorga una distintiva corteza color caramelo. Este proceso añade notas ahumadas profundas que contrastan deliciosamente con la cremosidad láctica de la leche de oveja, logrando una experiencia gourmet única.',
     droughtTolerance: 'Maduración y ahumado lento',
-    image: '/assets/Quesos%20Zampa/IMG_9824.JPG',
+    image: '/assets/Quesos%20Zampa/productos/producto_ahumado.png',
     imageAlt: 'Queso Ahumado artesanal Zampa'
   }
 ];

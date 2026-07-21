@@ -40,7 +40,7 @@ const cards: Card[] = [
     tastingNotes: 'Sabor robusto, notas herbales de pastura y textura firme quebradiza.',
     milkType: 'Leche Cruda A2 de Oveja',
     timelineLabel: 'Pecorino',
-    image: '/assets/Quesos%20Zampa/pecorino.jpeg',
+    image: '/assets/Quesos%20Zampa/productos/producto_pecorino.png',
     imageAlt: 'Queso Pecorino Zampa madurado rústico'
   },
   {
@@ -64,7 +64,7 @@ const cards: Card[] = [
     tastingNotes: 'Textura compacta, retrogusto limpio y equilibrado dulzor herbal.',
     milkType: 'Leche Cruda A2 de Oveja',
     timelineLabel: 'Manchego',
-    image: '/assets/Quesos%20Zampa/producto_1.png',
+    image: '/assets/Quesos%20Zampa/productos/producto_machego.png',
     imageAlt: 'Queso Manchego Zampa artesanal'
   },
   {
@@ -88,7 +88,7 @@ const cards: Card[] = [
     tastingNotes: 'Aromas ahumados profundos en elegante contraste con la cremosidad láctica.',
     milkType: 'Leche Cruda A2 de Oveja',
     timelineLabel: 'Ahumado',
-    image: '/assets/Quesos%20Zampa/IMG_9824.JPG',
+    image: '/assets/Quesos%20Zampa/productos/producto_ahumado.png',
     imageAlt: 'Queso Ahumado artesanal Zampa'
   }
 ];
