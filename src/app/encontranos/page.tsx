@@ -76,14 +76,7 @@ export default function EncontranosPage() {
         
         <div className="max-w-6xl mx-auto">
 
-          {/* Banner con imagen promocional para el apartado Directorio Oficial */}
-          <div className="relative w-full h-48 sm:h-64 md:h-80 rounded-3xl overflow-hidden mb-12 shadow-lg group">
-            <img 
-              src="/assets/Quesos Zampa/6de54990-a007-4692-8898-b1dda1296784.jpg" 
-              alt="Locales y Fiambrerías Zampa" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-            />
-          </div>
+
 
           {/* Header del apartado */}
           <div
