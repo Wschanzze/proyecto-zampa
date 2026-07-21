@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Catálogo de Quesos de Oveja Tandil | Quesos Zampa',
     description: 'Queso pecorino, queso brie y quesos artesanales de oveja producidos en Tandil.',
-    url: 'https://quesoszampa.com.ar/productos',
+    url: 'https://quesoszampa.com/productos',
   },
 };
 

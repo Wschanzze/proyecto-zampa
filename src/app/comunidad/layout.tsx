@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Comunidad y Valor en Origen en Tandil | Quesos Zampa',
     description: 'Producción artesanal sustentable y desarrollo comunitario en Tandil.',
-    url: 'https://quesoszampa.com.ar/comunidad',
+    url: 'https://quesoszampa.com/comunidad',
   },
 };
 

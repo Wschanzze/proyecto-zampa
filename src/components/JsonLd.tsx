@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function JsonLd() {
-  const baseUrl = 'https://quesoszampa.com.ar';
+  const baseUrl = 'https://quesoszampa.com';
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',

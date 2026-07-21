@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://quesoszampa.com.ar';
+  const baseUrl = 'https://quesoszampa.com';
   const currentDate = new Date().toISOString();
 
   const routes = [

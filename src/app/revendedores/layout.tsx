@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Dónde Comprar Quesos Zampa | Puntos de Venta y Revendedores',
     description: 'Encontrá los locales y restaurantes donde adquirir quesos de oveja Zampa.',
-    url: 'https://quesoszampa.com.ar/revendedores',
+    url: 'https://quesoszampa.com/revendedores',
   },
 };
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Nuestra Historia y Tambo Ovino en Tandil | Quesos Zampa',
     description: 'La historia de la familia Zampa y la pasión por la elaboración de quesos de oveja en Tandil.',
-    url: 'https://quesoszampa.com.ar/nuestra-historia',
+    url: 'https://quesoszampa.com/nuestra-historia',
   },
 };
 

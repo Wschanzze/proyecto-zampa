@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import '../styles/tailwind.css';
 import JsonLd from '@/components/JsonLd';
 
-const baseUrl = 'https://quesoszampa.com.ar';
+const baseUrl = 'https://quesoszampa.com';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -12,10 +12,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: {
-    default: 'Quesos de Oveja en Tandil | Quesería Zampa — Tambo Pastoril',
-    template: '%s | Quesos Zampa Tandil',
-  },
+  title: 'Quesos de Oveja en Tandil | Quesería Zampa — Tambo Pastoril',
   description: 'Elaboración artesanal de quesos de oveja de máxima calidad en Tandil, Buenos Aires. Queso pecorino, brie y variedades de tambo pastoril.',
   keywords: [
     'quesos de oveja tandil zampa',

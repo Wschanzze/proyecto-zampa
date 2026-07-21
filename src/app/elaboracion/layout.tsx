@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Elaboración de Quesos de Oveja en Tandil | Quesos Zampa',
     description: 'Proceso de elaboración artesanal de quesos de oveja en sistema pastoril en Tandil.',
-    url: 'https://quesoszampa.com.ar/elaboracion',
+    url: 'https://quesoszampa.com/elaboracion',
   },
 };
 

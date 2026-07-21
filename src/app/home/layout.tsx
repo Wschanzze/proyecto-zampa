@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Quesos de Oveja en Tandil | Quesería Zampa',
     description: 'Quesos artesanales de oveja elaborados en Tandil, Buenos Aires.',
-    url: 'https://quesoszampa.com.ar/home',
+    url: 'https://quesoszampa.com/home',
   },
 };
 

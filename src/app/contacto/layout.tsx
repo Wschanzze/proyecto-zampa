@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contacto y Ventas Directas Tandil | Quesos Zampa',
     description: 'Comunícate con Quesería Zampa en Tandil para consultas, compras directas y recorridos guiados.',
-    url: 'https://quesoszampa.com.ar/contacto',
+    url: 'https://quesoszampa.com/contacto',
   },
 };
 
