@@ -6,6 +6,7 @@ import FloatingPill from '@/app/home/components/FloatingPill';
 import RecipesPairings from '@/components/RecipesPairings';
 import CtaSection from '@/app/home/components/CtaSection';
 import TamboGallery from './components/TamboGallery';
+import DocumentarySection from '@/components/DocumentarySection';
 
 export default function ElaboracionPage() {
   return (
@@ -29,7 +30,10 @@ export default function ElaboracionPage() {
         </div>
       </header>
 
-      {/* TAMBO GALLERY SECTION (NEW) */}
+      {/* DOCUMENTARY SECTION */}
+      <DocumentarySection />
+
+      {/* TAMBO GALLERY SECTION */}
       <TamboGallery />
 
       {/* RECIPES & PAIRINGS SECTION */}

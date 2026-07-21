@@ -109,26 +109,6 @@ export default function ComunidadPage() {
         </div>
       </section>
 
-      {/* SECCIÓN DOCUMENTAL / VIDEO DE YOUTUBE */}
-      <section className="documentary-section">
-        <div className="documentary-header">
-          <h2 className="text-charcoal font-light uppercase">Conoce Más de Zampa</h2>
-          <p className="text-umber-light text-base leading-relaxed max-w-2xl mx-auto mt-4">
-            Te invitamos a ver el siguiente documental sobre nuestros orígenes, nuestro tambo pastoril 
-            y el testimonio directo de Juan Cruz e Isabel en su día a día.
-          </p>
-        </div>
-        <div className="video-wrapper rounded-lg">
-          <iframe 
-            src="https://www.youtube.com/embed/-Zb6oeexldo" 
-            title="Documental Zampa - Tambo Ovino y Quesería en Tandil" 
-            frameBorder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowFullScreen
-          ></iframe>
-        </div>
-      </section>
-
       <AudienceSection />
 
       {/* GALERÍA CRONOLÓGICA DE TRAYECTORIA */}
