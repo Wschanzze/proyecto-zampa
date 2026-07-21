@@ -1,10 +1,10 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingPill from '@/app/home/components/FloatingPill';
+import Icon from '@/components/ui/AppIcon';
 import AppIcon from '@/components/ui/AppIcon';
-import { MapPinIcon } from '@heroicons/react/24/outline';
 
 interface Location {
   name: string;
@@ -28,8 +28,20 @@ const locations: Location[] = [
 ];
 
 export default function EncontranosPage() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
+      { threshold: 0.1 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="min-h-screen bg-cream font-urbanist">
+    <div className="min-h-screen bg-[#FAF8F5] font-urbanist">
       <Header />
 
       {/* HERO SECTION */}
@@ -49,61 +61,83 @@ export default function EncontranosPage() {
         </div>
       </header>
 
-      {/* LOCATIONS GRID */}
-      <section className="relative w-full max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {locations.map((loc, idx) => (
-            <div 
-              key={idx}
-              className="group bg-white border border-charcoal/5 rounded-2xl p-6 lg:p-8 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-            >
-              <div>
-                <h3 className="text-xl md:text-2xl font-light text-charcoal uppercase tracking-wide mb-4 group-hover:text-[#C9A84C] transition-colors">{loc.name}</h3>
-                
-                {loc.city && loc.address ? (
-                  <div className="flex flex-col gap-3 mb-6">
-                    <div className="flex items-start gap-2 text-charcoal/70">
-                      <MapPinIcon className="w-5 h-5 flex-shrink-0 text-[#C9A84C] mt-0.5" />
-                      <div>
-                        <p className="text-[11px] font-bold tracking-widest uppercase mb-1">{loc.city}</p>
-                        <p className="text-sm font-light leading-relaxed">{loc.address}</p>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="flex flex-col gap-3 mb-6">
-                     <p className="text-xs text-charcoal/50 font-light italic">Tienda Online / Venta Directa</p>
-                  </div>
-                )}
-              </div>
-
-              <a 
-                href={`https://instagram.com/${loc.instagram}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 bg-charcoal/5 hover:bg-charcoal text-charcoal hover:text-white px-4 py-3 rounded-xl transition-colors duration-300 font-semibold text-xs tracking-wider uppercase group-hover:shadow-md"
-              >
-                <AppIcon name="Instagram" size={16} />
-                <span>@{loc.instagram}</span>
-              </a>
-            </div>
-          ))}
-        </div>
+      <section ref={sectionRef} className="pt-24 lg:pt-32 pb-24 lg:pb-32 px-6 lg:px-12 relative overflow-hidden">
         
-        {/* Contact CTA */}
-        <div className="mt-20 lg:mt-28 bg-limestone-soft/40 border border-[#C9A84C]/20 rounded-3xl p-8 lg:p-12 text-center max-w-4xl mx-auto">
-           <h4 className="text-2xl font-light text-charcoal uppercase tracking-wide mb-4">¿Querés vender nuestros quesos?</h4>
-           <p className="text-sm text-charcoal/70 font-light mb-8 max-w-xl mx-auto leading-relaxed">
-             Si tenés un restaurante de autor, una fiambrería boutique o red de distribución y querés sumar los quesos Zampa a tu propuesta, contactanos directamente.
-           </p>
-           <a 
-            href={`https://wa.me/5491132554757?text=${encodeURIComponent('Hola! Me interesa vender quesos Zampa en mi local.')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-[#C9A84C] hover:bg-[#b09240] text-white px-8 py-4 rounded-full transition-colors duration-300 font-bold text-[10px] sm:text-xs tracking-[0.2em] uppercase shadow-lg hover:shadow-xl"
-           >
-             Contactanos
-           </a>
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div
+            className={`mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          >
+            <p className="text-xs font-medium uppercase tracking-widest text-teal mb-3">Dónde Encontrarnos</p>
+            <h2 className="text-4xl lg:text-5xl font-light text-charcoal leading-tight max-w-2xl uppercase tracking-[0.06em]">
+              Puntos de Venta,<br />
+              <em className="font-light italic">Llevamos el origen a tu mesa.</em>
+            </h2>
+            <p className="mt-5 text-umber-light font-light text-lg max-w-xl leading-relaxed">
+              Encontrá los exclusivos locales, salumerías boutique y restaurantes que ofrecen nuestras piezas de autor. Hacé clic para visitar sus perfiles.
+            </p>
+          </div>
+
+          {/* Locations list modeled after Timeline */}
+          <div className="space-y-0">
+            {locations.map((loc, i) => (
+              <div key={i} className="timeline-item border-b border-wheat/25 last:border-b-0">
+                <a
+                  href={`https://instagram.com/${loc.instagram}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-start gap-3 sm:gap-6 py-7 text-left group hover:bg-limestone-soft/60 rounded-xl px-4 -mx-4 transition-colors duration-200"
+                >
+                  
+                  {/* Pin + City / Tag */}
+                  <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 w-32 sm:w-48">
+                    <div className="w-2 h-2 rounded-full bg-teal shrink-0" />
+                    <span className="text-sm sm:text-base font-semibold text-charcoal uppercase tracking-wider">
+                      {loc.city ? loc.city : 'Venta Directa'}
+                    </span>
+                  </div>
+
+                  {/* Badge */}
+                  <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest bg-wheat-muted text-umber border border-wheat/30 self-center flex-shrink-0 uppercase">
+                    <AppIcon name="Instagram" size={12} />
+                    @{loc.instagram}
+                  </span>
+
+                  {/* Title & Address */}
+                  <div className="flex-1 min-w-0 flex flex-col justify-center">
+                    <h3 className="text-lg sm:text-xl font-light text-charcoal group-hover:text-teal transition-colors duration-200 uppercase truncate">
+                      {loc.name}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-umber-light font-light mt-1 leading-relaxed line-clamp-1">
+                      {loc.address ? loc.address : 'Tienda Online / Contacto por Instagram'}
+                    </p>
+                  </div>
+
+                  {/* Arrow Icon */}
+                  <div className="flex-shrink-0 self-center transition-transform duration-300 group-hover:translate-x-1">
+                    <Icon name="ArrowRightIcon" size={20} variant="outline" className="text-teal" />
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
+
+          {/* Contact CTA below the list */}
+          <div className="mt-20 lg:mt-32 pt-16 border-t border-wheat/25 text-center max-w-3xl mx-auto">
+            <h4 className="text-2xl font-light text-charcoal uppercase tracking-wide mb-4">¿Querés sumar nuestros quesos a tu propuesta?</h4>
+            <p className="text-sm text-umber-light font-light mb-8 leading-relaxed">
+              Si tenés un restaurante de autor, fiambrería o almacén gourmet, contactanos para conocer nuestras opciones de distribución.
+            </p>
+            <a 
+              href={`https://wa.me/5491132554757?text=${encodeURIComponent('Hola! Me interesa vender quesos Zampa en mi local.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 h-12 rounded-full bg-charcoal text-white font-bold text-xs hover:bg-teal hover:scale-[1.02] transition-all duration-300 shadow-md tracking-[0.15em] uppercase px-8"
+            >
+              Contactanos por WhatsApp
+            </a>
+          </div>
+
         </div>
       </section>
 
