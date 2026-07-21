@@ -19,9 +19,9 @@ export default function Footer() {
               className="text-umber opacity-75"
             />
             <div className="flex items-center gap-6 text-sm font-medium text-umber-light">
-              <a href="/#timeline" className="hover:text-teal transition-colors">Nuestra Historia</a>
+              <a href="/nuestra-historia" className="hover:text-teal transition-colors">Nuestra Historia</a>
               <a href="/productos" className="hover:text-teal transition-colors">Productos</a>
-              <a href="/#about" className="hover:text-teal transition-colors">Calidad</a>
+              <a href="/elaboracion" className="hover:text-teal transition-colors">Calidad</a>
               <a href="#" className="hover:text-teal transition-colors">Privacidad</a>
               <a href="#" className="hover:text-teal transition-colors">Términos</a>
             </div>

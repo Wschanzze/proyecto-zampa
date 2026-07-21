@@ -5,20 +5,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date().toISOString();
 
   const routes = [
-    '',
-    '/inicio',
-    '/elaboracion',
-    '/nuestra-historia',
-    '/productos',
-    // '/comunidad', (oculto temporalmente)
-    '/contacto',
-    '/encontranos',
+    { path: '', priority: 1.0, changeFreq: 'weekly' as const },
+    { path: '/elaboracion', priority: 0.9, changeFreq: 'monthly' as const },
+    { path: '/nuestra-historia', priority: 0.8, changeFreq: 'monthly' as const },
+    { path: '/productos', priority: 0.9, changeFreq: 'weekly' as const },
+    // { path: '/comunidad', priority: 0.7, changeFreq: 'monthly' as const }, // oculto temporalmente
+    { path: '/contacto', priority: 0.8, changeFreq: 'monthly' as const },
+    { path: '/encontranos', priority: 0.8, changeFreq: 'monthly' as const },
   ];
 
-  return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
+  return routes.map(({ path, priority, changeFreq }) => ({
+    url: `${baseUrl}${path}`,
     lastModified: currentDate,
-    changeFrequency: route === '' || route === '/inicio' || route === '/productos' ? 'weekly' : 'monthly',
-    priority: route === '' || route === '/inicio' ? 1.0 : route === '/elaboracion' || route === '/productos' ? 0.9 : 0.8,
+    changeFrequency: changeFreq,
+    priority,
   }));
 }

@@ -15,10 +15,17 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Redirect legacy /home → /inicio (por si Google tiene cacheada la URL vieja)
       {
-        source: '/',
-        destination: '/home',
-        permanent: false,
+        source: '/home',
+        destination: '/inicio',
+        permanent: true,
+      },
+      // Redirect legacy /home/:path* → /inicio/:path*
+      {
+        source: '/home/:path*',
+        destination: '/inicio/:path*',
+        permanent: true,
       },
     ];
   },
