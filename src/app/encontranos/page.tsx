@@ -64,7 +64,7 @@ export default function EncontranosPage() {
         />
         <div className="absolute inset-0 bg-charcoal/40 backdrop-blur-[2px]"></div>
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white mt-16 md:mt-24">
-          <p className="text-[10px] md:text-xs font-bold tracking-[0.25em] text-[#C9A84C] uppercase mb-4 animate-fade-in">Puntos de Venta</p>
+          <p className="text-[10px] md:text-xs font-bold tracking-[0.25em] text-white uppercase mb-4 animate-fade-in">Puntos de Venta</p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light uppercase tracking-wide mb-6 text-shadow-sm animate-fade-in-up">Descubrí nuestros quesos</h1>
           <p className="text-sm md:text-lg font-light text-white/90 max-w-2xl mx-auto leading-relaxed animate-fade-in-up animation-delay-100">
             Encontrá los exclusivos locales, salumerías boutique y restaurantes que ofrecen nuestras piezas de autor.
