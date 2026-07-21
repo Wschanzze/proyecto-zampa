@@ -78,7 +78,15 @@ export default function EncontranosPage() {
             </p>
           </div>
 
-          {/* Locations list modeled after Timeline */}
+          {/* Table Header Labels for Desktop */}
+          <div className="hidden md:grid grid-cols-12 gap-6 px-4 pb-3 border-b border-wheat/40 text-xs font-bold tracking-widest text-teal uppercase">
+            <div className="col-span-5">Empresa</div>
+            <div className="col-span-3">Instagram</div>
+            <div className="col-span-3">Localidad</div>
+            <div className="col-span-1 text-right"></div>
+          </div>
+
+          {/* Locations list modeled after Timeline with updated column order */}
           <div className="space-y-0">
             {locations.map((loc, i) => (
               <div key={i} className="timeline-item border-b border-wheat/25 last:border-b-0">
@@ -86,35 +94,43 @@ export default function EncontranosPage() {
                   href={`https://instagram.com/${loc.instagram}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-start gap-3 sm:gap-6 py-7 text-left group hover:bg-limestone-soft/60 rounded-xl px-4 -mx-4 transition-colors duration-200"
+                  className="w-full grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 py-6 items-center text-left group hover:bg-limestone-soft/60 rounded-xl px-4 -mx-4 transition-colors duration-200"
                 >
                   
-                  {/* Pin + City / Tag */}
-                  <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 w-32 sm:w-48">
-                    <div className="w-2 h-2 rounded-full bg-teal shrink-0" />
-                    <span className="text-sm sm:text-base font-semibold text-charcoal uppercase tracking-wider">
-                      {loc.city ? loc.city : 'Venta Directa'}
-                    </span>
-                  </div>
-
-                  {/* Badge */}
-                  <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest bg-wheat-muted text-umber border border-wheat/30 self-center flex-shrink-0 uppercase">
-                    <AppIcon name="Instagram" size={12} />
-                    @{loc.instagram}
-                  </span>
-
-                  {/* Title & Address */}
-                  <div className="flex-1 min-w-0 flex flex-col justify-center">
+                  {/* 1. Nombre de la Empresa y Dirección */}
+                  <div className="md:col-span-5 flex flex-col justify-center">
                     <h3 className="text-lg sm:text-xl font-light text-charcoal group-hover:text-teal transition-colors duration-200 uppercase truncate">
                       {loc.name}
                     </h3>
-                    <p className="text-xs sm:text-sm text-umber-light font-light mt-1 leading-relaxed line-clamp-1">
-                      {loc.address ? loc.address : 'Tienda Online / Contacto por Instagram'}
-                    </p>
+                    {loc.address && (
+                      <p className="text-xs sm:text-sm text-umber-light font-light mt-0.5 leading-relaxed truncate">
+                        {loc.address}
+                      </p>
+                    )}
                   </div>
 
-                  {/* Arrow Icon */}
-                  <div className="flex-shrink-0 self-center transition-transform duration-300 group-hover:translate-x-1">
+                  {/* 2. Instagram */}
+                  <div className="md:col-span-3 flex items-center">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium tracking-wide bg-wheat-muted/60 text-umber group-hover:bg-teal group-hover:text-white border border-wheat/30 transition-colors duration-200">
+                      <AppIcon name="Instagram" size={13} />
+                      @{loc.instagram}
+                    </span>
+                  </div>
+
+                  {/* 3. Localidad */}
+                  <div className="md:col-span-3 flex items-center">
+                    {loc.city ? (
+                      <span className="text-xs sm:text-sm font-medium text-charcoal/80 uppercase tracking-wider flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
+                        {loc.city}
+                      </span>
+                    ) : (
+                      <span className="hidden md:inline-block"></span>
+                    )}
+                  </div>
+
+                  {/* 4. Flecha de enlace */}
+                  <div className="md:col-span-1 hidden md:flex justify-end items-center transition-transform duration-300 group-hover:translate-x-1">
                     <Icon name="ArrowRightIcon" size={20} variant="outline" className="text-teal" />
                   </div>
                 </a>
