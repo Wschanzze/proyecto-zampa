@@ -55,48 +55,37 @@ export default function EncontranosPage() {
     <div className="min-h-screen bg-[#FAF8F5] font-urbanist">
       <Header />
 
-      {/* HERO BANNER SECTION */}
-      <header className="relative w-full h-[65vh] min-h-[480px] max-h-[700px] flex items-center justify-center overflow-hidden">
+      {/* HERO SECTION STANDARD */}
+      <header className="products-hero h-[60vh] md:h-[70vh] flex flex-col justify-center relative overflow-hidden">
         <img 
           src="/assets/Quesos Zampa/IMG_9858.JPG" 
-          alt="Puntos de Venta - Quesos Zampa" 
-          className="absolute inset-0 w-full h-full object-cover scale-105 filter brightness-[0.75]" 
+          alt="Dónde encontrarnos - Quesos Zampa" 
+          className="absolute inset-0 w-full h-full object-cover scale-105" 
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-black/30 backdrop-blur-[1px]" />
-        
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white mt-12 md:mt-16 flex flex-col items-center">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-[0.25em] text-[#C9A84C] bg-white/10 backdrop-blur-md border border-[#C9A84C]/30 uppercase mb-6 shadow-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] animate-pulse" />
-            RED DE PUNTOS DE VENTA
-          </span>
-
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light uppercase tracking-[0.08em] mb-6 text-shadow-md leading-tight">
-            Descubrí Nuestros Quesos
-          </h1>
-
-          <p className="text-sm md:text-lg font-light text-white/90 max-w-2xl mx-auto leading-relaxed mb-8">
-            Encontrá la red exclusiva de salumerías boutique, fiambrerías gourmet y restaurantes de autor que ofrecen la calidez y el sabor de nuestras piezas en Argentina.
+        <div className="absolute inset-0 bg-charcoal/40 backdrop-blur-[2px]"></div>
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white mt-16 md:mt-24">
+          <p className="text-[10px] md:text-xs font-bold tracking-[0.25em] text-[#C9A84C] uppercase mb-4 animate-fade-in">Puntos de Venta</p>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light uppercase tracking-wide mb-6 text-shadow-sm animate-fade-in-up">Descubrí nuestros quesos</h1>
+          <p className="text-sm md:text-lg font-light text-white/90 max-w-2xl mx-auto leading-relaxed animate-fade-in-up animation-delay-100">
+            Encontrá los exclusivos locales, salumerías boutique y restaurantes que ofrecen nuestras piezas de autor.
           </p>
-
-          {/* Quick Highlight Pills Bar */}
-          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 pt-4 border-t border-white/15 text-xs font-light text-white/80 uppercase tracking-widest">
-            <div className="flex items-center gap-2">
-              <span className="font-semibold text-[#C9A84C] text-sm">+20</span>
-              <span>Locales Exclusivos</span>
-            </div>
-            <span className="hidden sm:inline text-white/30">•</span>
-            <div className="flex items-center gap-2">
-              <span className="font-semibold text-[#C9A84C] text-sm">CABA, Tandil, BRC</span>
-              <span>& Cobertura Nacional</span>
-            </div>
-          </div>
         </div>
       </header>
 
       <section ref={sectionRef} className="pt-20 lg:pt-28 pb-24 lg:pb-32 px-6 lg:px-12 relative overflow-hidden">
         
         <div className="max-w-6xl mx-auto">
-          {/* Header */}
+
+          {/* Banner con imagen promocional para el apartado Directorio Oficial */}
+          <div className="relative w-full h-48 sm:h-64 md:h-80 rounded-3xl overflow-hidden mb-12 shadow-lg group">
+            <img 
+              src="/assets/Quesos Zampa/6de54990-a007-4692-8898-b1dda1296784.jpg" 
+              alt="Locales y Fiambrerías Zampa" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            />
+          </div>
+
+          {/* Header del apartado */}
           <div
             className={`mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
