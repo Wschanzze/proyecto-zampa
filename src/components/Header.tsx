@@ -57,7 +57,7 @@ export default function Header() {
                 { label: 'NUESTRA HISTORIA', href: '/nuestra-historia' },
                 { label: 'ELABORACIÓN', href: '/elaboracion' },
                 { label: 'COMUNIDAD', href: '/comunidad' },
-                { label: 'REVENDEDORES', href: '/revendedores' },
+                { label: 'DÓNDE ENCONTRARNOS', href: '/encontranos' },
               ].map((item) => (
                 <a
                   key={item.label}
@@ -133,7 +133,7 @@ export default function Header() {
                 { label: 'NUESTRA HISTORIA', href: '/nuestra-historia' },
                 { label: 'ELABORACIÓN', href: '/elaboracion' },
                 { label: 'COMUNIDAD', href: '/comunidad' },
-                { label: 'REVENDEDORES', href: '/revendedores' },
+                { label: 'DÓNDE ENCONTRARNOS', href: '/encontranos' },
               ].map((item) => (
                 <a
                   key={item.label}
