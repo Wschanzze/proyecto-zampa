@@ -151,40 +151,39 @@ export default function EncontranosPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Contact CTA Banner below the list (Styled like JoinFamily) */}
-          <div className="relative w-full overflow-hidden rounded-3xl py-16 md:py-20 px-6 lg:px-12 flex flex-col items-center justify-center text-center mt-20 lg:mt-32 shadow-2xl">
-            <img 
-              src="/assets/Quesos Zampa/6de54990-a007-4692-8898-b1dda1296784.jpg" 
-              alt="Quesos Zampa Venta Mayorista" 
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            {/* Overlays for dark text readability */}
-            <div className="absolute inset-0 bg-black/65 z-10" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent z-10" />
-            
-            {/* Reseller Call to Action Content */}
-            <div className="relative z-20 max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">CANAL COMERCIAL Y MAYORISTA</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white tracking-[0.06em] uppercase leading-tight">
-                ¿QUERÉS SUMAR NUESTROS QUESOS A TU PROPUESTA?
-              </h2>
-              <p className="text-base md:text-lg lg:text-xl font-light text-white/80 leading-relaxed max-w-2xl mx-auto">
-                Si tenés un restaurante de autor, fiambrería o almacén gourmet, contactanos para conocer nuestras opciones de distribución.
-              </p>
-              
-              <a 
-                href={`https://wa.me/5491132554757?text=${encodeURIComponent('Hola! Me interesa vender quesos Zampa en mi local.')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)] tracking-[0.15em] uppercase px-8 mt-4"
-              >
-                <AppIcon name="whatsapp" size={18} className="text-charcoal" />
-                <span>Contactanos por WhatsApp</span>
-              </a>
-            </div>
-          </div>
-
+      {/* Contact CTA Banner (Full Width, Styled like JoinFamily) */}
+      <section className="relative w-full overflow-hidden py-20 lg:py-28 px-6 lg:px-12 flex flex-col items-center justify-center text-center">
+        <img 
+          src="/assets/Quesos Zampa/nuevas/1fbee0f4-70ba-4ef6-851a-3e32056a9edb.jpg" 
+          alt="Quesos Zampa Venta Mayorista" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Overlays for dark text readability */}
+        <div className="absolute inset-0 bg-black/65 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent z-10" />
+        
+        {/* Reseller Call to Action Content */}
+        <div className="relative z-20 max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">CANAL COMERCIAL Y MAYORISTA</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white tracking-[0.06em] uppercase leading-tight">
+            ¿QUERÉS SUMAR NUESTROS QUESOS A TU PROPUESTA?
+          </h2>
+          <p className="text-base md:text-lg lg:text-xl font-light text-white/80 leading-relaxed max-w-2xl mx-auto">
+            Si tenés un restaurante de autor, fiambrería o almacén gourmet, contactanos para conocer nuestras opciones de distribución.
+          </p>
+          
+          <a 
+            href={`https://wa.me/5491132554757?text=${encodeURIComponent('Hola! Me interesa vender quesos Zampa en mi local.')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)] tracking-[0.15em] uppercase px-8 mt-4"
+          >
+            <AppIcon name="whatsapp" size={18} className="text-charcoal" />
+            <span>Contactanos por WhatsApp</span>
+          </a>
         </div>
       </section>
 
