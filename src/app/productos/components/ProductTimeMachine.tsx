@@ -28,7 +28,7 @@ const cards: Card[] = [
     tastingNotes: 'Textura untuosa y fundente con aromas lácticos intensos y sotobosque.',
     milkType: 'Leche Cruda A2 de Oveja',
     timelineLabel: 'Camembert',
-    image: '/assets/Quesos%20Zampa/producto_3.png',
+    image: '/assets/Quesos%20Zampa/productos/producto_Camembert.png',
     imageAlt: 'Queso Camembert de oveja Zampa en plato'
   },
   {

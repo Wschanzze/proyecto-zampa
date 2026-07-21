@@ -19,7 +19,7 @@ const cultivars: Cultivar[] = [
     region: 'elaboración artesanal en Napaleofú',
     yieldGain: 'Considerado la vedette de la casa. Un queso de pasta blanda con corteza enmohecida blanca, elaborado 100% con leche de oveja frisona fresca del día. Ofrece una textura interior untuosa y fundente con aromas lácticos intensos y complejos de nivel gastronómico premium.',
     droughtTolerance: 'Punto óptimo de maduración',
-    image: '/assets/Quesos%20Zampa/producto_3.png',
+    image: '/assets/Quesos%20Zampa/productos/producto_Camembert.png',
     imageAlt: 'Queso Camembert de oveja Zampa en plato'
   },
   {
