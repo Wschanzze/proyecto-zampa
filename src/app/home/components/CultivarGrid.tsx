@@ -147,13 +147,13 @@ export default function CultivarGrid() {
                 </div>
 
                 {/* Center: Image */}
-                <div className="relative aspect-square max-w-xs mx-auto w-full order-1 lg:order-2 group-hover:scale-[1.03] transition-transform duration-700">
+                <div className="relative aspect-[4/3] sm:aspect-square max-w-sm sm:max-w-md mx-auto w-full order-1 lg:order-2 flex items-center justify-center p-2">
                   <AppImage
                     src={cultivar.image}
                     alt={cultivar.imageAlt}
-                    width={500}
-                    height={500}
-                    className="w-full h-full object-contain drop-shadow-2xl"
+                    width={600}
+                    height={600}
+                    className="w-full h-full object-contain drop-shadow-2xl scale-105 group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                 </div>
 
