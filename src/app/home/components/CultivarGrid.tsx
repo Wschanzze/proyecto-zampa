@@ -55,7 +55,7 @@ const cultivars: Cultivar[] = [
     region: 'pasta hilada y semidura',
     yieldGain: 'Variedad de origen mediterráneo adaptada al perfil graso y rico de la leche ovina. Presenta una textura elástica y un sabor moderado que se vuelve más picante y redondo con el tiempo de maduración, ideal para tablas de quesos premium.',
     droughtTolerance: '3 a 6 meses de maduración',
-    image: '/assets/Quesos%20Zampa/tipos%20de%20quesos.jpg',
+    image: '/assets/Quesos%20Zampa/productos/producto_provolone.png',
     imageAlt: 'Cortes de queso Provolone Zampa'
   },
   {

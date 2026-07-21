@@ -76,7 +76,7 @@ const cards: Card[] = [
     tastingNotes: 'Sabor rico y moderado que adquiere picor agradable con el tiempo.',
     milkType: 'Leche Cruda A2 de Oveja',
     timelineLabel: 'Provolone',
-    image: '/assets/Quesos%20Zampa/tipos%20de%20quesos.jpg',
+    image: '/assets/Quesos%20Zampa/productos/producto_provolone.png',
     imageAlt: 'Cortes de queso Provolone Zampa'
   },
   {
