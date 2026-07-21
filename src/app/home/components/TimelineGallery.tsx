@@ -90,7 +90,7 @@ export default function TimelineGallery() {
         <div
           className={`mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           
-          <p className="text-xs font-medium uppercase tracking-widest text-teal mb-3">Nuestra Trayectoria</p>
+          <p className="text-xs font-medium uppercase tracking-widest text-[#6B4226] mb-3">Nuestra Trayectoria</p>
           <h2 className="text-4xl lg:text-5xl font-light text-charcoal leading-tight max-w-2xl uppercase tracking-[0.06em]">
             Un Tambo Ovino Familiar,<br />
             <em className="font-light italic">Pasión de Origen en Cada Queso.</em>
@@ -123,7 +123,7 @@ export default function TimelineGallery() {
 
                 {/* Title */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-lg sm:text-xl font-light text-charcoal group-hover:text-teal transition-colors duration-200 animate-fade-in uppercase">
+                  <h3 className="text-lg sm:text-xl font-light text-charcoal group-hover:text-[#6B4226] transition-colors duration-200 animate-fade-in uppercase">
                     {entry.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-umber-light font-light mt-1 leading-relaxed line-clamp-1">
@@ -145,7 +145,7 @@ export default function TimelineGallery() {
 
                 {/* Chevron */}
                 <div className={`flex-shrink-0 self-center transition-transform duration-300 ${activeIndex === i ? 'rotate-180' : ''}`}>
-                  <Icon name="ChevronDownIcon" size={20} variant="outline" className="text-teal" />
+                  <Icon name="ChevronDownIcon" size={20} variant="outline" className="text-[#6B4226]" />
                 </div>
               </button>
 
@@ -179,11 +179,11 @@ export default function TimelineGallery() {
                   {/* Data panel */}
                   <div className="lg:col-span-3 flex flex-col gap-4">
                     <div className="p-4 bg-cream rounded-2xl border border-wheat/25">
-                      <p className="text-xs font-medium uppercase tracking-widest text-teal mb-2">Datos de Lote</p>
+                      <p className="text-xs font-medium uppercase tracking-widest text-[#6B4226] mb-2">Datos de Lote</p>
                       <p className="text-sm text-umber font-light leading-snug">{entry.yieldNote}</p>
                     </div>
                     <div className="p-4 bg-cream rounded-2xl border border-wheat/25">
-                      <p className="text-xs font-medium uppercase tracking-widest text-teal mb-2">Alcance de Distribución</p>
+                      <p className="text-xs font-medium uppercase tracking-widest text-[#6B4226] mb-2">Alcance de Distribución</p>
                       <p className="text-sm text-umber font-light leading-snug">{entry.regionNote}</p>
                     </div>
                   </div>

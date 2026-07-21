@@ -79,7 +79,7 @@ export default function EncontranosPage() {
           <div
             className={`mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
-            <p className="text-xs font-medium uppercase tracking-widest text-teal mb-3">Dónde Encontrarnos</p>
+            <p className="text-xs font-medium uppercase tracking-widest text-[#6B4226] mb-3">Dónde Encontrarnos</p>
             <h2 className="text-4xl lg:text-5xl font-light text-charcoal leading-tight max-w-2xl uppercase tracking-[0.06em]">
               Puntos de Venta,<br />
               <em className="font-light italic">Llevamos el origen a tu mesa.</em>
@@ -90,7 +90,7 @@ export default function EncontranosPage() {
           </div>
 
           {/* Table Header Labels for Desktop */}
-          <div className="hidden md:grid grid-cols-12 gap-6 px-4 pb-3 border-b border-wheat/40 text-xs font-bold tracking-widest text-teal uppercase">
+          <div className="hidden md:grid grid-cols-12 gap-6 px-4 pb-3 border-b border-wheat/40 text-xs font-bold tracking-widest text-[#6B4226] uppercase">
             <div className="col-span-5">Empresa</div>
             <div className="col-span-3">Instagram</div>
             <div className="col-span-3">Localidad</div>
@@ -110,7 +110,7 @@ export default function EncontranosPage() {
                   
                   {/* 1. Nombre de la Empresa y Dirección */}
                   <div className="md:col-span-5 flex flex-col justify-center">
-                    <h3 className="text-lg sm:text-xl font-light text-charcoal group-hover:text-teal transition-colors duration-200 uppercase truncate">
+                    <h3 className="text-lg sm:text-xl font-light text-charcoal group-hover:text-[#6B4226] transition-colors duration-200 uppercase truncate">
                       {loc.name}
                     </h3>
                     {loc.address && (
@@ -122,7 +122,7 @@ export default function EncontranosPage() {
 
                   {/* 2. Instagram */}
                   <div className="md:col-span-3 flex items-center">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium tracking-wide bg-wheat-muted/60 text-umber group-hover:bg-teal group-hover:text-white border border-wheat/30 transition-colors duration-200">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium tracking-wide bg-[#6B4226] text-white border border-[#6B4226] group-hover:bg-[#F2EDE0] group-hover:text-[#6B4226] group-hover:border-[#6B4226]/30 transition-all duration-300 shadow-sm">
                       <AppIcon name="Instagram" size={13} />
                       @{loc.instagram}
                     </span>
@@ -132,7 +132,7 @@ export default function EncontranosPage() {
                   <div className="md:col-span-3 flex items-center">
                     {loc.city ? (
                       <span className="text-xs sm:text-sm font-medium text-charcoal/80 uppercase tracking-wider flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-teal shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#6B4226] shrink-0" />
                         {loc.city}
                       </span>
                     ) : (
@@ -142,7 +142,7 @@ export default function EncontranosPage() {
 
                   {/* 4. Flecha de enlace */}
                   <div className="md:col-span-1 hidden md:flex justify-end items-center transition-transform duration-300 group-hover:translate-x-1">
-                    <Icon name="ArrowRightIcon" size={20} variant="outline" className="text-teal" />
+                    <Icon name="ArrowRightIcon" size={20} variant="outline" className="text-[#6B4226]" />
                   </div>
                 </a>
               </div>
@@ -159,7 +159,7 @@ export default function EncontranosPage() {
               href={`https://wa.me/5491132554757?text=${encodeURIComponent('Hola! Me interesa vender quesos Zampa en mi local.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 h-12 rounded-full bg-charcoal text-white font-bold text-xs hover:bg-teal hover:scale-[1.02] transition-all duration-300 shadow-md tracking-[0.15em] uppercase px-8"
+              className="inline-flex items-center justify-center gap-3 h-12 rounded-full bg-charcoal text-white font-bold text-xs hover:bg-[#6B4226] hover:scale-[1.02] transition-all duration-300 shadow-md tracking-[0.15em] uppercase px-8"
             >
               Contactanos por WhatsApp
             </a>

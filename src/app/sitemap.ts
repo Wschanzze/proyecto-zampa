@@ -10,9 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/elaboracion',
     '/nuestra-historia',
     '/productos',
-    '/comunidad',
+    // '/comunidad', (oculto temporalmente)
     '/contacto',
-    '/revendedores',
+    '/encontranos',
   ];
 
   return routes.map((route) => ({

@@ -56,13 +56,13 @@ export default function Header() {
                 { label: 'PRODUCTOS', href: '/productos' },
                 { label: 'NUESTRA HISTORIA', href: '/nuestra-historia' },
                 { label: 'ELABORACIÓN', href: '/elaboracion' },
-                { label: 'COMUNIDAD', href: '/comunidad' },
+                /* { label: 'COMUNIDAD', href: '/comunidad' }, */
                 { label: 'DÓNDE ENCONTRARNOS', href: '/encontranos' },
               ].map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-xs font-bold transition-colors duration-300 tracking-widest text-umber-dark hover:text-teal whitespace-nowrap"
+                  className="text-xs font-bold transition-colors duration-300 tracking-widest text-umber-dark hover:text-[#6B4226] whitespace-nowrap"
                 >
                   {item.label}
                 </a>
@@ -132,14 +132,14 @@ export default function Header() {
                 { label: 'PRODUCTOS', href: '/productos' },
                 { label: 'NUESTRA HISTORIA', href: '/nuestra-historia' },
                 { label: 'ELABORACIÓN', href: '/elaboracion' },
-                { label: 'COMUNIDAD', href: '/comunidad' },
+                /* { label: 'COMUNIDAD', href: '/comunidad' }, */
                 { label: 'DÓNDE ENCONTRARNOS', href: '/encontranos' },
               ].map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="text-sm font-bold tracking-widest text-umber-dark hover:text-teal transition-colors"
+                  className="text-sm font-bold tracking-widest text-umber-dark hover:text-[#6B4226] transition-colors"
                 >
                   {item.label}
                 </a>
