@@ -69,6 +69,7 @@ export default function TamboGallery() {
               src={galleryImages[0].src}
               alt={galleryImages[0].alt}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
             />
             <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
@@ -83,6 +84,7 @@ export default function TamboGallery() {
                 src={galleryImages[1].src}
                 alt={galleryImages[1].alt}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
              />
              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
@@ -97,6 +99,7 @@ export default function TamboGallery() {
               src={galleryImages[2].src}
               alt={galleryImages[2].alt}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
             />
             <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
@@ -111,6 +114,7 @@ export default function TamboGallery() {
               src={galleryImages[3].src}
               alt={galleryImages[3].alt}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
             />
             <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
@@ -125,6 +129,7 @@ export default function TamboGallery() {
               src={galleryImages[4].src}
               alt={galleryImages[4].alt}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
             />
             <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
@@ -139,6 +144,7 @@ export default function TamboGallery() {
               src={galleryImages[5].src}
               alt={galleryImages[5].alt}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100"
             />
             <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>

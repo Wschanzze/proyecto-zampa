@@ -7,6 +7,7 @@ import RecipesPairings from '@/components/RecipesPairings';
 import CtaSection from '@/app/home/components/CtaSection';
 import TamboGallery from './components/TamboGallery';
 import DocumentarySection from '@/components/DocumentarySection';
+import AppImage from '@/components/ui/AppImage';
 
 export default function ElaboracionPage() {
   return (
@@ -15,10 +16,13 @@ export default function ElaboracionPage() {
 
       {/* HERO SECTION */}
       <header className="products-hero">
-        <img 
+        <AppImage 
           src="/assets/Quesos Zampa/IMG_9816.JPG" 
           alt="Elaboración - Quesería Zampa" 
-          className="products-hero-bg" 
+          fill
+          priority
+          sizes="100vw"
+          className="products-hero-bg object-cover" 
         />
         <div className="products-hero-overlay"></div>
         <div className="products-hero-content">
