@@ -38,18 +38,6 @@ export default function JsonLd() {
     ],
   };
 
-  const productPecorinoSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: 'Queso Pecorino de Oveja Zampa',
-    image: `${baseUrl}/assets/Quesos%20Zampa/pecorino.jpeg`,
-    description: 'Auténtico queso pecorino elaborado con 100% leche pura de oveja de sistema pastoril en Tandil. Maduración artesanal controlada.',
-    brand: {
-      '@type': 'Brand',
-      name: 'Quesos Zampa',
-    },
-  };
-
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -86,10 +74,6 @@ export default function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productPecorinoSchema) }}
       />
       <script
         type="application/ld+json"
