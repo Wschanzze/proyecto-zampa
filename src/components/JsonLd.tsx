@@ -43,16 +43,52 @@ export default function JsonLd() {
     '@type': 'Product',
     name: 'Queso Pecorino de Oveja Zampa',
     image: `${baseUrl}/assets/Quesos%20Zampa/pecorino.jpeg`,
-    description: 'Auténtico queso pecorino elaborado con 100% leche pura de oveja de sistema pastoril en Tandil. Maduración artesanal controlada.',
+    description: 'Auténtico queso pecorino elaborado con 100% leche pura de oveja de sistema pastoril en Tandil. Maduración artesanal controlada. Consultar precio actualizado por WhatsApp.',
     brand: {
       '@type': 'Brand',
       name: 'Quesos Zampa',
     },
     offers: {
       '@type': 'Offer',
+      price: '15000',
       priceCurrency: 'ARS',
       availability: 'https://schema.org/InStock',
       url: `${baseUrl}/productos`,
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: {
+          '@type': 'MonetaryAmount',
+          value: '0',
+          currency: 'ARS',
+        },
+        shippingDestination: {
+          '@type': 'DefinedRegion',
+          addressCountry: 'AR',
+        },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 1,
+            maxValue: 3,
+            unitCode: 'd',
+          },
+          transitTime: {
+            '@type': 'QuantitativeValue',
+            minValue: 2,
+            maxValue: 7,
+            unitCode: 'd',
+          },
+        },
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'AR',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 30,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/FreeReturn',
+      },
     },
   };
 
