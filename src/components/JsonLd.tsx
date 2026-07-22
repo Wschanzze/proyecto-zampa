@@ -17,8 +17,10 @@ export default function JsonLd() {
     servesCuisine: 'Quesos artesanales de oveja',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Ruta Nacional 226',
       addressLocality: 'Tandil',
       addressRegion: 'Buenos Aires',
+      postalCode: '7000',
       addressCountry: 'AR',
     },
     geo: {
