@@ -66,8 +66,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/zampaico.ico', type: 'image/x-icon' }
+      { url: '/zampaico.ico', type: 'image/x-icon' },
+      { url: '/favicon.svg', type: 'image/svg+xml' }
     ],
+    shortcut: '/zampaico.ico',
+    apple: '/favicon.svg',
   },
 };
 
