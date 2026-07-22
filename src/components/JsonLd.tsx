@@ -13,6 +13,8 @@ export default function JsonLd() {
     logo: `${baseUrl}/assets/Quesos%20Zampa/logos/PNG/Zampa_Logotipos-02.png`,
     image: `${baseUrl}/assets/Quesos%20Zampa/IMG_9816.JPG`,
     description: 'Quesería artesanal y tambo ovino pastoril en Tandil, Buenos Aires, Argentina. Especialistas en queso pecorino, brie de oveja y productos artesanales ovinos.',
+    telephone: '+5491132554757',
+    servesCuisine: 'Quesos artesanales de oveja',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Tandil',
