@@ -12,7 +12,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: 'Quesos Zampa Tandil | Quesos de oveja — Tambo Pastoril',
+  title: 'Quesos Zampa | Quesos de Oveja en Tandil',
   description: 'Elaboración artesanal de quesos de oveja de máxima calidad en Tandil, Buenos Aires. Queso pecorino, brie y variedades de tambo pastoril.',
   keywords: [
     'quesos de oveja tandil zampa',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Quesos Zampa Tandil | Quesos de oveja',
+    title: 'Quesos Zampa | Quesos de Oveja en Tandil',
     description: 'Elaboración artesanal de quesos de oveja en Tandil. Sabores nobles de tambo pastoril.',
     url: baseUrl,
     siteName: 'Zampa Tandil',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Quesos Zampa Tandil | Quesos de oveja',
+    title: 'Quesos Zampa | Quesos de Oveja en Tandil',
     description: 'Quesería artesanal y tambo ovino pastoril en Tandil, Buenos Aires.',
     images: ['/assets/Quesos%20Zampa/IMG_9816.JPG'],
   },
