@@ -15,16 +15,28 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Redirect legacy /home → /inicio (por si Google tiene cacheada la URL vieja)
+      // Redirect legacy /home → / (por si Google tiene cacheada la URL vieja)
       {
         source: '/home',
-        destination: '/inicio',
+        destination: '/',
         permanent: true,
       },
-      // Redirect legacy /home/:path* → /inicio/:path*
+      // Redirect legacy /home/:path* → /:path*
       {
         source: '/home/:path*',
-        destination: '/inicio/:path*',
+        destination: '/:path*',
+        permanent: true,
+      },
+      // Redirect legacy /inicio → /
+      {
+        source: '/inicio',
+        destination: '/',
+        permanent: true,
+      },
+      // Redirect legacy /inicio/:path* → /:path*
+      {
+        source: '/inicio/:path*',
+        destination: '/:path*',
         permanent: true,
       },
     ];

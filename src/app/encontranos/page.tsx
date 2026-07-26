@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import FloatingPill from '@/app/inicio/components/FloatingPill';
+import FloatingPill from '@/components/home/FloatingPill';
 import Icon from '@/components/ui/AppIcon';
 import AppIcon from '@/components/ui/AppIcon';
 

@@ -1,9 +1,9 @@
 'use client';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import CultivarGrid from '@/app/inicio/components/CultivarGrid';
+import CultivarGrid from '@/components/home/CultivarGrid';
 // import ProductTimeMachine from '@/app/productos/components/ProductTimeMachine';
-import FloatingPill from '@/app/inicio/components/FloatingPill';
+import FloatingPill from '@/components/home/FloatingPill';
 
 export default function ProductosPage() {
   return (
