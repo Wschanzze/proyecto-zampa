@@ -37,4 +37,5 @@ turbo/
 # Environment files (keep .env.local and .env.example)
 .env
 .env.local
-.env.*.local
+.env.*.local 
+Panel de quesos/ 

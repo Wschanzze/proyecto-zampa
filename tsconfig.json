@@ -40,6 +40,7 @@
   ],
   "exclude": [
     "node_modules",
-    "apple-time-machine-rolodex-3-d-card-stack-with-timeline"
+    "apple-time-machine-rolodex-3-d-card-stack-with-timeline",
+    "Panel de quesos"
   ]
 }
