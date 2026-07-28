@@ -203,7 +203,7 @@ function Rosemary({
 }
 
 /* ─────────────────────────────────────
-   CLICK INVITATION BADGE
+   CLICK INVITATION BADGE - UBICADO DENTRO DE LA TARJETA
    ───────────────────────────────────── */
 function ClickBadge() {
   return (
@@ -211,23 +211,19 @@ function ClickBadge() {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.4, duration: 0.5 }}
-      className="absolute -top-3 -right-2 z-10 flex items-center gap-1.5 rounded-full px-3.5 py-1.5 shadow-lg"
-      style={{
-        background: T.cardBack,
-        border: `1px solid ${T.gold}`,
-      }}
+      className="absolute top-3.5 right-3.5 z-10 flex items-center gap-1.5 rounded-full px-3 py-1.5 shadow-lg bg-stone-900 border border-[#C9A84C]"
     >
       <motion.span
         animate={{ rotate: [0, 15, -15, 0] }}
         transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut', repeatDelay: 1.5 }}
-        style={{ display: 'inline-block', fontSize: '0.7rem', color: T.gold }}
+        style={{ display: 'inline-block', fontSize: '0.65rem', color: T.gold }}
         aria-hidden
       >
         ✦
       </motion.span>
       <span
         className="text-white uppercase tracking-widest font-semibold"
-        style={{ fontFamily: 'var(--font-cormorant), serif', fontSize: '0.68rem', letterSpacing: '0.18em' }}
+        style={{ fontFamily: 'var(--font-cormorant), serif', fontSize: '0.62rem', letterSpacing: '0.18em' }}
       >
         Receta Zampa
       </span>
@@ -236,7 +232,7 @@ function ClickBadge() {
 }
 
 /* ─────────────────────────────────────
-   PREMIUM FLIP CARD (3D) - IMÁGENES MÁS GRANDES
+   PREMIUM FLIP CARD (3D) - ANIMACIÓN MÁS SUTIL
    ───────────────────────────────────── */
 function FlipCard({
   recipeKey,
@@ -244,9 +240,9 @@ function FlipCard({
   alt,
   imgSize = 260,
   delay = 0,
-  duration = 4.5,
-  rotateFrom = -2,
-  rotateTo = 2,
+  duration = 5,
+  rotateFrom = -1,
+  rotateTo = 1,
 }: {
   recipeKey: string;
   src: string;
@@ -271,16 +267,17 @@ function FlipCard({
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 24, scale: 0.94 }}
+      initial={{ opacity: 0, y: 20, scale: 0.96 }}
       animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
       transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay }}
       className="relative w-full h-full"
       style={{ perspective: 1200 }}
     >
+      {/* Movimiento flotante más sutil (y reducido a 3px de amplitud, rotación muy suave) */}
       <motion.div
         animate={
           !flipped
-            ? { y: [0, -8, 0], rotate: [rotateFrom, rotateTo, rotateFrom] }
+            ? { y: [0, -3, 0], rotate: [rotateFrom, rotateTo, rotateFrom] }
             : { y: 0, rotate: 0 }
         }
         transition={{ duration, repeat: Infinity, ease: 'easeInOut', delay }}
@@ -293,9 +290,9 @@ function FlipCard({
           className="relative w-full h-full"
           style={{ transformStyle: 'preserve-3d' }}
         >
-          {/* ── FRONT SIDE (CON FOTO AGRANDADA) ── */}
+          {/* ── FRONT SIDE (QUITADO EL OVERFLOW-HIDDEN PARA NO CORTAR COMPONENTES) ── */}
           <div
-            className="absolute inset-0 flex flex-col items-center justify-between cursor-pointer group rounded-2xl p-4 bg-white/60 border border-[#EBE4D5] shadow-md hover:shadow-xl transition-all overflow-hidden"
+            className="absolute inset-0 flex flex-col items-center justify-between cursor-pointer group rounded-2xl p-4 bg-white/60 border border-[#EBE4D5] shadow-md hover:shadow-xl transition-all"
             style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
             onClick={() => setFlipped(true)}
             role="button"
@@ -307,7 +304,7 @@ function FlipCard({
 
             {/* Product Image Enlarged */}
             <motion.div
-              whileHover={{ scale: 1.10 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
               className="relative flex-1 flex items-center justify-center w-full pt-3 pb-1"
             >
@@ -316,7 +313,7 @@ function FlipCard({
                 alt={alt}
                 width={imgSize}
                 height={imgSize}
-                className="object-contain drop-shadow-xl max-h-[250px] w-auto"
+                className="object-contain drop-shadow-xl max-h-[240px] w-auto"
               />
             </motion.div>
 
@@ -852,9 +849,9 @@ export default function CheeseBoard() {
             subtitle={"Vedette de la Casa — Pasta blanda\n100% Leche Cruda A2 de Oveja Frisona"}
             delay={0.05}
             duration={4.5}
-            rotateFrom={-2}
-            rotateTo={2}
-            rosemaryPos="-bottom-2 -left-4"
+            rotateFrom={-0.6}
+            rotateTo={0.6}
+            rosemaryPos="-bottom-3 -left-3"
             rosemaryRotate={30}
           />
 
@@ -869,9 +866,9 @@ export default function CheeseBoard() {
             labelSide="right"
             delay={0.15}
             duration={5}
-            rotateFrom={1}
-            rotateTo={-1}
-            rosemaryPos="-top-3 -right-3"
+            rotateFrom={0.4}
+            rotateTo={-0.4}
+            rosemaryPos="-bottom-3 -right-3"
             rosemaryRotate={-20}
           />
 
@@ -885,9 +882,9 @@ export default function CheeseBoard() {
             subtitle={"Estilo Francés de Autor\nExtrema cremosidad y manteca de campo"}
             delay={0.1}
             duration={4.8}
-            rotateFrom={-2}
-            rotateTo={2}
-            rosemaryPos="-bottom-2 right-4"
+            rotateFrom={-0.5}
+            rotateTo={0.5}
+            rosemaryPos="-bottom-3 -left-3"
             rosemaryRotate={15}
           />
 
@@ -902,9 +899,9 @@ export default function CheeseBoard() {
             labelSide="right"
             delay={0.2}
             duration={4.6}
-            rotateFrom={-1}
-            rotateTo={2}
-            rosemaryPos="-top-4 -left-2"
+            rotateFrom={-0.4}
+            rotateTo={0.6}
+            rosemaryPos="-bottom-3 -right-3"
             rosemaryRotate={-12}
           />
 
@@ -918,9 +915,9 @@ export default function CheeseBoard() {
             subtitle={"Pasta Hilada Ovina — Textura elástica\ny rico sabor mediterráneo"}
             delay={0.12}
             duration={4.7}
-            rotateFrom={-2}
-            rotateTo={1}
-            rosemaryPos="-bottom-3 -right-2"
+            rotateFrom={-0.5}
+            rotateTo={0.4}
+            rosemaryPos="-bottom-3 -left-3"
             rosemaryRotate={-18}
           />
 
@@ -935,9 +932,9 @@ export default function CheeseBoard() {
             labelSide="right"
             delay={0.22}
             duration={5.1}
-            rotateFrom={1}
-            rotateTo={-2}
-            rosemaryPos="-top-2 right-2"
+            rotateFrom={0.4}
+            rotateTo={-0.5}
+            rosemaryPos="-bottom-3 -right-3"
             rosemaryRotate={22}
           />
 
