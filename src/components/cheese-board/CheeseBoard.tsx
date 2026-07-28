@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -236,13 +236,13 @@ function ClickBadge() {
 }
 
 /* ─────────────────────────────────────
-   PREMIUM FLIP CARD (3D) - AMPLIADA Y MÁS LEGIBLE
+   PREMIUM FLIP CARD (3D) - IMÁGENES MÁS GRANDES
    ───────────────────────────────────── */
 function FlipCard({
   recipeKey,
   src,
   alt,
-  imgSize = 220,
+  imgSize = 260,
   delay = 0,
   duration = 4.5,
   rotateFrom = -2,
@@ -293,9 +293,9 @@ function FlipCard({
           className="relative w-full h-full"
           style={{ transformStyle: 'preserve-3d' }}
         >
-          {/* ── FRONT SIDE ── */}
+          {/* ── FRONT SIDE (CON FOTO AGRANDADA) ── */}
           <div
-            className="absolute inset-0 flex flex-col items-center justify-between cursor-pointer group rounded-2xl p-5 bg-white/50 border border-[#EBE4D5] shadow-sm hover:shadow-md transition-all"
+            className="absolute inset-0 flex flex-col items-center justify-between cursor-pointer group rounded-2xl p-4 bg-white/60 border border-[#EBE4D5] shadow-md hover:shadow-xl transition-all overflow-hidden"
             style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
             onClick={() => setFlipped(true)}
             role="button"
@@ -305,33 +305,33 @@ function FlipCard({
           >
             <ClickBadge />
 
-            {/* Product Image */}
+            {/* Product Image Enlarged */}
             <motion.div
-              whileHover={{ scale: 1.08 }}
+              whileHover={{ scale: 1.10 }}
               transition={{ duration: 0.3 }}
-              className="relative flex items-center justify-center my-auto pt-2"
+              className="relative flex-1 flex items-center justify-center w-full pt-3 pb-1"
             >
               <Image
                 src={src}
                 alt={alt}
                 width={imgSize}
                 height={imgSize}
-                className="object-contain drop-shadow-lg"
+                className="object-contain drop-shadow-xl max-h-[250px] w-auto"
               />
             </motion.div>
 
             {/* Click hint */}
-            <div className="pt-2 flex justify-center">
+            <div className="pt-1 pb-1 flex justify-center shrink-0">
               <motion.div
                 animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
-                className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3ECE0]"
+                className="flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F3ECE0]"
               >
                 <span
                   className="uppercase tracking-widest font-semibold text-[#5A4F41]"
                   style={{
                     fontFamily: 'var(--font-cormorant), serif',
-                    fontSize: '0.7rem',
+                    fontSize: '0.72rem',
                     letterSpacing: '0.2em',
                   }}
                 >
@@ -525,7 +525,7 @@ function ItemLabel({
           className="font-bold uppercase whitespace-pre-line leading-tight tracking-widest"
           style={{
             fontFamily: 'var(--font-cormorant), serif',
-            fontSize: 'clamp(0.85rem, 2vw, 1.05rem)',
+            fontSize: 'clamp(0.9rem, 2.2vw, 1.1rem)',
             color: T.ink,
           }}
         >
@@ -536,7 +536,7 @@ function ItemLabel({
             className="italic leading-snug whitespace-pre-line"
             style={{
               fontFamily: 'var(--font-cormorant), serif',
-              fontSize: 'clamp(0.9rem, 2vw, 1.02rem)',
+              fontSize: 'clamp(0.92rem, 2.1vw, 1.05rem)',
               color: T.muted,
             }}
           >
@@ -555,7 +555,7 @@ function BoardItem({
   recipeKey,
   src,
   alt,
-  imgSize,
+  imgSize = 260,
   title,
   subtitle,
   labelSide = 'left',
@@ -582,7 +582,7 @@ function BoardItem({
 }) {
   return (
     <div className="relative flex flex-col items-center">
-      <div className="relative w-full" style={{ height: 360 }}>
+      <div className="relative w-full" style={{ height: 390 }}>
         <FlipCard
           recipeKey={recipeKey}
           src={src}
@@ -598,7 +598,7 @@ function BoardItem({
             className={rosemaryPos}
             rotate={rosemaryRotate ?? 0}
             delay={delay + 0.3}
-            size={80}
+            size={85}
           />
         )}
       </div>
@@ -637,7 +637,7 @@ function SectionDivider({ label }: { label: string }) {
         className="uppercase tracking-widest shrink-0 font-bold"
         style={{
           fontFamily: 'var(--font-cormorant), serif',
-          fontSize: '0.8rem',
+          fontSize: '0.85rem',
           letterSpacing: '0.28em',
           color: T.gold,
         }}
@@ -656,16 +656,44 @@ function SectionDivider({ label }: { label: string }) {
 }
 
 /* ─────────────────────────────────────
-   MAIN CHEESE BOARD COMPONENT
+   MAIN CHEESE BOARD COMPONENT (CON MODAL KIT INSTAGRAM & QR)
    ───────────────────────────────────── */
 export default function CheeseBoard() {
+  const [showQrModal, setShowQrModal] = useState(false);
+  const [copiedToast, setCopiedToast] = useState(false);
+
+  const shareUrl = 'https://quesoszampa.com/tabla-de-quesos';
+  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(shareUrl)}`;
+
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(shareUrl);
+    setCopiedToast(true);
+    setTimeout(() => setCopiedToast(false), 3000);
+  };
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Tabla de Quesos Zampa',
+          text: 'Descubrí la experiencia interactiva y recetas de la Tabla de Quesos de Oveja Zampa.',
+          url: shareUrl,
+        });
+      } catch (err) {
+        handleCopyLink();
+      }
+    } else {
+      handleCopyLink();
+    }
+  };
+
   return (
     <main
-      className="min-h-screen w-full flex flex-col items-center overflow-x-hidden"
+      className="min-h-screen w-full flex flex-col items-center overflow-x-hidden relative"
       style={{ background: T.linen }}
     >
       {/* ══ HEADER DISCRETO & NAVBAR DE EVENTOS ══ */}
-      <nav className="w-full border-b border-[#E7DFCE] bg-[#F4EFE6]/80 backdrop-blur-md sticky top-0 z-40 px-6 py-3 flex items-center justify-between">
+      <nav className="w-full border-b border-[#E7DFCE] bg-[#F4EFE6]/90 backdrop-blur-md sticky top-0 z-40 px-6 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/IMG_1960(1).png"
@@ -684,18 +712,26 @@ export default function CheeseBoard() {
           </div>
         </Link>
 
-        <div className="flex items-center gap-3">
-          <Link
-            href="/productos"
-            className="hidden sm:inline-flex items-center px-4 py-1.5 rounded-full text-xs font-serif tracking-widest border border-[#C9A84C] text-[#2A2421] hover:bg-[#C9A84C] hover:text-white transition-colors"
+        <div className="flex items-center gap-2 sm:gap-3">
+          <button
+            onClick={() => setShowQrModal(true)}
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-serif tracking-widest border border-[#C9A84C] text-[#2A2421] hover:bg-[#C9A84C] hover:text-white transition-colors bg-white/50"
           >
-            VER PRODUCTOS
-          </Link>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span className="hidden sm:inline">KIT INSTAGRAM & QR</span>
+            <span className="sm:hidden">QR & SHARE</span>
+          </button>
+
           <Link
             href="/contacto"
             className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-serif tracking-widest bg-[#2A2421] text-[#F8F5EE] hover:bg-[#C9A84C] transition-colors"
           >
-            CONTACTO EVENTOS
+            EVENTOS
           </Link>
         </div>
       </nav>
@@ -703,7 +739,7 @@ export default function CheeseBoard() {
       {/* ══ HERO HEADER ══ */}
       <header className="w-full max-w-5xl px-6 md:px-12 pt-12 pb-8 flex flex-col items-center text-center">
         <Reveal delay={0}>
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFE9DB] border border-[#DDD3BF] mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE9DB] border border-[#DDD3BF] mb-3">
             <span className="w-2 h-2 rounded-full bg-[#C9A84C] animate-pulse" />
             <span
               className="uppercase tracking-widest text-xs text-[#5C5245] font-semibold"
@@ -756,7 +792,7 @@ export default function CheeseBoard() {
         </Reveal>
 
         <Reveal delay={0.55} direction="none">
-          <div className="mt-6 flex flex-col items-center gap-2">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <motion.div
               animate={{ y: [0, -4, 0] }}
               transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
@@ -789,13 +825,20 @@ export default function CheeseBoard() {
                 aria-hidden
               />
             </motion.div>
+
+            <button
+              onClick={() => setShowQrModal(true)}
+              className="flex items-center gap-2 px-5 py-3 rounded-full bg-[#C9A84C] text-[#1E1915] font-serif uppercase tracking-widest font-bold text-xs shadow-md hover:bg-[#E5CD82] transition-colors"
+            >
+              <span>📱 QR PARA EVENTOS & INSTAGRAM</span>
+            </button>
           </div>
         </Reveal>
       </header>
 
       {/* ══ BOARD GRID ══ */}
       <section className="w-full max-w-5xl px-6 md:px-12 pb-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
 
           <SectionDivider label="Nuestros Quesos de Oveja Zampa" />
 
@@ -804,7 +847,7 @@ export default function CheeseBoard() {
             recipeKey="camembert-zampa"
             src="/assets/Quesos Zampa/productos/producto_Camembert.png"
             alt="Camembert de Oveja Zampa"
-            imgSize={220}
+            imgSize={260}
             title={"Camembert\nde Oveja Zampa"}
             subtitle={"Vedette de la Casa — Pasta blanda\n100% Leche Cruda A2 de Oveja Frisona"}
             delay={0.05}
@@ -820,7 +863,7 @@ export default function CheeseBoard() {
             recipeKey="pecorino-zampa"
             src="/assets/Quesos Zampa/productos/producto_pecorino.png"
             alt="Queso Pecorino Zampa"
-            imgSize={210}
+            imgSize={250}
             title={"Queso Pecorino\nZampa"}
             subtitle={"Orgullo en Cava — Pasta dura\nMadurado de 9 a 12 Meses en Cava"}
             labelSide="right"
@@ -837,7 +880,7 @@ export default function CheeseBoard() {
             recipeKey="brie-zampa"
             src="/assets/Quesos Zampa/productos/producto_brie.png"
             alt="Brie de Oveja Zampa"
-            imgSize={210}
+            imgSize={250}
             title={"Brie de Oveja\nZampa"}
             subtitle={"Estilo Francés de Autor\nExtrema cremosidad y manteca de campo"}
             delay={0.1}
@@ -853,7 +896,7 @@ export default function CheeseBoard() {
             recipeKey="manchego-zampa"
             src="/assets/Quesos Zampa/productos/producto_machego.png"
             alt="Manchego Artesanal Zampa"
-            imgSize={210}
+            imgSize={250}
             title={"Manchego Artesanal\nZampa"}
             subtitle={"Tradición Ibérica — Pasta semidura\nMadurado 6 a 9 Meses en Cava"}
             labelSide="right"
@@ -870,7 +913,7 @@ export default function CheeseBoard() {
             recipeKey="provolone-zampa"
             src="/assets/Quesos Zampa/productos/producto_provolone.png"
             alt="Provolone de Oveja Zampa"
-            imgSize={205}
+            imgSize={245}
             title={"Provolone de Oveja\nZampa"}
             subtitle={"Pasta Hilada Ovina — Textura elástica\ny rico sabor mediterráneo"}
             delay={0.12}
@@ -886,7 +929,7 @@ export default function CheeseBoard() {
             recipeKey="ahumado-zampa"
             src="/assets/Quesos Zampa/productos/producto_ahumado.png"
             alt="Queso Ahumado Zampa"
-            imgSize={205}
+            imgSize={245}
             title={"Queso Ahumado\nZampa"}
             subtitle={"Ahumado Natural de Autor\nCorteza caramelo con maderas aromáticas"}
             labelSide="right"
@@ -927,21 +970,141 @@ export default function CheeseBoard() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
+            <button
+              onClick={() => setShowQrModal(true)}
+              className="px-8 py-3.5 rounded-full font-serif text-sm tracking-widest uppercase bg-[#C9A84C] text-[#1E1915] font-bold hover:bg-[#E5CD82] transition-colors shadow-lg flex items-center gap-2"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              <span>Ver QR & Kit de Redes</span>
+            </button>
             <Link
               href="/contacto"
-              className="px-8 py-3.5 rounded-full font-serif text-sm tracking-widest uppercase bg-[#C9A84C] text-[#1E1915] font-bold hover:bg-[#E5CD82] transition-colors shadow-lg"
-            >
-              Consultar por Eventos
-            </Link>
-            <Link
-              href="/productos"
               className="px-8 py-3.5 rounded-full font-serif text-sm tracking-widest uppercase border border-[#C9A84C] text-[#F8F5EE] font-semibold hover:bg-white/10 transition-colors"
             >
-              Ver Catálogo Completo
+              Consultar por Eventos
             </Link>
           </div>
         </div>
       </section>
+
+      {/* ══ MODAL KIT INSTAGRAM & CÓDIGO QR ══ */}
+      <AnimatePresence>
+        {showQrModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm"
+            onClick={() => setShowQrModal(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-md bg-[#1E1915] text-[#F8F5EE] rounded-3xl p-6 md:p-8 shadow-2xl border border-[#C9A84C]/40 overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setShowQrModal(false)}
+                className="absolute top-4 right-4 text-stone-400 hover:text-white p-2 rounded-full bg-stone-800/60 transition-colors"
+                aria-label="Cerrar modal"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+
+              <div className="flex flex-col items-center text-center">
+                <span
+                  className="uppercase tracking-widest text-xs text-[#C9A84C] font-semibold mb-1"
+                  style={{ fontFamily: 'var(--font-cormorant), serif', letterSpacing: '0.24em' }}
+                >
+                  Experiencia Interactiva
+                </span>
+                <h3
+                  className="text-2xl md:text-3xl font-serif mb-2 text-white"
+                  style={{ fontFamily: 'var(--font-cormorant), serif' }}
+                >
+                  Kit Eventos & Instagram
+                </h3>
+                <p
+                  className="text-stone-300 font-serif italic text-sm mb-6 max-w-xs"
+                  style={{ fontFamily: 'var(--font-cormorant), serif' }}
+                >
+                  Escaneá este código en degustaciones presenciales o compartí el enlace directo en tus Historias de Instagram.
+                </p>
+
+                {/* QR Code Container */}
+                <div className="relative p-4 bg-white rounded-2xl shadow-xl mb-6 flex items-center justify-center border-4 border-[#C9A84C]/30">
+                  <img
+                    src={qrCodeUrl}
+                    alt="Código QR Tabla de Quesos Zampa"
+                    width={200}
+                    height={200}
+                    className="object-contain rounded-lg"
+                  />
+                </div>
+
+                <p
+                  className="text-xs text-[#C9A84C] tracking-widest uppercase mb-6 font-mono bg-stone-900/80 px-3 py-1.5 rounded-full border border-stone-800"
+                >
+                  quesoszampa.com/tabla-de-quesos
+                </p>
+
+                {/* Actions */}
+                <div className="flex flex-col w-full gap-2.5">
+                  <button
+                    onClick={handleShare}
+                    className="w-full py-3 rounded-full font-serif text-xs tracking-widest uppercase bg-[#C9A84C] text-[#1E1915] font-bold hover:bg-[#E5CD82] transition-colors flex items-center justify-center gap-2 shadow-md"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                      <polyline points="16 6 12 2 8 6"></polyline>
+                      <line x1="12" y1="2" x2="12" y2="15"></line>
+                    </svg>
+                    <span>Compartir Enlace / Instagram</span>
+                  </button>
+
+                  <a
+                    href={qrCodeUrl}
+                    download="QR-Tabla-Quesos-Zampa.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-3 rounded-full font-serif text-xs tracking-widest uppercase border border-stone-700 text-stone-200 font-semibold hover:bg-stone-800 transition-colors flex items-center justify-center gap-2"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Descargar Imagen QR</span>
+                  </a>
+                </div>
+
+                {/* Toast Notification */}
+                {copiedToast && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    className="mt-3 px-4 py-2 rounded-full bg-[#6B7A59] text-white text-xs font-serif tracking-widest uppercase shadow-lg"
+                  >
+                    ✓ ¡Enlace copiado al portapapeles!
+                  </motion.div>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* ══ FOOTER BRANDING ══ */}
       <footer className="flex flex-col items-center pb-16 gap-4 text-center">
