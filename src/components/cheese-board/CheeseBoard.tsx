@@ -22,7 +22,7 @@ const RECIPES: Record<
       'Ramitas de tomillo fresco',
       'Nueces mariposa tostadas',
     ],
-    tip: 'Calienta la rueda de Camembert Zampa a 160°C durante 6 a 8 min hasta que el centro se vuelva cremoso y fundente. Rocía miel tibia y ramitas de tomillo.',
+    tip: 'Calienta la rueda de Camembert Zampa a 160°C durante 6 a 8 min hasta que el centro se vuelva cremoso y fundente. Rocía miel tibia y tomillo.',
     pairWith: 'Vino Blanco Chardonnay o Espumante Brut',
   },
   'pecorino-zampa': {
@@ -35,7 +35,7 @@ const RECIPES: Record<
       'Escamas de sal marina',
       'Aceite de oliva virgen extra',
     ],
-    tip: 'Corta el Pecorino Zampa en lajas o trozos irregulares con cuchillo punzón. Su intensa maduración en cava combina de maravilla con frutos secos y sal marina.',
+    tip: 'Corta el Pecorino Zampa en lajas o trozos irregulares con cuchillo punzón. Su intensa maduración en cava combina de maravilla con frutos secos.',
     pairWith: 'Malbec Reserva, Cabernet Sauvignon o Barolo',
   },
   'brie-zampa': {
@@ -88,53 +88,6 @@ const RECIPES: Record<
     ],
     tip: 'El ahumado natural con maderas aromáticas selectas resalta maravillosamente con el toque ácido de frutos rojos y la crocantez de la manzana verde.',
     pairWith: 'Merlot, Cerveza Amber Ale o Whisky',
-  },
-  fruit: {
-    title: 'Frutas Frescas de Estación',
-    cheeseName: 'Maridaje Dulce y Fresco',
-    ingredients: [
-      'Higos negros maduros',
-      'Uvas de mesa sin semilla',
-      'Peras de agua finamente laminadas',
-      'Frambuesas y moras frescas',
-    ],
-    tip: 'Las frutas aportan frescura e hidratación al paladar entre bocado y bocado de queso ovino.',
-    pairWith: 'Vinos espumantes y sidras artesanales',
-  },
-  honey: {
-    title: 'Miel Pura de Monte & Confituras',
-    cheeseName: 'Dulzor Artesanal',
-    ingredients: [
-      'Miel pura de flora nativa',
-      'Ramita de tomillo infusionada',
-      'Ralladura de limón sutil',
-      'Escamas de flor de sal',
-    ],
-    tip: 'Vierte la miel tibia sobre quesos de pasta blanda como el Brie o Camembert Zampa para potenciar su cremosidad.',
-    pairWith: 'Toda la línea de quesos Zampa',
-  },
-  nuts: {
-    title: 'Frutos Secos & Semillas Tostadas',
-    cheeseName: 'Textura Crujiente',
-    ingredients: [
-      'Nueces mariposa seleccionadas',
-      'Almendras tostadas al horno',
-      'Pecan especiado con romero',
-      'Pizca de sal marina',
-    ],
-    tip: 'Aportan una textura crujiente imprescindible y potencian los matices a fruto seco naturales de la leche de oveja.',
-    pairWith: 'Vinos de guarda y aperitivos',
-  },
-  garnish: {
-    title: 'Romero & Hierbas de Huerta',
-    cheeseName: 'Toque Botánico',
-    ingredients: [
-      'Ramitas de romero fresco',
-      'Tomillo de huerta',
-      'Pétalos y lavanda comestible',
-    ],
-    tip: 'El romero perfuma la tabla y sus ramitas leñosas funcionan como delicados aplicadores de miel.',
-    pairWith: 'Toda la experiencia sensorial Zampa',
   },
 };
 
@@ -258,7 +211,7 @@ function ClickBadge() {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.4, duration: 0.5 }}
-      className="absolute -top-3 -right-2 z-10 flex items-center gap-1.5 rounded-full px-3 py-1.5 shadow-lg"
+      className="absolute -top-3 -right-2 z-10 flex items-center gap-1.5 rounded-full px-3.5 py-1.5 shadow-lg"
       style={{
         background: T.cardBack,
         border: `1px solid ${T.gold}`,
@@ -267,14 +220,14 @@ function ClickBadge() {
       <motion.span
         animate={{ rotate: [0, 15, -15, 0] }}
         transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut', repeatDelay: 1.5 }}
-        style={{ display: 'inline-block', fontSize: '0.65rem', color: T.gold }}
+        style={{ display: 'inline-block', fontSize: '0.7rem', color: T.gold }}
         aria-hidden
       >
         ✦
       </motion.span>
       <span
         className="text-white uppercase tracking-widest font-semibold"
-        style={{ fontFamily: 'var(--font-cormorant), serif', fontSize: '0.62rem', letterSpacing: '0.18em' }}
+        style={{ fontFamily: 'var(--font-cormorant), serif', fontSize: '0.68rem', letterSpacing: '0.18em' }}
       >
         Receta Zampa
       </span>
@@ -283,13 +236,13 @@ function ClickBadge() {
 }
 
 /* ─────────────────────────────────────
-   PREMIUM FLIP CARD (3D)
+   PREMIUM FLIP CARD (3D) - AMPLIADA Y MÁS LEGIBLE
    ───────────────────────────────────── */
 function FlipCard({
   recipeKey,
   src,
   alt,
-  imgSize = 200,
+  imgSize = 220,
   delay = 0,
   duration = 4.5,
   rotateFrom = -2,
@@ -342,7 +295,7 @@ function FlipCard({
         >
           {/* ── FRONT SIDE ── */}
           <div
-            className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer group rounded-2xl p-4 bg-white/40 border border-[#EBE4D5] shadow-sm hover:shadow-md transition-shadow"
+            className="absolute inset-0 flex flex-col items-center justify-between cursor-pointer group rounded-2xl p-5 bg-white/50 border border-[#EBE4D5] shadow-sm hover:shadow-md transition-all"
             style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
             onClick={() => setFlipped(true)}
             role="button"
@@ -356,40 +309,39 @@ function FlipCard({
             <motion.div
               whileHover={{ scale: 1.08 }}
               transition={{ duration: 0.3 }}
-              className="relative flex items-center justify-center my-auto"
+              className="relative flex items-center justify-center my-auto pt-2"
             >
               <Image
                 src={src}
                 alt={alt}
                 width={imgSize}
                 height={imgSize}
-                className="object-contain drop-shadow-md"
+                className="object-contain drop-shadow-lg"
               />
             </motion.div>
 
             {/* Click hint */}
-            <div className="mt-auto pt-2 flex justify-center">
+            <div className="pt-2 flex justify-center">
               <motion.div
-                animate={{ opacity: [0.6, 1, 0.6] }}
+                animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
-                className="flex items-center gap-1.5"
+                className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#F3ECE0]"
               >
                 <span
-                  className="uppercase tracking-widest font-medium"
+                  className="uppercase tracking-widest font-semibold text-[#5A4F41]"
                   style={{
                     fontFamily: 'var(--font-cormorant), serif',
-                    fontSize: '0.62rem',
+                    fontSize: '0.7rem',
                     letterSpacing: '0.2em',
-                    color: T.muted,
                   }}
                 >
                   Toca para ver receta
                 </span>
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
+                <svg width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden>
                   <path
                     d="M6 2v8M3 7l3 3 3-3"
                     stroke={T.gold}
-                    strokeWidth="1.4"
+                    strokeWidth="1.6"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
@@ -398,9 +350,9 @@ function FlipCard({
             </div>
           </div>
 
-          {/* ── BACK SIDE (RECIPE CARD) ── */}
+          {/* ── BACK SIDE (RECIPE CARD ENLARGED & HIGH LEGIBILITY) ── */}
           <div
-            className="absolute inset-0 flex flex-col cursor-pointer rounded-2xl overflow-hidden shadow-2xl"
+            className="absolute inset-0 flex flex-col cursor-pointer rounded-2xl overflow-hidden shadow-2xl border border-[#C9A84C]/40"
             style={{
               backfaceVisibility: 'hidden',
               WebkitBackfaceVisibility: 'hidden',
@@ -414,16 +366,16 @@ function FlipCard({
             onKeyDown={(e) => e.key === 'Enter' && setFlipped(false)}
           >
             {/* Gold Stripe */}
-            <div className="h-1 w-full shrink-0" style={{ background: T.gold }} />
+            <div className="h-1.5 w-full shrink-0" style={{ background: T.gold }} />
 
             {/* Card Header */}
-            <div className="px-5 pt-4 pb-3 border-b border-stone-800">
+            <div className="px-6 pt-5 pb-3 border-b border-stone-800 shrink-0">
               <p
-                className="uppercase tracking-widest mb-1 font-semibold"
+                className="uppercase tracking-widest mb-1 font-bold"
                 style={{
                   fontFamily: 'var(--font-cormorant), serif',
-                  fontSize: '0.58rem',
-                  letterSpacing: '0.22em',
+                  fontSize: '0.72rem',
+                  letterSpacing: '0.24em',
                   color: T.gold,
                 }}
               >
@@ -433,8 +385,8 @@ function FlipCard({
                 className="leading-tight"
                 style={{
                   fontFamily: 'var(--font-great-vibes), cursive',
-                  fontSize: 'clamp(1.35rem, 2.5vw, 1.65rem)',
-                  color: '#F4EFE6',
+                  fontSize: 'clamp(1.6rem, 3.2vw, 2.1rem)',
+                  color: '#FFFFFF',
                   lineHeight: 1.1,
                 }}
               >
@@ -443,32 +395,32 @@ function FlipCard({
             </div>
 
             {/* Ingredients List */}
-            <div className="px-5 py-3 flex-1 overflow-y-auto">
+            <div className="px-6 py-4 flex-1 overflow-y-auto">
               <p
-                className="uppercase tracking-widest mb-2 font-semibold"
+                className="uppercase tracking-widest mb-2.5 font-bold"
                 style={{
                   fontFamily: 'var(--font-cormorant), serif',
-                  fontSize: '0.56rem',
-                  letterSpacing: '0.2em',
+                  fontSize: '0.68rem',
+                  letterSpacing: '0.22em',
                   color: T.goldLight,
                 }}
               >
                 Ingredientes Sugeridos
               </p>
-              <ul className="flex flex-col gap-1">
+              <ul className="flex flex-col gap-2">
                 {recipe.ingredients.map((ing) => (
-                  <li key={ing} className="flex items-start gap-2">
+                  <li key={ing} className="flex items-start gap-2.5">
                     <span
-                      className="mt-[6px] w-1 h-1 rounded-full shrink-0"
+                      className="mt-[7px] w-1.5 h-1.5 rounded-full shrink-0"
                       style={{ background: T.gold }}
                       aria-hidden
                     />
                     <span
-                      className="leading-tight"
+                      className="leading-snug font-medium"
                       style={{
                         fontFamily: 'var(--font-cormorant), serif',
-                        fontSize: '0.82rem',
-                        color: '#D8D0C5',
+                        fontSize: '0.94rem',
+                        color: '#E8E1D5',
                       }}
                     >
                       {ing}
@@ -481,14 +433,14 @@ function FlipCard({
             {/* Chef Tip */}
             {recipe.tip && (
               <div
-                className="mx-4 mb-2 px-3 py-2 rounded-xl border border-stone-800"
-                style={{ background: 'rgba(255,255,255,0.04)' }}
+                className="mx-5 mb-3 px-4 py-2.5 rounded-xl border border-stone-700/60 shrink-0"
+                style={{ background: 'rgba(255,255,255,0.06)' }}
               >
                 <p
-                  className="uppercase tracking-widest mb-1 font-semibold"
+                  className="uppercase tracking-widest mb-1 font-bold"
                   style={{
                     fontFamily: 'var(--font-cormorant), serif',
-                    fontSize: '0.54rem',
+                    fontSize: '0.64rem',
                     letterSpacing: '0.2em',
                     color: T.gold,
                   }}
@@ -496,10 +448,10 @@ function FlipCard({
                   Consejo del Maestro Quesero
                 </p>
                 <p
-                  className="italic leading-tight text-stone-300"
+                  className="italic leading-relaxed text-stone-200"
                   style={{
                     fontFamily: 'var(--font-cormorant), serif',
-                    fontSize: '0.78rem',
+                    fontSize: '0.9rem',
                   }}
                 >
                   "{recipe.tip}"
@@ -509,12 +461,12 @@ function FlipCard({
 
             {/* Pairing */}
             {recipe.pairWith && (
-              <div className="px-5 pb-2 flex items-center gap-2">
+              <div className="px-6 pb-3 flex items-center gap-2 shrink-0">
                 <span
-                  className="uppercase tracking-widest font-semibold"
+                  className="uppercase tracking-widest font-bold shrink-0"
                   style={{
                     fontFamily: 'var(--font-cormorant), serif',
-                    fontSize: '0.54rem',
+                    fontSize: '0.66rem',
                     letterSpacing: '0.18em',
                     color: T.sage,
                   }}
@@ -522,10 +474,10 @@ function FlipCard({
                   Marida con:
                 </span>
                 <span
-                  className="italic text-stone-300"
+                  className="italic text-stone-200 font-medium truncate"
                   style={{
                     fontFamily: 'var(--font-cormorant), serif',
-                    fontSize: '0.78rem',
+                    fontSize: '0.9rem',
                   }}
                 >
                   {recipe.pairWith}
@@ -536,11 +488,11 @@ function FlipCard({
             {/* Bottom hint */}
             <div className="h-0.5 w-full shrink-0" style={{ background: T.gold }} />
             <p
-              className="text-center py-1.5 uppercase tracking-widest text-stone-400"
+              className="text-center py-2 uppercase tracking-widest text-stone-300 font-semibold bg-stone-900/90 shrink-0"
               style={{
                 fontFamily: 'var(--font-cormorant), serif',
-                fontSize: '0.5rem',
-                letterSpacing: '0.2em',
+                fontSize: '0.58rem',
+                letterSpacing: '0.22em',
               }}
             >
               Toca para volver
@@ -573,7 +525,7 @@ function ItemLabel({
           className="font-bold uppercase whitespace-pre-line leading-tight tracking-widest"
           style={{
             fontFamily: 'var(--font-cormorant), serif',
-            fontSize: 'clamp(0.72rem, 1.6vw, 0.85rem)',
+            fontSize: 'clamp(0.85rem, 2vw, 1.05rem)',
             color: T.ink,
           }}
         >
@@ -584,7 +536,7 @@ function ItemLabel({
             className="italic leading-snug whitespace-pre-line"
             style={{
               fontFamily: 'var(--font-cormorant), serif',
-              fontSize: 'clamp(0.82rem, 1.7vw, 0.95rem)',
+              fontSize: 'clamp(0.9rem, 2vw, 1.02rem)',
               color: T.muted,
             }}
           >
@@ -630,7 +582,7 @@ function BoardItem({
 }) {
   return (
     <div className="relative flex flex-col items-center">
-      <div className="relative w-full" style={{ height: 280 }}>
+      <div className="relative w-full" style={{ height: 360 }}>
         <FlipCard
           recipeKey={recipeKey}
           src={src}
@@ -646,12 +598,12 @@ function BoardItem({
             className={rosemaryPos}
             rotate={rosemaryRotate ?? 0}
             delay={delay + 0.3}
-            size={72}
+            size={80}
           />
         )}
       </div>
 
-      <div className="w-full pt-3 pb-2 px-1">
+      <div className="w-full pt-4 pb-2 px-1">
         <ItemLabel
           title={title}
           subtitle={subtitle}
@@ -682,10 +634,10 @@ function SectionDivider({ label }: { label: string }) {
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="uppercase tracking-widest shrink-0 font-semibold"
+        className="uppercase tracking-widest shrink-0 font-bold"
         style={{
           fontFamily: 'var(--font-cormorant), serif',
-          fontSize: '0.7rem',
+          fontSize: '0.8rem',
           letterSpacing: '0.28em',
           color: T.gold,
         }}
@@ -751,7 +703,7 @@ export default function CheeseBoard() {
       {/* ══ HERO HEADER ══ */}
       <header className="w-full max-w-5xl px-6 md:px-12 pt-12 pb-8 flex flex-col items-center text-center">
         <Reveal delay={0}>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EFE9DB] border border-[#DDD3BF] mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFE9DB] border border-[#DDD3BF] mb-3">
             <span className="w-2 h-2 rounded-full bg-[#C9A84C] animate-pulse" />
             <span
               className="uppercase tracking-widest text-xs text-[#5C5245] font-semibold"
@@ -767,7 +719,7 @@ export default function CheeseBoard() {
             className="uppercase text-center mb-2 font-medium"
             style={{
               fontFamily: 'var(--font-cormorant), serif',
-              fontSize: '0.75rem',
+              fontSize: '0.78rem',
               letterSpacing: '0.32em',
               color: T.muted,
             }}
@@ -796,7 +748,7 @@ export default function CheeseBoard() {
 
         <Reveal delay={0.45} direction="none">
           <p
-            className="max-w-xl text-center mt-4 font-serif italic text-stone-600 text-base md:text-lg leading-relaxed"
+            className="max-w-xl text-center mt-4 font-serif italic text-stone-600 text-base md:text-xl leading-relaxed"
             style={{ fontFamily: 'var(--font-cormorant), serif' }}
           >
             Una selección artesanal elaborada 100% con leche de oveja frisona de nuestras pasturas de Tandil. Toca cada tarjeta para descubrir sus maridajes, secretos y recetas sugeridas.
@@ -808,7 +760,7 @@ export default function CheeseBoard() {
             <motion.div
               animate={{ y: [0, -4, 0] }}
               transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-              className="flex items-center gap-3 rounded-full px-5 py-2.5 shadow-sm"
+              className="flex items-center gap-3 rounded-full px-6 py-3 shadow-md"
               style={{
                 background: T.cardBack,
                 border: `1px solid ${T.gold}`,
@@ -817,14 +769,14 @@ export default function CheeseBoard() {
               <motion.span
                 animate={{ scale: [1, 1.3, 1] }}
                 transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
-                style={{ width: 6, height: 6, borderRadius: '50%', background: T.gold, display: 'block', flexShrink: 0 }}
+                style={{ width: 7, height: 7, borderRadius: '50%', background: T.gold, display: 'block', flexShrink: 0 }}
                 aria-hidden
               />
               <span
-                className="text-white uppercase tracking-widest font-medium"
+                className="text-white uppercase tracking-widest font-semibold"
                 style={{
                   fontFamily: 'var(--font-cormorant), serif',
-                  fontSize: '0.68rem',
+                  fontSize: '0.74rem',
                   letterSpacing: '0.22em',
                 }}
               >
@@ -833,7 +785,7 @@ export default function CheeseBoard() {
               <motion.span
                 animate={{ scale: [1, 1.3, 1] }}
                 transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut', delay: 0.9 }}
-                style={{ width: 6, height: 6, borderRadius: '50%', background: T.gold, display: 'block', flexShrink: 0 }}
+                style={{ width: 7, height: 7, borderRadius: '50%', background: T.gold, display: 'block', flexShrink: 0 }}
                 aria-hidden
               />
             </motion.div>
@@ -843,7 +795,7 @@ export default function CheeseBoard() {
 
       {/* ══ BOARD GRID ══ */}
       <section className="w-full max-w-5xl px-6 md:px-12 pb-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8">
 
           <SectionDivider label="Nuestros Quesos de Oveja Zampa" />
 
@@ -852,7 +804,7 @@ export default function CheeseBoard() {
             recipeKey="camembert-zampa"
             src="/assets/Quesos Zampa/productos/producto_Camembert.png"
             alt="Camembert de Oveja Zampa"
-            imgSize={210}
+            imgSize={220}
             title={"Camembert\nde Oveja Zampa"}
             subtitle={"Vedette de la Casa — Pasta blanda\n100% Leche Cruda A2 de Oveja Frisona"}
             delay={0.05}
@@ -868,7 +820,7 @@ export default function CheeseBoard() {
             recipeKey="pecorino-zampa"
             src="/assets/Quesos Zampa/productos/producto_pecorino.png"
             alt="Queso Pecorino Zampa"
-            imgSize={200}
+            imgSize={210}
             title={"Queso Pecorino\nZampa"}
             subtitle={"Orgullo en Cava — Pasta dura\nMadurado de 9 a 12 Meses en Cava"}
             labelSide="right"
@@ -885,7 +837,7 @@ export default function CheeseBoard() {
             recipeKey="brie-zampa"
             src="/assets/Quesos Zampa/productos/producto_brie.png"
             alt="Brie de Oveja Zampa"
-            imgSize={200}
+            imgSize={210}
             title={"Brie de Oveja\nZampa"}
             subtitle={"Estilo Francés de Autor\nExtrema cremosidad y manteca de campo"}
             delay={0.1}
@@ -901,7 +853,7 @@ export default function CheeseBoard() {
             recipeKey="manchego-zampa"
             src="/assets/Quesos Zampa/productos/producto_machego.png"
             alt="Manchego Artesanal Zampa"
-            imgSize={200}
+            imgSize={210}
             title={"Manchego Artesanal\nZampa"}
             subtitle={"Tradición Ibérica — Pasta semidura\nMadurado 6 a 9 Meses en Cava"}
             labelSide="right"
@@ -918,7 +870,7 @@ export default function CheeseBoard() {
             recipeKey="provolone-zampa"
             src="/assets/Quesos Zampa/productos/producto_provolone.png"
             alt="Provolone de Oveja Zampa"
-            imgSize={195}
+            imgSize={205}
             title={"Provolone de Oveja\nZampa"}
             subtitle={"Pasta Hilada Ovina — Textura elástica\ny rico sabor mediterráneo"}
             delay={0.12}
@@ -934,7 +886,7 @@ export default function CheeseBoard() {
             recipeKey="ahumado-zampa"
             src="/assets/Quesos Zampa/productos/producto_ahumado.png"
             alt="Queso Ahumado Zampa"
-            imgSize={195}
+            imgSize={205}
             title={"Queso Ahumado\nZampa"}
             subtitle={"Ahumado Natural de Autor\nCorteza caramelo con maderas aromáticas"}
             labelSide="right"
@@ -944,72 +896,6 @@ export default function CheeseBoard() {
             rotateTo={-2}
             rosemaryPos="-top-2 right-2"
             rosemaryRotate={22}
-          />
-
-          <SectionDivider label="Acompañamientos & Maridajes" />
-
-          {/* 7. Frutas Frescas */}
-          <BoardItem
-            recipeKey="fruit"
-            src="/images/fruit.png"
-            alt="Higos y Frutas de Estación"
-            imgSize={170}
-            title="Frutas de Estación"
-            subtitle={"Higos frescos, uvas sin semilla,\nláminas de pera y moras"}
-            delay={0.05}
-            duration={4.2}
-            rotateFrom={-3}
-            rotateTo={3}
-            rosemaryPos="-bottom-3 right-6"
-            rosemaryRotate={20}
-          />
-
-          {/* 8. Miel y Confituras */}
-          <BoardItem
-            recipeKey="honey"
-            src="/images/honey.png"
-            alt="Miel Pura de Monte"
-            imgSize={180}
-            title={"Miel Pura\nde Monte"}
-            subtitle={"Miel de floración nativa con tomillo\no dulce artesanal de fruta"}
-            labelSide="right"
-            delay={0.15}
-            duration={5.5}
-            rotateFrom={-1}
-            rotateTo={1}
-            rosemaryPos="-top-3 -left-3"
-            rosemaryRotate={25}
-          />
-
-          {/* 9. Frutos Secos */}
-          <BoardItem
-            recipeKey="nuts"
-            src="/images/nuts.png"
-            alt="Nueces y Almendras Tostadas"
-            imgSize={180}
-            title="Frutos Secos"
-            subtitle={"Nueces mariposa, almendras marcona\ny pecan especiado"}
-            delay={0.1}
-            duration={4}
-            rotateFrom={-3}
-            rotateTo={3}
-            rosemaryPos="-bottom-4 -right-2"
-            rosemaryRotate={-25}
-          />
-
-          {/* 10. Romero & Hierbas */}
-          <BoardItem
-            recipeKey="garnish"
-            src="/images/rosemary.png"
-            alt="Romero y Hierbas Aromáticas"
-            imgSize={165}
-            title="Romero & Hierbas"
-            subtitle={"Romero fresco de la huerta, tomillo\ny lavanda comestible"}
-            labelSide="right"
-            delay={0.2}
-            duration={6}
-            rotateFrom={-4}
-            rotateTo={4}
           />
 
         </div>
