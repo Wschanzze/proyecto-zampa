@@ -39,7 +39,7 @@ export default function Header() {
           <div 
             className={`absolute top-1/2 -translate-y-1/2 transition-all duration-700 ease-in-out ${
               scrolled 
-                ? 'left-4 lg:left-6 translate-x-0' 
+                ? 'left-1/2 -translate-x-1/2 lg:left-6 lg:translate-x-0' 
                 : 'left-1/2 -translate-x-1/2'
             }`}
             style={{
@@ -104,7 +104,7 @@ export default function Header() {
             }`}
             aria-label="Toggle menu"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
