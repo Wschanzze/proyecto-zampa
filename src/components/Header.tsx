@@ -39,7 +39,7 @@ export default function Header() {
           <div 
             className={`absolute top-1/2 -translate-y-1/2 transition-all duration-700 ease-in-out ${
               scrolled 
-                ? 'left-6 lg:left-12 translate-x-0' 
+                ? 'left-4 lg:left-6 translate-x-0' 
                 : 'left-1/2 -translate-x-1/2'
             }`}
             style={{
@@ -89,7 +89,7 @@ export default function Header() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-lg font-bold transition-colors duration-300 tracking-wider text-umber-dark hover:text-[#6B4226] whitespace-nowrap"
+                className="text-sm font-bold transition-colors duration-300 tracking-wider text-black hover:text-[#6B4226] active:text-[#6B4226] whitespace-nowrap"
               >
                 {item.label}
               </a>
