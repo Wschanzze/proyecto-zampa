@@ -43,8 +43,8 @@ export default function Header() {
                 : 'left-1/2 -translate-x-1/2'
             }`}
             style={{
-              width: scrolled ? '140px' : '200px',
-              height: scrolled ? '62px' : '88px'
+              width: scrolled ? '115px' : '170px',
+              height: scrolled ? '51px' : '75px'
             }}
           >
             <div className="relative w-full h-full cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleLogoClick}>
