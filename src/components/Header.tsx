@@ -33,7 +33,7 @@ export default function Header() {
         }`}
       >
         <div className={`mx-auto px-6 lg:px-12 relative flex items-center justify-end min-h-[80px] transition-all duration-500 ${
-          scrolled ? 'max-w-5xl' : 'max-w-7xl'
+          scrolled ? 'max-w-4xl' : 'max-w-7xl'
         }`}>
           {/* Logo Container (Absolute positioning for smooth transition from center to left) */}
           <div 
@@ -89,7 +89,7 @@ export default function Header() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-xs font-bold transition-colors duration-300 tracking-widest text-umber-dark hover:text-[#6B4226] whitespace-nowrap"
+                className="text-lg font-bold transition-colors duration-300 tracking-wider text-umber-dark hover:text-[#6B4226] whitespace-nowrap"
               >
                 {item.label}
               </a>
