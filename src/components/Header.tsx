@@ -32,7 +32,9 @@ export default function Header() {
           scrolled ? 'nav-blur py-2 shadow-sm' : 'bg-transparent py-4'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative flex items-center justify-end min-h-[80px]">
+        <div className={`mx-auto px-6 lg:px-12 relative flex items-center justify-end min-h-[80px] transition-all duration-500 ${
+          scrolled ? 'max-w-5xl' : 'max-w-7xl'
+        }`}>
           {/* Logo Container (Absolute positioning for smooth transition from center to left) */}
           <div 
             className={`absolute top-1/2 -translate-y-1/2 transition-all duration-700 ease-in-out ${
@@ -41,8 +43,8 @@ export default function Header() {
                 : 'left-1/2 -translate-x-1/2'
             }`}
             style={{
-              width: scrolled ? '75px' : '120px',
-              height: scrolled ? '75px' : '120px'
+              width: scrolled ? '140px' : '200px',
+              height: scrolled ? '62px' : '88px'
             }}
           >
             <div className="relative w-full h-full cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleLogoClick}>
