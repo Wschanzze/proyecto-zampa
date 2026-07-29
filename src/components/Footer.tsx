@@ -14,8 +14,8 @@ export default function Footer() {
           {/* Logo + links */}
           <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
             <AppLogo
-              src="/IMG_1960(1).png"
-              size={40}
+              src="/assets/Quesos Zampa/logo negro.png"
+              size={45}
               className="text-umber opacity-75"
             />
             <div className="flex items-center gap-6 text-sm font-medium text-umber-light">

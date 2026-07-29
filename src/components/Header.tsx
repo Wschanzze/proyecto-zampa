@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import AppLogo from '@/components/ui/AppLogo';
+import AppImage from '@/components/ui/AppImage';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -31,43 +32,66 @@ export default function Header() {
           scrolled ? 'nav-blur py-2 shadow-sm' : 'bg-transparent py-4'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative flex items-center justify-center min-h-[80px]">
-          {/* Centered Group Container */}
-          <div className="flex items-center gap-6 lg:gap-10 transition-all duration-500">
-            {/* Logo */}
-            <div className="flex-shrink-0 transition-all duration-500">
-              <AppLogo
-                src="/IMG_1960(1).png"
-                size={scrolled ? 75 : 120}
-                className="text-umber transition-all duration-500 hover:scale-105 cursor-pointer drop-shadow-md"
-                onClick={handleLogoClick}
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative flex items-center justify-end min-h-[80px]">
+          {/* Logo Container (Absolute positioning for smooth transition from center to left) */}
+          <div 
+            className={`absolute top-1/2 -translate-y-1/2 transition-all duration-700 ease-in-out ${
+              scrolled 
+                ? 'left-6 lg:left-12 translate-x-0' 
+                : 'left-1/2 -translate-x-1/2'
+            }`}
+            style={{
+              width: scrolled ? '75px' : '120px',
+              height: scrolled ? '75px' : '120px'
+            }}
+          >
+            <div className="relative w-full h-full cursor-pointer hover:scale-105 transition-transform duration-300" onClick={handleLogoClick}>
+              {/* Logo Blanco (visible when transparent header) */}
+              <AppImage
+                src="/assets/Quesos Zampa/logo blanco.png"
+                alt="Quesos Zampa Logo Blanco"
+                fill
+                className={`object-contain transition-opacity duration-500 ${
+                  scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
+                }`}
+                priority
+              />
+              {/* Logo Negro (visible when scrolled / light background header) */}
+              <AppImage
+                src="/assets/Quesos Zampa/logo negro.png"
+                alt="Quesos Zampa Logo Negro"
+                fill
+                className={`object-contain transition-opacity duration-500 ${
+                  scrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                }`}
+                priority
               />
             </div>
+          </div>
 
-            {/* Links Container (expands on scroll) */}
-            <div 
-              className={`hidden lg:flex items-center gap-6 lg:gap-8 transition-all duration-500 ease-in-out overflow-hidden ${
-                scrolled 
-                  ? 'opacity-100 max-w-[900px] pointer-events-auto translate-x-0' 
-                  : 'opacity-0 max-w-0 pointer-events-none -translate-x-6'
-              }`}
-            >
-              {[
-                { label: 'PRODUCTOS', href: '/productos' },
-                { label: 'NUESTRA HISTORIA', href: '/nuestra-historia' },
-                { label: 'ELABORACIÓN', href: '/elaboracion' },
-                /* { label: 'COMUNIDAD', href: '/comunidad' }, */
-                { label: 'DÓNDE ENCONTRARNOS', href: '/encontranos' },
-              ].map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-xs font-bold transition-colors duration-300 tracking-widest text-umber-dark hover:text-[#6B4226] whitespace-nowrap"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
+          {/* Links Container (expands on scroll) */}
+          <div 
+            className={`hidden lg:flex items-center gap-6 lg:gap-8 transition-all duration-500 ease-in-out overflow-hidden ${
+              scrolled 
+                ? 'opacity-100 max-w-[900px] pointer-events-auto translate-x-0' 
+                : 'opacity-0 max-w-0 pointer-events-none -translate-x-6'
+            }`}
+          >
+            {[
+              { label: 'PRODUCTOS', href: '/productos' },
+              { label: 'NUESTRA HISTORIA', href: '/nuestra-historia' },
+              { label: 'ELABORACIÓN', href: '/elaboracion' },
+              /* { label: 'COMUNIDAD', href: '/comunidad' }, */
+              { label: 'DÓNDE ENCONTRARNOS', href: '/encontranos' },
+            ].map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="text-xs font-bold transition-colors duration-300 tracking-widest text-umber-dark hover:text-[#6B4226] whitespace-nowrap"
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
 
           {/* Mobile Burger Button */}
@@ -107,7 +131,7 @@ export default function Header() {
             {/* Header inside drawer */}
             <div className="flex items-center justify-between border-b border-wheat/20 pb-4">
               <AppLogo
-                src="/IMG_1960(1).png"
+                src="/assets/Quesos Zampa/logo negro.png"
                 size={70}
                 className="text-umber cursor-pointer"
                 onClick={() => {
