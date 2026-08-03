@@ -45,8 +45,8 @@ export default function JsonLd() {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Zampa Tandil',
-    alternateName: ['Quesos Zampa', 'Quesería Zampa', 'Quesos Zampa Tandil'],
+    name: 'Quesos Zampa',
+    alternateName: ['Zampa Tandil', 'Quesería Zampa', 'Quesos Zampa Tandil'],
     url: baseUrl,
   };
 

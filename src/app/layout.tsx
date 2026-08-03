@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: 'Quesos Zampa | Quesos de Oveja en Tandil',
     description: 'Elaboración artesanal de quesos de oveja en Tandil. Sabores nobles de tambo pastoril.',
     url: baseUrl,
-    siteName: 'Zampa Tandil',
+    siteName: 'Quesos Zampa',
     locale: 'es_AR',
     type: 'website',
     images: [
