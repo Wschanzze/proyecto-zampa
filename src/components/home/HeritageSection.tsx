@@ -82,33 +82,6 @@ export default function HeritageSection() {
               </a>
             </div>
 
-            {/* Social proof strip */}
-            <div className="pt-5 border-t border-wheat/30 flex items-center gap-6 flex-wrap">
-              <div className="flex -space-x-3">
-                {[
-                  'https://images.pexels.com/photos/2132180/pexels-photo-2132180.jpeg?auto=compress&w=64&h=64&fit=crop',
-                  'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&w=64&h=64&fit=crop',
-                  'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&w=64&h=64&fit=crop'
-                ].map((src, i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-limestone-soft overflow-hidden flex-shrink-0">
-                    <AppImage src={src} alt={`Customer ${i + 1}`} width={40} height={40} className="w-full h-full object-cover" />
-                  </div>
-                ))}
-                <div className="w-10 h-10 rounded-full border-2 border-limestone-soft bg-wheat-muted flex items-center justify-center text-xs font-semibold text-umber flex-shrink-0">
-                  +500
-                </div>
-              </div>
-              <div>
-                <div className="flex items-center gap-1 text-wheat">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <svg key={s} className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-xs text-umber-light mt-0.5 font-light">Elegido por los amantes del buen queso artesanal</p>
-              </div>
-            </div>
           </div>
 
           {/* Right: Asymmetric photo grid */}
