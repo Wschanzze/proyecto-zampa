@@ -72,7 +72,7 @@ const OurProducts = () => {
                 {/* Content container */}
                 <div className="absolute inset-x-0 bottom-0 p-8 z-20 text-left flex flex-col gap-2">
 
-                  <h3 className="text-2xl md:text-3xl font-light text-white tracking-wide uppercase">
+                  <h3 className="text-3xl md:text-4xl font-light text-white tracking-wide uppercase">
                     {cat.title}
                   </h3>
                   <p className="text-xs md:text-sm font-light text-white/80 leading-relaxed mt-2 max-h-20 opacity-100 md:max-h-0 md:opacity-0 md:group-hover:max-h-20 md:group-hover:opacity-100 transition-all duration-500 overflow-hidden">
