@@ -57,6 +57,18 @@ const OurProducts = () => {
                 <div className="absolute inset-0 bg-black/35 group-hover:bg-black/40 transition-colors duration-500 z-10" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10" />
                 
+                {/* Logo superior */}
+                <div className="absolute top-8 left-8 z-20">
+                  <div className="relative" style={{ width: '80px', height: '35px' }}>
+                    <Image 
+                      src="/assets/Quesos Zampa/logo blanco.png" 
+                      alt="Quesos Zampa" 
+                      fill 
+                      className="object-contain opacity-90"
+                    />
+                  </div>
+                </div>
+
                 {/* Content container */}
                 <div className="absolute inset-x-0 bottom-0 p-8 z-20 text-left flex flex-col gap-2">
 
@@ -66,7 +78,7 @@ const OurProducts = () => {
                   <p className="text-xs md:text-sm font-light text-white/80 leading-relaxed mt-2 max-h-20 opacity-100 md:max-h-0 md:opacity-0 md:group-hover:max-h-20 md:group-hover:opacity-100 transition-all duration-500 overflow-hidden">
                     {cat.desc}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-xs font-semibold text-wheat-light uppercase tracking-widest mt-4">
+                  <span className="inline-flex items-center gap-2 text-xs font-semibold text-white uppercase tracking-widest mt-4">
                     Ver Variedades
                     <svg className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
