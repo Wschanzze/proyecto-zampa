@@ -83,130 +83,114 @@ export default function ServicesSection() {
           </div>
         </div>
 
-        {/* Bento Grid (inspired by the 5-card layout) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8">
+        {/* Bento Grid: Experiencia Inmersiva (Cinematográfica) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
           
-          {/* Card 1: Conocé nuestro campo (Row 1 Left - Large Image Card) */}
+          {/* Card 1: Conocé nuestro campo (col-span-8) */}
           <div
             onClick={() => handleServiceClick('campo')}
-            className={`col-span-1 md:col-span-2 lg:col-span-8 rounded-[2rem] overflow-hidden relative h-[320px] md:h-[420px] group shadow-xl border border-charcoal/5 cursor-pointer transition-all duration-1000 delay-100 hover:scale-[1.005] hover:shadow-2xl ${
+            className={`col-span-1 lg:col-span-8 rounded-[2.5rem] overflow-hidden relative h-[380px] lg:h-[450px] group shadow-xl border border-charcoal/5 cursor-pointer transition-all duration-1000 delay-100 hover:scale-[1.005] hover:shadow-2xl ${
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
           >
-            {/* Background image */}
             <AppImage
               src="/assets/Quesos%20Zampa/IMG_1034.jpg"
               alt="Ovejas frisonas lecheras en pasturas de Napaleofú"
               fill
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
-            {/* Overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10" />
 
-            {/* Content */}
             <div className="relative z-20 h-full w-full p-8 md:p-10 flex flex-col justify-end text-left">
               <div>
-                <span className="inline-block bg-limestone-soft/90 border border-umber/20 text-umber px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-4">
+                <span className="inline-block bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-4 backdrop-blur-sm">
                   01. Tambo Ovino
                 </span>
-                <h3 className="text-2xl md:text-3xl font-light text-white leading-tight uppercase mb-3">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-tight uppercase mb-3">
                   Conocé nuestro campo
                 </h3>
                 <p className="text-xs md:text-sm text-white/80 font-light leading-relaxed max-w-xl mb-6">
-                  Visita guiada por el tambo ovino y todo el proceso de producción.
+                  Una visita guiada exclusiva por nuestro tambo ovino para conocer el libre pastoreo de las ovejas frisonas y todo el proceso artesanal de producción.
                 </p>
                 
-                <div className="inline-flex items-center gap-3 text-xs font-semibold tracking-wider text-white uppercase group-hover:text-wheat transition-colors duration-300">
+                <div className="inline-flex items-center gap-3 text-xs font-semibold tracking-wider text-white uppercase group-hover:text-[#E8D49A] transition-colors duration-300">
                   <span>Reservar Visita Guiada</span>
-                  <AppIcon name="WhatsApp" size={16} className="text-white group-hover:text-wheat group-hover:scale-110 transition-all duration-300" />
+                  <AppIcon name="WhatsApp" size={16} className="text-white group-hover:text-[#E8D49A] group-hover:scale-110 transition-all duration-300" />
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Card 2: Visitas educativas (Row 1 Right - Solid Green Card) */}
+          {/* Card 2: Visitas educativas (col-span-4) */}
           <div
             onClick={() => handleServiceClick('educativas')}
-            className={`col-span-1 md:col-span-2 lg:col-span-4 rounded-[2rem] p-8 md:p-10 bg-teal text-white flex flex-col justify-between group cursor-pointer shadow-xl hover:scale-[1.005] hover:bg-teal-dark transition-all duration-1000 delay-200 ${
-              visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-            }`}
-          >
-            <div>
-              <div className="flex items-center justify-between mb-8">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-wheat-muted">
-                  03. Educación
-                </span>
-                <AppIcon name="BookOpenIcon" size={24} className="text-white group-hover:scale-110 transition-transform duration-300" />
-              </div>
-              <h3 className="text-2xl md:text-3xl font-light uppercase leading-tight mb-3">
-                Visitas educativas
-              </h3>
-              <p className="text-xs md:text-sm text-white/80 font-light leading-relaxed">
-                Experiencias para escuelas e instituciones.
-              </p>
-            </div>
-
-            <div className="inline-flex items-center gap-3 text-xs font-semibold tracking-wider text-white uppercase group-hover:text-wheat-muted transition-colors duration-300 mt-8">
-              <span>Agendar visita</span>
-              <AppIcon name="WhatsApp" size={16} className="text-white group-hover:text-wheat-muted transition-all duration-300" />
-            </div>
-          </div>
-
-          {/* Card 3: Image Decorator 1 (Row 2 Left - Square Image Card) */}
-          <div
-            className={`col-span-1 md:col-span-1 lg:col-span-4 rounded-[2rem] overflow-hidden relative h-[250px] md:h-[300px] shadow-lg border border-charcoal/5 transition-all duration-1000 delay-300 ${
+            className={`col-span-1 lg:col-span-4 rounded-[2.5rem] overflow-hidden relative h-[380px] lg:h-[450px] group shadow-xl border border-charcoal/5 cursor-pointer transition-all duration-1000 delay-200 hover:scale-[1.005] hover:shadow-2xl ${
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
           >
             <AppImage
-              src="/assets/Quesos%20Zampa/elaboracion/15.jpg"
-              alt="Cuidado de ovejas en el tambo Zampa"
+              src="/assets/Quesos%20Zampa/elaboracion/10.jpg"
+              alt="Proceso de curado y elaboración artesanal de queso"
               fill
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-black/10 z-10 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10" />
+
+            <div className="relative z-20 h-full w-full p-8 md:p-10 flex flex-col justify-end text-left">
+              <div>
+                <span className="inline-block bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-4 backdrop-blur-sm">
+                  02. Educación
+                </span>
+                <h3 className="text-2xl md:text-3xl font-light text-white leading-tight uppercase mb-3">
+                  Visitas educativas
+                </h3>
+                <p className="text-xs md:text-sm text-white/80 font-light leading-relaxed mb-6">
+                  Experiencias didácticas y talleres pensados para escuelas e instituciones que quieran conectar con la vida rural.
+                </p>
+                
+                <div className="inline-flex items-center gap-3 text-xs font-semibold tracking-wider text-white uppercase group-hover:text-[#E8D49A] transition-colors duration-300">
+                  <span>Agendar Visita</span>
+                  <AppIcon name="WhatsApp" size={16} className="text-white group-hover:text-[#E8D49A] group-hover:scale-110 transition-all duration-300" />
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Card 4: Proyectos universitarios (Row 2 Center - Solid Brown Quote Card) */}
+          {/* Card 3: Proyectos universitarios (col-span-12) */}
           <div
             onClick={() => handleServiceClick('universitarios')}
-            className={`col-span-1 md:col-span-1 lg:col-span-4 rounded-[2rem] p-8 bg-umber text-white flex flex-col justify-between text-center group cursor-pointer shadow-lg hover:scale-[1.005] hover:bg-umber-dark transition-all duration-1000 delay-400 ${
-              visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-            }`}
-          >
-            <div className="flex justify-center mt-2">
-              <AppIcon name="AcademicCapIcon" size={24} className="text-[#E8D49A] group-hover:scale-110 transition-transform duration-300" />
-            </div>
-
-            <div className="my-auto px-2">
-              <p className="text-sm md:text-base italic leading-relaxed text-white/95">
-                “Actividades y prácticas de estudiantes, especialmente de Veterinaria.”
-              </p>
-            </div>
-
-            <div>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-[#E8D49A] block mb-1">
-                02. Universidad
-              </span>
-              <span className="text-[9px] font-semibold text-white/50 tracking-wider uppercase block">
-                Prácticas profesionales
-              </span>
-            </div>
-          </div>
-
-          {/* Card 5: Image Decorator 2 (Row 2 Right - Square Image Card) */}
-          <div
-            className={`col-span-1 md:col-span-2 lg:col-span-4 rounded-[2rem] overflow-hidden relative h-[250px] md:h-[300px] shadow-lg border border-charcoal/5 transition-all duration-1000 delay-500 ${
+            className={`col-span-1 lg:col-span-12 rounded-[2.5rem] overflow-hidden relative h-[280px] lg:h-[320px] group shadow-xl border border-charcoal/5 cursor-pointer transition-all duration-1000 delay-300 hover:scale-[1.005] hover:shadow-2xl ${
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
           >
             <AppImage
               src="/assets/Quesos%20Zampa/elaboracion/16.jpg"
-              alt="Ordeñe de ovejas en el tambo Zampa"
+              alt="Prácticas de veterinaria y cuidado ovino en Tambo Zampa"
               fill
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-black/10 z-10 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent z-10" />
+
+            <div className="relative z-20 h-full w-full p-8 md:p-10 flex flex-col justify-end text-left">
+              <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+                <div className="max-w-2xl">
+                  <span className="inline-block bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-4 backdrop-blur-sm">
+                    03. Universidad
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-light text-white leading-tight uppercase mb-3">
+                    Proyectos universitarios
+                  </h3>
+                  <p className="text-xs md:text-sm text-white/80 font-light leading-relaxed">
+                    Espacio abierto para la realización de prácticas profesionales, proyectos de investigación y pasantías académicas, con especial foco en ciencias veterinarias y producción agropecuaria sustentable.
+                  </p>
+                </div>
+                
+                <div className="inline-flex items-center gap-3 text-xs font-semibold tracking-wider text-white uppercase group-hover:text-[#E8D49A] transition-colors duration-300 flex-shrink-0">
+                  <span>Coordinar Prácticas</span>
+                  <AppIcon name="WhatsApp" size={16} className="text-white group-hover:text-[#E8D49A] group-hover:scale-110 transition-all duration-300" />
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
