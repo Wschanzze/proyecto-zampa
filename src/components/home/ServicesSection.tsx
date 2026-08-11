@@ -70,9 +70,9 @@ export default function ServicesSection() {
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-charcoal leading-tight uppercase font-fraunces tracking-[0.06em]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-charcoal leading-tight uppercase tracking-[0.06em]">
               Donde el origen <br />
-              <em className="font-normal italic text-teal">se hace tradición.</em>
+              se hace tradición.
             </h2>
           </div>
 
@@ -109,7 +109,7 @@ export default function ServicesSection() {
                 <span className="inline-block bg-limestone-soft/90 border border-umber/20 text-umber px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-4">
                   01. Tambo Ovino
                 </span>
-                <h3 className="text-2xl md:text-3xl font-light text-white leading-tight uppercase font-fraunces mb-3">
+                <h3 className="text-2xl md:text-3xl font-light text-white leading-tight uppercase mb-3">
                   Conocé nuestro campo
                 </h3>
                 <p className="text-xs md:text-sm text-white/80 font-light leading-relaxed max-w-xl mb-6">
@@ -138,7 +138,7 @@ export default function ServicesSection() {
                 </span>
                 <AppIcon name="BookOpenIcon" size={24} className="text-white group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-light font-fraunces uppercase leading-tight mb-3">
+              <h3 className="text-2xl md:text-3xl font-light uppercase leading-tight mb-3">
                 Visitas educativas
               </h3>
               <p className="text-xs md:text-sm text-white/80 font-light leading-relaxed">
@@ -179,7 +179,7 @@ export default function ServicesSection() {
             </div>
 
             <div className="my-auto px-2">
-              <p className="font-fraunces text-sm md:text-base italic leading-relaxed text-white/95">
+              <p className="text-sm md:text-base italic leading-relaxed text-white/95">
                 “Actividades y prácticas de estudiantes, especialmente de Veterinaria.”
               </p>
             </div>
