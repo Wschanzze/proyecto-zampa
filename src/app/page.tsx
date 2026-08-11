@@ -4,6 +4,7 @@ import HeroSection from '@/components/home/HeroSection';
 import SliderSection from '@/components/home/SliderSection';
 import HeritageSection from '@/components/home/HeritageSection';
 import FloatingPill from '@/components/home/FloatingPill';
+import ServicesSection from '@/components/home/ServicesSection';
 
 // Legacy Home Components
 import OurProducts from '@/components/home/legacy/OurProducts';
@@ -23,6 +24,8 @@ export default function HomePage() {
       <OurProducts />
       <HeritageSection />
       <SliderSection />
+
+      <ServicesSection />
 
       <LegacyVisitSection />
       <InstagramCarousel />
