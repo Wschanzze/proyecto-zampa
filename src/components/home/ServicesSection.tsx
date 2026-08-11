@@ -103,9 +103,6 @@ export default function ServicesSection() {
 
             <div className="relative z-20 h-full w-full p-8 md:p-10 flex flex-col justify-end text-left">
               <div>
-                <span className="inline-block bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-4 backdrop-blur-sm">
-                  01. Tambo Ovino
-                </span>
                 <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-tight uppercase mb-6">
                   Conocé nuestro campo
                 </h3>
@@ -135,9 +132,6 @@ export default function ServicesSection() {
 
             <div className="relative z-20 h-full w-full p-8 md:p-10 flex flex-col justify-end text-left">
               <div>
-                <span className="inline-block bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-4 backdrop-blur-sm">
-                  02. Educación
-                </span>
                 <h3 className="text-2xl md:text-3xl font-light text-white leading-tight uppercase mb-6">
                   Visitas educativas
                 </h3>
@@ -168,9 +162,6 @@ export default function ServicesSection() {
             <div className="relative z-20 h-full w-full p-8 md:p-10 flex flex-col justify-end text-left">
               <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
                 <div className="max-w-2xl">
-                  <span className="inline-block bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-4 backdrop-blur-sm">
-                    03. Universidad
-                  </span>
                   <h3 className="text-2xl md:text-3xl font-light text-white leading-tight uppercase mb-0">
                     Proyectos universitarios
                   </h3>
