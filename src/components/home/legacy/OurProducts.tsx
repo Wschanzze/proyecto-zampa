@@ -57,17 +57,7 @@ const OurProducts = () => {
                 <div className="absolute inset-0 bg-black/35 group-hover:bg-black/40 transition-colors duration-500 z-10" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent z-10" />
                 
-                {/* Logo superior */}
-                <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20">
-                  <div className="relative" style={{ width: '120px', height: '53px' }}>
-                    <Image 
-                      src="/assets/Quesos Zampa/logo blanco.png" 
-                      alt="Quesos Zampa" 
-                      fill 
-                      className="object-contain opacity-90"
-                    />
-                  </div>
-                </div>
+
 
                 {/* Content container */}
                 <div className="absolute inset-x-0 bottom-0 p-8 z-20 text-left flex flex-col gap-2">
