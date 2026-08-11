@@ -106,12 +106,9 @@ export default function ServicesSection() {
                 <span className="inline-block bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-4 backdrop-blur-sm">
                   01. Tambo Ovino
                 </span>
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-tight uppercase mb-3">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-tight uppercase mb-6">
                   Conocé nuestro campo
                 </h3>
-                <p className="text-xs md:text-sm text-white/80 font-light leading-relaxed max-w-xl mb-6">
-                  Una visita guiada exclusiva por nuestro tambo ovino para conocer el libre pastoreo de las ovejas frisonas y todo el proceso artesanal de producción.
-                </p>
                 
                 <div className="inline-flex items-center gap-3 text-xs font-semibold tracking-wider text-white uppercase group-hover:text-[#E8D49A] transition-colors duration-300">
                   <span>Reservar Visita Guiada</span>
@@ -141,12 +138,9 @@ export default function ServicesSection() {
                 <span className="inline-block bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-4 backdrop-blur-sm">
                   02. Educación
                 </span>
-                <h3 className="text-2xl md:text-3xl font-light text-white leading-tight uppercase mb-3">
+                <h3 className="text-2xl md:text-3xl font-light text-white leading-tight uppercase mb-6">
                   Visitas educativas
                 </h3>
-                <p className="text-xs md:text-sm text-white/80 font-light leading-relaxed mb-6">
-                  Experiencias didácticas y talleres pensados para escuelas e instituciones que quieran conectar con la vida rural.
-                </p>
                 
                 <div className="inline-flex items-center gap-3 text-xs font-semibold tracking-wider text-white uppercase group-hover:text-[#E8D49A] transition-colors duration-300">
                   <span>Agendar Visita</span>
@@ -177,12 +171,9 @@ export default function ServicesSection() {
                   <span className="inline-block bg-white/10 border border-white/20 text-white px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest mb-4 backdrop-blur-sm">
                     03. Universidad
                   </span>
-                  <h3 className="text-2xl md:text-3xl font-light text-white leading-tight uppercase mb-3">
+                  <h3 className="text-2xl md:text-3xl font-light text-white leading-tight uppercase mb-0">
                     Proyectos universitarios
                   </h3>
-                  <p className="text-xs md:text-sm text-white/80 font-light leading-relaxed">
-                    Espacio abierto para la realización de prácticas profesionales, proyectos de investigación y pasantías académicas, con especial foco en ciencias veterinarias y producción agropecuaria sustentable.
-                  </p>
                 </div>
                 
                 <div className="inline-flex items-center gap-3 text-xs font-semibold tracking-wider text-white uppercase group-hover:text-[#E8D49A] transition-colors duration-300 flex-shrink-0">
