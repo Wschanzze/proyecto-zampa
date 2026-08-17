@@ -21,9 +21,8 @@ export default function LegacyVisitSection() {
     return () => observer.disconnect();
   }, []);
 
-  const handleBookExperience = () => {
-    const message = "¡Hola! Me pongo en contacto desde su sitio web porque me gustaría recibir información para reservar una visita y conocer el Tambo Zampa.";
-    window.open(`https://wa.me/5491132554757?text=${encodeURIComponent(message)}`, '_blank');
+  const handleLeaveReview = () => {
+    window.open('https://g.page/r/CZQDdzpztPFvEAI/review', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -33,19 +32,23 @@ export default function LegacyVisitSection() {
           
           {/* Left Column: Texts */}
           <div className={`lg:col-span-6 flex flex-col gap-6 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-teal">Establecimiento Zampa</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-teal">Tu opinión nos inspira</span>
             
             <h2 className="text-4xl md:text-5xl font-light text-charcoal leading-tight uppercase">
-              UN VIAJE PARA DESCUBRIR LA TRADICIÓN QUESERA.<br />
-              ¡VEN A VISITARNOS!
+              ¿PROBASTE NUESTROS QUESOS?<br />
+              ¡DÉJANOS TU RESEÑA EN GOOGLE!
             </h2>
+
+            <p className="text-sm md:text-base text-charcoal/70 font-light leading-relaxed">
+              Tu experiencia en nuestro establecimiento y con nuestras variedades de queso de oveja nos ayuda a seguir perfeccionando nuestra tradición artesanal en Tandil.
+            </p>
             
             <button
-              onClick={handleBookExperience}
-              className="group flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal border border-charcoal/10 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] hover:scale-[1.02] transition-all duration-300 shadow-md hover:shadow-lg mt-2 self-start tracking-[0.15em] uppercase px-8"
+              onClick={handleLeaveReview}
+              className="group flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal border border-charcoal/15 hover:bg-[#4285F4] hover:text-white hover:border-[#4285F4] hover:scale-[1.02] transition-all duration-300 shadow-md hover:shadow-lg mt-2 self-start tracking-[0.15em] uppercase px-8 font-semibold text-xs sm:text-sm"
             >
-              <Icon name="WhatsApp" size={18} className="w-5 h-5 text-charcoal transition-transform duration-300 group-hover:scale-110 group-hover:text-white" />
-              <span>Reserva tu experiencia</span>
+              <Icon name="Google" size={18} className="w-5 h-5 text-charcoal transition-transform duration-300 group-hover:scale-110 group-hover:text-white" />
+              <span>Dejar reseña en Google</span>
             </button>
           </div>
 
