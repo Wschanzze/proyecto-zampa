@@ -15,14 +15,6 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    subtitle: 'RECORRIDO GUIADO',
-    title: 'Conocé nuestro tambo',
-    excerpt: 'Vení a Napaleofú a conocer el proceso desde el inicio. Caminá entre nuestras pasturas y observá el ordeñe diario de nuestras ovejas frisonas en un entorno natural único.',
-    image: '/assets/Quesos%20Zampa/BAB4C1FD-5368-4434-ADE4-498A3AE4D8C6.jpg',
-    href: 'https://wa.me/5491132554757?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20coordinar/reservar%20un%20recorrido%20guiado%20para%20conocer%20el%20tambo%20en%20Napaleof%C3%BA.',
-  },
-  {
-    id: 2,
     subtitle: 'ALIMENTACIÓN NATURAL',
     title: 'Sistema pastoril',
     excerpt: 'Nuestras ovejas pastan libremente en las pasturas de Napaleofú bajo un esquema de pastoreo rotativo. Esta alimentación natural y el respeto por el bienestar animal son la clave para obtener una leche de oveja de altísima calidad.',
@@ -30,7 +22,7 @@ const slides: Slide[] = [
     href: '/nuestra-historia',
   },
   {
-    id: 3,
+    id: 2,
     subtitle: 'DE LA PASTURA A LA CAVA',
     title: 'Ciclo completo de elaboración',
     excerpt: 'Controlamos con absoluta dedicación cada etapa del proceso: desde el ordeñe higiénico y la elaboración manual de cada pieza, hasta la maduración controlada en nuestra cava de Tandil, garantizando un queso honesto y con carácter real.',
