@@ -128,6 +128,7 @@ export default function HeroSection() {
               src={slide.image}
               alt={slide.alt}
               fill
+              sizes="100vw"
               className="object-cover transition-transform duration-[10000ms] ease-out"
               style={{
                 transform: idx === currentIdx ? 'scale(1)' : 'scale(1.08)'

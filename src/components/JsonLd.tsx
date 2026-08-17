@@ -3,14 +3,37 @@ import React from 'react';
 export default function JsonLd() {
   const baseUrl = 'https://quesoszampa.com';
 
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${baseUrl}/#organization`,
+    name: 'Quesos Zampa',
+    legalName: 'Quesos Zampa',
+    url: baseUrl,
+    logo: `${baseUrl}/logo.png`,
+    image: `${baseUrl}/logo.png`,
+    description: 'Quesería artesanal y tambo ovino pastoril en Tandil, Buenos Aires, Argentina. Especialistas en queso pecorino, brie de oveja y productos artesanales ovinos.',
+    sameAs: [
+      'https://www.instagram.com/quesoszampa/',
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Ruta Nacional 226',
+      addressLocality: 'Tandil',
+      addressRegion: 'Buenos Aires',
+      postalCode: '7000',
+      addressCountry: 'AR',
+    },
+  };
+
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'FoodEstablishment',
-    '@id': `${baseUrl}/#organization`,
+    '@id': `${baseUrl}/#localbusiness`,
     name: 'Quesos Zampa',
     alternateName: 'Quesería Zampa Tandil',
     url: baseUrl,
-    logo: `${baseUrl}/assets/Quesos%20Zampa/logos/PNG/Zampa_Logotipos-02.png`,
+    logo: `${baseUrl}/logo.png`,
     image: `${baseUrl}/assets/Quesos%20Zampa/IMG_9816.JPG`,
     description: 'Quesería artesanal y tambo ovino pastoril en Tandil, Buenos Aires, Argentina. Especialistas en queso pecorino, brie de oveja y productos artesanales ovinos.',
     telephone: '+5491132554757',
@@ -83,6 +106,10 @@ export default function JsonLd() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}

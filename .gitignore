@@ -39,3 +39,5 @@ turbo/
 .env.local
 .env.*.local 
 Panel de quesos/ 
+scratch/
+

@@ -93,6 +93,7 @@ export default function HeritageSection() {
                   src="/assets/Quesos%20Zampa/IMG_9821.JPG"
                   alt="Proceso de elaboración artesanal de queso de oveja Zampa"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-umber-dark/50 via-transparent to-transparent" />
@@ -108,6 +109,7 @@ export default function HeritageSection() {
                   src="/assets/Quesos%20Zampa/IMG_2809.jpg"
                   alt="Maduración en cava de los quesos de oveja Zampa"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-umber-dark/40 via-transparent to-transparent" />
@@ -123,6 +125,7 @@ export default function HeritageSection() {
                   src="/assets/Quesos%20Zampa/IMG_9858.JPG"
                   alt="Detalle de los quesos artesanales en Napaleofú"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 25vw"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               </div>
 
