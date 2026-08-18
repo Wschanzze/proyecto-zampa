@@ -34,7 +34,7 @@ const entries: TimelineEntry[] = [
   era: 'Quesería',
   title: 'La Transformación en Quesos',
   description: 'Decisión estratégica de integrar la cadena y elaborar quesos artesanales propios.',
-  detail: 'Para capturar mayor valor agregado, Zampa dejó de vender leche cruda a terceros y comenzó a procesarla en quesos de autor. Juan Cruz, con su formación gastronómica, desarrolló recetas inspiradas en las tradiciones francesa, italiana y española, elaborando quesos con leche fresca del mismo día.',
+  detail: 'Para capturar mayor valor agregado, Zampa dejó de vender leche pasteurizada a terceros y comenzó a procesarla en quesos de autor. Juan Cruz, con su formación gastronómica, desarrolló recetas inspiradas en las tradiciones francesa, italiana y española, elaborando quesos con leche fresca del mismo día.',
   yieldNote: 'Integración: Elaboración diaria de lunes a lunes con leche fresca.',
   regionNote: 'Desarrollo de las primeras recetas de Camembert y Pecorino.',
   thumb: "/assets/Quesos%20Zampa/68C50477-1C39-48B6-86FE-640DEDCA65B1.jpg",

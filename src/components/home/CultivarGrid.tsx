@@ -26,7 +26,7 @@ const cultivars: Cultivar[] = [
     id: 'cul-002',
     name: 'Queso Pecorino Zampa',
     region: 'guarda prolongada en cava ovinos',
-    yieldGain: 'El gran desafío técnico y orgullo de nuestro tambo. Inspirado en la tradición italiana, es un queso de pasta dura o semidura elaborado con leche cruda y madurado lentamente en cava para desarrollar un sabor robusto, notas herbales y una textura firme y quebradiza.',
+    yieldGain: 'El gran desafío técnico y orgullo de nuestro tambo. Inspirado en la tradición italiana, es un queso de pasta dura o semidura elaborado con leche pasteurizada y madurado lentamente en cava para desarrollar un sabor robusto, notas herbales y una textura firme y quebradiza.',
     droughtTolerance: '9 a 12 meses en cava',
     image: '/assets/Quesos%20Zampa/productos/producto_pecorino.png',
     imageAlt: 'Queso Pecorino Zampa madurado rústico'
@@ -176,7 +176,7 @@ export default function CultivarGrid() {
                       Elaboración
                     </span>
                     <span className="text-sm text-charcoal/80 font-light leading-relaxed">
-                      Leche cruda de oveja, {cultivar.region}
+                      Leche pasteurizada de oveja, {cultivar.region}
                     </span>
                   </div>
 

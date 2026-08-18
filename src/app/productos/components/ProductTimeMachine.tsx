@@ -26,7 +26,7 @@ const cards: Card[] = [
     subtitle: 'Considerado la vedette de la casa. Un queso de pasta blanda con corteza enmohecida blanca, elaborado 100% con leche de oveja frisona fresca del día.',
     maturationMonths: 'Punto óptimo (4 a 6 sem.)',
     tastingNotes: 'Textura untuosa y fundente con aromas lácticos intensos y sotobosque.',
-    milkType: 'Leche Cruda A2 de Oveja',
+    milkType: 'Leche Pasteurizada A2 de Oveja',
     timelineLabel: 'Camembert',
     image: '/assets/Quesos%20Zampa/productos/producto_Camembert.png',
     imageAlt: 'Queso Camembert de oveja Zampa en plato'
@@ -38,7 +38,7 @@ const cards: Card[] = [
     subtitle: 'El gran desafío técnico y orgullo de nuestro tambo. Inspirado en la tradición italiana, es un queso de pasta dura madurado lentamente en cava.',
     maturationMonths: '9 a 12 Meses en Cava',
     tastingNotes: 'Sabor robusto, notas herbales de pastura y textura firme quebradiza.',
-    milkType: 'Leche Cruda A2 de Oveja',
+    milkType: 'Leche Pasteurizada A2 de Oveja',
     timelineLabel: 'Pecorino',
     image: '/assets/Quesos%20Zampa/productos/producto_pecorino.png',
     imageAlt: 'Queso Pecorino Zampa madurado rústico'
@@ -50,7 +50,7 @@ const cards: Card[] = [
     subtitle: 'De estilo clásico francés y corteza aterciopelada blanca. Aprovecha la gran riqueza grasa de la leche frisona para lograr extrema cremosidad.',
     maturationMonths: '3 a 5 Semanas en Cava',
     tastingNotes: 'Matices complejos, cremosidad envolvente y notas de mantequilla rica.',
-    milkType: 'Leche Cruda A2 de Oveja',
+    milkType: 'Leche Pasteurizada A2 de Oveja',
     timelineLabel: 'Brie',
     image: '/assets/Quesos%20Zampa/productos/producto_brie.png',
     imageAlt: 'Queso Brie de oveja Zampa cortado'
@@ -62,7 +62,7 @@ const cards: Card[] = [
     subtitle: 'Inspirado en la gran tradición española. Un queso de pasta semidura o dura que resalta el dulzor natural y sutiles matices herbales.',
     maturationMonths: '6 a 9 Meses en Cava',
     tastingNotes: 'Textura compacta, retrogusto limpio y equilibrado dulzor herbal.',
-    milkType: 'Leche Cruda A2 de Oveja',
+    milkType: 'Leche Pasteurizada A2 de Oveja',
     timelineLabel: 'Manchego',
     image: '/assets/Quesos%20Zampa/productos/producto_machego.png',
     imageAlt: 'Queso Manchego Zampa artesanal'
@@ -74,7 +74,7 @@ const cards: Card[] = [
     subtitle: 'Variedad mediterránea adaptada al perfil graso y rico de la leche ovina. Presenta una textura elástica que evoluciona con el tiempo.',
     maturationMonths: '3 a 6 Meses Maduración',
     tastingNotes: 'Sabor rico y moderado que adquiere picor agradable con el tiempo.',
-    milkType: 'Leche Cruda A2 de Oveja',
+    milkType: 'Leche Pasteurizada A2 de Oveja',
     timelineLabel: 'Provolone',
     image: '/assets/Quesos%20Zampa/productos/producto_provolone.png',
     imageAlt: 'Cortes de queso Provolone Zampa'
@@ -86,7 +86,7 @@ const cards: Card[] = [
     subtitle: 'Sometido a un ahumado natural lento con maderas selectas que le otorga una distintiva corteza color caramelo y aroma inconfundible.',
     maturationMonths: 'Ahumado Lento en Cava',
     tastingNotes: 'Aromas ahumados profundos en elegante contraste con la cremosidad láctica.',
-    milkType: 'Leche Cruda A2 de Oveja',
+    milkType: 'Leche Pasteurizada A2 de Oveja',
     timelineLabel: 'Ahumado',
     image: '/assets/Quesos%20Zampa/productos/producto_ahumado.png',
     imageAlt: 'Queso Ahumado artesanal Zampa'

@@ -846,7 +846,7 @@ export default function CheeseBoard() {
             alt="Camembert de Oveja Zampa"
             imgSize={260}
             title={"Camembert\nde Oveja Zampa"}
-            subtitle={"Vedette de la Casa — Pasta blanda\n100% Leche Cruda A2 de Oveja Frisona"}
+            subtitle={"Vedette de la Casa — Pasta blanda\n100% Leche Pasteurizada A2 de Oveja Frisona"}
             delay={0.05}
             duration={4.5}
             rotateFrom={-0.6}
@@ -1119,7 +1119,7 @@ export default function CheeseBoard() {
               className="font-serif text-xs tracking-widest text-[#766D65] uppercase"
               style={{ fontFamily: 'var(--font-cormorant), serif' }}
             >
-              Quesos Zampa • Tandil, Buenos Aires • Leche Cruda A2 de Oveja
+              Quesos Zampa • Tandil, Buenos Aires • Leche Pasteurizada A2 de Oveja
             </p>
           </div>
         </Reveal>
