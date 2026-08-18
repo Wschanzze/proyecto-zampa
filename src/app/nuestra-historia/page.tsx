@@ -88,7 +88,7 @@ export default function NuestraHistoriaPage() {
                     Motivados por el enorme potencial de la actividad, tomaron una decisión temprana y muy audaz: adquirieron 40 borregas frisonas lecheras sin contar aún con una estructura física consolidada. Fue un salto de fe que requirió determinación inmediata para acondicionar su campo en las sierras de Tandil y convertirlo en su centro operativo.
                   </p>
                   <p>
-                    Hoy en día, Zampa opera bajo un sistema de integración vertical. Esto significa que la familia controla meticulosamente cada eslabón de la cadena de valor: la cría de su rebaño frisón en pasturas naturales, la obtención de leche fresca y la elaboración de quesos de oveja de carácter excepcional en su propia quesería.
+                    Hoy en día, Zampa opera bajo un sistema de integración vertical. Esto significa que la familia controla meticulosamente cada eslabón de la cadena de valor: la cría de su rebaño frisón en pasturas implantadas de alfalfa y festuca, la obtención de leche fresca y la elaboración de quesos de oveja de carácter excepcional en su propia quesería.
                   </p>
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function NuestraHistoriaPage() {
                     </p>
                   </div>
                   <p className="text-sm leading-relaxed text-charcoal mb-4 text-left sm:text-justify">
-                    En Zampa nos enfocamos en producciones limitadas donde cada horma se cuida individualmente. Elaboramos variedades selectas como Pecorino, Ahumado, Orégano y Manchego. El gran objetivo del proyecto es avanzar con la habilitación definitiva de la quesería propia para vender directo al público y potenciar el valor agregado en origen.
+                    En Zampa nos enfocamos en producciones limitadas donde cada horma se cuida individualmente. Elaboramos variedades selectas como Pecorino, Ahumado, Orégano y Manchego. Con la habilitación definitiva de nuestra quesería propia plenamente alcanzada, vendemos directo al público y potenciamos el valor agregado en origen.
                   </p>
                 </div>
 
