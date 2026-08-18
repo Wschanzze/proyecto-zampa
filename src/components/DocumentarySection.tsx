@@ -10,7 +10,7 @@ export default function DocumentarySection() {
         </h2>
         <p className="text-umber-light font-light text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
           Te invitamos a ver el siguiente documental sobre nuestros orígenes, nuestro tambo pastoril 
-          y el testimonio directo de Juan Cruz e Isabel en su día a día.
+          y el testimonio directo de Isabel y Juan Cruz en su día a día.
         </p>
       </div>
       <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl bg-black">

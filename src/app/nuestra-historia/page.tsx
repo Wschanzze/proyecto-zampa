@@ -58,13 +58,13 @@ export default function NuestraHistoriaPage() {
               <span className="article-tag">Historia de Familia</span>
               <h2 className="article-title font-light uppercase">El Origen de un Sueño de Oveja en Tandil</h2>
               <p className="article-subtitle">
-                Cómo Juan Cruz e Isabel unieron la gastronomía y el paisajismo en un tambo ovino referente en Tandil.
+                Cómo Isabel y Juan Cruz unieron el paisajismo y la gastronomía en un tambo ovino referente en Tandil.
               </p>
               
               <div className="newspaper-img-container main-img relative block mx-auto max-w-[450px] w-full my-6">
                 <Image 
                   src="/assets/Quesos Zampa/nuevas/e86d00df-bd8f-464c-93ea-ecd85bf7f3a8.jpg" 
-                  alt="Juan Cruz e Isabel - Zampa" 
+                  alt="Isabel y Juan Cruz - Zampa" 
                   width={450}
                   height={280}
                   sizes="(max-width: 640px) 100vw, 450px"
@@ -72,7 +72,7 @@ export default function NuestraHistoriaPage() {
                   className="h-[220px] md:h-[280px] w-full object-cover rounded-sm"
                 />
                 <p className="newspaper-img-caption">
-                  Juan Cruz Moy Peña e Isabel Sáenz Rozas, fundadores de Quesos Zampa.
+                  Isabel Sáenz Rozas y Juan Cruz Moy Peña, fundadores de Quesos Zampa.
                 </p>
                 <h1 className="watermark-logo absolute bottom-12 right-4 opacity-15 pointer-events-none select-none font-light text-right leading-none text-charcoal uppercase">
                   ZAMPA<br />QUESOS<br />TANDIL
@@ -82,7 +82,7 @@ export default function NuestraHistoriaPage() {
               <div className="article-text">
                 <div className="article-columns">
                   <p className="drop-cap">
-                    Juan Cruz Moy Peña e Isabel Sáenz Rozas, pareja desde hace más de diez años, decidieron iniciar un proyecto productivo conjunto tras un largo período de búsqueda sin una idea definida. Con experiencia profesional en gastronomía (Juan Cruz) y paisajismo (Isabel), la chispa definitiva se encendió al asistir, junto a Gonzalo (35), hermano de Isabel y productor agropecuario, a una charla sobre tambos ovinos en el Parque Industrial de Tandil.
+                    Isabel Sáenz Rozas y Juan Cruz Moy Peña, pareja desde hace más de diez años, decidieron iniciar un proyecto productivo conjunto tras un largo período de búsqueda sin una idea definida. Con experiencia profesional en paisajismo (Isabel) y gastronomía (Juan Cruz), la chispa definitiva se encendió al asistir, junto a Gonzalo (35), hermano de Isabel y productor agropecuario, a una charla sobre tambos ovinos en el Parque Industrial de Tandil.
                   </p>
                   <p>
                     Motivados por el enorme potencial de la actividad, tomaron una decisión temprana y muy audaz: adquirieron 40 borregas frisonas lecheras sin contar aún con una estructura física consolidada. Fue un salto de fe que requirió determinación inmediata para acondicionar su campo en las sierras de Tandil y convertirlo en su centro operativo.

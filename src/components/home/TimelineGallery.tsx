@@ -22,7 +22,7 @@ const entries: TimelineEntry[] = [
   era: 'El Origen',
   title: 'El Comienzo del Tambo',
   description: 'Adquisición de las primeras ovejas frisonas y puesta en marcha del tambo en Napaleofú.',
-  detail: 'Tras asistir a una charla sobre tambos ovinos en Tandil, Juan Cruz, Isabel y Gonzalo decidieron emprender en el campo. Comenzaron con la compra de 40 borregas frisonas de aptitud lechera, iniciando así un camino de aprendizaje constante y manejo de pasturas bajo el nombre de Ovinos Zampa.',
+  detail: 'Tras asistir a una charla sobre tambos ovinos en Tandil, Isabel, Juan Cruz y Gonzalo decidieron emprender en el campo. Comenzaron con la compra de 40 borregas frisonas de aptitud lechera, iniciando así un camino de aprendizaje constante y manejo de pasturas bajo el nombre de Ovinos Zampa.',
   yieldNote: 'Rodeo inicial: 40 borregas ovinas frisonas seleccionadas.',
   regionNote: 'Establecimiento en Napaleofú, Buenos Aires (Ruta 226).',
   thumb: "/assets/Quesos%20Zampa/07B73847-614E-4FDC-B7AF-F639064C64CB.jpg",
