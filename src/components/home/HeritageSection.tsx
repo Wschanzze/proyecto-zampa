@@ -132,13 +132,13 @@ export default function HeritageSection() {
             {/* Floating trial card */}
             <div
               ref={cardRef}
-              className="absolute top-[38%] right-[-28px] glass-stone p-5 rounded-3xl w-64 shadow-2xl animate-float border border-wheat/30 hidden lg:block">
+              className="absolute top-[38%] right-[-28px] glass-stone p-5 rounded-3xl w-64 shadow-2xl animate-float border border-limestone/50 hidden lg:block">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-medium uppercase tracking-wide text-umber-light">Edición Limitada</span>
                 <Icon name="EllipsisHorizontalIcon" size={16} variant="outline" className="text-umber-light" />
               </div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-wheat-muted text-teal flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-limestone text-umber flex-shrink-0">
                   <Icon name="SparklesIcon" size={18} variant="outline" />
                 </div>
                 <div>
@@ -146,11 +146,11 @@ export default function HeritageSection() {
                   <p className="text-xs text-umber-light">Producción Estacional</p>
                 </div>
               </div>
-              <div className="flex items-center justify-between p-3 rounded-xl border border-wheat/30 bg-cream">
+              <div className="flex items-center justify-between p-3 rounded-xl border border-limestone/40 bg-cream">
                 <span className="text-xs text-umber-light">Proteína A2</span>
-                <span className="text-sm font-semibold text-teal">Fácil Digestión</span>
+                <span className="text-sm font-semibold text-umber">Fácil Digestión</span>
               </div>
-              <div className="mt-3 flex items-center gap-2 text-xs font-medium px-2 py-1 rounded-md text-teal bg-teal/10 w-max">
+              <div className="mt-3 flex items-center gap-2 text-xs font-medium px-2 py-1 rounded-md text-umber bg-umber/10 w-max">
                 <Icon name="CheckCircleIcon" size={12} variant="outline" />
                 Lotes de Estación
               </div>

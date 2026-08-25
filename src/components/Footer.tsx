@@ -19,11 +19,11 @@ export default function Footer() {
               className="text-umber opacity-75"
             />
             <div className="flex items-center gap-6 text-sm font-medium text-umber-light">
-              <a href="/nuestra-historia" className="hover:text-teal transition-colors">Nuestra Historia</a>
-              <a href="/productos" className="hover:text-teal transition-colors">Productos</a>
-              <a href="/elaboracion" className="hover:text-teal transition-colors">Calidad</a>
-              <a href="#" className="hover:text-teal transition-colors">Privacidad</a>
-              <a href="#" className="hover:text-teal transition-colors">Términos</a>
+              <a href="/nuestra-historia" className="hover:text-umber transition-colors">Nuestra Historia</a>
+              <a href="/productos" className="hover:text-umber transition-colors">Productos</a>
+              <a href="/elaboracion" className="hover:text-umber transition-colors">Calidad</a>
+              <a href="#" className="hover:text-umber transition-colors">Privacidad</a>
+              <a href="#" className="hover:text-umber transition-colors">Términos</a>
             </div>
           </div>
 
@@ -34,7 +34,7 @@ export default function Footer() {
                 <a
                   key={icon}
                   href="#"
-                  className="w-9 h-9 rounded-full border border-wheat/40 flex items-center justify-center text-umber-light hover:text-teal hover:border-teal transition-all duration-200"
+                  className="w-9 h-9 rounded-full border border-wheat/40 flex items-center justify-center text-umber-light hover:text-umber hover:border-umber transition-all duration-200"
                   aria-label={icon}
                 >
                   <Icon name={icon} size={16} variant="outline" />
