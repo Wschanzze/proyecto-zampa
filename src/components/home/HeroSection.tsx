@@ -174,14 +174,6 @@ export default function HeroSection() {
       <div className="relative z-20 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16 pt-28 lg:pt-36 pb-16 lg:pb-20">
         <div className="max-w-4xl flex flex-col gap-6 sm:gap-8">
           
-          {/* Subtitle */}
-          <div className="flex items-center gap-3 sm:gap-4 opacity-90">
-            <span className="w-8 sm:w-16 h-[1px] bg-white"></span>
-            <p className="text-[10px] sm:text-xs font-bold tracking-[0.4em] text-white uppercase drop-shadow-md">
-              De Tandil a tu Mesa
-            </p>
-          </div>
-
           {/* Title Area */}
           <div className="min-h-[120px] sm:min-h-[160px] lg:min-h-[200px] flex flex-col justify-center">
             <h1

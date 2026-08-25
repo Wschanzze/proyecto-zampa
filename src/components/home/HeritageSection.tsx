@@ -25,33 +25,12 @@ export default function HeritageSection() {
 
   return (
     <section id="heritage" className="relative py-24 lg:py-32 bg-white overflow-hidden flex items-center grain-overlay">
-      {/* Atmospheric gradient background */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <div
-          className="absolute top-0 right-0 w-2/3 h-full opacity-30"
-          style={{
-            background: 'radial-gradient(ellipse at 80% 30%, rgba(201,168,76,0.18) 0%, transparent 60%)'
-          }} />
-        
-        <div
-          className="absolute bottom-0 left-0 w-1/2 h-1/2 opacity-20"
-          style={{
-            background: 'radial-gradient(ellipse at 20% 80%, rgba(46,93,90,0.15) 0%, transparent 55%)'
-          }} />
-      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
           {/* Left: Copy */}
           <div className="lg:col-span-5 flex flex-col gap-7">
-            {/* Season badge */}
-            <div className="inline-flex items-center gap-2 self-start border border-wheat/50 bg-cream px-4 py-2 rounded-full">
-              <span className="w-2 h-2 rounded-full bg-teal animate-pulse flex-shrink-0" />
-              <span className="text-xs font-medium text-teal tracking-widest uppercase">
-                Quesos Estacionales • Leche A2
-              </span>
-            </div>
 
             <h2
               ref={headlineRef}
@@ -62,7 +41,7 @@ export default function HeritageSection() {
 
             <p
               ref={subRef}
-              className="text-lg font-light text-umber-light leading-relaxed max-w-md">
+              className="text-lg font-light text-charcoal/80 leading-relaxed max-w-md">
               Nuestros quesos se elaboran exclusivamente con leche 100% de oveja, naturalmente rica en proteína A2 para una fácil digestión. Al respetar el ciclo biológico natural del rebaño, la producción es estacional, convirtiendo a cada horma de queso en una edición limitada, única y atada al ritmo de la tierra.
             </p>
 

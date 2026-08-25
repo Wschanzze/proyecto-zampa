@@ -71,9 +71,8 @@ const InstagramCarousel = () => {
   return (
     <section className="py-24 lg:py-32 bg-[#FAF8F5] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center mb-16">
-        <span className="text-xs font-semibold uppercase tracking-[0.25em] text-teal mb-3 block">FILOSOFÍA EN IMÁGENES</span>
         <h2 className="text-4xl md:text-5xl font-light text-charcoal tracking-[0.06em] uppercase mb-3">
-          <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-teal transition-colors duration-300">
+          <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#6B4226] transition-colors duration-300">
             @quesos.zampa
           </a>
         </h2>
@@ -103,7 +102,7 @@ const InstagramCarousel = () => {
               href={instagramUrl} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex-shrink-0 w-[300px] md:w-[420px] aspect-square rounded-[32px] overflow-hidden relative shadow-lg group border border-teal/5 transition-all duration-500 hover:shadow-2xl"
+              className="flex-shrink-0 w-[300px] md:w-[420px] aspect-square rounded-[32px] overflow-hidden relative shadow-lg group border border-charcoal/5 transition-all duration-500 hover:shadow-2xl"
             >
               <div className="relative w-full h-full">
                 {item.type === 'video' ? (
@@ -156,8 +155,8 @@ const InstagramCarousel = () => {
             onClick={() => scrollToSection(idx)}
             className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
               activeIndex === idx 
-                ? 'bg-teal scale-125' // Active dot is colored and slightly larger
-                : 'bg-teal/20 hover:bg-teal/40'  // Inactive dot is lighter
+                ? 'bg-[#6B4226] scale-125' // Active dot is colored and slightly larger
+                : 'bg-charcoal/20 hover:bg-charcoal/40'  // Inactive dot is lighter
             }`}
             aria-label={`Go to page ${idx + 1}`}
           />

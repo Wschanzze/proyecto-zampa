@@ -122,11 +122,6 @@ export default function SliderSection() {
                     : 'opacity-0 -translate-y-[40%] absolute pointer-events-none'
                 }`}
               >
-                {/* Subtitle */}
-                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
-                  {slide.subtitle}
-                </span>
-
                 {/* Title */}
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white leading-tight uppercase tracking-wide">
                   {slide.title}
@@ -143,7 +138,7 @@ export default function SliderSection() {
                     href={slide.href}
                     target={slide.href.startsWith('http') ? "_blank" : undefined}
                     rel={slide.href.startsWith('http') ? "noopener noreferrer" : undefined}
-                    className="inline-block text-xs font-bold uppercase tracking-[0.25em] text-white border-b border-[#C9A84C] pb-1 hover:text-[#C9A84C] hover:border-white transition-all duration-300"
+                    className="inline-block text-xs font-bold uppercase tracking-[0.25em] text-white border-b border-white/60 pb-1 hover:text-wheat-muted hover:border-wheat-muted transition-all duration-300"
                   >
                     MAS INFO
                   </a>

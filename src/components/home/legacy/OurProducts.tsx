@@ -31,7 +31,6 @@ const OurProducts = () => {
     <section className="py-24 lg:py-32 bg-[#FAF8F5] relative overflow-hidden">
       {/* Header section */}
       <div className="max-w-4xl mx-auto px-6 text-center mb-16 md:mb-24">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-teal mb-4 block">NUESTROS PRODUCTOS</p>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-charcoal leading-tight uppercase tracking-[0.06em] mb-6">
           Descubrí nuestros quesos de autor
         </h2>
@@ -43,7 +42,7 @@ const OurProducts = () => {
       {/* Categories Grid */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         {categories.map((cat, idx) => (
-          <div key={idx} className="product-card group relative aspect-square sm:aspect-[4/3] md:aspect-[4/5] rounded-[32px] overflow-hidden shadow-xl hover:shadow-2xl border border-teal/5 transition-all duration-500 hover:-translate-y-2 bg-white">
+          <div key={idx} className="product-card group relative aspect-square sm:aspect-[4/3] md:aspect-[4/5] rounded-[32px] overflow-hidden shadow-xl hover:shadow-2xl border border-charcoal/5 transition-all duration-500 hover:-translate-y-2 bg-white">
             <Link href={cat.link} className="absolute inset-0 z-20">
               <div className="relative w-full h-full">
                 <Image 

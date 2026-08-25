@@ -20,7 +20,6 @@ const JoinFamily = () => {
       
       {/* Reseller Call to Action */}
       <div className="relative z-20 max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
-        <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">DESCUBRÍ NUESTROS PUNTOS DE VENTA</span>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-[0.06em] uppercase leading-tight">
           DÓNDE ENCONTRAR NUESTROS QUESOS
         </h2>

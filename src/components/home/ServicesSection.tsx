@@ -38,22 +38,6 @@ export default function ServicesSection() {
       ref={sectionRef}
       className="py-24 lg:py-32 bg-[#FAF8F5] relative overflow-hidden grain-overlay"
     >
-      {/* Background radial highlights for visual depth */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <div
-          className="absolute top-0 right-0 w-2/3 h-full opacity-20"
-          style={{
-            background: 'radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.1) 0%, transparent 60%)'
-          }}
-        />
-        <div
-          className="absolute bottom-0 left-0 w-1/2 h-1/2 opacity-15"
-          style={{
-            background: 'radial-gradient(ellipse at 20% 80%, rgba(46,93,90,0.08) 0%, transparent 55%)'
-          }}
-        />
-      </div>
-
       <div className="max-w-7xl mx-auto relative z-10 px-6 lg:px-12">
         
         {/* Header in 2-column layout (inspired by the reference) */}
@@ -63,13 +47,6 @@ export default function ServicesSection() {
           }`}
         >
           <div className="lg:col-span-8">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-px bg-teal" />
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
-                Nuestros Servicios
-              </span>
-            </div>
-
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-charcoal leading-tight uppercase tracking-[0.06em]">
               Donde el origen <br />
               se hace tradición.
