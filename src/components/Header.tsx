@@ -175,7 +175,7 @@ export default function Header() {
 
           {/* Footer inside drawer */}
           <div className="text-[10px] text-umber-light/80 font-medium tracking-[0.2em] uppercase border-t border-wheat/20 pt-4">
-            Quesos Zampa · Napaleofú
+            Quesos Zampa · Tandil
           </div>
         </div>
       </div>

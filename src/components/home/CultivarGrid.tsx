@@ -113,7 +113,7 @@ export default function CultivarGrid() {
               
               {/* Product Title + Swirl Flourish */}
               <div className="text-center mb-8 flex flex-col items-center">
-                <h3 className="font-urbanist text-2xl lg:text-3xl font-light text-charcoal uppercase tracking-[0.08em]">
+                <h3 className="font-urbanist text-xl sm:text-2xl lg:text-3xl font-light text-charcoal uppercase tracking-[0.06em] whitespace-normal sm:whitespace-nowrap">
                   {cultivar.name}
                 </h3>
                 {/* SVG Vignette Flourish (Classic swirl and loops with diamond center) */}
