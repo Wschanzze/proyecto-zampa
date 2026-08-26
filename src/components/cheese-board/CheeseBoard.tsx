@@ -689,58 +689,14 @@ export default function CheeseBoard() {
       className="min-h-screen w-full flex flex-col items-center overflow-x-hidden relative"
       style={{ background: T.linen }}
     >
-      {/* ══ HEADER DISCRETO & NAVBAR DE EVENTOS ══ */}
-      <nav className="w-full border-b border-[#E7DFCE] bg-[#F4EFE6]/90 backdrop-blur-md sticky top-0 z-40 px-6 py-3 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
-          <Image
-            src="/IMG_1960(1).png"
-            alt="Quesos Zampa Logo"
-            width={48}
-            height={48}
-            className="object-contain group-hover:scale-105 transition-transform"
-          />
-          <div className="flex flex-col">
-            <span className="font-serif font-bold text-sm tracking-widest text-[#2A2421]">
-              QUESOS ZAMPA
-            </span>
-            <span className="text-[10px] tracking-widest text-[#8C7A5B] font-light">
-              TANDIL • BUENOS AIRES
-            </span>
-          </div>
-        </Link>
-
-        <div className="flex items-center gap-2 sm:gap-3">
-          <button
-            onClick={() => setShowQrModal(true)}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-serif tracking-widest border border-[#C9A84C] text-[#2A2421] hover:bg-[#C9A84C] hover:text-white transition-colors bg-white/50"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <rect x="3" y="3" width="7" height="7"></rect>
-              <rect x="14" y="3" width="7" height="7"></rect>
-              <rect x="14" y="14" width="7" height="7"></rect>
-              <rect x="3" y="14" width="7" height="7"></rect>
-            </svg>
-            <span className="hidden sm:inline">KIT INSTAGRAM & QR</span>
-            <span className="sm:hidden">QR & SHARE</span>
-          </button>
-
-          <Link
-            href="/contacto"
-            className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-serif tracking-widest bg-[#2A2421] text-[#F8F5EE] hover:bg-[#C9A84C] transition-colors"
-          >
-            EVENTOS
-          </Link>
-        </div>
-      </nav>
-
-      {/* ══ HERO HEADER ══ */}
-      <header className="w-full max-w-5xl px-6 md:px-12 pt-12 pb-8 flex flex-col items-center text-center">
+      {/* ══ HERO HEADER (Ajustado para integrarse bajo el Header oficial) ══ */}
+      <header className="w-full max-w-5xl px-6 md:px-12 pt-28 md:pt-36 pb-8 flex flex-col items-center text-center">
         <Reveal delay={0}>
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE9DB] border border-[#DDD3BF] mb-3">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#EFE9DB] border border-[#DDD3BF] shadow-sm mb-4">
             <span className="w-2 h-2 rounded-full bg-[#C9A84C] animate-pulse" />
             <span
-              className="uppercase tracking-widest text-xs text-[#5C5245] font-semibold"
-              style={{ fontFamily: 'var(--font-cormorant), serif' }}
+              className="uppercase tracking-widest text-xs text-[#4A3F35] font-bold"
+              style={{ fontFamily: 'var(--font-cormorant), serif', letterSpacing: '0.22em' }}
             >
               Edición Promociones & Eventos
             </span>
@@ -752,8 +708,8 @@ export default function CheeseBoard() {
             className="uppercase text-center mb-2 font-medium"
             style={{
               fontFamily: 'var(--font-cormorant), serif',
-              fontSize: '0.78rem',
-              letterSpacing: '0.32em',
+              fontSize: '0.82rem',
+              letterSpacing: '0.34em',
               color: T.muted,
             }}
           >
@@ -789,7 +745,7 @@ export default function CheeseBoard() {
         </Reveal>
 
         <Reveal delay={0.55} direction="none">
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <motion.div
               animate={{ y: [0, -4, 0] }}
               transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
@@ -825,9 +781,15 @@ export default function CheeseBoard() {
 
             <button
               onClick={() => setShowQrModal(true)}
-              className="flex items-center gap-2 px-5 py-3 rounded-full bg-[#C9A84C] text-[#1E1915] font-serif uppercase tracking-widest font-bold text-xs shadow-md hover:bg-[#E5CD82] transition-colors"
+              className="flex items-center gap-2 px-6 py-3 rounded-full bg-[#C9A84C] text-[#1E1915] font-serif uppercase tracking-widest font-bold text-xs shadow-md hover:bg-[#E5CD82] transition-all transform hover:scale-105"
             >
-              <span>📱 QR PARA EVENTOS & INSTAGRAM</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              <span>KIT INSTAGRAM & QR</span>
             </button>
           </div>
         </Reveal>
@@ -989,7 +951,7 @@ export default function CheeseBoard() {
         </div>
       </section>
 
-      {/* ══ MODAL KIT INSTAGRAM & CÓDIGO QR ══ */}
+      {/* ══ MODAL KIT INSTAGRAM & CÓDIGO QR (CON LOGO OFICIAL ZAMPA) ══ */}
       <AnimatePresence>
         {showQrModal && (
           <motion.div
@@ -1010,7 +972,7 @@ export default function CheeseBoard() {
               {/* Close Button */}
               <button
                 onClick={() => setShowQrModal(false)}
-                className="absolute top-4 right-4 text-stone-400 hover:text-white p-2 rounded-full bg-stone-800/60 transition-colors"
+                className="absolute top-4 right-4 text-stone-400 hover:text-white p-2 rounded-full bg-stone-800/60 transition-colors z-10"
                 aria-label="Cerrar modal"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -1020,6 +982,16 @@ export default function CheeseBoard() {
               </button>
 
               <div className="flex flex-col items-center text-center">
+                {/* Official Brand Logo */}
+                <div className="relative w-36 h-14 mb-3">
+                  <Image
+                    src="/assets/Quesos Zampa/logo blanco.png"
+                    alt="Quesos Zampa Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+
                 <span
                   className="uppercase tracking-widest text-xs text-[#C9A84C] font-semibold mb-1"
                   style={{ fontFamily: 'var(--font-cormorant), serif', letterSpacing: '0.24em' }}
@@ -1102,28 +1074,6 @@ export default function CheeseBoard() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* ══ FOOTER BRANDING ══ */}
-      <footer className="flex flex-col items-center pb-16 gap-4 text-center">
-        <DecorLine delay={0.1} />
-        <Reveal delay={0.2} direction="none">
-          <div className="flex flex-col items-center gap-2">
-            <Image
-              src="/IMG_1960(1).png"
-              alt="Quesos Zampa Monograma"
-              width={56}
-              height={56}
-              className="object-contain"
-            />
-            <p
-              className="font-serif text-xs tracking-widest text-[#766D65] uppercase"
-              style={{ fontFamily: 'var(--font-cormorant), serif' }}
-            >
-              Quesos Zampa • Tandil, Buenos Aires • Leche Pasteurizada A2 de Oveja
-            </p>
-          </div>
-        </Reveal>
-      </footer>
     </main>
   );
 }
