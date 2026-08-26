@@ -20,14 +20,34 @@ const instagramUrl = "https://www.instagram.com/quesos.zampa/";
 const InstagramCarousel = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isMouseDown, setIsMouseDown] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const isHovered = useRef(false);
   const isDragging = useRef(false);
   const startX = useRef(0);
   const scrollLeftStart = useRef(0);
-  const hasMoved = useRef(false);
+  const dragDistance = useRef(0);
 
   // Duplicar elementos para lograr un flujo continuo en loop infinito
   const displayItems = [...items, ...items];
+
+  const updateActiveDot = () => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const halfWidth = container.scrollWidth / 2;
+      if (halfWidth <= 0) return;
+      const currentScroll = (container.scrollLeft) % halfWidth;
+      const ratio = currentScroll / halfWidth;
+
+      if (ratio < 0.33) {
+        setActiveIndex(0);
+      } else if (ratio < 0.66) {
+        setActiveIndex(1);
+      } else {
+        setActiveIndex(2);
+      }
+    }
+  };
 
   // Scroll automático continuo e infinito
   useEffect(() => {
@@ -42,6 +62,7 @@ const InstagramCarousel = () => {
         if (container.scrollLeft >= halfWidth) {
           container.scrollLeft -= halfWidth;
         }
+        updateActiveDot();
       }
       animationFrameId = requestAnimationFrame(scrollStep);
     };
@@ -56,7 +77,7 @@ const InstagramCarousel = () => {
     if (!scrollContainerRef.current) return;
     isDragging.current = true;
     setIsMouseDown(true);
-    hasMoved.current = false;
+    dragDistance.current = 0;
     startX.current = e.pageX - scrollContainerRef.current.offsetLeft;
     scrollLeftStart.current = scrollContainerRef.current.scrollLeft;
   };
@@ -81,9 +102,8 @@ const InstagramCarousel = () => {
     e.preventDefault();
     const x = e.pageX - scrollContainerRef.current.offsetLeft;
     const walk = (x - startX.current) * 1.4;
-    if (Math.abs(walk) > 5) {
-      hasMoved.current = true;
-    }
+    dragDistance.current = Math.abs(x - startX.current);
+
     let newScroll = scrollLeftStart.current - walk;
 
     const container = scrollContainerRef.current;
@@ -94,11 +114,30 @@ const InstagramCarousel = () => {
       newScroll -= halfWidth;
     }
     container.scrollLeft = newScroll;
+    updateActiveDot();
   };
 
   const handleLinkClick = (e: React.MouseEvent) => {
-    if (hasMoved.current) {
+    // Si hubo arrastre del mouse mayor a 5px, se bloquea la apertura del enlace
+    if (dragDistance.current > 5) {
       e.preventDefault();
+      e.stopPropagation();
+    }
+  };
+
+  const scrollToSection = (index: number) => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const halfWidth = container.scrollWidth / 2;
+      let target = 0;
+      if (index === 1) target = halfWidth * 0.33;
+      if (index === 2) target = halfWidth * 0.66;
+
+      container.scrollTo({
+        left: target,
+        behavior: 'smooth'
+      });
+      setActiveIndex(index);
     }
   };
 
@@ -131,6 +170,7 @@ const InstagramCarousel = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               onClick={handleLinkClick}
+              onDragStart={(e) => e.preventDefault()}
               className="flex-shrink-0 w-[300px] md:w-[420px] aspect-square rounded-[32px] overflow-hidden relative shadow-lg group border border-charcoal/5 transition-all duration-500 hover:shadow-2xl pointer-events-auto"
             >
               <div className="relative w-full h-full">
@@ -154,6 +194,22 @@ const InstagramCarousel = () => {
             </a>
           ))}
         </div>
+      </div>
+
+      {/* 3 Puntos Estilo Instagram */}
+      <div className="flex justify-center gap-1.5 mt-4 z-20 relative">
+        {[0, 1, 2].map((idx) => (
+          <button
+            key={idx}
+            onClick={() => scrollToSection(idx)}
+            className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+              activeIndex === idx 
+                ? 'bg-[#6B4226] scale-125' // Punto activo en color café
+                : 'bg-charcoal/20 hover:bg-charcoal/40' // Puntos inactivos
+            }`}
+            aria-label={`Ir a la sección ${idx + 1}`}
+          />
+        ))}
       </div>
     </section>
   );
