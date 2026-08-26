@@ -10,6 +10,19 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#18130F] text-white/80 border-t border-white/10 pt-16 pb-12 px-6 lg:px-12 font-urbanist relative overflow-hidden">
+      {/* Background Logo Watermark */}
+      <div className="absolute right-[-3%] bottom-[-5%] sm:right-6 sm:bottom-0 pointer-events-none select-none z-0 opacity-[0.035]">
+        <div className="relative w-[300px] sm:w-[480px] md:w-[620px] aspect-[2.27/1]">
+          <Image
+            src="/assets/Quesos Zampa/logo blanco.png"
+            alt="Quesos Zampa Watermark"
+            fill
+            className="object-contain object-right-bottom"
+            sizes="(max-width: 640px) 300px, 620px"
+          />
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto flex flex-col gap-12 relative z-10">
         
         {/* Main 4-Column Grid */}
