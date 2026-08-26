@@ -26,7 +26,6 @@ export default function ElaboracionPage() {
         />
         <div className="products-hero-overlay"></div>
         <div className="products-hero-content">
-          <p className="hero-subtitle">NUESTRO PROCESO</p>
           <h1 className="hero-title font-light uppercase">Elaboración</h1>
           <p className="hero-description">
             El arte de transformar la leche más pura en quesos extraordinarios. Conocé nuestra sala de elaboración diaria, el cuidado de la materia prima y las técnicas culinarias que nos definen.

@@ -64,7 +64,6 @@ export default function EncontranosPage() {
         />
         <div className="absolute inset-0 bg-charcoal/40 backdrop-blur-[2px]"></div>
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white mt-16 md:mt-24">
-          <p className="text-[10px] md:text-xs font-bold tracking-[0.25em] text-white uppercase mb-4 animate-fade-in">Puntos de Venta</p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light uppercase tracking-wide mb-6 text-shadow-sm animate-fade-in-up">Descubrí nuestros quesos</h1>
           <p className="text-sm md:text-lg font-light text-white/90 max-w-2xl mx-auto leading-relaxed animate-fade-in-up animation-delay-100">
             Encontrá los exclusivos locales, salumerías boutique y restaurantes que ofrecen nuestras piezas de autor.
@@ -82,7 +81,6 @@ export default function EncontranosPage() {
           <div
             className={`mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
           >
-            <p className="text-xs font-medium uppercase tracking-widest text-[#6B4226] mb-3">Directorio Oficial</p>
             <h2 className="text-4xl lg:text-5xl font-light text-charcoal leading-tight max-w-3xl uppercase tracking-[0.06em]">
               Dónde Encontrar Zampa,<br />
               <em className="font-light italic">De la cava a las mejores fiambrerías del país.</em>
@@ -167,7 +165,6 @@ export default function EncontranosPage() {
         
         {/* Reseller Call to Action Content */}
         <div className="relative z-20 max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">CANAL COMERCIAL Y MAYORISTA</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white tracking-[0.06em] uppercase leading-tight">
             ¿QUERÉS SUMAR NUESTROS QUESOS A TU PROPUESTA?
           </h2>

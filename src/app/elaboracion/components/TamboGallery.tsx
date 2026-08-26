@@ -49,11 +49,10 @@ export default function TamboGallery() {
     <>
       <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
         <div className="mb-12 text-center md:text-left">
-          <p className="text-xs font-medium uppercase tracking-widest text-teal mb-3">EL ORIGEN</p>
           <h2 className="text-3xl md:text-4xl font-light uppercase tracking-wide text-charcoal mb-4">
             Pasión de Origen
           </h2>
-          <p className="text-umber-light font-light max-w-3xl text-base md:text-lg leading-relaxed">
+          <p className="text-charcoal/80 font-light max-w-3xl text-base md:text-lg leading-relaxed">
             Nuestra historia y nuestros quesos nacen en el campo. Realizamos el proceso completo, desde la crianza de nuestras ovejas en un sistema pastoril natural y el ordeñe diario, hasta la elaboración cuidadosa en nuestra quesería. Cada etapa refleja nuestro compromiso, logrando así un queso de oveja con verdadera pasión de origen.
           </p>
         </div>

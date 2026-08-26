@@ -41,8 +41,6 @@ export default function CtaSection() {
         <div
           className={`transition-all duration-800 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           style={{ transitionDuration: '0.8s' }}>
-          
-          <p className="text-xs font-medium uppercase tracking-widest text-teal mb-5">El Legado Continúa</p>
 
           <h2 className="text-5xl lg:text-6xl font-light text-charcoal leading-tight uppercase tracking-[0.06em] mb-7">
             Del Campo a tu Mesa.<br />
@@ -61,7 +59,7 @@ export default function CtaSection() {
               { icon: 'ShieldCheckIcon', text: 'Procesos Integrados' }
             ].map((item) => (
               <div key={item.text} className="flex items-center gap-2 text-sm font-medium text-umber">
-                <Icon name={item.icon as any} size={16} variant="outline" className="text-teal" />
+                <Icon name={item.icon as any} size={16} variant="outline" className="text-[#6B4226]" />
                 {item.text}
               </div>
             ))}
@@ -71,8 +69,7 @@ export default function CtaSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <a
               href="/productos"
-              className="flex items-center justify-center gap-3 h-16 px-12 rounded-2xl bg-limestone-soft border border-umber/30 text-umber font-medium text-lg hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 group"
-              style={{ boxShadow: '0 16px 48px rgba(46,93,90,0.32)' }}>
+              className="flex items-center justify-center gap-3 h-16 px-12 rounded-2xl bg-limestone-soft border border-umber/30 text-umber font-medium text-lg hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 group">
               
               <Icon name="SparklesIcon" size={20} variant="outline" />
               Explorar Catálogo
@@ -86,7 +83,7 @@ export default function CtaSection() {
               href="https://wa.me/5491132554757?text=%C2%A1Hola!%20Te%20contacto%20desde%20la%20web%20de%20Quesos%20Zampa.%20Somos%20un%20comercio/distribuidor%20y%20nos%20gustar%C3%ADa%20vender%20sus%20productos." 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="teal-link font-medium"
+              className="text-[#6B4226] font-medium underline hover:text-charcoal transition-colors"
             >
               contactarnos directamente
             </a>{' '}

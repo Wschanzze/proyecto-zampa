@@ -4,11 +4,10 @@ export default function DocumentarySection() {
   return (
     <section className="py-16 px-4 md:px-8 max-w-5xl mx-auto text-center">
       <div className="mb-8">
-        <p className="text-xs font-medium uppercase tracking-widest text-teal mb-3">DOCUMENTAL</p>
         <h2 className="text-3xl md:text-4xl font-light uppercase tracking-wide text-charcoal mb-4">
           Conoce Más de Zampa
         </h2>
-        <p className="text-umber-light font-light text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+        <p className="text-charcoal/80 font-light text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
           Te invitamos a ver el siguiente documental sobre nuestros orígenes, nuestro tambo pastoril 
           y el testimonio directo de Isabel y Juan Cruz en su día a día.
         </p>

@@ -91,7 +91,6 @@ export default function CultivarGrid() {
         {/* Header */}
         <div
           className={`mb-24 text-center transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <p className="font-urbanist text-[10px] font-bold uppercase tracking-[0.25em] text-charcoal/60 mb-4">Nuestra Selección</p>
           <h2 className="font-urbanist text-4xl lg:text-6xl font-light text-charcoal leading-tight tracking-[0.06em] max-w-4xl mx-auto uppercase">
             Variedades Artesanales<br />
             Elaboradas con Leche 100% de Oveja

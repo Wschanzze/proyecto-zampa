@@ -25,7 +25,6 @@ export default function NuestraHistoriaPage() {
         />
         <div className="products-hero-overlay"></div>
         <div className="products-hero-content z-10">
-          <p className="hero-subtitle">DESDE TANDIL</p>
           <h1 className="hero-title font-light uppercase">Nuestra Historia</h1>
           <p className="hero-description">
             Un proyecto familiar que nació de la curiosidad y la pasión. Conocé el origen de nuestro tambo de ovejas y nuestra quesería artesanal en las sierras de Tandil.

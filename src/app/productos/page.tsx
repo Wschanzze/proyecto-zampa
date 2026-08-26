@@ -19,7 +19,6 @@ export default function ProductosPage() {
         />
         <div className="products-hero-overlay"></div>
         <div className="products-hero-content">
-          <p className="hero-subtitle">NUESTRA QUESERÍA</p>
           <h1 className="hero-title font-light uppercase">Nuestros Productos</h1>
           <p className="hero-description">
             Descubrí nuestra variedad de quesos artesanales elaborados con leche 100% de oveja de pastoreo. Una selección de autor madurada lentamente con paciencia y esmero.
