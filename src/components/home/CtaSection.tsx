@@ -1,99 +1,43 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import Icon from '@/components/ui/AppIcon';
-import AppImage from '@/components/ui/AppImage';
 
 export default function CtaSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {if (entry.isIntersecting) setVisible(true);},
-      { threshold: 0.15 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section
-      id="about"
-      ref={sectionRef}
-      className="relative py-24 lg:py-36 px-6 lg:px-12 bg-white overflow-hidden">
+    <section className="relative w-full overflow-hidden py-20 lg:py-28 px-6 lg:px-12 flex flex-col items-center justify-center text-center">
+      <Image 
+        src="/assets/Quesos Zampa/nuevas/1fbee0f4-70ba-4ef6-851a-3e32056a9edb.jpg" 
+        alt="Del Campo a tu Mesa - Quesos Zampa" 
+        fill
+        className="object-cover"
+        sizes="100vw"
+        priority
+      />
+      {/* Overlays for dark text readability */}
+      <div className="absolute inset-0 bg-black/65 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent z-10" />
       
-      {/* Background image with overlay */}
-      <div className="absolute inset-0 z-0">
-        <AppImage
-          src="/assets/images/footer.png"
-          alt="Vista panorámica de la quesería Zampa y pasturas al atardecer"
-          fill
-          className="w-full h-full object-cover opacity-15"
-          priority />
+      {/* Content */}
+      <div className="relative z-20 max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white tracking-[0.06em] uppercase leading-tight">
+          DEL CAMPO A TU MESA.<br />
+          SABOR ARTESANAL DE OVEJA.
+        </h2>
         
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white" />
+        <p className="text-base md:text-lg lg:text-xl font-light text-white/80 leading-relaxed max-w-2xl mx-auto">
+          Cada una de nuestras piezas gourmet se elabora de lunes a lunes con leche de oveja fresca del mismo día, garantizando la máxima pureza, trazabilidad y bienestar animal.
+        </p>
+        
+        <Link 
+          href="/productos" 
+          className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)] tracking-[0.15em] uppercase px-8 mt-2"
+        >
+          <Icon name="SparklesIcon" size={16} variant="solid" className="sm:w-5 sm:h-5 text-charcoal/90" />
+          <span>Explorar Catálogo</span>
+        </Link>
       </div>
-
-      {/* Wheat rule */}
-      <div className="wheat-rule mb-16 relative z-10" />
-
-      <div className="max-w-4xl mx-auto text-center relative z-10">
-        <div
-          className={`transition-all duration-800 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-          style={{ transitionDuration: '0.8s' }}>
-
-          <h2 className="text-5xl lg:text-6xl font-light text-charcoal leading-tight uppercase tracking-[0.06em] mb-7">
-            Del Campo a tu Mesa.<br />
-            Sabor Artesanal de Oveja.
-          </h2>
-
-          <p className="text-xl font-light text-charcoal/85 leading-relaxed max-w-2xl mx-auto mb-10">
-            Cada una de nuestras piezas gourmet se elabora de lunes a lunes con leche de oveja fresca del mismo día, garantizando la máxima pureza, trazabilidad y bienestar animal.
-          </p>
-
-          {/* Evidence strip */}
-          <div className="flex items-center justify-center gap-8 flex-wrap mb-12">
-            {[
-              { icon: 'BeakerIcon', text: '6 Variedades de Queso' },
-              { icon: 'GlobeAltIcon', text: 'Origen y Trazabilidad' },
-              { icon: 'ShieldCheckIcon', text: 'Procesos Integrados' }
-            ].map((item) => (
-              <div key={item.text} className="flex items-center gap-2 text-sm font-medium text-umber">
-                <Icon name={item.icon as any} size={16} variant="outline" className="text-[#6B4226]" />
-                {item.text}
-              </div>
-            ))}
-          </div>
-
-          {/* Primary CTA — full-width button */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <a
-              href="/productos"
-              className="flex items-center justify-center gap-3 h-16 px-12 rounded-2xl bg-limestone-soft border border-umber/30 text-umber font-medium text-lg hover:bg-umber hover:text-white hover:border-umber transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 group">
-              
-              <Icon name="SparklesIcon" size={20} variant="outline" />
-              Explorar Catálogo
-              <Icon name="ArrowRightIcon" size={18} variant="outline" className="group-hover:translate-x-1 transition-transform duration-200" />
-            </a>
-          </div>
-
-          <p className="text-sm text-charcoal/70 font-light">
-            Distribuidores y comercios interesados pueden{' '}
-            <a 
-              href="https://wa.me/5491132554757?text=%C2%A1Hola!%20Te%20contacto%20desde%20la%20web%20de%20Quesos%20Zampa.%20Somos%20un%20comercio/distribuidor%20y%20nos%20gustar%C3%ADa%20vender%20sus%20productos." 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-[#6B4226] font-medium underline hover:text-charcoal transition-colors"
-            >
-              contactarnos directamente
-            </a>{' '}
-            para consultas comerciales.
-          </p>
-        </div>
-      </div>
-
-      {/* Wheat rule */}
-      <div className="wheat-rule mt-16 relative z-10" />
-    </section>);
-
+    </section>
+  );
 }
