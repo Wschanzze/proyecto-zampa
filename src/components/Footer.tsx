@@ -64,24 +64,25 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Product Varieties (3 cols) */}
+          {/* Column 3: Seal & Quality Pillars (3 cols) */}
           <div className="lg:col-span-3 flex flex-col gap-4">
-            <h4 className="text-xs font-bold tracking-[0.2em] text-white/40 uppercase">Variedades de Autor</h4>
+            <h4 className="text-xs font-bold tracking-[0.2em] text-white/40 uppercase">Sello & Calidad</h4>
             <ul className="flex flex-col gap-2.5 text-sm font-light text-white/75">
-              <li>
-                <Link href="/productos" className="hover:text-white transition-colors">Pecorino Zampa</Link>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#DFC070] shrink-0" />
+                <span>100% Leche Pasteurizada de Oveja</span>
               </li>
-              <li>
-                <Link href="/productos" className="hover:text-white transition-colors">Queso Ahumado</Link>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#DFC070] shrink-0" />
+                <span>Proteína A2 de Fácil Digestión</span>
               </li>
-              <li>
-                <Link href="/productos" className="hover:text-white transition-colors">Queso al Orégano</Link>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#DFC070] shrink-0" />
+                <span>Sistema Pastoril Sustentable</span>
               </li>
-              <li>
-                <Link href="/productos" className="hover:text-white transition-colors">Manchego Zampa</Link>
-              </li>
-              <li>
-                <Link href="/productos" className="hover:text-white transition-colors">Camembert de Oveja</Link>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#DFC070] shrink-0" />
+                <span>Maduración & Cuidado en Cava</span>
               </li>
             </ul>
           </div>
@@ -130,13 +131,6 @@ export default function Footer() {
             </div>
           </div>
 
-        </div>
-
-        {/* Local SEO Keywords Note */}
-        <div className="text-center">
-          <p className="text-xs text-white/40 font-light leading-relaxed max-w-4xl mx-auto">
-            <strong className="font-semibold text-white/60">Quesos Zampa Tandil</strong> — Quesería Artesanal y Tambo Ovino Pastoril. Producción limitada de quesos de oveja en Tandil, Buenos Aires, Argentina.
-          </p>
         </div>
 
         {/* Footer Bottom Bar: Copyright & Firm */}
