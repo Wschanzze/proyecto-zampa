@@ -28,8 +28,8 @@ export default function Footer() {
         {/* Main 3-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-10 border-b border-white/10">
           
-          {/* Column 1: Brand & Slogan (4 cols) */}
-          <div className="lg:col-span-4 flex flex-col items-start gap-5">
+          {/* Column 1: Brand & Slogan (5 cols) */}
+          <div className="lg:col-span-5 flex flex-col items-start gap-4">
             <Link href="/" className="inline-block relative w-[140px] h-[62px]">
               <Image 
                 src="/assets/Quesos Zampa/logo blanco.png" 
@@ -40,22 +40,15 @@ export default function Footer() {
               />
             </Link>
             
-            <p className="text-sm font-light text-white/70 leading-relaxed max-w-sm">
-              Quesería artesanal y tambo ovino pastoril.
+            <p className="text-sm font-light text-white/70 leading-relaxed max-w-md">
+              Quesería artesanal y tambo ovino pastoril. Elaboración dedicada de quesos de autor 100% con leche pasteurizada de oveja.
             </p>
-
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/15 bg-white/5 backdrop-blur-sm mt-1">
-              <span className="w-2 h-2 rounded-full bg-[#DFC070] animate-pulse shrink-0" />
-              <span className="text-[10px] font-semibold tracking-widest text-white/90 uppercase">
-                100% Leche A2 de Oveja • Tandil
-              </span>
-            </div>
           </div>
 
-          {/* Column 2: Navigation Links (4 cols, split in 2 sub-columns of 3 links) */}
+          {/* Column 2: Navigation Links (4 cols, split in 2 clean sub-columns) */}
           <div className="lg:col-span-4 flex flex-col gap-4">
-            <h4 className="text-xs font-bold tracking-[0.2em] text-white/40 uppercase text-center">Navegación</h4>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-2.5 text-sm font-light text-white/75 text-center">
+            <h4 className="text-xs font-bold tracking-[0.2em] text-white/40 uppercase">Navegación</h4>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-2.5 text-sm font-light text-white/75">
               <ul className="flex flex-col gap-2.5">
                 <li>
                   <Link href="/" className="hover:text-white transition-colors">Inicio</Link>
@@ -81,8 +74,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 3: Contact & Socials (4 cols) */}
-          <div className="lg:col-span-4 flex flex-col gap-4">
+          {/* Column 3: Contact & Socials (3 cols) */}
+          <div className="lg:col-span-3 flex flex-col gap-4">
             <h4 className="text-xs font-bold tracking-[0.2em] text-white/40 uppercase">Contacto & Ubicación</h4>
             
             <div className="flex flex-col gap-3 text-sm font-light text-white/75">
