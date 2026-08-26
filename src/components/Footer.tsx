@@ -25,11 +25,11 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto flex flex-col gap-12 relative z-10">
         
-        {/* Main 4-Column Grid */}
+        {/* Main 3-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/10">
           
-          {/* Column 1: Brand & Slogan (4 cols) */}
-          <div className="lg:col-span-4 flex flex-col items-start gap-5">
+          {/* Column 1: Brand & Slogan (5 cols) */}
+          <div className="lg:col-span-5 flex flex-col items-start gap-5">
             <Link href="/" className="inline-block relative w-[140px] h-[62px]">
               <Image 
                 src="/assets/Quesos Zampa/logo blanco.png" 
@@ -52,8 +52,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Navigation Links (2 cols) */}
-          <div className="lg:col-span-2 flex flex-col gap-4">
+          {/* Column 2: Navigation Links (3 cols) */}
+          <div className="lg:col-span-3 flex flex-col gap-4">
             <h4 className="text-xs font-bold tracking-[0.2em] text-white/40 uppercase">Navegación</h4>
             <ul className="flex flex-col gap-2.5 text-sm font-light text-white/75">
               <li>
@@ -77,31 +77,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Seal & Quality Pillars (3 cols) */}
-          <div className="lg:col-span-3 flex flex-col gap-4">
-            <h4 className="text-xs font-bold tracking-[0.2em] text-white/40 uppercase">Sello & Calidad</h4>
-            <ul className="flex flex-col gap-2.5 text-sm font-light text-white/75">
-              <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#DFC070] shrink-0" />
-                <span>100% Leche Pasteurizada de Oveja</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#DFC070] shrink-0" />
-                <span>Proteína A2 de Fácil Digestión</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#DFC070] shrink-0" />
-                <span>Sistema Pastoril Sustentable</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#DFC070] shrink-0" />
-                <span>Maduración & Cuidado en Cava</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 4: Contact & Socials (3 cols) */}
-          <div className="lg:col-span-3 flex flex-col gap-4">
+          {/* Column 3: Contact & Socials (4 cols) */}
+          <div className="lg:col-span-4 flex flex-col gap-4">
             <h4 className="text-xs font-bold tracking-[0.2em] text-white/40 uppercase">Contacto & Ubicación</h4>
             
             <div className="flex flex-col gap-3 text-sm font-light text-white/75">
