@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { ReactNode } from 'react';
 import '../styles/tailwind.css';
 import JsonLd from '@/components/JsonLd';
+import { Analytics } from '@vercel/analytics/next';
 
 const baseUrl = 'https://quesoszampa.com';
 
@@ -90,6 +91,7 @@ export default function RootLayout({
       <body>
         <JsonLd />
         {children}
+        <Analytics />
       </body>
     </html>
   );
