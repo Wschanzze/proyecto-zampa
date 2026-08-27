@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { ReactNode } from 'react';
+import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 import '../styles/tailwind.css';
 import JsonLd from '@/components/JsonLd';
 
@@ -87,9 +89,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-DC6XJFTXB8"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-DC6XJFTXB8');
+          `}
+        </Script>
+      </head>
       <body>
         <JsonLd />
         {children}
+        <Analytics />
       </body>
     </html>
   );
