@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { ReactNode } from 'react';
+import { Analytics } from '@vercel/analytics/next';
 import '../styles/tailwind.css';
 import JsonLd from '@/components/JsonLd';
 
@@ -90,6 +91,7 @@ export default function RootLayout({
       <body>
         <JsonLd />
         {children}
+        <Analytics />
       </body>
     </html>
   );
