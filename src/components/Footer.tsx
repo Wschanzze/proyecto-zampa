@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Icon from '@/components/ui/AppIcon';
 import AppIcon from '@/components/ui/AppIcon';
+import { trackWhatsAppClick } from '@/lib/posthog';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -88,6 +89,7 @@ export default function Footer() {
                 href="https://wa.me/5491132554757?text=%C2%A1Hola!%20Te%20contacto%20desde%20la%20web%20de%20Quesos%20Zampa."
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick('footer_direct_phone')}
                 className="flex items-center gap-2.5 text-white/80 hover:text-white transition-colors group"
               >
                 <AppIcon name="whatsapp" size={16} className="text-white/60 group-hover:text-white shrink-0" />
@@ -110,6 +112,7 @@ export default function Footer() {
                 href="https://wa.me/5491132554757?text=%C2%A1Hola!%20Me%20interesa%20vender%20Quesos%20Zampa%20en%20mi%20local."
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick('footer_wholesale_button')}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 hover:bg-white hover:text-charcoal hover:border-white text-xs font-semibold tracking-wider uppercase transition-all duration-300 shadow-sm"
               >
                 <span>Ventas Mayoristas</span>

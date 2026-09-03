@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import AppImage from '@/components/ui/AppImage';
+import { trackWhatsAppClick } from '@/lib/posthog';
 
 interface Cultivar {
   id: string;
@@ -138,6 +139,7 @@ export default function CultivarGrid() {
                       href={`https://wa.me/5491132554757?text=${encodeURIComponent(`¡Hola! Estoy interesado en el queso ${cultivar.name} que vi en su sitio web. ¿Me dirías precio y disponibilidad?`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => trackWhatsAppClick('product_card', { product_id: cultivar.id, product_name: cultivar.name })}
                       className="inline-flex items-center justify-center gap-2.5 h-11 sm:h-12 rounded-full bg-charcoal text-white font-bold text-[10px] sm:text-xs hover:bg-[#C9A84C] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-[0_4px_15px_rgba(0,0,0,0.12)] tracking-[0.15em] uppercase px-6"
                     >
                       <span>Consultar por WhatsApp</span>

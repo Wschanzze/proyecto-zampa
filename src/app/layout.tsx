@@ -4,6 +4,7 @@ import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import '../styles/tailwind.css';
 import JsonLd from '@/components/JsonLd';
+import { PostHogProvider } from '@/components/PostHogProvider';
 
 const baseUrl = 'https://quesoszampa.com';
 
@@ -105,9 +106,11 @@ export default function RootLayout({
         </Script>
       </head>
       <body>
-        <JsonLd />
-        {children}
-        <Analytics />
+        <PostHogProvider>
+          <JsonLd />
+          {children}
+          <Analytics />
+        </PostHogProvider>
       </body>
     </html>
   );

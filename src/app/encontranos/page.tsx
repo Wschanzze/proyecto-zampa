@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import FloatingPill from '@/components/home/FloatingPill';
 import Icon from '@/components/ui/AppIcon';
 import AppIcon from '@/components/ui/AppIcon';
+import { trackWhatsAppClick } from '@/lib/posthog';
 
 interface Location {
   name: string;
@@ -176,6 +177,7 @@ export default function EncontranosPage() {
             href={`https://wa.me/5491132554757?text=${encodeURIComponent('Hola! Me interesa vender quesos Zampa en mi local.')}`}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('wholesale_banner', { target: 'revendedores_mayoristas' })}
             className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)] tracking-[0.15em] uppercase px-8 mt-4"
           >
             <AppIcon name="whatsapp" size={18} className="text-charcoal" />
