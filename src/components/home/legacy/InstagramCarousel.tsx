@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
+import { trackEvent } from '@/lib/posthog';
 
 const items = [
   { type: 'image', src: '/assets/Quesos Zampa/IMG_0773.jpg' },
@@ -117,12 +118,14 @@ const InstagramCarousel = () => {
     updateActiveDot();
   };
 
-  const handleLinkClick = (e: React.MouseEvent) => {
+  const handleLinkClick = (e: React.MouseEvent, postIndex?: number) => {
     // Si hubo arrastre del mouse mayor a 5px, se bloquea la apertura del enlace
     if (dragDistance.current > 5) {
       e.preventDefault();
       e.stopPropagation();
+      return;
     }
+    trackEvent('instagram_carousel_post_click', { post_index: postIndex });
   };
 
   const scrollToSection = (index: number) => {
@@ -169,7 +172,7 @@ const InstagramCarousel = () => {
               href={instagramUrl} 
               target="_blank" 
               rel="noopener noreferrer" 
-              onClick={handleLinkClick}
+              onClick={(e) => handleLinkClick(e, index)}
               onDragStart={(e) => e.preventDefault()}
               className="flex-shrink-0 w-[300px] md:w-[420px] aspect-square rounded-[32px] overflow-hidden relative shadow-lg group border border-charcoal/5 transition-all duration-500 hover:shadow-2xl pointer-events-auto"
             >

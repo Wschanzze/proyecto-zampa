@@ -4,6 +4,7 @@ import { useRef, useState } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { trackEvent } from '@/lib/posthog';
 
 /* ─────────────────────────────────────
    RECIPES & RECETAS DE QUESOS ZAMPA
@@ -283,7 +284,10 @@ function FlipCard({
           <div
             className="absolute inset-0 flex flex-col items-center justify-between cursor-pointer group rounded-2xl p-4 bg-white/60 border border-[#EBE4D5] shadow-md hover:shadow-xl transition-all"
             style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
-            onClick={() => setFlipped(true)}
+            onClick={() => {
+              trackEvent('cheese_board_recipe_view', { cheese_name: recipe.cheeseName, recipe_title: recipe.title });
+              setFlipped(true);
+            }}
             role="button"
             tabIndex={0}
             aria-label={`Ver receta para ${alt}`}
@@ -618,6 +622,7 @@ export default function CheeseBoard() {
   };
 
   const handleShare = async () => {
+    trackEvent('cheese_board_share_click');
     if (navigator.share) {
       try {
         await navigator.share({
@@ -996,6 +1001,7 @@ export default function CheeseBoard() {
                     download="QR-Tabla-Quesos-Zampa.png"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackEvent('cheese_board_qr_download')}
                     className="w-full py-3 rounded-full font-serif text-xs tracking-widest uppercase border border-stone-700 text-stone-200 font-semibold hover:bg-stone-800 transition-colors flex items-center justify-center gap-2"
                   >
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

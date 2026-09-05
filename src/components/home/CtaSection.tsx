@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Icon from '@/components/ui/AppIcon';
+import { trackEvent } from '@/lib/posthog';
 
 export default function CtaSection() {
   return (
@@ -32,6 +33,7 @@ export default function CtaSection() {
         
         <Link 
           href="/productos" 
+          onClick={() => trackEvent('cta_catalog_click', { location: 'home_cta_banner' })}
           className="flex items-center justify-center gap-2 sm:gap-3 h-12 sm:h-14 rounded-full bg-white text-charcoal font-bold text-[10px] sm:text-xs hover:bg-white/90 hover:scale-[1.02] transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)] tracking-[0.15em] uppercase px-8 mt-2"
         >
           <Icon name="SparklesIcon" size={16} variant="solid" className="sm:w-5 sm:h-5 text-charcoal/90" />

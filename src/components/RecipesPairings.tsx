@@ -1,6 +1,7 @@
 'use client';
 import React, { useRef, useState, useEffect } from 'react';
 import AppIcon from '@/components/ui/AppIcon';
+import { trackEvent } from '@/lib/posthog';
 
 interface VideoItem {
   id: number;
@@ -85,6 +86,7 @@ function VideoCard({
     if (isPlaying) {
       setActivePlayingId(null);
     } else {
+      trackEvent('recipe_video_play', { video_title: item.title, author: item.author });
       setActivePlayingId(item.id);
     }
   };
@@ -188,6 +190,7 @@ function VideoCard({
             href={item.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent('recipe_chef_instagram_click', { restaurant: item.title, instagram_handle: item.instagramHandle })}
             className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#6B4226] hover:text-charcoal transition-colors"
           >
             <AppIcon name="Instagram" size={15} />

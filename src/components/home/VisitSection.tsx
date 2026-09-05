@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import { trackEvent } from '@/lib/posthog';
 
 export default function VisitSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -40,6 +41,7 @@ export default function VisitSection() {
             href="https://g.page/r/CZQDdzpztPFvEAI/review"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent('google_review_click', { location: 'visit_section' })}
             className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-umber hover:text-teal transition-colors duration-300 group mb-16"
           >
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
