@@ -111,6 +111,16 @@ export default function RootLayout({
           {children}
           <Analytics />
         </PostHogProvider>
+        {/* Metricool tracking pixel */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://tracker.metricool.com/c3po.jpg?hash=dcf151a64700f8b34fce9e1d01542308"
+          alt=""
+          style={{ display: 'none' }}
+          width="1"
+          height="1"
+          aria-hidden="true"
+        />
       </body>
     </html>
   );
